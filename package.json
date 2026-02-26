@@ -1,0 +1,44 @@
+{
+  "name": "uss",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "NODE_OPTIONS='--max_old_space_size=4096' next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export"
+  },
+  "dependencies": {
+    "@amcharts/amcharts5": "^5.13.4",
+    "@amcharts/amcharts5-geodata": "^5.1.5",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@fancyapps/ui": "^6.0.17",
+    "@mui/icons-material": "^7.2.0",
+    "@mui/material": "^7.2.0",
+    "@tsparticles/react": "^3.0.0",
+    "circletype": "^2.3.0",
+    "classnames": "^2.5.1",
+    "dotenv": "^17.2.1",
+    "formidable": "^3.5.4",
+    "framer-motion": "^12.23.12",
+    "lottie-react": "^2.4.1",
+    "mysql2": "^3.14.3",
+    "next": "^15.5.3",
+    "nodemailer": "^7.0.10",
+    "react": "^19.0.0",
+    "react-countup": "^6.5.3",
+    "react-dom": "^19.0.0",
+    "react-google-recaptcha": "^3.1.0",
+    "react-intersection-observer": "^9.16.0",
+    "react-phone-input-2": "^2.15.1",
+    "react-tsparticles": "^2.12.2",
+    "swiper": "^11.2.10",
+    "tsparticles": "^3.8.1",
+    "tsparticles-slim": "^2.12.0"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^8.1.0"
+  }
+}
