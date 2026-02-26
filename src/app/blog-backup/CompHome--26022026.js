@@ -34,18 +34,6 @@ import Metadata from "~/meta/Metadata";
 import RxValetLogo from "@/companylogo/rxvalet.svg?url";
 import AdvancePharmacyLogo from "@/companylogo/advance-pharmacy.svg?url";
 
-import Wheel1 from "@/wheel1.webp";
-import Wheel2 from "@/wheel2.webp";
-import Wheel3 from "@/wheel3.webp";
-
-import androidIcon from "@/android.svg?url";
-import appleIcon from "@/ios.svg?url";
-import phpIcon from "@/php.svg?url";
-import ciIcon from "@/ci.svg?url";
-import reactIcon from "@/react-js.svg?url";
-import NextjsIcon from "@/nextjs.svg?url";
-import nodejsIcon from "@/nodejs.svg?url";
-import wordpressIcon from "@/wp.svg?url";
 
 import Slider1 from "@/slider1.webp";
 import Slider2 from "@/slider2.webp";
@@ -83,6 +71,7 @@ import Hover3 from "@/hover3.webp";
 import Hover4 from "@/hover4.webp";
 import Hover5 from "@/hover5.webp";
 import Hover6 from "@/hover6.webp";
+
 
 
 import TestimonialBobthompson from "@/bobthompson.webp";
@@ -236,33 +225,38 @@ const testimonials = [
   },
 ];
 
-//for wheel section
-const stageData = [
-  {
-    title: "Priscription Bliss",
-    techtext: "Tech Stack:",
-    techimages: [nodejsIcon, reactIcon, NextjsIcon],
-    desc2:
-      "Prescription Bliss is a U.S.‑based patient support service that helps people struggling with high brand‑name medication costs by guiding them through manufacturer‑sponsored assistance programs and handling the paperwork, coordination, and ongoing refill management on their behalf.",
-    mainimage: Wheel1,
-  },
-  {
-    title: "Cosmo Chemistry",
-    techtext: "Tech Stack:",
-    techimages: [wordpressIcon, phpIcon],
-    desc2:
-      "Cosmo Chemistry India is a Gujarat‑based chemical solutions provider specializing in sustainable contract manufacturing and high‑quality chemical products for diverse industries such as water treatment, pharmaceuticals, dyes, personal care and more.",
-    mainimage: Wheel2,
-  },
-  {
-    title: "RxValet",
-    techtext: "Tech Stack:",
-    techimages: [androidIcon, appleIcon, ciIcon, phpIcon],
-    desc2:
-      "MyRxValet is an online pharmacy savings platform that helps consumers find and purchase prescription medications at significantly reduced prices by comparing national retailers and offering options like home delivery or retail pickup with discounted rates.",
-    mainimage: Wheel3,
-  },
-];
+// const stageData = [
+//   {
+//     title: "RX Valet",
+//     techtext: "Tech Stack:",
+//     techimage1: appleIcon,
+//     techimage2: androidIcon,
+//     desc2:
+//       "Lorem ipsum dolor sit amet consectetur. Dui duis sed venenatis nunc fames donec eu feugiat ac. Morbi quisque pretium.",
+//     image:
+//       "https://cdn.prod.website-files.com/667a7576e7e7ef3ba89b3f2a/66c46332f4c126638f4aab2e_startup-1.webp",
+//   },
+//   {
+//     title: "Seed",
+//     techtext: "Tech Stack:",
+//     techimage1: appleIcon,
+//     techimage2: androidIcon,
+//     desc2:
+//       "More than 25% of our clients get Series A investments to build full-scale product and start marketing",
+//     image:
+//       "https://cdn.prod.website-files.com/667a7576e7e7ef3ba89b3f2a/66c46332e77197f7d0a36ead_startup-2.webp",
+//   },
+//   {
+//     title: "Series A",
+//     techtext: "Tech Stack:",
+//     techimage1: appleIcon,
+//     techimage2: androidIcon,
+//     desc2:
+//       "We've helped every start-up we worked with at this stage to cut costs and improve user experience",
+//     image:
+//       "https://cdn.prod.website-files.com/667a7576e7e7ef3ba89b3f2a/66c46332a94d7b4ba339bb39_startup-3.webp",
+//   },
+// ];
 
 
 const fadeInUp = {
@@ -392,7 +386,6 @@ export default function CompHome() {
   }, []);
 
   // toggle sticky on benefits header when second box touches the first
-  // ishita 9/1
   useEffect(() => {
     const stickyMain = document.querySelector('.sticky-group-main');
     const secondHeading = document.querySelector(
@@ -421,6 +414,7 @@ export default function CompHome() {
       window.removeEventListener('resize', onScroll);
     };
   }, []);
+
 
   // const handleTabChange = (event, newValue) => {
   //   setJourneyIndex(newValue);
@@ -544,8 +538,6 @@ export default function CompHome() {
 
 
   // display-on-scroll
-  
-  // ishita 9/1
   const lastImageUrlRef = useRef(null);
   useEffect(() => {
     const stickyGroups = document.querySelectorAll(".sticky-group");
@@ -592,20 +584,15 @@ export default function CompHome() {
           if (imageUrl && imageUrl !== lastImageUrlRef.current) {
             if (activeImage) activeImage.classList.remove("show");
 
-            // wait for fade-out to finish
             setTimeout(() => {
               setActiveImageSrc(imageUrl);
               lastImageUrlRef.current = imageUrl;
 
-              // wait one frame so browser applies new src
               requestAnimationFrame(() => {
-                requestAnimationFrame(() => {
-                  if (activeImage) activeImage.classList.add("show");
-                });
+                if (activeImage) activeImage.classList.add("show");
               });
-            }, 300);
+            }, 500);
           }
-
 
           found = true;
         } else {
@@ -757,69 +744,52 @@ export default function CompHome() {
 
   //rotate wheel
   useEffect(() => {
-    const section = document.getElementById("wheel-cases");
-    const ellipse = document.getElementById("wheel-ellipse");
-    const cards = Array.from(document.querySelectorAll(".wheel-card"));
+    const rotateElement = document.querySelector(".rotate-ellipse-2");
+    const section = document.querySelector(".section.is-cases-new");
 
-    if (!section || !ellipse || !cards.length) return;
+    const handleScroll = () => {
+      if (!rotateElement || !section) return;
 
-    let rafId = null;
+      const sectionRect = section.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
 
-    const update = () => {
-      const scrollY = window.scrollY;
-      const sectionTop = section.offsetTop;
+      // Skip if section is out of view
+      if (sectionRect.bottom < 0 || sectionRect.top > windowHeight) return;
+
+      // Scroll progress within the section
       const sectionHeight = section.offsetHeight;
-
-      /* ---------- ROTATION ---------- */
+      const scrollYWithinSection = window.scrollY - section.offsetTop;
       const progress = Math.min(
         1,
-        Math.max(
-          0,
-          (scrollY - sectionTop) /
-          (sectionHeight - window.innerHeight + 150)
-        )
+        Math.max(0, scrollYWithinSection / (sectionHeight - windowHeight))
       );
 
-      const rotation = -28 + progress * 42;
-      ellipse.style.transform = `rotate(${rotation}deg)`;
+      // Apply transformations (same ranges)
+      const minAngle = -27;
+      const maxAngle = 14;
+      const rotationZ = minAngle + progress * (maxAngle - minAngle);
 
-      /* ---------- ACTIVE CARD ---------- */
-      const viewportCenter = window.innerHeight / 2;
-      let activeIndex = 0;
-      let closest = Infinity;
+      const minTranslateY = -2;
+      const maxTranslateY = 8;
+      const translateY =
+        minTranslateY + progress * (maxTranslateY - minTranslateY);
 
-      cards.forEach((card, i) => {
-        const rect = card.getBoundingClientRect();
-        const center = rect.top + rect.height / 2;
-        const dist = Math.abs(viewportCenter - center + 50);
-
-        if (dist < closest) {
-          closest = dist;
-          activeIndex = i;
-        }
-      });
-
-      cards.forEach((card, i) => {
-        card.classList.toggle("wheel-active", i === activeIndex);
-      });
+      rotateElement.style.transform = `
+      translate3d(0px, ${translateY}%, 0px)
+      scale3d(1, 1, 1)
+      rotateX(0deg) rotateY(0deg)
+      rotateZ(${rotationZ}deg)
+      skew(0deg, 0deg)
+    `;
+      rotateElement.style.willChange = "transform";
+      rotateElement.style.transformStyle = "preserve-3d";
     };
 
-    const onScroll = () => {
-      if (rafId) cancelAnimationFrame(rafId);
-      rafId = requestAnimationFrame(update);
-    };
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // call initially
 
-    update();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-      if (rafId) cancelAnimationFrame(rafId);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
 
   const coreServices = [
     {
@@ -1028,7 +998,7 @@ export default function CompHome() {
                             </Typography>
                           </Link>
                           <Link href={card.link || "#"} className="inline-flex">
-                            <Image src={RoundOrangeRighticon} alt="explore more" />
+                            <Image src={RoundOrangeRighticon} alt="explore more"  />
                           </Link>
                         </Box>
                         <Box className="gray-spacer"></Box>
@@ -1089,14 +1059,25 @@ export default function CompHome() {
             modules={[Mousewheel, Navigation]}
             loop={false}
             navigation
-            speed={800}
             mousewheel={{
-              enabled: true,
+              enabled: false,
               sensitivity: 1,
               releaseOnEdges: true,
             }}
             spaceBetween={24}
             slidesPerView={4.3}
+            onSwiper={(sw) => {
+              // Store swiper and track animation state
+              window.__serviceSwiper = sw;
+              window.__serviceSwiperAnimating = false;
+              if (sw && sw.on) {
+                try {
+                  sw.on('slideChangeTransitionStart', function () { window.__serviceSwiperAnimating = true; });
+                  sw.on('slideChangeTransitionEnd', function () { window.__serviceSwiperAnimating = false; });
+                  sw.on('transitionEnd', function () { window.__serviceSwiperAnimating = false; });
+                } catch (e) { }
+              }
+            }}
             breakpoints={{
               0: { slidesPerView: 1.3 },
               768: { slidesPerView: 2.3 },
@@ -1140,6 +1121,110 @@ export default function CompHome() {
               </SwiperSlide>
             ))}
           </Swiper>
+          {/* Deterministic wheel locking: finish all slides before page scroll (both directions) */}
+          <script dangerouslySetInnerHTML={{
+            __html: `
+            (function(){
+              var LOCK_NONE = null;
+              var LOCK_DOWN = 'down';
+              var LOCK_UP = 'up';
+              var __svcLockDir = LOCK_NONE;   // current locked direction
+              var __svcLastTriggerAt = 0;     // debounce
+              var __svcManual = true;         // we control wheel; keep module disabled
+
+              function isCentered(el){
+                if(!el) return false;
+                var rect = el.getBoundingClientRect();
+                var vpH = window.innerHeight || document.documentElement.clientHeight;
+                var center = vpH / 2;
+                var elCenter = rect.top + rect.height/2;
+                var threshold = Math.max(120, rect.height * 0.15);
+                return Math.abs(elCenter - center) <= threshold;
+              }
+
+              function ensureModuleDisabled(){
+                var sw = window.__serviceSwiper;
+                if(!sw || !sw.params || !sw.params.mousewheel) return;
+                if(sw.params.mousewheel.enabled){
+                  try {
+                    if(sw.mousewheel && sw.mousewheel.disable) sw.mousewheel.disable();
+                  } catch(_){}
+                  sw.params.mousewheel.enabled = false;
+                }
+              }
+
+              function trySlide(goNext){
+                var sw = window.__serviceSwiper;
+                if(!sw) return false;
+                if(window.__serviceSwiperAnimating) return true; // still animating; we consumed the wheel
+                if(goNext){
+                  if(!sw.isEnd){ sw.slideNext(); return true; }
+                  return false;
+                } else {
+                  if(!sw.isBeginning){ sw.slidePrev(); return true; }
+                  return false;
+                }
+              }
+
+              function wheelHandler(e){
+                var sw = window.__serviceSwiper;
+                var container = document.querySelector('.service-swiper');
+                if(!sw || !container) return;
+
+                // only engage when section is centered OR if a lock is already active
+                var centered = isCentered(container);
+                if(!centered && !__svcLockDir) return;
+
+                var dy = e.deltaY || 0;
+                if(dy === 0) return;
+
+                // initialize lock when first wheel while centered
+                if(!__svcLockDir){
+                  __svcLockDir = dy > 0 ? LOCK_DOWN : LOCK_UP;
+                }
+
+                // while locked, prevent page scroll until we reach swiper boundary in the lock direction
+                if(__svcLockDir){
+                  ensureModuleDisabled(); // always keep native mousewheel off for deterministic control
+
+                  var goNext = __svcLockDir === LOCK_DOWN;
+                  var atBoundary = goNext ? sw.isEnd : sw.isBeginning;
+
+                  if(atBoundary){
+                    // release and allow this very wheel event to scroll the page
+                    __svcLockDir = LOCK_NONE;
+                    return; // no preventDefault here so page moves immediately
+                  }
+
+                  // not at boundary → consume the wheel and slide
+                  var now = Date.now();
+                  // Debounce fast wheels/touchpads a bit; allow new trigger only after 120ms if not animating
+                  if(window.__serviceSwiperAnimating && (now - __svcLastTriggerAt < 120)){
+                    e.preventDefault();
+                    return;
+                  }
+
+                  e.preventDefault();
+                  var didSlide = trySlide(goNext);
+                  if(didSlide){
+                    __svcLastTriggerAt = now;
+                  }
+                  return; // keep lock until boundary reached
+                }
+              }
+
+              function onScrollOrResize(){
+                // No-op; we rely on isCentered each wheel. Keep here in case future tweaks needed.
+              }
+
+              // listeners
+              window.addEventListener('wheel', wheelHandler, { passive: false });
+              window.addEventListener('scroll', onScrollOrResize, { passive: true });
+              window.addEventListener('resize', onScrollOrResize, { passive: true });
+              document.addEventListener('DOMContentLoaded', ensureModuleDisabled);
+              setTimeout(ensureModuleDisabled, 200);
+            })();
+          ` }} />
         </Box>
       </motion.section>
 
@@ -1168,12 +1253,76 @@ export default function CompHome() {
           </Box>
 
           <Box className="benefits-wrapper-section">
+            <Grid
+              container
+              spacing={4}
+              alignItems="center"
+              className="sticky-group-main"
+            >
+              <Grid size={{ xs: 4 }}>
+                <Box className="benefits-title-box first">
+                  <Box className="benefits-title-image">
+                    <Image src={UIcon} alt="Uninterrupted" width={70} height={70} />
+                    <Image
+                      src={OrangeCircle}
+                      alt="Uninterrupted"
+                      className="benefits-title-image-bg"
+                    />
+                  </Box>
+                  <Box>
+                    <Typography variant="h3" sx={{ fontWeight: 700 }}>
+                      Uninterrupted
+                    </Typography>
+                  </Box>
+                </Box>
+              </Grid>
+              <Grid size={{ xs: 4 }}>
+                <Box className="benefits-title-box sticky-group2">
+                  <Box className="benefits-title-image">
+                    <Image
+                      src={SOrangeIcon}
+                      alt="Scalable"
+                      width={70}
+                      height={70}
+                    />
+                    <Image
+                      src={BlueCircle}
+                      alt="Scalable"
+                      className="benefits-title-image-bg"
+                    />
+                  </Box>
+                  <Box>
+                    <Typography variant="h3" sx={{ fontWeight: 700 }}>
+                      Scalable
+                    </Typography>
+                  </Box>
+                </Box>
+              </Grid>
+              <Grid size={{ xs: 4 }}>
+                <Box className="benefits-title-box sticky-group3">
+                  <Box className="benefits-title-image">
+                    <Image src={SIcon} alt="Secure" width={70} height={70} />
+                    <Image
+                      src={OrangeCircle}
+                      alt="Secure"
+                      className="benefits-title-image-bg"
+                    />
+                  </Box>
+                  <Box>
+                    <Typography variant="h3" sx={{ fontWeight: 700 }}>
+                      Secure
+                    </Typography>
+                  </Box>
+                </Box>
+              </Grid>
+            </Grid>
 
             <Grid
               container
               spacing={4}
               alignItems="center"
-              className="after-sticky-group1">
+              className="after-sticky-group1"
+            >
               <Grid size={{ xs: 12, sm: 7 }} className="column1">
                 <Box className="main-benefit-box first">
                   <Box
@@ -1200,69 +1349,6 @@ export default function CompHome() {
                         </Typography>
                       </Box>
                     </Box>
-                    <Grid
-                      container
-                      spacing={4}
-                      alignItems="center"
-                      className="sticky-group-main"
-                    >
-                      <Grid size={{ xs: 4 }}>
-                        <Box className="benefits-title-box first">
-                          <Box className="benefits-title-image">
-                            <Image src={UIcon} alt="Uninterrupted" width={70} height={70} />
-                            <Image
-                              src={OrangeCircle}
-                              alt="Uninterrupted"
-                              className="benefits-title-image-bg"
-                            />
-                          </Box>
-                          <Box>
-                            <Typography variant="h3" sx={{ fontWeight: 700 }}>
-                              Uninterrupted
-                            </Typography>
-                          </Box>
-                        </Box>
-                      </Grid>
-                      <Grid size={{ xs: 4 }}>
-                        <Box className="benefits-title-box sticky-group2">
-                          <Box className="benefits-title-image">
-                            <Image
-                              src={SOrangeIcon}
-                              alt="Scalable"
-                              width={70}
-                              height={70}
-                            />
-                            <Image
-                              src={BlueCircle}
-                              alt="Scalable"
-                              className="benefits-title-image-bg"
-                            />
-                          </Box>
-                          <Box>
-                            <Typography variant="h3" sx={{ fontWeight: 700 }}>
-                              Scalable
-                            </Typography>
-                          </Box>
-                        </Box>
-                      </Grid>
-                      <Grid size={{ xs: 4 }}>
-                        <Box className="benefits-title-box sticky-group3">
-                          <Box className="benefits-title-image">
-                            <Image src={SIcon} alt="Secure" width={70} height={70} />
-                            <Image
-                              src={OrangeCircle}
-                              alt="Secure"
-                              className="benefits-title-image-bg"
-                            />
-                          </Box>
-                          <Box>
-                            <Typography variant="h3" sx={{ fontWeight: 700 }}>
-                              Secure
-                            </Typography>
-                          </Box>
-                        </Box>
-                      </Grid>
-                    </Grid>
                     <Box className="paragraph">
                       <Typography variant="body1" sx={{ mb: 2 }}>
                         We keep your projects running smoothly with clear
@@ -1683,136 +1769,6 @@ export default function CompHome() {
       {/* Journey Section */}
       <Ussjourneysection />
 
-      {/* wheel Section */}
-      <Box component="section" className="wheel-section" id="wheel-cases">
-        <Box className="wheel-wrap">
-
-          <Box className="wheel-left">
-            <Box className="wheel-text-wrapper" id="wheel-textWrapper">
-
-              {stageData.map((item, i) => (
-                <Box
-                  className="wheel-text" key={i}>
-                  <Box className="wheel-image" >
-                    <Image src={item.mainimage} alt="wheel-2" />
-                  </Box>
-                  <Box className="heading-content">
-                    <Typography
-                      variant="h2"
-                      sx={{ my: 2, fontWeight: 700 }}
-                    >
-                      <span className="primary-color">
-                        {item.title}
-                        <span className="span-text">
-                          <div className="line-container">
-                            <div className="line-wrapper"></div>
-                            <div className="line"></div>
-                            <div className="moving-box"></div>
-                          </div>
-                        </span>
-                      </span>
-                    </Typography>
-                  </Box>
-
-                  <Box className="cases-cards-left-item-text-wrap">
-                    {item.techtext && (
-                      <Typography className="cases-cards-left-item-text text-white">
-                        {item.techtext}
-                      </Typography>
-                    )}
-
-                    {((item.techimages && item.techimages.length) || item.techimage1 || item.techimage2) && (
-                      <Box
-                        className="tech-icons"
-                        sx={{ display: "flex", gap: 2, mt: 1 }}
-                      >
-                        {(item.techimages && item.techimages.length ? item.techimages : [item.techimage1, item.techimage2])
-                          .filter(Boolean)
-                          .map((img, idx) => (
-                            <Image
-                              key={idx}
-                              src={img}
-                              alt={`techicon-${idx}`}
-                              width={32}
-                              height={32}
-                            />
-                          ))}
-                      </Box>
-                    )}
-
-                    {item.desc2 && (
-                      <Typography
-                        className="cases-cards-left-item-text text-white"
-                        sx={{ mt: 2 }}
-                      >
-                        <span className="text-color-white">
-                          {item.desc2}
-                        </span>
-                      </Typography>
-                    )}
-                  </Box>
-                </Box>
-              ))}
-
-              {/* <Box className="wheel-text wheel-content1">
-                <h2>UX Design</h2>
-                <p>Flow & experience definition.</p>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-              </Box>
-
-              <Box className="wheel-text wheel-content2">
-                <h2>UI Design</h2>
-                <p>Visual language & polish.</p>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-              </Box>
-
-              <Box className="wheel-text wheel-content3">
-                <h2>Development</h2>
-                <p>Scalable tech execution.</p>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-              </Box> */}
-
-            </Box>
-          </Box>
-
-          <Box className="wheel-right">
-            <Box className="wheel-ellipse" id="wheel-ellipse">
-
-              <Box className="wheel-card wheel-active wheel-d-none-card">
-                <Image src={Wheel1} alt="wheel-1" />
-              </Box>
-
-              <Box className="wheel-card">
-                <Image src={Wheel1} alt="wheel-2" />
-              </Box>
-
-              <Box className="wheel-card">
-                <Image src={Wheel2} alt="wheel-3" />
-              </Box>
-
-              <Box className="wheel-card">
-                <Image src={Wheel3} alt="wheel-4" />
-              </Box>
-
-              <Box className="wheel-card wheel-d-none-card">
-                <Image src={Wheel3} alt="wheel-5" />
-              </Box>
-
-            </Box>
-          </Box>
-
-        </Box>
-        <Container
-          className="custom-container"
-          maxWidth="lg">
-          <Box className="heading-content" sx={{ mb: { sm: 0, lg: 9 }, mt: { sm: 3, lg: 0 }, position: "relative", zIndex: 99 }}>
-            <Link href="/casestudies" variant="contained" className="main-primary-btn">
-              View All
-            </Link>
-          </Box>
-        </Container>
-      </Box >
-
       {/* <Box
         sx={{ py: { xs: 3, md: 4, lg: 5 } }} className="journey-main-wrapper"
       // ref={sectionRef}
@@ -1921,6 +1877,198 @@ export default function CompHome() {
         )}
       </Box> */}
 
+      {/* products Section */}
+      {/* ---------------- Desktop Section ---------------- */}
+      {/* <Box
+        component="section"
+        className="section is-cases-new show-desktop"
+        section-color="black"
+      >
+        <Box className="height-cases">
+          <Box className="cases-sticky-wrap">
+            <Box className="cards-cases">
+              <Box className="cards-cases-left">
+                <Box className="cards-cases-left-wrap">
+                  {stageData.map((item, i) => (
+                    <Box
+                      className={`cases-cards-left-item ${i === 0 ? "first" : ""
+                        }`}
+                      key={i}
+                      ref={(el) => (itemsRef.current[i] = el)} // Attach refs
+                    >
+                      <Box className="heading-content">
+                        <Typography
+                          variant="h2"
+                          sx={{ my: 2, fontWeight: 700 }}
+                        >
+                          <span className="primary-color">
+                            {item.title}
+                            <span className="span-text">
+                              <div className="line-container">
+                                <div className="line-wrapper"></div>
+                                <div className="line"></div>
+                                <div className="moving-box"></div>
+                              </div>
+                            </span>
+                          </span>
+                        </Typography>
+                      </Box>
+
+                      <Box className="cases-cards-left-item-text-wrap">
+                        {item.techtext && (
+                          <Typography className="cases-cards-left-item-text text-white">
+                            {item.techtext}
+                          </Typography>
+                        )}
+
+                        {(item.techimage1 || item.techimage2) && (
+                          <Box
+                            className="tech-icons"
+                            sx={{ display: "flex", gap: 2, mt: 1 }}
+                          >
+                            {item.techimage1 && (
+                              <Image
+                                src={item.techimage1}
+                                alt="techimage1"
+                                width={32}
+                                height={32}
+                              />
+                            )}
+                            {item.techimage2 && (
+                              <Image
+                                src={item.techimage2}
+                                alt="techimage2"
+                                width={32}
+                                height={32}
+                              />
+                            )}
+                          </Box>
+                        )}
+
+                        {item.desc2 && (
+                          <Typography
+                            className="cases-cards-left-item-text text-white"
+                            sx={{ mt: 2 }}
+                          >
+                            <span className="text-color-white">
+                              {item.desc2}
+                            </span>
+                          </Typography>
+                        )}
+                      </Box>
+                    </Box>
+                  ))}
+                </Box>
+                <Box className="top-gradient"></Box>
+                <Box className="top-gradient-copy"></Box>
+              </Box>
+
+              <Box className="cards-cases-right">
+                <Box className="rotate-cards-flexbox-2">
+                  <Box className="rotate-ellipse-2" ref={ellipseRef}>
+                    {stageData.map((item, idx) => (
+                      <Box
+                        className={`rotate-card-2 card-${idx + 2}`}
+                        key={idx}
+                      >
+                        <img
+                          src={item.image}
+                          alt=""
+                          className={`case-rotate-img set-${idx}`}
+                          loading="lazy"
+                        />
+                      </Box>
+                    ))}
+                  </Box>
+                </Box>
+              </Box>
+            </Box>
+          </Box>
+
+        </Box>
+      </Box> */}
+
+      {/* ---------------- Mobile Section ---------------- */}
+      {/* <Box
+        component="section"
+        className="section is-cases-mobile show-mobile"
+        section-color="black"
+      >
+        <Box className="cards-cases-mobile">
+          {stageData.map((item, idx) => (
+            <Box className="mobile-item" key={idx}>
+              <Box className="mobile-img-wrap">
+                <img
+                  src={item.image}
+                  alt=""
+                  className="case-rotate-img"
+                  loading="lazy"
+                />
+              </Box>
+              <Box className="cases-cards-left-item-text-wrap">
+                <Box className="heading-content">
+                  <Typography variant="h2" sx={{ my: 2, fontWeight: 700 }}>
+                    <span className="primary-color">
+                      {item.title}
+                      <span className="span-text">
+                        <div className="line-container">
+                          <div className="line-wrapper"></div>
+                          <div className="line"></div>
+                          <div className="moving-box"></div>
+                        </div>
+                      </span>
+                    </span>
+                  </Typography>
+                </Box>
+
+                {item.techtext && (
+                  <Typography className="cases-cards-left-item-text text-white">
+                    {item.techtext}
+                  </Typography>
+                )}
+
+                {(item.techimage1 || item.techimage2) && (
+                  <Box
+                    className="tech-icons"
+                    sx={{ display: "flex", gap: 2, mt: 1 }}
+                  >
+                    {item.techimage1 && (
+                      <Image
+                        src={item.techimage1}
+                        alt="techimage1"
+                        width={32}
+                        height={32}
+                      />
+                    )}
+                    {item.techimage2 && (
+                      <Image
+                        src={item.techimage2}
+                        alt="techimage2"
+                        width={32}
+                        height={32}
+                      />
+                    )}
+                  </Box>
+                )}
+
+                {item.desc2 && (
+                  <Typography
+                    className="cases-cards-left-item-text text-white"
+                    sx={{ mt: 2 }}
+                  >
+                    <span className="text-color-white">{item.desc2}</span>
+                  </Typography>
+                )}
+              </Box>
+            </Box>
+          ))}
+          <Box className="heading-content">
+            <Button variant="contained" className="main-primary-btn">
+              View All
+            </Button>
+          </Box>
+        </Box>
+      </Box> */}
 
       {/* testimonials Section */}
       <motion.section {...fadeInUp}>
