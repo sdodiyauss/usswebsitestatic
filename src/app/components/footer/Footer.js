@@ -524,7 +524,7 @@ const Footer = () => {
                 <Grid size={{ xs: 12, md: 6 }}>
                   <Box className="copyright-text">
                     <Typography variant="p">
-                      © Copyright 2025 USS Pvt Ltd. All rights reserved.
+                      © Copyright 2026 USS Pvt Ltd. All rights reserved.
                     </Typography>
                   </Box>
                 </Grid>
