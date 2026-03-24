@@ -4946,7 +4946,10 @@ text {
 }
 
 .modal-header .modal-info-row {
-  width: 65%;
+  /* width: 65%; */
+  width: 100%;
+  justify-content: unset;
+  gap: 15px;
 }
 
 .job-modal-box-wrapper .modal-close-icon img,
@@ -8625,7 +8628,7 @@ text {
   }
 
   .modal-header .modal-info-row {
-    width: 85%;
+    width: 100%;
   }
 
   .impact-column {

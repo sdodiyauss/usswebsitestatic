@@ -22,6 +22,9 @@ import CloseIcon from "@/close-vector.svg?url";
 
 import MicrosoftDOTNETIcon from "@/microsoftdotnet.svg?url";
 import hrIcon from "@/hr.svg?url";
+import MernstackDeveloperIcon from "@/mernstackdeveloper.png";
+import SoftwareTesterIcon from "@/softwaretester.png";
+
 
 import HalfBlue from "@/half-blue-circle.svg?url";
 import HalfOrange from "@/half-orange-circle.svg?url";
@@ -63,28 +66,28 @@ import Urja from "@/uss-employee/urja.webp";
 
 export const jobData = [
     {
-        title: "Jr. Dot Net Developer",
+        title: "DotNet Developer (Core & MVC)",
         logo: MicrosoftDOTNETIcon,
         alt: ".NET",
         position: "01 Position",
-        experience: "1+ years",
+        experience: "Minimum 3 Years",
         location: "Ahmedabad",
-        aboutRole: "We are looking for a motivated Jr. .NET Developer to join our dynamic development team. You will work on designing, developing, and maintaining web and desktop applications using the .NET framework. This is an excellent opportunity for a passionate developer to grow their career in a collaborative environment.",
+        aboutRole: "We are looking for an experienced DotNet Developer who can independently handle development tasks and contribute to building robust, scalable applications. The ideal candidate should be comfortable working on production-level projects.",
         responsibilities: [
-            "Develop, test, and maintain web and desktop applications using C#, ASP.NET, and .NET Core.",
-            "Collaborate with senior developers, project managers, and QA teams to deliver high-quality software solutions.",
-            "Troubleshoot, debug, and resolve application issues in a timely manner.",
-            "Participate in code reviews and contribute to team knowledge sharing.",
-            "Assist in documentation of technical specifications and user manuals.",
-            "Stay up-to-date with emerging .NET technologies and best practices."
+            "Develop and maintain web applications using .NET Core and MVC",
+            "Handle end-to-end feature development with minimal supervision",
+            "Optimize application performance and fix bugs",
+            "Work closely with team members on project delivery",
+            "Integrate APIs and manage database operations",
+            "Ensure code quality and best practices"
         ],
         requiredSkills: [
-            "1+ years of experience in .NET development (ASP.NET, .NET Core, C#).",
-            "Basic knowledge of SQL Server, database design, and querying.",
-            "Familiarity with HTML, CSS, JavaScript, and front-end frameworks is a plus.",
-            "Understanding of OOP concepts, design patterns, and software development lifecycle.",
-            "Strong problem-solving skills and attention to detail.",
-            "Ability to work independently and collaboratively in a team environment.",
+            "3+ years of hands-on experience in .NET Core & MVC",
+            "Strong knowledge of C#, ASP.NET, Web API",
+            "Experience with SQL Server",
+            "Basic understanding of frontend technologies",
+            "Familiarity with Git/version control",
+            "Good problem-solving and debugging skills",
         ]
     },
     {
@@ -110,6 +113,52 @@ export const jobData = [
             "Strong organizational and multitasking abilities.",
             "Detail-oriented with problem-solving and teamwork skills.",
             "Proficiency in MS Office tools (Word, Excel, PowerPoint).",
+        ]
+    },
+    {
+        title: "React, NodeJS & NextJS Developer",
+        logo: MernstackDeveloperIcon,
+        alt: "React, NodeJS & NextJS",
+        position: "01 Position",
+        experience: "Minimum 1 Year",
+        location: "Ahmedabad",
+        aboutRole: "We are looking for a junior to mid-level developer with at least 1 year of hands-on experience in modern JavaScript frameworks to support ongoing development projects.",
+        responsibilities: [
+            "Build UI components using React.js",
+            "Assist in backend development using Node.js",
+            "Work with Next.js for basic implementations",
+            "Fix bugs and support feature enhancements",
+            "Collaborate with senior developers and designers"
+        ],
+        requiredSkills: [
+            "Minimum 1 year experience in React and Node.js",
+            "Basic understanding of Next.js",
+            "Knowledge of JavaScript, APIs, and database basics",
+            "Familiarity with Git",
+            "Willingness to learn and grow"
+        ]
+    },
+    {
+        title: "Software Tester",
+        logo: SoftwareTesterIcon,
+        alt: "QA",
+        position: "01 Position",
+        experience: "Minimum 1 Year",
+        location: "Ahmedabad",
+        aboutRole: "We are looking for a Software Tester with at least 1 year of experience who can handle testing tasks and ensure application quality.",
+        responsibilities: [
+            "Perform manual testing of applications",
+            "Identify and report bugs clearly",
+            "Execute test cases and scenarios",
+            "Work with developers to resolve issues",
+            "Support regression testing"
+        ],
+        requiredSkills: [
+            "Minimum 1 year experience in software testing",
+            "Understanding of testing concepts and SDLC",
+            "Attention to detail",
+            "Basic knowledge of bug tracking tools",
+            "Good communication skills"
         ]
     }
 ];

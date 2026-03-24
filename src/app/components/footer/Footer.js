@@ -128,7 +128,7 @@ const Footer = () => {
                         Universal Stream Solution Pvt. Ltd.
                       </Typography>
                       <Typography variant="body1">
-                        712/713, Shaligram Arcade, Ambali T Junction, Vakil Bridge, Bopal, Ahmedabad, Gujarat - 380058
+                        712-713-714, Shaligram Arcade, Ambali T Junction, Vakil Bridge, Bopal, Ahmedabad, Gujarat - 380058
                       </Typography>
                       <Link href="tel:+919638225579" sx={{ textDecoration: "none" }}>
                         <Typography variant="h5">
