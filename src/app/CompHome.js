@@ -1684,7 +1684,7 @@ export default function CompHome() {
       <Ussjourneysection />
 
       {/* wheel Section */}
-      <Box component="section" className="wheel-section" id="wheel-cases">
+      {/*<Box component="section" className="wheel-section" id="wheel-cases">
         <Box className="wheel-wrap">
 
           <Box className="wheel-left">
@@ -1754,7 +1754,7 @@ export default function CompHome() {
                 </Box>
               ))}
 
-              {/* <Box className="wheel-text wheel-content1">
+               <Box className="wheel-text wheel-content1">
                 <h2>UX Design</h2>
                 <p>Flow & experience definition.</p>
                 <p>Lorem ipsum dolor sit amet consectetur.</p>
@@ -1770,7 +1770,7 @@ export default function CompHome() {
                 <h2>Development</h2>
                 <p>Scalable tech execution.</p>
                 <p>Lorem ipsum dolor sit amet consectetur.</p>
-              </Box> */}
+              </Box> 
 
             </Box>
           </Box>
@@ -1812,6 +1812,7 @@ export default function CompHome() {
           </Box>
         </Container>
       </Box >
+      */}
 
       {/* <Box
         sx={{ py: { xs: 3, md: 4, lg: 5 } }} className="journey-main-wrapper"

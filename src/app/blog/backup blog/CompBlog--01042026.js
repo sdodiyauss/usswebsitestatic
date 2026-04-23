@@ -63,13 +63,6 @@ import Blog30 from "@/blog-future-are-changing-prescriptions.webp";
 import Blog31 from "@/blog-save-money-on-expensive-medi.webp";
 import Blog32 from "@/blog-software-for-growing-business.webp";
 import Blog33 from "@/blog-buy-vs-build-software.webp";
-import Blog34 from "@/blog-industry-skill-expert.webp";
-import Blog35 from "@/blog-swiftui-for-modern-apple-platforms.webp";
-import Blog36 from "@/blog-ehr-interoperability.webp";
-import Blog37 from "@/blog-full-stack-development.webp";
-import Blog38 from "@/blog-transparency-or-overexposure.webp";
-import Blog39 from "@/blog-dot-net-maui-ideal-choice.webp";
-
 import CircleType from "circletype";
 import minitsCircle from "~/minitsCircle.json";
 import Lottie from "lottie-react";
@@ -95,7 +88,6 @@ const CompBlog = () => {
   //tab
   const [activeTab, setActiveTab] = useState("All");
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [visiblePosts, setVisiblePosts] = useState(6);
 
   const handleTabChange = (event, newValue) => {
     setActiveTab(newValue);
@@ -239,12 +231,6 @@ const CompBlog = () => {
       { id: "p35", title: "How to Save on Expensive Medications with Online Prescription Assistance ", excerpt: "Healthcare costs continue to rise globally, and one of the biggest financial burdens for patients is the cost of prescription medications. Many individuals struggle to afford the treatments they need, especially those managing chronic conditions that require long-term medication. Fortunately, online...",   author: "Kinjal Vaghasiya", date: "March 16th, 2026", readTime: "6 min read", category: "Business Strategy", image: Blog31, avatarImage: "/images/written-by-kinjal.webp", featured: false, url: "/blog/save-money-on-expensive-medications-online-prescription-assistance"},
       { id: "p36", title: "Custom vs Off-the-Shelf Software: What Growing Businesses Should Choose", excerpt: "In today’s competitive and technology-driven business environment, software is no longer just a support tool—it has become the backbone of operations, decision-making, and customer experience. Whether it’s managing internal...", author: "Bharat Katariya", date: "March 19th, 2026", readTime: "6 min read", category: "Web Development", image: Blog32, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/custom-vs-off-the-shelf-software-for-growing-businesses" },
       { id: "p37", title: "Buying vs Building Software: What Smart Businesses Are Doing Today ", excerpt: "The rise of digital transformation has completely reshaped how businesses evaluate software decisions. Earlier, software was seen as a support tool. Today, it defines customer experience, operational efficiency, and even revenue generation. Modern businesses are no longer...", author: "Jignesh Vaghasiya", date: "March 26th, 2026", readTime: "6 min read", category: "Business Strategy", image: Blog33, avatarImage: "/images/written-by-jignesh.webp", featured: false, url: "/blog/buy-vs-build-software-guide" },
-      { id: "p38", title: "10 Essential Skills Every Industry Expert Must Master in 2026", excerpt: "The expectations from industry experts have shifted dramatically over the past few years. Earlier, deep knowledge in a single domain was enough to establish authority. Today, however, expertise is judged by how well you can integrate knowledge, technology, and strategy to create real-world impact. In 2026...", author: "Bharat Katariya", date: "April 1st, 2026", readTime: "6 min read", category: "Web Development", image: Blog34, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/essential-skills-industry-experts-2026" },
-      { id: "p39", title: "Why Swift UI Is the Standard for Modern Apple Platforms in 2026", excerpt: "The Apple ecosystem has undergone a massive transformation over the past few years, and in 2026, the expectations from applications are higher than ever. Users demand speed, seamless navigation, visually rich interfaces, and consistent experiences across devices. To meet these expectations, developers and businesses...", author: "Raj Shah", date: "April 6th, 2026", readTime: "6 min read", category: "Mobile App Development", image: Blog35, avatarImage: "/images/written-by-raj.webp", featured: false, url: "/blog/swiftui-modern-apple-app-development-2026" },
-      { id: "p40", title: "Why Hospitals Still Struggle With EHR Interoperability", excerpt: "Electronic Health Records (EHRs) were introduced with the promise of creating a seamless, connected healthcare ecosystem where patient data could move effortlessly across providers, departments, and even countries. However, despite rapid digital transformation in healthcare, EHR interoperability remains...",   author: "Kinjal Vaghasiya", date: "April 10th, 2026", readTime: "6 min read", category: "Business Strategy", image: Blog36, avatarImage: "/images/written-by-kinjal.webp", featured: false, url: "/blog/ehr-interoperability-challenges-solutions-healthcare"},
-      { id: "p41", title: "From Frontend to Backend: How Full Stack Development Bridges Business and Technology ", excerpt: "In today’s fast-evolving digital landscape, businesses are no longer just supported by technology—they are built on it. From customer-facing applications to internal operational systems, every digital product represents a direct connection...", author: "Arzeb Mansuri", date: "April 14th, 2026", readTime: "6 min read", category: "Web Development", image: Blog37, avatarImage: "/images/blog-avtar-arzeb.webp", featured: false, url: "/blog/frontend-to-backend-full-stack-development" },
-       { id: "p42", title: "Transparency or Overexposure? Redefining Trust in Modern Workplaces", excerpt: "In modern workplaces, trust is no longer built only through policies, leadership behavior, or performance outcomes. It is increasingly shaped by how information flows inside an organization. Companies today are more connected, more digital...", author: "Jignesh Vaghasiya", date: "April 17th, 2026", readTime: "6 min read", category: "Business Strategy", image: Blog38, avatarImage: "/images/written-by-jignesh.webp", featured: false, url: "/blog/transparency-vs-overexposure-organizational-culture-business-growth"  },
-       { id: "p43", title: "Why .NET MAUI is the Ideal Choice for Cross-Platform Enterprise Apps", excerpt: "In today’s digital-first enterprise environment, organizations are expected to deliver seamless application experiences across multiple devices while maintaining speed, security, and scalability. Whether it’s a healthcare dashboard used by doctors, a logistics tracking app for field agents, or a financial reporting system for executives...", author: "Bharat Katariya", date: "April 23rd, 2026", readTime: "6 min read", category: "Web Development", image: Blog39, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/net-maui-enterprise-app-development" },
   ];
 
 
@@ -356,60 +342,48 @@ const CompBlog = () => {
   };
 
   const renderExploreMore = () => {
-    const explorePosts = posts.slice(0, visiblePosts);
+    // const explorePosts = posts.filter((p) => !p.featured).slice(0, 9);
+    // if (!explorePosts.length) return null;
 
     return (
-      <>
-        <Grid container spacing={4}>
-          {explorePosts.map((post) => (
-            <Grid key={`explore-${post.id}`} size={{ xs: 12, sm: 6, md: 4 }}>
-              <Card className="blog-card" elevation={0}>
-                <CardMedia className="blog-card-image">
-                  <Image src={post.image} alt={post.title} />
-                </CardMedia>
+      <Grid container spacing={4}>
+        {posts.map((post) => (
+          <Grid key={`explore-${post.id}`} size={{ xs: 12, sm: 6, md: 4 }}>
+            <Card className="blog-card" elevation={0}>
+              <CardMedia className="blog-card-image">
+                <Image src={post.image} alt={post.title} />
+              </CardMedia>
 
-                <CardContent className="blog-card-content">
-                  <Chip label={post.category} size="small" className="blog-card-chip" />
+              <CardContent className="blog-card-content">
+                <Chip label={post.category} size="small" className="blog-card-chip" />
 
-                  <Box className="blog-card-title-row">
-                    <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
-                      {post.title}
-                    </Typography>
-                    <Image src={BtnIcon} alt="btn-icon" />
-                  </Box>
+                <Box className="blog-card-title-row">
+                  <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
+                    {post.title}
+                  </Typography>
+                  <Image src={BtnIcon} alt="btn-icon" />
+                </Box>
 
-                  <Box className="blog-card-meta">
-                    <Box className="avtar-box">
-                      <Avatar
-                        alt={post.author}
-                        src={post.avatarImage || post.avtarimage || "/images/blog-avtar-hitesh.webp"}
-                        className="blog-card-avatar"
-                      />
-                      <Typography variant="caption" className="blog-card-author">
-                        {post.author}
-                      </Typography>
-                    </Box>
-                    <Typography variant="caption" className="blog-card-date">
-                      {post.date} | {post.readTime}
+                <Box className="blog-card-meta">
+                  <Box className="avtar-box">
+                    <Avatar
+                      alt={post.author}
+                      src={post.avatarImage || post.avtarimage || "/images/blog-avtar-hitesh.webp"}
+                      className="blog-card-avatar"
+                    />
+                    <Typography variant="caption" className="blog-card-author">
+                      {post.author}
                     </Typography>
                   </Box>
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-        {visiblePosts < posts.length && (
-          <Grid container spacing={4} mt={4} justifyContent={'center'}>
-            <Grid size={{ xs: 12, sm: 6, md: 4 }}>
-              <Box className="heading-content text-center">
-                <Button variant="contained" className="main-primary-btn" onClick={() => setVisiblePosts(prev => prev + 6)}>
-                  Load more
-                </Button>
-              </Box>
-            </Grid>
+                  <Typography variant="caption" className="blog-card-date">
+                    {post.date} | {post.readTime}
+                  </Typography>
+                </Box>
+              </CardContent>
+            </Card>
           </Grid>
-        )}
-      </>
+        ))}
+      </Grid>
     );
   };
 
@@ -554,6 +528,16 @@ const CompBlog = () => {
             </Box>
 
             {renderExploreMore()}
+
+            {/* <Grid container spacing={4} mt={4} justifyContent={'center'}>
+              <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+                <Box className="heading-content text-center">
+                  <Button variant="contained" className="main-primary-btn">
+                    Load more
+                  </Button>
+                </Box>
+              </Grid>
+            </Grid> */}
           </Container>
         </Box>
       </motion.section>

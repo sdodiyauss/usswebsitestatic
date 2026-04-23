@@ -68,7 +68,6 @@ import Blog35 from "@/blog-swiftui-for-modern-apple-platforms.webp";
 import Blog36 from "@/blog-ehr-interoperability.webp";
 import Blog37 from "@/blog-full-stack-development.webp";
 import Blog38 from "@/blog-transparency-or-overexposure.webp";
-import Blog39 from "@/blog-dot-net-maui-ideal-choice.webp";
 
 import CircleType from "circletype";
 import minitsCircle from "~/minitsCircle.json";
@@ -244,7 +243,6 @@ const CompBlog = () => {
       { id: "p40", title: "Why Hospitals Still Struggle With EHR Interoperability", excerpt: "Electronic Health Records (EHRs) were introduced with the promise of creating a seamless, connected healthcare ecosystem where patient data could move effortlessly across providers, departments, and even countries. However, despite rapid digital transformation in healthcare, EHR interoperability remains...",   author: "Kinjal Vaghasiya", date: "April 10th, 2026", readTime: "6 min read", category: "Business Strategy", image: Blog36, avatarImage: "/images/written-by-kinjal.webp", featured: false, url: "/blog/ehr-interoperability-challenges-solutions-healthcare"},
       { id: "p41", title: "From Frontend to Backend: How Full Stack Development Bridges Business and Technology ", excerpt: "In today’s fast-evolving digital landscape, businesses are no longer just supported by technology—they are built on it. From customer-facing applications to internal operational systems, every digital product represents a direct connection...", author: "Arzeb Mansuri", date: "April 14th, 2026", readTime: "6 min read", category: "Web Development", image: Blog37, avatarImage: "/images/blog-avtar-arzeb.webp", featured: false, url: "/blog/frontend-to-backend-full-stack-development" },
        { id: "p42", title: "Transparency or Overexposure? Redefining Trust in Modern Workplaces", excerpt: "In modern workplaces, trust is no longer built only through policies, leadership behavior, or performance outcomes. It is increasingly shaped by how information flows inside an organization. Companies today are more connected, more digital...", author: "Jignesh Vaghasiya", date: "April 17th, 2026", readTime: "6 min read", category: "Business Strategy", image: Blog38, avatarImage: "/images/written-by-jignesh.webp", featured: false, url: "/blog/transparency-vs-overexposure-organizational-culture-business-growth"  },
-       { id: "p43", title: "Why .NET MAUI is the Ideal Choice for Cross-Platform Enterprise Apps", excerpt: "In today’s digital-first enterprise environment, organizations are expected to deliver seamless application experiences across multiple devices while maintaining speed, security, and scalability. Whether it’s a healthcare dashboard used by doctors, a logistics tracking app for field agents, or a financial reporting system for executives...", author: "Bharat Katariya", date: "April 23rd, 2026", readTime: "6 min read", category: "Web Development", image: Blog39, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/net-maui-enterprise-app-development" },
   ];
 
 
