@@ -47,6 +47,7 @@ const Contact = () => {
 
   const nameRegex = /^[A-Za-z][A-Za-z\s'-]{1,49}$/;
   const emailRegex = /^[A-Za-z][\w.!#$%&'*+/=?^`{|}~-]*@[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?(?:\.[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?)+$/;
+  const ABOUT_PROJECT_MAX_CHARS = 2000;
 
   const validate = (field, value) => {
     switch (field) {
@@ -79,6 +80,9 @@ const Contact = () => {
       case 'aboutProject':
         if (!value.trim()) return 'Project details are required';
         if (value.trim().length < 10) return 'Please provide at least 10 characters';
+        if (value.length > ABOUT_PROJECT_MAX_CHARS) {
+          return `Project details must not exceed ${ABOUT_PROJECT_MAX_CHARS.toLocaleString()} characters`;
+        }
         return '';
       // case 'captcha':
       //   if (!value) return 'Please complete the reCAPTCHA verification';
@@ -329,7 +333,7 @@ const Contact = () => {
                       setAboutProject(e.target.value);
                       setErrors((prev) => ({ ...prev, aboutProject: validate('aboutProject', e.target.value) }));
                     }}
-                    className="custom-input"
+                    className="custom-input text-area-input"
                     error={!!errors.aboutProject}
                     helperText={errors.aboutProject}
                   />

@@ -7185,7 +7185,10 @@ text {
 .call-to-action-innerbox .heading-content{
     width: 70%;
 }
-
+.text-area-input textarea{
+  max-height: 300px!important;
+  overflow-y: auto!important;
+}
 
 
 /* media query max */

@@ -40,7 +40,7 @@ const Contactformsecond = () => {
 
   const nameRegex = /^[A-Za-z][A-Za-z\s'-]{1,49}$/;
   const emailRegex = /^[A-Za-z][\w.!#$%&'*+/=?^`{|}~-]*@[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?(?:\.[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?)+$/;
-
+  const DESCRIPTION_MAX_CHARS = 2000;
   const validate = (field, value) => {
     switch (field) {
       case "FirstName":
@@ -66,6 +66,10 @@ const Contactformsecond = () => {
         return "";
       case "Description":
         if (!value.trim()) return "Description is required";
+        if (value.trim().length < 10) return "Please provide at least 10 characters";
+        if (value.length > DESCRIPTION_MAX_CHARS) {
+          return `Description must not exceed ${DESCRIPTION_MAX_CHARS.toLocaleString()} characters`;
+        }
         return "";
       // case "captcha":
       //   if (!value) return "Please complete the reCAPTCHA verification";
@@ -304,7 +308,7 @@ const Contactformsecond = () => {
                         Description: validate("Description", e.target.value),
                       }));
                     }}
-                    className="custom-input"
+                    className="custom-input text-area-input"
                     error={!!errors.Description}
                     helperText={errors.Description}
                   />

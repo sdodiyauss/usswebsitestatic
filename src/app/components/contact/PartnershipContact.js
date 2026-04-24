@@ -46,7 +46,7 @@ const PartnershipContact = () => {
 
   const nameRegex = /^[A-Za-z][A-Za-z\s'-]{1,49}$/;
   const emailRegex = /^[A-Za-z][\w.!#$%&'*+/=?^`{|}~-]*@[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?(?:\.[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?)+$/;
-
+  const MESSAGE_MAX_CHARS = 2000;
   const validate = (field, value) => {
     switch (field) {
       case 'firstName':
@@ -77,6 +77,9 @@ const PartnershipContact = () => {
       case 'message':
         if (!value.trim()) return 'Message is required';
         if (value.trim().length < 10) return 'Please provide at least 10 characters';
+        if (value.length > MESSAGE_MAX_CHARS) {
+          return `Message must not exceed ${MESSAGE_MAX_CHARS.toLocaleString()} characters`;
+        } 
         return '';
       // case 'captcha':
       //   if (!value) return 'Please complete the reCAPTCHA verification';
@@ -322,7 +325,7 @@ const PartnershipContact = () => {
                       setMessage(e.target.value);
                       setErrors((prev) => ({ ...prev, message: validate('message', e.target.value) }));
                     }}
-                    className="custom-input"
+                    className="custom-input text-area-input"
                     error={!!errors.message}
                     helperText={errors.message}
                   />
