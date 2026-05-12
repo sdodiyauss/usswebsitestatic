@@ -47,7 +47,8 @@ const Contact = () => {
 
   const nameRegex = /^[A-Za-z][A-Za-z\s'-]{1,49}$/;
   const emailRegex = /^[A-Za-z][\w.!#$%&'*+/=?^`{|}~-]*@[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?(?:\.[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?)+$/;
-  const ABOUT_PROJECT_MAX_CHARS = 2000;
+  const ABOUT_PROJECT_MAX_CHARS = 30000;
+  const SUBJECT_MAX_CHARS = 100;
 
   const validate = (field, value) => {
     switch (field) {
@@ -73,6 +74,7 @@ const Contact = () => {
       case 'subject':
         if (!value.trim()) return 'Subject is required';
         if (value.trim().length < 3) return 'Subject must be at least 3 characters';
+        if (value.length > SUBJECT_MAX_CHARS) return `Subject must not exceed ${SUBJECT_MAX_CHARS} characters`;
         return '';
       case 'projectStatus':
         if (!value) return 'Please select a project status';

@@ -138,29 +138,29 @@ export const jobData = [
             "Willingness to learn and grow"
         ]
     },
-    {
-        title: "Software Tester",
-        logo: SoftwareTesterIcon,
-        alt: "QA",
-        position: "01 Position",
-        experience: "Minimum 1 Year",
-        location: "Ahmedabad",
-        aboutRole: "We are looking for a Software Tester with at least 1 year of experience who can handle testing tasks and ensure application quality.",
-        responsibilities: [
-            "Perform manual testing of applications",
-            "Identify and report bugs clearly",
-            "Execute test cases and scenarios",
-            "Work with developers to resolve issues",
-            "Support regression testing"
-        ],
-        requiredSkills: [
-            "Minimum 1 year experience in software testing",
-            "Understanding of testing concepts and SDLC",
-            "Attention to detail",
-            "Basic knowledge of bug tracking tools",
-            "Good communication skills"
-        ]
-    }
+    // {
+    //     title: "Software Tester",
+    //     logo: SoftwareTesterIcon,
+    //     alt: "QA",
+    //     position: "01 Position",
+    //     experience: "Minimum 1 Year",
+    //     location: "Ahmedabad",
+    //     aboutRole: "We are looking for a Software Tester with at least 1 year of experience who can handle testing tasks and ensure application quality.",
+    //     responsibilities: [
+    //         "Perform manual testing of applications",
+    //         "Identify and report bugs clearly",
+    //         "Execute test cases and scenarios",
+    //         "Work with developers to resolve issues",
+    //         "Support regression testing"
+    //     ],
+    //     requiredSkills: [
+    //         "Minimum 1 year experience in software testing",
+    //         "Understanding of testing concepts and SDLC",
+    //         "Attention to detail",
+    //         "Basic knowledge of bug tracking tools",
+    //         "Good communication skills"
+    //     ]
+    // }
 ];
 
 export const teamDescriptions = {

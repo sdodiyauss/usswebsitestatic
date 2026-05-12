@@ -47,6 +47,7 @@ const PartnershipContact = () => {
   const nameRegex = /^[A-Za-z][A-Za-z\s'-]{1,49}$/;
   const emailRegex = /^[A-Za-z][\w.!#$%&'*+/=?^`{|}~-]*@[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?(?:\.[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?)+$/;
   const MESSAGE_MAX_CHARS = 2000;
+  const ORGANIZATION_MAX_CHARS = 50;
   const validate = (field, value) => {
     switch (field) {
       case 'firstName':
@@ -69,7 +70,10 @@ const PartnershipContact = () => {
       }
       case 'organization':
         if (!value.trim()) return 'Organization name is required';
-        if (value.trim().length < 2) return 'Enter a valid organization name';
+        if (value.trim().length < 10) return 'Please provide at least 10 characters for organization name';
+        if (value.length > ORGANIZATION_MAX_CHARS) {
+          return `Organization name must not exceed ${ORGANIZATION_MAX_CHARS.toLocaleString()} characters`;
+        }
         return '';
       case 'typeOfPartnership':
         if (!value) return 'Please select type of partnership';

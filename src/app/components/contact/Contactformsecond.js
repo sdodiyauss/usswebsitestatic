@@ -41,6 +41,7 @@ const Contactformsecond = () => {
   const nameRegex = /^[A-Za-z][A-Za-z\s'-]{1,49}$/;
   const emailRegex = /^[A-Za-z][\w.!#$%&'*+/=?^`{|}~-]*@[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?(?:\.[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?)+$/;
   const DESCRIPTION_MAX_CHARS = 2000;
+  const SUBJECT_MAX_CHARS = 100;
   const validate = (field, value) => {
     switch (field) {
       case "FirstName":
@@ -63,6 +64,8 @@ const Contactformsecond = () => {
       }
       case "Subject":
         if (!value.trim()) return "Subject is required";
+        if (value.trim().length < 3) return "Subject must be at least 3 characters";
+        if (value.length > SUBJECT_MAX_CHARS) return `Subject must not exceed ${SUBJECT_MAX_CHARS.toLocaleString()} characters`;
         return "";
       case "Description":
         if (!value.trim()) return "Description is required";
