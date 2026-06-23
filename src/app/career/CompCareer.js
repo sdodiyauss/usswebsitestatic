@@ -90,31 +90,31 @@ export const jobData = [
             "Good problem-solving and debugging skills",
         ]
     },
-    {
-        title: "HR Executive",
-        logo: hrIcon,
-        alt: "HR",
-        position: "01 Position",
-        experience: "0-1 years",
-        location: "Ahmedabad",
-        aboutRole: "We are looking for an enthusiastic HR Executive to join our growing team. The ideal candidate will be responsible for handling the end-to-end recruitment process, employee engagement activities, and HR operations. This is a great opportunity for someone who wants to start their career in human resources and grow in a dynamic and supportive environment.",
-        responsibilities: [
-            "Manage the recruitment and onboarding process.",
-            "Conduct employee engagement activities to build a positive work culture.",
-            "Maintain HR documentation and employee records.",
-            "Support daily HR operations and assist with payroll coordination.",
-            "Ensure compliance with company policies and labor laws.",
-            "Assist in performance management and employee relations.",
-        ],
-        requiredSkills: [
-            "Master's Degree in MBA (Human Resources).",
-            "Excellent communication and interpersonal skills.",
-            "Good understanding of HR policies, procedures, and documentation.",
-            "Strong organizational and multitasking abilities.",
-            "Detail-oriented with problem-solving and teamwork skills.",
-            "Proficiency in MS Office tools (Word, Excel, PowerPoint).",
-        ]
-    },
+    // {
+    //     title: "HR Executive",
+    //     logo: hrIcon,
+    //     alt: "HR",
+    //     position: "01 Position",
+    //     experience: "0-1 years",
+    //     location: "Ahmedabad",
+    //     aboutRole: "We are looking for an enthusiastic HR Executive to join our growing team. The ideal candidate will be responsible for handling the end-to-end recruitment process, employee engagement activities, and HR operations. This is a great opportunity for someone who wants to start their career in human resources and grow in a dynamic and supportive environment.",
+    //     responsibilities: [
+    //         "Manage the recruitment and onboarding process.",
+    //         "Conduct employee engagement activities to build a positive work culture.",
+    //         "Maintain HR documentation and employee records.",
+    //         "Support daily HR operations and assist with payroll coordination.",
+    //         "Ensure compliance with company policies and labor laws.",
+    //         "Assist in performance management and employee relations.",
+    //     ],
+    //     requiredSkills: [
+    //         "Master's Degree in MBA (Human Resources).",
+    //         "Excellent communication and interpersonal skills.",
+    //         "Good understanding of HR policies, procedures, and documentation.",
+    //         "Strong organizational and multitasking abilities.",
+    //         "Detail-oriented with problem-solving and teamwork skills.",
+    //         "Proficiency in MS Office tools (Word, Excel, PowerPoint).",
+    //     ]
+    // },
     {
         title: "React, NodeJS & NextJS Developer",
         logo: MernstackDeveloperIcon,
@@ -393,7 +393,7 @@ const CompCareer = () => {
                 </motion.section>
 
                 <motion.section {...fadeIn}>
-                    <Grid container spacing={3}>
+                    <Grid container justifyContent="center" spacing={3}>
                         {jobData.map((job, index) => (
                             <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
                                 <Box className="job-card">
