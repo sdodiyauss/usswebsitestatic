@@ -1589,6 +1589,7 @@ a {
   display: flex;
   flex-wrap: nowrap;
   gap: 30px;
+  align-items: center;
 }
 
 .call-to-action-innerbox .heading-content {

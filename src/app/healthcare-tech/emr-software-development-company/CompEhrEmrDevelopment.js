@@ -64,37 +64,37 @@ import Lottie from "lottie-react";
 const features = [
   {
     number: "01",
-    title: "Customizable Workflows",
+    title: "Custom EHR & EMR Workflows",
     description:
       "Easily tailor workflows to fit your specialty and daily processes for smoother adoption and better productivity. Empower your team with tools that adapt to them—not the other way around. Deliver care your way, with a system built around your unique practice needs.",
   },
   {
     number: "02",
-    title: "Secure Patient Data Management",
+    title: "Secure Patient Data & Records Management",
     description:
       "Keep sensitive health information safe. Our HIPAA‑compliant encryption protects patient data while allowing secure, anytime access for authorized users. Give patients and providers peace of mind knowing their data is always protected.",
   },
   {
     number: "03",
-    title: "Interoperability & Integration",
+    title: "Healthcare System Integration & Interoperability",
     description:
       "Connect effortlessly with labs, pharmacies, imaging centers, and other systems so you always have a complete, up‑to‑date patient record in one place. Improve collaboration and care coordination with a fully connected healthcare ecosystem.",
   },
   {
     number: "04",
-    title: "Advanced Clinical Decision Support",
+    title: "AI-Powered Clinical Decision Support",
     description:
       "Get real time guidance when it matters most. AI powered alerts, reminders, and evidence‑based recommendations help you make faster, more accurate clinical decisions. Reduce errors and enhance patient outcomes with intelligent support at every step.",
   },
   {
     number: "05",
-    title: "E-Prescribing & Medication Management",
+    title: "Electronic Prescribing & Medication Management",
     description:
       "Send prescriptions directly to pharmacies in seconds. Track refills, monitor drug interactions, and cut down on medication errors with built‑in safety checks. Improve medication accuracy and save valuable time for both providers and patients.",
   },
   {
     number: "06",
-    title: "Analytics & Reporting",
+    title: "Healthcare Analytics & Reporting",
     description:
       "Build a secure, HIPAA‑compliant EHR/EMR system tailored to your workflow. Enhance patient care, streamline operations, and accelerate decision making. Empower your practice with technology designed for the future of healthcare.",
   },
@@ -102,32 +102,32 @@ const features = [
 
 const trustBoxes = [
   {
-    title: "Doctor Centric",
+    title: "Provider-Centric Design",
     description:
       "We collaborate closely with healthcare teams to design practical, real-world workflows that simplify operations and truly fit clinical needs.",
   },
   {
-    title: "Secure Privacy",
+    title: "HIPAA-Compliant Security",
     description:
       "HIPAA, GDPR, and FHIR compliant system ensures your patients' sensitive data is always protected, encrypted, and handled with care.",
   },
   {
-    title: "Seamless Integration",
+    title: "Healthcare Interoperability & Integration",
     description:
       "From EHRs to billing, our portal seamlessly integrates with your current systems — no disruptions, just smooth and simple connectivity.",
   },
   {
-    title: "Custom Solutions",
+    title: "Custom EHR & EMR Development",
     description:
       "Fits solo clinics or multi-location hospitals — the portal is fully customizable to match your workflows, scale, and daily operations.",
   },
   {
-    title: "Ongoing Support",
+    title: "Dedicated Healthcare Support",
     description:
       "Real support, real people — our team's always here to help, with healthcare expertise and zero chatbot frustration.",
   },
   {
-    title: "Clinic Trusted",
+    title: "Trusted by Healthcare Providers",
     description:
       "Our portal streamlines check-ins, enhances communication, and creates a smoother, more satisfying experience for both healthcare staff and patients alike.",
   },
@@ -138,7 +138,7 @@ const cardData = [
     title: "Patient Management Portal for your Clinic",
     desc: "Streamline clinic operations with a secure, intuitive patient management portal for scheduling, records, and seamless communication.",
     image: Slider1,
-    link: "/healthcare-tech/patient-management-portal",
+    link: "/healthcare-tech/patient-management-system-solution",
   },
   {
     title: "Online/Offline Pharmacy Development",
@@ -162,13 +162,13 @@ const cardData = [
     title: "EHR/EMR Development",
     desc: "Develop intelligent EHR/EMR solutions with secure data, automated workflows, and real-time patient management to enhance efficiency, accuracy, & healthcare delivery.",
     image: Slider5,
-    link: "/healthcare-tech/ehr-emr-development",
+    link: "/healthcare-tech/emr-software-development-company",
   },
   {
     title: "Hospital Management Portal Development",
     desc: "Create a smart hospital management portal with automated workflows, real-time data access, and secure patient administration for enhanced efficiency and care delivery.",
     image: Slider6,
-    link: "/healthcare-tech/hospital-management",
+    link: "/healthcare-tech/hospital-management-system-solution",
   },
   {
     title: "Compliance Software Development",
@@ -180,37 +180,37 @@ const cardData = [
 
 const solutions = [
   {
-    title: "Custom EHR/EMR Development",
+    title: "Custom EHR & EMR Software Development",
     description:
       "Your practice is unique, and your EHR/EMR should be too. We build systems from the ground up that match your specialty, simplify your workflow, and stay fully compliant with healthcare regulations.",
     icon: CodeCircle,
   },
   {
-    title: "Legacy System Modernization",
+    title: "Legacy Healthcare System Modernization",
     description:
       "Still using an outdated system? We'll help you upgrade to a faster, more connected platform without slowing down your work. Seamlessly transition to modern technology and stay ahead in healthcare innovation.",
     icon: Monitor,
   },
   {
-    title: "Third Party System Integration",
+    title: "Healthcare System Integration Services",
     description:
       "No more jumping between platforms. We connect your EHR/EMR with labs, pharmacies, billing systems & imaging tools so everything you need is in one place. Work smarter with a unified system that saves time & reduces error.",
     icon: Data,
   },
   {
-    title: "Mobile & Web App Development",
+    title: "Healthcare Mobile & Web Application Development",
     description:
       "Access patient records anytime, anywhere. Our secure, intuitive apps let providers and staff work on the go without compromising security. Deliver faster, informed care with instant data access.",
     icon: MonitorMobile,
   },
   {
-    title: "Data Migration & Security",
+    title: "Secure Data Migration & Compliance Management",
     description:
       "Switching systems doesn't have to be risky. We handle migration with precision, ensuring every record is secure, accurate, & HIPAA compliant. Make the move confidently, knowing your data is safe every step of the way.",
     icon: ShieldSecurity,
   },
   {
-    title: "Ongoing Support & Maintenance",
+    title: "EHR & EMR Support and Maintenance Services",
     description:
       "Technology should keep improving. We provide continuous support, timely updates, and performance checks so your EHR/EMR always runs smoothly. Focus on patient care while we keep your system at peak performance.",
     icon: Support24,
@@ -295,12 +295,10 @@ const CompEhrEmrDevelopment = () => {
             <Grid size={{ xs: 12, md: 10 }}>
               <Box className="heading-content healthcare-banner-content">
                 <Typography variant="h1" sx={{ color: "#f28c38", mb: 2 }}>
-                  EHR/EMR Development
+                  EMR Software Development Company for Modern Healthcare
                 </Typography>
                 <Typography variant="h6" paragraph sx={{ mb: 3 }}>
-                  Build a secure, HIPAA‑compliant EHR/EMR system tailored to
-                  your workflow. Enhance patient care, streamline operations,
-                  and accelerate decision‑making.
+                  As a trusted EMR Software Development Company, we build secure, HIPAA-compliant EHR and EMR solutions tailored to your healthcare workflows. Improve patient care, streamline clinical operations, and enhance decision-making with custom healthcare technology.
                 </Typography>
               </Box>
               <Box className="heading-content" align="center">
@@ -332,11 +330,11 @@ const CompEhrEmrDevelopment = () => {
               <Box className="patient-left">
                 <Box className="heading-content">
                   <Typography variant="h2" sx={{ mb: 2, fontWeight: 700 }}>
-                    EHR/EMR Features{" "}
+                    Key Features of Our{" "}
                     <span className="primary-color">
-                      That Transform{" "}
+                       EHR & EMR Software Development{" "}
                       <span className="span-text">
-                        Care
+                         Services
                         <div className="line-container">
                           <div className="line-wrapper"></div>
                           <div className="line"></div>
@@ -346,8 +344,7 @@ const CompEhrEmrDevelopment = () => {
                     </span>
                   </Typography>
                   <Typography className="patient-subheading">
-                    From secure data to AI support, our EHR/ EMR streamlines
-                    care.
+                    Our EMR Software Development Company delivers intelligent, secure, and scalable EHR/EMR solutions that improve clinical workflows, patient engagement, interoperability, and healthcare outcomes.
                   </Typography>
                 </Box>
                 <Box className="patient-image-wrapper">
@@ -397,9 +394,9 @@ const CompEhrEmrDevelopment = () => {
                 <Box className="opportunity-card opportunity-text-card md-order-1">
                   <Box className="heading-content">
                     <Typography variant="h2" sx={{ mb: 5, fontWeight: 700 }}>
-                      Expand business opportunities <br />
+                      Benefits of Our <br />
                       <span className="span-text primary-color">
-                        of Software
+                        EHR & EMR Software Solutions
                         <div className="line-container">
                           <div className="line-wrapper"></div>
                           <div className="line"></div>
@@ -471,11 +468,7 @@ const CompEhrEmrDevelopment = () => {
                     variant="body2"
                     className="opportunity-description"
                   >
-                    Our Patient Management Portal helps you scale smart — with
-                    online bookings, teleconsults, and real-time insights. Serve
-                    more patients, reduce no-shows, and explore new revenue
-                    streams, all while keeping your workflow smooth and your
-                    team focused.
+                    Our EHR and EMR software solutions help healthcare organizations streamline patient data management, improve clinical efficiency, reduce administrative burdens, enhance interoperability, and support better patient outcomes through secure, scalable technology.
                   </Typography>
                 </Box>
               </Box>
@@ -496,11 +489,11 @@ const CompEhrEmrDevelopment = () => {
               align="center"
               sx={{ mb: 5, fontWeight: 700 }}
             >
-              End to End{" "}
+              Comprehensive{" "}
               <span className="primary-color">
-                EHR/EMR Development Solutions for Modern Heal
+                 EHR & EMR Software Development{" "}
                 <span className="span-text">
-                  thcare
+                   Services
                   <div className="line-container">
                     <div className="line-wrapper"></div>
                     <div className="line"></div>
@@ -545,7 +538,10 @@ const CompEhrEmrDevelopment = () => {
           >
             <Box className="heading-content pr">
               <Typography variant="h2" sx={{ my: 2, color: "white" }}>
-                Let's Build Your Next‑Gen EHR/EMR Together
+                Partner with a Trusted EMR Software Development Company
+              </Typography>
+              <Typography variant="body1">
+                Build secure, scalable, and fully compliant EHR and EMR solutions that streamline healthcare workflows, improve patient care, and support long-term digital transformation.
               </Typography>
             </Box>
 
@@ -571,11 +567,11 @@ const CompEhrEmrDevelopment = () => {
         <Container className="custom-container" maxWidth="lg">
           <Box className="heading-content">
             <Typography variant="h2" sx={{ mb: 5, mt: 3, fontWeight: 700 }}>
-              Why Healthcare Client{" "}
+              Why Healthcare Organizations Choose{" "}
               <span className="primary-color">
-                Trus
+                 Our EMR Software Development{" "}
                 <span className="span-text">
-                  t USS
+                  Company
                   <div className="line-container">
                     <div className="line-wrapper"></div>
                     <div className="line"></div>
@@ -593,12 +589,12 @@ const CompEhrEmrDevelopment = () => {
             >
               <Box
                 className="trust-uss-box"
-                onMouseEnter={() => handleHover("Doctor Centric")}
+                onMouseEnter={() => handleHover("Provider-Centric Design")}
                 onMouseLeave={handleMouseLeave}
-                onClick={() => handleClick("Doctor Centric")}
+                onClick={() => handleClick("Provider-Centric Design")}
               >
                 <Image src={TrustIcon2} alt="TrustIcon1" />
-                <Typography variant="h6">Doctor Centric</Typography>
+                <Typography variant="h6">Provider-Centric Design</Typography>
               </Box>
               <Image
                 src={OrangeStar}
@@ -618,12 +614,12 @@ const CompEhrEmrDevelopment = () => {
             >
               <Box
                 className="trust-uss-box"
-                onMouseEnter={() => handleHover("Secure Privacy")}
+                onMouseEnter={() => handleHover("HIPAA-Compliant Security")}
                 onMouseLeave={handleMouseLeave}
-                onClick={() => handleClick("Secure Privacy")}
+                onClick={() => handleClick("HIPAA-Compliant Security")}
               >
                 <Image src={TrustIcon3} alt="TrustIcon1" />
-                <Typography variant="h6">Secure Privacy</Typography>
+                <Typography variant="h6">HIPAA-Compliant Security</Typography>
               </Box>
               <Image
                 src={BlueStar}
@@ -688,12 +684,12 @@ const CompEhrEmrDevelopment = () => {
             >
               <Box
                 className="trust-uss-box"
-                onMouseEnter={() => handleHover("Seamless Integration")}
+                onMouseEnter={() => handleHover("Healthcare Interoperability & Integration")}
                 onMouseLeave={handleMouseLeave}
-                onClick={() => handleClick("Seamless Integration")}
+                onClick={() => handleClick("Healthcare Interoperability & Integration")}
               >
                 <Image src={TrustIcon4} alt="TrustIcon1" />
-                <Typography variant="h6">Seamless Integration</Typography>
+                <Typography variant="h6">Healthcare Interoperability & Integration</Typography>
               </Box>
               <Image
                 src={OrangeStar}
@@ -713,12 +709,12 @@ const CompEhrEmrDevelopment = () => {
             >
               <Box
                 className="trust-uss-box"
-                onMouseEnter={() => handleHover("Custom Solutions")}
+                onMouseEnter={() => handleHover("Custom EHR & EMR Development")}
                 onMouseLeave={handleMouseLeave}
-                onClick={() => handleClick("Custom Solutions")}
+                onClick={() => handleClick("Custom EHR & EMR Development")}
               >
                 <Image src={TrustIcon1} alt="TrustIcon1" />
-                <Typography variant="h6">Custom Solutions</Typography>
+                <Typography variant="h6">Custom EHR & EMR Development</Typography>
               </Box>
               <Image
                 src={BlueStar}
@@ -743,12 +739,12 @@ const CompEhrEmrDevelopment = () => {
             >
               <Box
                 className="trust-uss-box"
-                onMouseEnter={() => handleHover("Ongoing Support")}
+                onMouseEnter={() => handleHover("Dedicated Healthcare Support")}
                 onMouseLeave={handleMouseLeave}
-                onClick={() => handleClick("Ongoing Support")}
+                onClick={() => handleClick("Dedicated Healthcare Support")}
               >
                 <Image src={TrustIcon6} alt="TrustIcon1" />
-                <Typography variant="h6">Ongoing Support</Typography>
+                <Typography variant="h6">Dedicated Healthcare Support</Typography>
               </Box>
               <Image
                 src={OrangeStar}
@@ -773,12 +769,12 @@ const CompEhrEmrDevelopment = () => {
             >
               <Box
                 className="trust-uss-box"
-                onMouseEnter={() => handleHover("Clinic Trusted")}
+                onMouseEnter={() => handleHover("Trusted by Healthcare Providers")}
                 onMouseLeave={handleMouseLeave}
-                onClick={() => handleClick("Clinic Trusted")}
+                onClick={() => handleClick("Trusted by Healthcare Providers")}
               >
                 <Image src={TrustIcon5} alt="TrustIcon1" />
-                <Typography variant="h6">Clinic Trusted</Typography>
+                <Typography variant="h6">Trusted by Healthcare Providers</Typography>
               </Box>
               <Image
                 src={OrangeStar}

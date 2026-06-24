@@ -385,7 +385,7 @@ const CompRoleOfElectronic = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                   Interoperability in <Link href="/healthcare-tech/ehr-emr-development">EHR in modern healthcare</Link> enables seamless data exchange between hospitals, laboratories, pharmacies, and insurance systems, improving care coordination.
+                                   Interoperability in <Link href="/healthcare-tech/emr-software-development-company">EHR in modern healthcare</Link> enables seamless data exchange between hospitals, laboratories, pharmacies, and insurance systems, improving care coordination.
                                     <br />
                                     <br />
                                 </Typography>

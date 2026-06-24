@@ -441,7 +441,7 @@ const CompERHERMSystemPatientRecord = () => {
                                     <br />
                                 </Typography>
                                  <Typography variant="body1">
-                                    A well-designed <strong><Link href="/healthcare-tech/patient-management-portal">patient management portal solution</Link> for healthcare organizations</strong> enables real-time access to records, smoother coordination between departments, and a better patient experience, while maintaining compliance and data security standards. This is where technology moves beyond software installation and becomes a true enabler of efficient, patient-centric care. 
+                                    A well-designed <strong><Link href="/healthcare-tech/patient-management-system-solution">patient management portal solution</Link> for healthcare organizations</strong> enables real-time access to records, smoother coordination between departments, and a better patient experience, while maintaining compliance and data security standards. This is where technology moves beyond software installation and becomes a true enabler of efficient, patient-centric care. 
                                     <br />
                                     <br />
                                 </Typography>
@@ -514,7 +514,7 @@ const CompERHERMSystemPatientRecord = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Modern<strong><Link href="/healthcare-tech/ehr-emr-development"> EHR/EMR development solutions</Link> for healthcare providers</strong> are designed to reduce this burden by automating critical administrative workflows, including: 
+                                    Modern<strong><Link href="/healthcare-tech/emr-software-development-company"> EHR/EMR development solutions</Link> for healthcare providers</strong> are designed to reduce this burden by automating critical administrative workflows, including: 
                                 </Typography>
                                  <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
                                     <ListItem component="li" disablePadding>

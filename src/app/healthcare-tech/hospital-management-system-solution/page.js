@@ -7,7 +7,7 @@ export const metadata = {
   openGraph: {
     title: 'Hospital Management Software Solutions',
     description: 'All‑in‑one hospital management software to streamline operations, manage patients, billing, inventory & ensure quality care delivery.',
-    url: 'https://www.universalstreamsolution.com/healthcare-tech/hospital-management',
+    url: 'https://www.universalstreamsolution.com/healthcare-tech/hospital-management-system-solution',
     siteName: 'USS IT Services',
     images: [
       {

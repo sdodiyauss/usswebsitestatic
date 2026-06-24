@@ -1604,6 +1604,7 @@ a {
   display: flex;
   flex-wrap: nowrap;
   gap: 30px;
+  align-items: center;
 }
 
 .call-to-action-innerbox .heading-content {
@@ -3798,7 +3799,7 @@ text {
 }
 
 .heading-content.pr {
-  padding-right: 100px;
+  padding-right: 85px;
 }
 
 .solution-card {

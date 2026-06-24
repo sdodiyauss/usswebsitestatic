@@ -87,7 +87,7 @@ const imageList = [
     sub: "All your appointments, records, and patient messages — finally in one place, stress-free.",
     image: "patient-management",
     src: Cursor1,
-    url: "/healthcare-tech/patient-management-portal",
+    url: "/healthcare-tech/patient-management-system-solution",
   },
   {
     title: "Online/Offline Pharmacy",
@@ -115,14 +115,14 @@ const imageList = [
     sub: "Doctor-friendly EHRs that are fast, secure, and built for real-time care.",
     image: "ehr-development",
     src: Cursor5,
-    url: "/healthcare-tech/ehr-emr-development",
+    url: "/healthcare-tech/emr-software-development-company",
   },
   {
     title: "Hospital Management",
     sub: "One system to run your entire hospital — smooth, smart, and connected.",
-    image: "hospital-management",
+    image: "hospital-management-system-solution",
     src: Cursor6,
-    url: "/healthcare-tech/hospital-management",
+    url: "/healthcare-tech/hospital-management-system-solution",
   },
   {
     title: "Compliance Software",

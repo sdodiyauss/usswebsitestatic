@@ -39,6 +39,26 @@ const nextConfig = {
     ];
   },
 
+  async redirects() {
+    return [
+      {
+        source: '/healthcare-tech/patient-management-portal',
+        destination: '/healthcare-tech/patient-management-system-solution',
+        permanent: true, // 301 redirect
+      },
+      {
+        source: '/healthcare-tech/hospital-management',
+        destination: '/healthcare-tech/hospital-management-system-solution',
+        permanent: true, // 301 redirect
+      },
+      {
+        source: '/healthcare-tech/ehr-emr-development',
+        destination: '/healthcare-tech/emr-software-development-company',
+        permanent: true, // 301 redirect
+      },
+    ];
+  },
+
   // Your existing Webpack config (unchanged)
   webpack(config) {
     config.resolve = config.resolve || {};

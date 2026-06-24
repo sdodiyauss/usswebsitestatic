@@ -12,10 +12,15 @@ import {
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Mousewheel, Navigation } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import "swiper/css";
-import CircleType from "circletype";
 
+import PagesBannerBg from "@/healthcare-bg.webp";
+import PatientBanner from "@/patient-banner.svg?url";
+import opportunity3 from "@/opportunity3.webp";
+import opportunity1 from "@/opportunity1.webp";
+// import ExpandbusinessImge from "@/expand-business-img.webp";
+// import PagesBannerBg from "@/pages-banner-bg.webp";
 import DigitalMap from "~/verticalmap.json";
 import DigitalMapMobile from "~/horizontalmap.json";
 import callIcon from "@/call-icon.svg?url";
@@ -33,7 +38,6 @@ import TrustIcon5 from "@/medical-kit.svg?url";
 import TrustIcon6 from "@/setting-2.svg?url";
 
 import ActiveBG from "@/trust-uss-vector.svg?url";
-import HospitalBanner from "@/hospital-bg.svg?url";
 
 import Slider1 from "@/slider1.webp";
 import Slider2 from "@/slider2.webp";
@@ -44,19 +48,17 @@ import Slider6 from "@/slider6.webp";
 import Slider7 from "@/slider7.webp";
 import RoundOrangeRighticon from "@/round-orange-right.svg?url";
 
-import People from "@/people.svg?url";
+import Frame from "@/frame.svg?url";
 import Note from "@/note.svg?url";
-import MedalStar from "@/medal-star2.svg?url";
-import Chart from "@/chart.svg?url";
-import Hospital from "@/hospital.svg?url";
-import ConvertCube from "@/convert-3d-cube.svg?url";
-
-import opportunity3 from "@/opportunity3.webp";
-import opportunity1 from "@/opportunity1.webp";
-import opportunity2 from "@/opportunity2.webp";
+import Message from "@/messages-3.svg?url";
+import WalletMoney from "@/wallet-money.svg?url";
+import StatusUp from "@/status-up.svg?url";
+import ShieldTick from "@/shield-tick.svg?url";
 
 import Contact from "~/contact/Contact";
 import Link from "next/link";
+
+import CircleType from "circletype";
 import Metadata from "~/meta/Metadata";
 import minitsCircle from "~/minitsCircle.json";
 import Lottie from "lottie-react";
@@ -64,70 +66,70 @@ import Lottie from "lottie-react";
 const features = [
   {
     number: "01",
-    title: "Centralized Patient Records",
+    title: "Patient Registration & Profile Management",
     description:
-      "Keep all your patients' health information in one secure place. From medical history and prescriptions to test results — everything is just a click away, helping you provide faster, more accurate care. Access it anytime, anywhere for seamless treatment delivery.",
+      "Register patients in seconds and track every detail—from first visit to follow-up. No digging through files or toggling between tabs—just clean, connected records at your fingertips. Secure, intuitive, and built for teams who'd rather spend time on people, not paperwork.",
   },
   {
     number: "02",
-    title: "Smart Appointment Scheduling",
+    title: "Appointment Scheduling & Automated Reminders",
     description:
-      "Say goodbye to appointment chaos. Easily manage bookings, rescheduling, and reminders so patients spend less time waiting and more time getting care. Keep your schedules organized and your days running smoothly every single day. yeh check karo toh isme Smart Appointment Scheduling",
+      "Let patients book appointments anytime with ease, while automated reminders reduce no-shows. Save staff time, streamline scheduling, and keep your clinic running smoothly, on time, and hassle-free—every single day, without manual follow-ups.",
   },
   {
     number: "03",
-    title: "Integrated Billing & Payments",
+    title: "Telehealth & Virtual Consultations",
     description:
-      "Handle billing, insurance claims, and payments without the headaches. Get invoices right the first time and speed up reimbursements. Keep your financial processes transparent, accurate, and completely error‑free. Save time and reduce administrative workload for your team.",
+      "Connect with patients anytime, anywhere through secure telehealth and virtual consultations. Provide timely, flexible care beyond clinic walls, reduce waiting room visits, and make healthcare more accessible — all from a single, easy-to-use platform.",
   },
   {
     number: "04",
-    title: "Inventory & Pharmacy Management",
+    title: "Medical Billing & Insurance Management",
     description:
-      "Stay on top of your medicine and supply stock. Get real time updates, low stock alerts, and avoid last‑minute shortages. Ensure your hospital is always prepared to deliver safe, uninterrupted care. Streamline purchasing to keep costs under control.",
+      "Tired of flipping through files to find patient details?Access complete medical histories, notes, and documents instantly — all in one place. Stay informed, make faster decisions, and deliver better care. Try smarter record-keeping today!",
   },
   {
     number: "05",
-    title: "Staff & Shift Management",
+    title: "Secure Patient Communication Portal",
     description:
-      "Make scheduling simple for your doctors, nurses, and staff. Track attendance, assign shifts, and keep your team organized without the stress. Ensure the right people are always in the right place at the right time for optimal care.",
+      "Still juggling invoices and insurance claims manually? Integrate billing and insurance into one seamless flow. Track payments, file claims faster, and reduce errors — all while giving patients a smoother, transparent experience. Simplify billing today!",
   },
   {
     number: "06",
-    title: "Analytics & Compliance Reporting",
+    title: "Healthcare Analytics & Reporting Dashboard",
     description:
-      "Turn hospital data into powerful insights. Monitor performance, track patient trends, and easily meet all compliance requirements. Make informed decisions that drive better care, productivity, and operational efficiency.",
+      "Put patients at the center with personalized care plans, seamless communication, and ongoing engagement—making every interaction meaningful, efficient, and truly focused on their comfort, outcomes, and overall well-being.",
   },
 ];
 
 const trustBoxes = [
   {
-    title: "Doctor Centric",
+    title: "Provider-Centric Design",
     description:
       "We collaborate closely with healthcare teams to design practical, real-world workflows that simplify operations and truly fit clinical needs.",
   },
   {
-    title: "Secure Privacy",
+    title: "HIPAA-Compliant Security",
     description:
       "HIPAA, GDPR, and FHIR compliant system ensures your patients' sensitive data is always protected, encrypted, and handled with care.",
   },
   {
-    title: "Seamless Integration",
+    title: "EHR & EMR Integration",
     description:
       "From EHRs to billing, our portal seamlessly integrates with your current systems — no disruptions, just smooth and simple connectivity.",
   },
   {
-    title: "Custom Solutions",
+    title: "Customizable Workflows",
     description:
       "Fits solo clinics or multi-location hospitals — the portal is fully customizable to match your workflows, scale, and daily operations.",
   },
   {
-    title: "Ongoing Support",
+    title: "Dedicated Support",
     description:
       "Real support, real people — our team's always here to help, with healthcare expertise and zero chatbot frustration.",
   },
   {
-    title: "Clinic Trusted",
+    title: "Trusted by Healthcare Organizations",
     description:
       "Our portal streamlines check-ins, enhances communication, and creates a smoother, more satisfying experience for both healthcare staff and patients alike.",
   },
@@ -138,7 +140,7 @@ const cardData = [
     title: "Patient Management Portal for your Clinic",
     desc: "Streamline clinic operations with a secure, intuitive patient management portal for scheduling, records, and seamless communication.",
     image: Slider1,
-    link: "/healthcare-tech/patient-management-portal",
+    link: "/healthcare-tech/patient-management-system-solution",
   },
   {
     title: "Online/Offline Pharmacy Development",
@@ -162,13 +164,13 @@ const cardData = [
     title: "EHR/EMR Development",
     desc: "Develop intelligent EHR/EMR solutions with secure data, automated workflows, and real-time patient management to enhance efficiency, accuracy, & healthcare delivery.",
     image: Slider5,
-    link: "/healthcare-tech/ehr-emr-development",
+    link: "/healthcare-tech/emr-software-development-company",
   },
   {
     title: "Hospital Management Portal Development",
     desc: "Create a smart hospital management portal with automated workflows, real-time data access, and secure patient administration for enhanced efficiency and care delivery.",
     image: Slider6,
-    link: "/healthcare-tech/hospital-management",
+    link: "/healthcare-tech/hospital-management-system-solution",
   },
   {
     title: "Compliance Software Development",
@@ -180,44 +182,44 @@ const cardData = [
 
 const solutions = [
   {
-    title: "End to End Hospital Management",
+    title: "Centralized Patient Records",
     description:
-      "Run your entire hospital from one platform from the moment a patient registers to the time they’re discharged. No more switching between systems. Keep every department connected for smooth, coordinated care.",
-    icon: Hospital,
+      "Avoid scattered records by storing patient histories, appointments, and medical updates in one secure, centralized system that's easy to access, manage, and update from anywhere, at any time.",
+    icon: Frame,
   },
   {
-    title: "Improved Patient Experience",
+    title: "Appointment Scheduling Management",
     description:
-      "Make every visit smooth and stress free with quick check ins, shorter waiting times, & clear updates at every stage of their care. Create a patient experience that builds trust and long term loyalty.",
-    icon: People,
-  },
-  {
-    title: "Hassle Free Billing & Insurance",
-    description:
-      "Skip the billing headaches. Create invoices automatically, track payments easily, and process insurance claims without the usual delays. Keep your hospital’s finances organized and stress free.",
-    icon: MedalStar,
-  },
-  {
-    title: "Seamless Staff Coordination",
-    description:
-      "Keep your team organized and on schedule. Plan doctor, nurse, and staff shifts effortlessly so every day runs like clockwork. Reduce staffing conflicts and ensure optimal coverage at all times.Easily manage invoices, insurance claims, and online payments from a single, integrated platform—eliminating the need for extra tools and streamlining your entire billing workflow seamlessly.",
+      "Empower patients to schedule, cancel, or reschedule appointments anytime, while you maintain an organized, efficient calendar that enhances workflow, reduces no-shows, and supports smooth, hassle-free operations daily.",
     icon: Note,
   },
   {
-    title: "Smarter Inventory Control",
+    title: "Patient Communication Portal",
     description:
-      "Always know what’s in stock. Track medicines, supplies, and equipment in real time so you’re never caught off guard. Prevent shortages and keep essential resources ready when they’re needed most.",
-    icon: ConvertCube,
+      "Secure chat features and automated reminders foster trust; improve communication and significantly reduce no-shows—ensuring both patients and providers stay informed, connected, and on schedule effortlessly.",
+    icon: Message,
   },
   {
-    title: "Actionable Insights & Reports",
+    title: "Billing & Claims Management",
     description:
-      "Turn your hospital data into smart decisions. See what’s working, spot trends, and stay on top of compliance requirements with clear, easy to read reports. Use insights to boost efficiency and deliver better patient care.",
-    icon: Chart,
+      "Easily manage invoices, insurance claims, and online payments from a single, integrated platform—eliminating the need for extra tools and streamlining your entire billing workflow seamlessly.",
+    icon: WalletMoney,
+  },
+  {
+    title: "Healthcare Analytics & Reporting",
+    description:
+      "Monitor everything across your clinic—patient flow, staff activity, and performance trends—using intuitive, easy-to-read dashboards that provide real-time insights to support smarter, faster decision-making every day.",
+    icon: StatusUp,
+  },
+  {
+    title: "HIPAA-Compliant Data Security",
+    description:
+      "The portal is designed to comply with healthcare regulations like HIPAA, GDPR, and more—ensuring patient data stays secure while keeping your practice fully compliant and protected.",
+    icon: ShieldTick,
   },
 ];
 
-const CompHospitalManagement = () => {
+const CompPatientManagentPortal = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -257,9 +259,9 @@ const CompHospitalManagement = () => {
     }
   };
 
-
   //circle text
   const textRef = useRef(null);
+
   useEffect(() => {
     if (textRef.current) {
       const circleType = new CircleType(textRef.current);
@@ -270,7 +272,7 @@ const CompHospitalManagement = () => {
       // let animationFrame;
 
       // const animate = () => {
-      //   rotation += 0.5; // rotation speed (degrees per frame)
+      //   rotation += 0.5; 
       //   textRef.current.style.transform = `rotate(${rotation}deg)`;
       //   animationFrame = requestAnimationFrame(animate);
       // };
@@ -281,47 +283,57 @@ const CompHospitalManagement = () => {
     }
   }, []);
 
+
   return (
     <>
       {/* <Metadata
-        title="Hospital Management Software Solutions"
-        description="All‑in‑one hospital management software to streamline operations, manage patients, billing, inventory & ensure quality care delivery."
+        title="Patient Management Software for Clinics & Hospitals | USS"
+        description="USS offers patient management software for hospitals and clinics with features like appointment scheduling, EHR integration, billing, and secure data handling."
       /> */}
 
       {/* patient-banner */}
-      <Box className="healthcare-banner-section">
+      <Box className="healthcare-banner-section-inner">
+        <Image
+          src={PagesBannerBg}
+          fill
+          alt="Patient Management Portal Banner"
+          className="pages-banner-bg-main"
+          priority
+          fetchPriority="high"
+        />
         <Container className="custom-container" maxWidth="lg">
           <Grid container spacing={2} justifyContent="center">
             <Grid size={{ xs: 12, md: 10 }}>
               <Box className="heading-content healthcare-banner-content">
                 <Typography variant="h1" sx={{ color: "#f28c38", mb: 2 }}>
-                  Hospital Management
+                  Patient Management System for Clinics & Hospitals
                 </Typography>
                 <Typography variant="h6" paragraph sx={{ mb: 3 }}>
-                  Streamline patient care, appointments, billing, and records in
-                  one secure, easy to use platform built to improve hospital
-                  efficiency and patient satisfaction.
+                  Manage patient records, appointment scheduling, billing, telehealth consultations, and communication through a secure Patient Management System designed to streamline healthcare operations and improve patient experiences.
                 </Typography>
               </Box>
               <Box className="heading-content" align="center">
                 <Link href="/contactus" variant="contained" className="main-primary-btn">
-                  Get Started Today
+                  Get Started
                 </Link>
               </Box>
             </Grid>
           </Grid>
         </Container>
+        {/* <Image src={PagesBannerBg} alt="shape" className="pages-banner-bg-main" priority={true}
+          fetchPriority="high" /> */}
+
         <Image src={HalfBlue} alt="shape" className="half-blue-shape" />
         <Image
           src={HalfOrange}
           alt="shape"
           className="half-orange-shape"
         />
-        <Image src={OrangeStar} alt="shape" className="star1" />
-        <Image src={OrangeStar} alt="shape" className="star2" />
-        <Image src={BlueStar} alt="shape" className="star3" />
-        <Image src={BlueStar} alt="shape" className="star4" />
-        <Image src={BlueStar} alt="shape" className="star5" />
+        <Image src={OrangeStar} alt="shape" className="star1" loading="lazy" />
+        <Image src={OrangeStar} alt="shape" className="star2" loading="lazy" />
+        <Image src={BlueStar} alt="shape" className="star3" loading="lazy" />
+        <Image src={BlueStar} alt="shape" className="star4" loading="lazy" />
+        <Image src={BlueStar} alt="shape" className="star5" loading="lazy" />
       </Box>
 
       <Box className="patient-section" sx={{ py: { xs: 3, md: 4, lg: 5 } }}>
@@ -332,11 +344,11 @@ const CompHospitalManagement = () => {
               <Box className="patient-left">
                 <Box className="heading-content">
                   <Typography variant="h2" sx={{ mb: 2, fontWeight: 700 }}>
-                    Smart Features{" "}
+                    Smart & Simplified{" "}
                     <span className="primary-color">
-                      for Modern Hos
+                      Patient Manageme
                       <span className="span-text">
-                        pitals
+                        nt System
                         <div className="line-container">
                           <div className="line-wrapper"></div>
                           <div className="line"></div>
@@ -346,17 +358,17 @@ const CompHospitalManagement = () => {
                     </span>
                   </Typography>
                   <Typography className="patient-subheading">
-                    Empower your hospital with advanced tools to manage
-                    patients, staff operations, & compliance all in one
-                    integrated platform.
+                    Everything healthcare providers need—from patient registration and appointment scheduling to billing and telehealth—in one powerful Patient Management System built to improve efficiency and patient care.
                   </Typography>
                 </Box>
                 <Box className="patient-image-wrapper">
                   <Image
-                    src={HospitalBanner}
-                    alt="Smart Features for Modern Hospitals"
+                    src={PatientBanner}
+                    alt="Smart & Simplified Patient Management"
                     width={400}
                     height={300}
+                    priority={true}
+                    fetchPriority="high"
                   />
                 </Box>
               </Box>
@@ -439,6 +451,7 @@ const CompHospitalManagement = () => {
                     width={400}
                     height={250}
                     className="opportunity-image"
+                    loading="lazy"
                   />
                 </Box>
               </Box>
@@ -451,6 +464,14 @@ const CompHospitalManagement = () => {
                   animationData={isMobile ? DigitalMapMobile : DigitalMap}
                   loop={true}
                 />
+                {/* <Image
+                    src={ExpandbusinessImge}
+                    alt="Expand business Imge"
+                    width={450}
+                    height={874}
+                    className="expand-business-image"
+                    loading="lazy"
+                  /> */}
               </Box>
             </Grid>
 
@@ -464,6 +485,7 @@ const CompHospitalManagement = () => {
                     width={400}
                     height={250}
                     className="opportunity-image"
+                    loading="lazy"
                   />
                 </Box>
 
@@ -472,11 +494,7 @@ const CompHospitalManagement = () => {
                     variant="body2"
                     className="opportunity-description"
                   >
-                    Our Patient Management Portal helps you scale smart — with
-                    online bookings, teleconsults, and real-time insights. Serve
-                    more patients, reduce no-shows, and explore new revenue
-                    streams, all while keeping your workflow smooth and your
-                    team focused.
+                    Our Patient Management System helps healthcare providers automate administrative tasks, reduce appointment no-shows, improve patient engagement, streamline billing workflows, and deliver better healthcare experiences through a centralized digital platform.
                   </Typography>
                 </Box>
               </Box>
@@ -497,11 +515,11 @@ const CompHospitalManagement = () => {
               align="center"
               sx={{ mb: 5, fontWeight: 700 }}
             >
-              Complete Solution{" "}
+              Explore Our Smart{" "}
               <span className="primary-color">
-                for Smarter Hospital Ope
+                Solutions for your Bu
                 <span className="span-text">
-                  rations
+                  siness
                   <div className="line-container">
                     <div className="line-wrapper"></div>
                     <div className="line"></div>
@@ -522,6 +540,7 @@ const CompHospitalManagement = () => {
                       alt={item.title}
                       width={24}
                       height={24}
+                      loading="lazy"
                     />
                   </Box>
                   <Typography variant="h6" className="solution-title">
@@ -546,7 +565,8 @@ const CompHospitalManagement = () => {
           >
             <Box className="heading-content pr">
               <Typography variant="h2" sx={{ my: 2, color: "white" }}>
-                Run Your Hospital Smarter — Start Today
+                Experience Hassle-Free Patient Management Transform How You
+                Manage Patients
               </Typography>
             </Box>
 
@@ -594,22 +614,22 @@ const CompHospitalManagement = () => {
             >
               <Box
                 className="trust-uss-box"
-                onMouseEnter={() => handleHover("Doctor Centric")}
+                onMouseEnter={() => handleHover("Provider-Centric Design")}
                 onMouseLeave={handleMouseLeave}
-                onClick={() => handleClick("Doctor Centric")}
+                onClick={() => handleClick("Provider-Centric Design")}
               >
-                <Image src={TrustIcon2} alt="TrustIcon1" />
-                <Typography variant="h6">Doctor Centric</Typography>
+                <Image src={TrustIcon2} alt="TrustIcon1" loading="lazy" />
+                <Typography variant="h6">Provider-Centric Design</Typography>
               </Box>
               <Image
                 src={OrangeStar}
                 alt="shape"
-                className="corner-star star-a"
+                className="corner-star star-a" loading="lazy"
               />
               <Image
                 src={BlueStar}
                 alt="shape"
-                className="corner-star star-b"
+                className="corner-star star-b" loading="lazy"
               />
             </Grid>
 
@@ -619,27 +639,27 @@ const CompHospitalManagement = () => {
             >
               <Box
                 className="trust-uss-box"
-                onMouseEnter={() => handleHover("Secure Privacy")}
+                onMouseEnter={() => handleHover("HIPAA-Compliant Security")}
                 onMouseLeave={handleMouseLeave}
-                onClick={() => handleClick("Secure Privacy")}
+                onClick={() => handleClick("HIPAA-Compliant Security")}
               >
-                <Image src={TrustIcon3} alt="TrustIcon1" />
-                <Typography variant="h6">Secure Privacy</Typography>
+                <Image src={TrustIcon3} alt="TrustIcon1" loading="lazy" />
+                <Typography variant="h6">HIPAA-Compliant Security</Typography>
               </Box>
               <Image
                 src={BlueStar}
                 alt="shape"
-                className="corner-star star-c"
+                className="corner-star star-c" loading="lazy"
               />
               <Image
                 src={OrangeStar}
                 alt="shape"
-                className="corner-star star-d"
+                className="corner-star star-d" loading="lazy"
               />
               <Image
                 src={OrangeStar}
                 alt="shape"
-                className="corner-star star-md-d"
+                className="corner-star star-md-d" loading="lazy"
               />
             </Grid>
 
@@ -651,6 +671,7 @@ const CompHospitalManagement = () => {
                 src={ActiveBG}
                 alt="Active Background"
                 className="hover-content-bg"
+                loading="lazy"
               />
               <Box ref={hoverBoxRef} className={`hover-content-box ${isVisible ? 'visible' : ''}`}>
                 {hoverContent && (
@@ -669,17 +690,17 @@ const CompHospitalManagement = () => {
               <Image
                 src={OrangeStar}
                 alt="shape"
-                className="corner-star star-e"
+                className="corner-star star-e" loading="lazy"
               />
               <Image
                 src={OrangeStar}
                 alt="shape"
-                className="corner-star star-f"
+                className="corner-star star-f" loading="lazy"
               />
               <Image
                 src={BlueStar}
                 alt="shape"
-                className="corner-star star-md-f"
+                className="corner-star star-md-f" loading="lazy"
               />
             </Grid>
 
@@ -689,22 +710,22 @@ const CompHospitalManagement = () => {
             >
               <Box
                 className="trust-uss-box"
-                onMouseEnter={() => handleHover("Seamless Integration")}
+                onMouseEnter={() => handleHover("EHR & EMR Integration")}
                 onMouseLeave={handleMouseLeave}
-                onClick={() => handleClick("Seamless Integration")}
+                onClick={() => handleClick("EHR & EMR Integration")}
               >
-                <Image src={TrustIcon4} alt="TrustIcon1" />
-                <Typography variant="h6">Seamless Integration</Typography>
+                <Image src={TrustIcon4} alt="TrustIcon1" loading="lazy" />
+                <Typography variant="h6">EHR & EMR Integration</Typography>
               </Box>
               <Image
                 src={OrangeStar}
                 alt="shape"
-                className="corner-star star-g"
+                className="corner-star star-g" loading="lazy"
               />
               <Image
                 src={BlueStar}
                 alt="shape"
-                className="corner-star star-h"
+                className="corner-star star-h" loading="lazy"
               />
             </Grid>
 
@@ -714,27 +735,27 @@ const CompHospitalManagement = () => {
             >
               <Box
                 className="trust-uss-box"
-                onMouseEnter={() => handleHover("Custom Solutions")}
+                onMouseEnter={() => handleHover("Customizable Workflows")}
                 onMouseLeave={handleMouseLeave}
-                onClick={() => handleClick("Custom Solutions")}
+                onClick={() => handleClick("Customizable Workflows")}
               >
-                <Image src={TrustIcon1} alt="TrustIcon1" />
-                <Typography variant="h6">Custom Solutions</Typography>
+                <Image src={TrustIcon1} alt="TrustIcon1" loading="lazy" />
+                <Typography variant="h6">Customizable Workflows</Typography>
               </Box>
               <Image
                 src={BlueStar}
                 alt="shape"
-                className="corner-star star-i"
+                className="corner-star star-i" loading="lazy"
               />
               <Image
                 src={BlueStar}
                 alt="shape"
-                className="corner-star star-md-i"
+                className="corner-star star-md-i" loading="lazy"
               />
               <Image
                 src={OrangeStar}
                 alt="shape"
-                className="corner-star star-j"
+                className="corner-star star-j" loading="lazy"
               />
             </Grid>
 
@@ -744,27 +765,27 @@ const CompHospitalManagement = () => {
             >
               <Box
                 className="trust-uss-box"
-                onMouseEnter={() => handleHover("Ongoing Support")}
+                onMouseEnter={() => handleHover("Dedicated Support")}
                 onMouseLeave={handleMouseLeave}
-                onClick={() => handleClick("Ongoing Support")}
+                onClick={() => handleClick("Dedicated Support")}
               >
-                <Image src={TrustIcon6} alt="TrustIcon1" />
-                <Typography variant="h6">Ongoing Support</Typography>
+                <Image src={TrustIcon6} alt="TrustIcon1" loading="lazy" />
+                <Typography variant="h6">Dedicated Support</Typography>
               </Box>
               <Image
                 src={OrangeStar}
                 alt="shape"
-                className="corner-star star-k"
+                className="corner-star star-k" loading="lazy"
               />
               <Image
                 src={BlueStar}
                 alt="shape"
-                className="corner-star star-l"
+                className="corner-star star-l" loading="lazy"
               />
               <Image
                 src={BlueStar}
                 alt="shape"
-                className="corner-star star-md-l"
+                className="corner-star star-md-l" loading="lazy"
               />
             </Grid>
 
@@ -774,22 +795,22 @@ const CompHospitalManagement = () => {
             >
               <Box
                 className="trust-uss-box"
-                onMouseEnter={() => handleHover("Clinic Trusted")}
+                onMouseEnter={() => handleHover("Trusted by Healthcare Organizations")}
                 onMouseLeave={handleMouseLeave}
-                onClick={() => handleClick("Clinic Trusted")}
+                onClick={() => handleClick("Trusted by Healthcare Organizations")}
               >
-                <Image src={TrustIcon5} alt="TrustIcon1" />
-                <Typography variant="h6">Clinic Trusted</Typography>
+                <Image src={TrustIcon5} alt="TrustIcon1" loading="lazy" />
+                <Typography variant="h6">Trusted by Healthcare Organizations</Typography>
               </Box>
               <Image
                 src={OrangeStar}
                 alt="shape"
-                className="corner-star star-m"
+                className="corner-star star-m" loading="lazy"
               />
               <Image
                 src={BlueStar}
                 alt="shape"
-                className="corner-star star-n"
+                className="corner-star star-n" loading="lazy"
               />
             </Grid>
           </Grid>
@@ -808,11 +829,11 @@ const CompHospitalManagement = () => {
               align="center"
               sx={{ mb: 5, fontWeight: 700 }}
             >
-              Let's Talk{" "}
+              Next-Gen{" "}
               <span className="primary-color">
-                About Your Hospital's{" "}
+                Healthcar
                 <span className="span-text">
-                  Needs
+                  e Tech
                   <div className="line-container">
                     <div className="line-wrapper"></div>
                     <div className="line"></div>
@@ -828,13 +849,14 @@ const CompHospitalManagement = () => {
           <Grid size={{ xs: 12 }}>
             <Swiper
               className="healthcare-swiper patient-healthcare-swiper"
-              modules={[Mousewheel, Navigation]}
+              // modules={[Mousewheel, Navigation]}
+              modules={[Navigation]}
               loop={false}
               navigation
-              mousewheel={{
-                sensitivity: 1,
-                releaseOnEdges: true,
-              }}
+              // mousewheel={{
+              //   sensitivity: 1,
+              //   releaseOnEdges: true,
+              // }}
               spaceBetween={20}
               slidesPerView={2.5}
               breakpoints={{
@@ -856,7 +878,7 @@ const CompHospitalManagement = () => {
                           {card.title}
                         </Typography>
                         <Link href={card.link || "#"} className="inline-flex">
-                          <Image src={RoundOrangeRighticon} alt={card.title} />
+                          <Image src={RoundOrangeRighticon} alt={card.title} loading="lazy" />
                         </Link>
                       </Box>
                       <Box className="gray-spacer"></Box>
@@ -874,7 +896,7 @@ const CompHospitalManagement = () => {
                           width: "100%",
                           height: "auto",
                           objectFit: "cover",
-                        }}
+                        }} loading="lazy"
                       />
                     </Box>
                   </Paper>
@@ -893,12 +915,12 @@ const CompHospitalManagement = () => {
             align="center"
             sx={{ mt: 6, mb: 4, fontWeight: 700 }}
           >
-            Let’s Talk About Your
+            Need A Custom Patient Portal?
             <span className="primary-color">
               {" "}
-              Hospital’s {" "}
+              We're Here To{" "}
               <span className="span-text">
-                Needs
+                Help
                 <div className="line-container">
                   <div className="line-wrapper"></div>
                   <div className="line"></div>
@@ -914,4 +936,4 @@ const CompHospitalManagement = () => {
   );
 };
 
-export default CompHospitalManagement;
+export default CompPatientManagentPortal;

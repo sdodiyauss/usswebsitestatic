@@ -400,7 +400,7 @@ const CompEHRForModernHealthcare = () => {
                                     Vendor Lock-In and Competitive Barriers
                                 </Typography>
                                 <Typography variant="body1">
-                                    Many EHR vendors intentionally design systems that are difficult to integrate with competitors. This creates a phenomenon known as vendor lock-in, where hospitals are dependent on a single provider. In such cases, adopting <Link href="/healthcare-tech/ehr-emr-development">healthcare EHR development solutions</Link>  becomes essential to build flexible, scalable, and interoperable systems that reduce dependency and improve data exchange across platforms. 
+                                    Many EHR vendors intentionally design systems that are difficult to integrate with competitors. This creates a phenomenon known as vendor lock-in, where hospitals are dependent on a single provider. In such cases, adopting <Link href="/healthcare-tech/emr-software-development-company">healthcare EHR development solutions</Link>  becomes essential to build flexible, scalable, and interoperable systems that reduce dependency and improve data exchange across platforms. 
                                     <br />
                                     <br />
                                     Hospitals face:
