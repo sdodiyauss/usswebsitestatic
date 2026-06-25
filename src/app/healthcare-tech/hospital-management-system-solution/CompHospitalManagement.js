@@ -7,8 +7,15 @@ import {
   Typography,
   Paper,
   Avatar,
-  AvatarGroup, useMediaQuery, useTheme
+  AvatarGroup,
+  useMediaQuery,
+  useTheme,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
 } from "@mui/material";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -217,9 +224,44 @@ const solutions = [
   },
 ];
 
+const faqItems = [
+  {
+    question: "What is a Hospital Management System?",
+    answer:
+      "A Hospital Management System is a comprehensive healthcare software solution that helps hospitals manage patient records, appointments, billing, inventory, staff scheduling, and administrative operations from a centralized platform.",
+  },
+  {
+    question: "What are the benefits of a Hospital Management System?",
+    answer:
+      "A Hospital Management System improves operational efficiency, reduces paperwork, streamlines communication, automates billing, enhances patient care, and helps healthcare organizations manage resources effectively.",
+  },
+  {
+    question: "How does a Hospital Management System improve hospital operations?",
+    answer:
+      "It automates routine administrative tasks, centralizes information, improves department coordination, reduces manual errors, and enables healthcare providers to deliver faster and more efficient patient care.",
+  },
+  {
+    question: "Is a Hospital Management System secure?",
+    answer:
+      "Yes. Hospital Management Systems use advanced security protocols, data encryption, role-based access controls, and compliance measures to protect sensitive healthcare information.",
+  },
+  {
+    question: "Does a Hospital Management System support billing and insurance claims?",
+    answer:
+      "Yes. It simplifies invoice generation, payment tracking, insurance claim processing, and revenue cycle management through automated workflows.",
+  },
+  {
+    question: "How does a Hospital Management System help manage inventory?",
+    answer:
+      "The system tracks medicines, medical supplies, and equipment in real time, helping hospitals prevent shortages, optimize stock levels, and reduce operational costs.",
+  },
+];
+
 const CompHospitalManagement = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
+  const [openFaqIndex, setOpenFaqIndex] = useState(null);
 
   //trust-uss
   const [hoverContent, setHoverContent] = useState(null);
@@ -396,7 +438,7 @@ const CompHospitalManagement = () => {
                     <Typography variant="h2" sx={{ mb: 5, fontWeight: 700 }}>
                       Benefits of Our <br />
                       <span className="span-text primary-color">
-                         Hospital Management System
+                        Hospital Management System
                         <div className="line-container">
                           <div className="line-wrapper"></div>
                           <div className="line"></div>
@@ -468,7 +510,7 @@ const CompHospitalManagement = () => {
                     variant="body2"
                     className="opportunity-description"
                   >
-                   Our Hospital Management System helps healthcare organizations improve operational efficiency, automate administrative processes, optimize resource utilization, streamline billing workflows, and enhance patient care through a centralized digital platform.
+                    Our Hospital Management System helps healthcare organizations improve operational efficiency, automate administrative processes, optimize resource utilization, streamline billing workflows, and enhance patient care through a centralized digital platform.
                   </Typography>
                 </Box>
               </Box>
@@ -905,6 +947,68 @@ const CompHospitalManagement = () => {
         </Box>
       </Container>
       <Contact />
+
+      <Box className="patient-section" sx={{ py: { xs: 3, md: 4, lg: 5 } }}>
+        <Container className="custom-container" maxWidth="lg">
+          <Grid container spacing={4}>
+            {/* Left Section */}
+            <Grid size={{ xs: 12, md: 4 }}>
+              <Box className="patient-left">
+                <Box className="heading-content">
+                  <Typography variant="h2" sx={{ mb: 2, fontWeight: 700 }}>
+                    Frequently Asked{" "}
+                    <span className="primary-color">
+                      <span className="span-text">
+                        Questions
+                        <div className="line-container">
+                          <div className="line-wrapper"></div>
+                          <div className="line"></div>
+                          <div className="moving-box"></div>
+                        </div>
+                      </span>
+                    </span>
+                  </Typography>
+                  <Typography className="patient-subheading">
+                    Need More Information?<br /> Start Here.
+                  </Typography>
+                </Box>
+              </Box>
+            </Grid>
+
+            {/* Right Section */}
+            <Grid size={{ xs: 12, md: 8 }}>
+              <Box className="faq-accordion">
+                {faqItems.map((item, index) => (
+                  <Accordion
+                    key={item.question}
+                    expanded={openFaqIndex === index}
+                    onChange={() =>
+                      setOpenFaqIndex((prevIndex) =>
+                        prevIndex === index ? null : index
+                      )
+                    }
+                    className="faq-item"
+                  >
+                    <AccordionSummary
+                      expandIcon={
+                        openFaqIndex === index ? <RemoveIcon sx={{ color: "#222222" }} /> : <AddIcon sx={{ color: "#222222" }} />
+                      }
+                      aria-controls={`faq-content-${index}`}
+                      id={`faq-header-${index}`}
+                      className="faq-question"
+                    >
+                      <Typography variant="h6">{item.question}</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails className="faq-answer">
+                      <Typography variant="body1">{item.answer}</Typography>
+                    </AccordionDetails>
+                  </Accordion>
+                ))}
+              </Box>
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
     </>
   );
 };

@@ -7,9 +7,16 @@ import {
   Typography,
   Paper,
   Avatar,
-  AvatarGroup, useMediaQuery, useTheme
+  AvatarGroup, 
+  useMediaQuery, 
+  useTheme,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
 } from "@mui/material";
 import React, { useState, useEffect, useRef } from "react";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Mousewheel, Navigation } from "swiper/modules";
@@ -217,9 +224,44 @@ const solutions = [
   },
 ];
 
+const faqItems = [
+  {
+    question: "What is an EMR Software Development Company?",
+    answer:
+      "An EMR Software Development Company specializes in designing, developing, and implementing Electronic Medical Record systems that help healthcare providers manage patient records, clinical documentation, prescriptions, and workflows digitally.",
+  },
+  {
+    question: "What is the difference between EHR and EMR?",
+    answer:
+      "EMR focuses on digital patient records within a single organization, while EHR enables secure sharing across multiple healthcare providers and facilities.",
+  },
+  {
+    question: "Why should healthcare organizations invest in custom EHR and EMR software?",
+    answer:
+      "Custom solutions align with specific workflows, specialties, compliance requirements, and operational goals.",
+  },
+  {
+    question: "Is EHR and EMR software HIPAA compliant?",
+    answer:
+      "Yes. Modern solutions include encryption, audit trails, access controls, and security measures designed to support HIPAA compliance.",
+  },
+  {
+    question: "Can EHR and EMR software integrate with other healthcare systems?",
+    answer:
+      "Yes. They can integrate with laboratories, pharmacies, billing systems, imaging platforms, telehealth solutions, and other healthcare applications.",
+  },
+  {
+    question: "Why choose USS as your EMR Software Development Company?",
+    answer:
+      "USS provides custom healthcare software solutions, HIPAA-compliant development, seamless integrations, scalable architectures, and dedicated support.",
+  },
+];
+
 const CompEhrEmrDevelopment = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
+  const [openFaqIndex, setOpenFaqIndex] = useState(null);
 
   //trust-uss
   const [hoverContent, setHoverContent] = useState(null);
@@ -332,9 +374,9 @@ const CompEhrEmrDevelopment = () => {
                   <Typography variant="h2" sx={{ mb: 2, fontWeight: 700 }}>
                     Key Features of Our{" "}
                     <span className="primary-color">
-                       EHR & EMR Software Development{" "}
+                      EHR & EMR Software Development{" "}
                       <span className="span-text">
-                         Services
+                        Services
                         <div className="line-container">
                           <div className="line-wrapper"></div>
                           <div className="line"></div>
@@ -491,9 +533,9 @@ const CompEhrEmrDevelopment = () => {
             >
               Comprehensive{" "}
               <span className="primary-color">
-                 EHR & EMR Software Development{" "}
+                EHR & EMR Software Development{" "}
                 <span className="span-text">
-                   Services
+                  Services
                   <div className="line-container">
                     <div className="line-wrapper"></div>
                     <div className="line"></div>
@@ -569,7 +611,7 @@ const CompEhrEmrDevelopment = () => {
             <Typography variant="h2" sx={{ mb: 5, mt: 3, fontWeight: 700 }}>
               Why Healthcare Organizations Choose{" "}
               <span className="primary-color">
-                 Our EMR Software Development{" "}
+                Our EMR Software Development{" "}
                 <span className="span-text">
                   Company
                   <div className="line-container">
@@ -905,6 +947,68 @@ const CompEhrEmrDevelopment = () => {
         </Box>
       </Container>
       <Contact />
+
+       <Box className="patient-section" sx={{ py: { xs: 3, md: 4, lg: 5 } }}>
+        <Container className="custom-container" maxWidth="lg">
+          <Grid container spacing={4}>
+            {/* Left Section */}
+            <Grid size={{ xs: 12, md: 4 }}>
+              <Box className="patient-left">
+                <Box className="heading-content">
+                  <Typography variant="h2" sx={{ mb: 2, fontWeight: 700 }}>
+                    Frequently Asked{" "}
+                    <span className="primary-color">
+                      <span className="span-text">
+                        Questions
+                        <div className="line-container">
+                          <div className="line-wrapper"></div>
+                          <div className="line"></div>
+                          <div className="moving-box"></div>
+                        </div>
+                      </span>
+                    </span>
+                  </Typography>
+                  <Typography className="patient-subheading">
+                    Need More Information?<br /> Start Here.
+                  </Typography>
+                </Box>
+              </Box>
+            </Grid>
+
+            {/* Right Section */}
+            <Grid size={{ xs: 12, md: 8 }}>
+              <Box className="faq-accordion">
+                {faqItems.map((item, index) => (
+                  <Accordion
+                    key={item.question}
+                    expanded={openFaqIndex === index}
+                    onChange={() =>
+                      setOpenFaqIndex((prevIndex) =>
+                        prevIndex === index ? null : index
+                      )
+                    }
+                    className="faq-item"
+                  >
+                    <AccordionSummary
+                      expandIcon={
+                        openFaqIndex === index ? <RemoveIcon sx={{ color: "#222222" }} /> : <AddIcon sx={{ color: "#222222" }} />
+                      }
+                      aria-controls={`faq-content-${index}`}
+                      id={`faq-header-${index}`}
+                      className="faq-question"
+                    >
+                      <Typography variant="h6">{item.question}</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails className="faq-answer">
+                      <Typography variant="body1">{item.answer}</Typography>
+                    </AccordionDetails>
+                  </Accordion>
+                ))}
+              </Box>
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
     </>
   );
 };

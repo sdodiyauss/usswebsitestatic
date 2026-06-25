@@ -7,8 +7,15 @@ import {
   Typography,
   Paper,
   Avatar,
-  AvatarGroup, useMediaQuery, useTheme
+  AvatarGroup,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -219,9 +226,39 @@ const solutions = [
   },
 ];
 
+const faqItems = [
+  {
+    question: "What is a Patient Management System?",
+    answer:
+      "A Patient Management System is a healthcare software solution that helps clinics, hospitals, and healthcare providers manage patient records, appointments, billing, communication, and clinical workflows from a centralized platform.",
+  },
+  {
+    question: "How does a Patient Management System improve patient care?",
+    answer:
+      "By centralizing patient information and automating routine tasks, providers can focus more on patient care.",
+  },
+  {
+    question: "Can a Patient Management System integrate with EHR and EMR software?",
+    answer:
+      "Yes. Modern systems integrate seamlessly with EHR and EMR platforms.",
+  },
+  {
+    question: "Is a Patient Management System secure?",
+    answer:
+      "Yes. It uses encryption, role-based access controls, and compliance measures to protect patient data.",
+  },
+  {
+    question: "Can small clinics benefit from a Patient Management System?",
+    answer:
+      "Yes. It is suitable for clinics, specialty practices, multi-location facilities, and hospitals.",
+  },
+];
+
 const CompPatientManagentPortal = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
+  const [openFaqIndex, setOpenFaqIndex] = useState(null);
 
   //trust-uss
   const [hoverContent, setHoverContent] = useState(null);
@@ -932,6 +969,68 @@ const CompPatientManagentPortal = () => {
         </Box>
       </Container>
       <Contact />
+
+      <Box className="patient-section" sx={{ py: { xs: 3, md: 4, lg: 5 } }}>
+        <Container className="custom-container" maxWidth="lg">
+          <Grid container spacing={4}>
+            {/* Left Section */}
+            <Grid size={{ xs: 12, md: 4 }}>
+              <Box className="patient-left">
+                <Box className="heading-content">
+                  <Typography variant="h2" sx={{ mb: 2, fontWeight: 700 }}>
+                    Frequently Asked{" "}
+                    <span className="primary-color">
+                      <span className="span-text">
+                        Questions
+                        <div className="line-container">
+                          <div className="line-wrapper"></div>
+                          <div className="line"></div>
+                          <div className="moving-box"></div>
+                        </div>
+                      </span>
+                    </span>
+                  </Typography>
+                  <Typography className="patient-subheading">
+                    Need More Information?<br /> Start Here.
+                  </Typography>
+                </Box>
+              </Box>
+            </Grid>
+
+            {/* Right Section */}
+            <Grid size={{ xs: 12, md: 8 }}>
+              <Box className="faq-accordion">
+                {faqItems.map((item, index) => (
+                  <Accordion
+                    key={item.question}
+                    expanded={openFaqIndex === index}
+                    onChange={() =>
+                      setOpenFaqIndex((prevIndex) =>
+                        prevIndex === index ? null : index
+                      )
+                    }
+                    className="faq-item"
+                  >
+                    <AccordionSummary
+                      expandIcon={
+                        openFaqIndex === index ? <RemoveIcon sx={{ color: "#222222" }} /> : <AddIcon sx={{ color: "#222222" }} />
+                      }
+                      aria-controls={`faq-content-${index}`}
+                      id={`faq-header-${index}`}
+                      className="faq-question"
+                    >
+                      <Typography variant="h6">{item.question}</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails className="faq-answer">
+                      <Typography variant="body1">{item.answer}</Typography>
+                    </AccordionDetails>
+                  </Accordion>
+                ))}
+              </Box>
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
     </>
   );
 };
