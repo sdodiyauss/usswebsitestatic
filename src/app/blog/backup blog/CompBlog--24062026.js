@@ -77,9 +77,8 @@ import Blog44 from "@/blog-react-native-for-mobile-app.webp";
 import Blog45 from "@/blog-ui-design-to-frontend-dev.webp";
 import Blog46 from "@/blog-dot-net-game-changer.webp";
 import Blog47 from "@/blog-nodejs-2026.webp";
-import Blog48 from "@/blog-ai-fraud-detection.webp";
-import Blog49 from "@/blog-how-ai-change-seo.webp";
-import Blog50 from "@/blog-rebranding-vs-refreshing.webp";
+import Blog48 from "@/blog-ai-fraud-detection.webp"
+import Blog49 from "@/blog-how-ai-change-seo.webp"
 
 import CircleType from "circletype";
 import minitsCircle from "~/minitsCircle.json";
@@ -266,7 +265,6 @@ const CompBlog = () => {
         { id: "p51", title: "Node.js in 2026: What’s Changed and What Developers Must Learn", excerpt: "The world of backend development is evolving rapidly, and Node.js continues to remain one of the most powerful technologies for building scalable, high-performance web applications. From startups to enterprise platforms, businesses still rely heavily on Node.js for APIs, real-time applications, microservices...", author: "Arzeb Mansuri", date: "June 2nd, 2026", readTime: "6 min read", category: "Web Development", image: Blog47, avatarImage: "/images/blog-avtar-arzeb.webp", featured: false, url: "/blog/nodejs-in-2026-trends-changes-skills" },
          { id: "p52", title: "How AI Is Revolutionizing Fraud Detection in Fintech", excerpt: "The financial technology (Fintech) industry has transformed the way people manage money, make payments, apply for loans, invest, and access financial services. Digital banking, mobile wallets, online lending platforms, Buy Now Pay Later (BNPL) services, cryptocurrency exchanges, and peer-to-peer payment systems have created a more connected...", author: "Jignesh Vaghasiya", date: "June 9th, 2026", readTime: "6 min read", category: "Business Strategy", image: Blog48, avatarImage: "/images/written-by-jignesh.webp", featured: false, url: "/blog/ai-fraud-detection-in-fintech"  },
           { id: "p53", title: "How AI Search Is Changing Traditional SEO in 2026", excerpt: "The search landscape is experiencing its biggest transformation since Google revolutionized the internet. For years, businesses relied on traditional Search Engine Optimization (SEO) strategies to improve rankings, increase organic traffic, and generate leads. Success was measured by keyword rankings, backlinks, click-through rates...", author: "Jignesh Vaghasiya", date: "June 16th, 2026", readTime: "6 min read", category: "Business Strategy", image: Blog49, avatarImage: "/images/written-by-jignesh.webp", featured: false, url: "/blog/how-ai-search-is-changing-traditional-seo-in-2026"  },
-          { id: "p54", title: "Rebranding vs Refreshing: Which One Does Your Business Need?", excerpt: "In today's competitive digital landscape, businesses must continuously evolve to stay relevant, attract customers, and maintain a strong market presence. However, many organizations face a common dilemma: Should they rebrand completely or simply refresh their existing brand? While both strategies...", author: "Jignesh Vaghasiya", date: "June 24th, 2026", readTime: "6 min read", category: "Business Strategy", image: Blog50, avatarImage: "/images/written-by-jignesh.webp", featured: false, url: "/blog/rebrand-or-refresh-your-business"  },
   ];
 
 
