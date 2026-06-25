@@ -7,19 +7,26 @@ import {
   Typography,
   Paper,
   Avatar,
-  AvatarGroup, useMediaQuery, useTheme
+  AvatarGroup,
+  useMediaQuery,
+  useTheme,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
 } from "@mui/material";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Mousewheel, Navigation } from "swiper/modules";
 import "swiper/css";
-
-import callIcon from "@/call-icon.svg?url";
 import CircleType from "circletype";
 
 import DigitalMap from "~/verticalmap.json";
 import DigitalMapMobile from "~/horizontalmap.json";
+import callIcon from "@/call-icon.svg?url";
+
 import HalfBlue from "@/half-blue-circle.svg?url";
 import HalfOrange from "@/half-orange-circle.svg?url";
 import BlueStar from "@/star-blue.svg?url";
@@ -33,7 +40,7 @@ import TrustIcon5 from "@/medical-kit.svg?url";
 import TrustIcon6 from "@/setting-2.svg?url";
 
 import ActiveBG from "@/trust-uss-vector.svg?url";
-import EmrErhBanner from "@/ehr-emr-bg.svg?url";
+import HospitalBanner from "@/hospital-bg.svg?url";
 
 import Slider1 from "@/slider1.webp";
 import Slider2 from "@/slider2.webp";
@@ -44,12 +51,12 @@ import Slider6 from "@/slider6.webp";
 import Slider7 from "@/slider7.webp";
 import RoundOrangeRighticon from "@/round-orange-right.svg?url";
 
-import CodeCircle from "@/code-circle.svg?url";
-import ShieldSecurity from "@/shield-security.svg?url";
-import Monitor from "@/monitor.svg?url";
-import MonitorMobile from "@/monitor-mobbile.svg?url";
-import Data from "@/data.svg?url";
-import Support24 from "@/24-support.svg?url";
+import People from "@/people.svg?url";
+import Note from "@/note.svg?url";
+import MedalStar from "@/medal-star2.svg?url";
+import Chart from "@/chart.svg?url";
+import Hospital from "@/hospital.svg?url";
+import ConvertCube from "@/convert-3d-cube.svg?url";
 
 import opportunity3 from "@/opportunity3.webp";
 import opportunity1 from "@/opportunity1.webp";
@@ -64,70 +71,70 @@ import Lottie from "lottie-react";
 const features = [
   {
     number: "01",
-    title: "Customizable Workflows",
+    title: "Centralized Patient Records Management",
     description:
-      "Easily tailor workflows to fit your specialty and daily processes for smoother adoption and better productivity. Empower your team with tools that adapt to them—not the other way around. Deliver care your way, with a system built around your unique practice needs.",
+      "Keep all your patients' health information in one secure place. From medical history and prescriptions to test results — everything is just a click away, helping you provide faster, more accurate care. Access it anytime, anywhere for seamless treatment delivery.",
   },
   {
     number: "02",
-    title: "Secure Patient Data Management",
+    title: "Hospital Appointment Scheduling System",
     description:
-      "Keep sensitive health information safe. Our HIPAA‑compliant encryption protects patient data while allowing secure, anytime access for authorized users. Give patients and providers peace of mind knowing their data is always protected.",
+      "Say goodbye to appointment chaos. Easily manage bookings, rescheduling, and reminders so patients spend less time waiting and more time getting care. Keep your schedules organized and your days running smoothly every single day. yeh check karo toh isme Smart Appointment Scheduling",
   },
   {
     number: "03",
-    title: "Interoperability & Integration",
+    title: "Hospital Billing & Revenue Management",
     description:
-      "Connect effortlessly with labs, pharmacies, imaging centers, and other systems so you always have a complete, up‑to‑date patient record in one place. Improve collaboration and care coordination with a fully connected healthcare ecosystem.",
+      "Handle billing, insurance claims, and payments without the headaches. Get invoices right the first time and speed up reimbursements. Keep your financial processes transparent, accurate, and completely error‑free. Save time and reduce administrative workload for your team.",
   },
   {
     number: "04",
-    title: "Advanced Clinical Decision Support",
+    title: "Hospital Inventory & Pharmacy Management",
     description:
-      "Get real time guidance when it matters most. AI powered alerts, reminders, and evidence‑based recommendations help you make faster, more accurate clinical decisions. Reduce errors and enhance patient outcomes with intelligent support at every step.",
+      "Stay on top of your medicine and supply stock. Get real time updates, low stock alerts, and avoid last‑minute shortages. Ensure your hospital is always prepared to deliver safe, uninterrupted care. Streamline purchasing to keep costs under control.",
   },
   {
     number: "05",
-    title: "E-Prescribing & Medication Management",
+    title: "Hospital Staff & Workforce Management",
     description:
-      "Send prescriptions directly to pharmacies in seconds. Track refills, monitor drug interactions, and cut down on medication errors with built‑in safety checks. Improve medication accuracy and save valuable time for both providers and patients.",
+      "Make scheduling simple for your doctors, nurses, and staff. Track attendance, assign shifts, and keep your team organized without the stress. Ensure the right people are always in the right place at the right time for optimal care.",
   },
   {
     number: "06",
-    title: "Analytics & Reporting",
+    title: "Healthcare Analytics & Compliance Reporting",
     description:
-      "Build a secure, HIPAA‑compliant EHR/EMR system tailored to your workflow. Enhance patient care, streamline operations, and accelerate decision making. Empower your practice with technology designed for the future of healthcare.",
+      "Turn hospital data into powerful insights. Monitor performance, track patient trends, and easily meet all compliance requirements. Make informed decisions that drive better care, productivity, and operational efficiency.",
   },
 ];
 
 const trustBoxes = [
   {
-    title: "Doctor Centric",
+    title: "Provider-Centric Design",
     description:
       "We collaborate closely with healthcare teams to design practical, real-world workflows that simplify operations and truly fit clinical needs.",
   },
   {
-    title: "Secure Privacy",
+    title: "HIPAA-Compliant Security",
     description:
       "HIPAA, GDPR, and FHIR compliant system ensures your patients' sensitive data is always protected, encrypted, and handled with care.",
   },
   {
-    title: "Seamless Integration",
+    title: "EHR & EMR Integration",
     description:
       "From EHRs to billing, our portal seamlessly integrates with your current systems — no disruptions, just smooth and simple connectivity.",
   },
   {
-    title: "Custom Solutions",
+    title: "Customizable Hospital Workflows",
     description:
       "Fits solo clinics or multi-location hospitals — the portal is fully customizable to match your workflows, scale, and daily operations.",
   },
   {
-    title: "Ongoing Support",
+    title: "Dedicated Healthcare Support",
     description:
       "Real support, real people — our team's always here to help, with healthcare expertise and zero chatbot frustration.",
   },
   {
-    title: "Clinic Trusted",
+    title: "Trusted by Hospitals & Healthcare Organizations",
     description:
       "Our portal streamlines check-ins, enhances communication, and creates a smoother, more satisfying experience for both healthcare staff and patients alike.",
   },
@@ -138,7 +145,7 @@ const cardData = [
     title: "Patient Management Portal for your Clinic",
     desc: "Streamline clinic operations with a secure, intuitive patient management portal for scheduling, records, and seamless communication.",
     image: Slider1,
-    link: "/healthcare-tech/patient-management-portal",
+    link: "/healthcare-tech/patient-management-system-solution",
   },
   {
     title: "Online/Offline Pharmacy Development",
@@ -162,13 +169,13 @@ const cardData = [
     title: "EHR/EMR Development",
     desc: "Develop intelligent EHR/EMR solutions with secure data, automated workflows, and real-time patient management to enhance efficiency, accuracy, & healthcare delivery.",
     image: Slider5,
-    link: "/healthcare-tech/ehr-emr-development",
+    link: "/healthcare-tech/emr-software-development-company",
   },
   {
     title: "Hospital Management Portal Development",
     desc: "Create a smart hospital management portal with automated workflows, real-time data access, and secure patient administration for enhanced efficiency and care delivery.",
     image: Slider6,
-    link: "/healthcare-tech/hospital-management",
+    link: "/healthcare-tech/hospital-management-system-solution",
   },
   {
     title: "Compliance Software Development",
@@ -180,46 +187,81 @@ const cardData = [
 
 const solutions = [
   {
-    title: "Custom EHR/EMR Development",
+    title: "End-to-End Hospital Operations Managementt",
     description:
-      "Your practice is unique, and your EHR/EMR should be too. We build systems from the ground up that match your specialty, simplify your workflow, and stay fully compliant with healthcare regulations.",
-    icon: CodeCircle,
+      "Run your entire hospital from one platform from the moment a patient registers to the time they’re discharged. No more switching between systems. Keep every department connected for smooth, coordinated care.",
+    icon: Hospital,
   },
   {
-    title: "Legacy System Modernization",
+    title: "Improved Patient Experience",
     description:
-      "Still using an outdated system? We'll help you upgrade to a faster, more connected platform without slowing down your work. Seamlessly transition to modern technology and stay ahead in healthcare innovation.",
-    icon: Monitor,
+      "Make every visit smooth and stress free with quick check ins, shorter waiting times, & clear updates at every stage of their care. Create a patient experience that builds trust and long term loyalty.",
+    icon: People,
   },
   {
-    title: "Third Party System Integration",
+    title: "Automated Billing & Insurance Processing",
     description:
-      "No more jumping between platforms. We connect your EHR/EMR with labs, pharmacies, billing systems & imaging tools so everything you need is in one place. Work smarter with a unified system that saves time & reduces error.",
-    icon: Data,
+      "Skip the billing headaches. Create invoices automatically, track payments easily, and process insurance claims without the usual delays. Keep your hospital’s finances organized and stress free.",
+    icon: MedalStar,
   },
   {
-    title: "Mobile & Web App Development",
+    title: "Hospital Workforce & Staff Coordination",
     description:
-      "Access patient records anytime, anywhere. Our secure, intuitive apps let providers and staff work on the go without compromising security. Deliver faster, informed care with instant data access.",
-    icon: MonitorMobile,
+      "Keep your team organized and on schedule. Plan doctor, nurse, and staff shifts effortlessly so every day runs like clockwork. Reduce staffing conflicts and ensure optimal coverage at all times.Easily manage invoices, insurance claims, and online payments from a single, integrated platform—eliminating the need for extra tools and streamlining your entire billing workflow seamlessly.",
+    icon: Note,
   },
   {
-    title: "Data Migration & Security",
+    title: "Real-Time Inventory & Asset Management",
     description:
-      "Switching systems doesn't have to be risky. We handle migration with precision, ensuring every record is secure, accurate, & HIPAA compliant. Make the move confidently, knowing your data is safe every step of the way.",
-    icon: ShieldSecurity,
+      "Always know what’s in stock. Track medicines, supplies, and equipment in real time so you’re never caught off guard. Prevent shortages and keep essential resources ready when they’re needed most.",
+    icon: ConvertCube,
   },
   {
-    title: "Ongoing Support & Maintenance",
+    title: "Advanced Healthcare Analytics & Reporting",
     description:
-      "Technology should keep improving. We provide continuous support, timely updates, and performance checks so your EHR/EMR always runs smoothly. Focus on patient care while we keep your system at peak performance.",
-    icon: Support24,
+      "Turn your hospital data into smart decisions. See what’s working, spot trends, and stay on top of compliance requirements with clear, easy to read reports. Use insights to boost efficiency and deliver better patient care.",
+    icon: Chart,
   },
 ];
 
-const CompEhrEmrDevelopment = () => {
+const faqItems = [
+  {
+    question: "What is a Hospital Management System?",
+    answer:
+      "A Hospital Management System is a comprehensive healthcare software solution that helps hospitals manage patient records, appointments, billing, inventory, staff scheduling, and administrative operations from a centralized platform.",
+  },
+  {
+    question: "What are the benefits of a Hospital Management System?",
+    answer:
+      "A Hospital Management System improves operational efficiency, reduces paperwork, streamlines communication, automates billing, enhances patient care, and helps healthcare organizations manage resources effectively.",
+  },
+  {
+    question: "How does a Hospital Management System improve hospital operations?",
+    answer:
+      "It automates routine administrative tasks, centralizes information, improves department coordination, reduces manual errors, and enables healthcare providers to deliver faster and more efficient patient care.",
+  },
+  {
+    question: "Is a Hospital Management System secure?",
+    answer:
+      "Yes. Hospital Management Systems use advanced security protocols, data encryption, role-based access controls, and compliance measures to protect sensitive healthcare information.",
+  },
+  {
+    question: "Does a Hospital Management System support billing and insurance claims?",
+    answer:
+      "Yes. It simplifies invoice generation, payment tracking, insurance claim processing, and revenue cycle management through automated workflows.",
+  },
+  {
+    question: "How does a Hospital Management System help manage inventory?",
+    answer:
+      "The system tracks medicines, medical supplies, and equipment in real time, helping hospitals prevent shortages, optimize stock levels, and reduce operational costs.",
+  },
+];
+
+const CompHospitalManagement = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
+  const [openFaqIndex, setOpenFaqIndex] = useState(0);
 
   //trust-uss
   const [hoverContent, setHoverContent] = useState(null);
@@ -284,8 +326,8 @@ const CompEhrEmrDevelopment = () => {
   return (
     <>
       {/* <Metadata
-        title="EHR & EMR Development Services"
-        description="Custom EHR/EMR solutions to digitize patient records, streamline workflows, and ensure secure, HIPAA‑compliant healthcare management."
+        title="Hospital Management Software Solutions"
+        description="All‑in‑one hospital management software to streamline operations, manage patients, billing, inventory & ensure quality care delivery."
       /> */}
 
       {/* patient-banner */}
@@ -295,17 +337,15 @@ const CompEhrEmrDevelopment = () => {
             <Grid size={{ xs: 12, md: 10 }}>
               <Box className="heading-content healthcare-banner-content">
                 <Typography variant="h1" sx={{ color: "#f28c38", mb: 2 }}>
-                  EHR/EMR Development
+                  Hospital Management System for Modern Healthcare Facilities
                 </Typography>
                 <Typography variant="h6" paragraph sx={{ mb: 3 }}>
-                  Build a secure, HIPAA‑compliant EHR/EMR system tailored to
-                  your workflow. Enhance patient care, streamline operations,
-                  and accelerate decision‑making.
+                  Streamline patient care, appointments, billing, inventory management, staff scheduling, and medical records with a secure Hospital Management System designed to improve operational efficiency and patient outcomes.
                 </Typography>
               </Box>
               <Box className="heading-content" align="center">
                 <Link href="/contactus" variant="contained" className="main-primary-btn">
-                  Request Free Consultation
+                  Get Started Today
                 </Link>
               </Box>
             </Grid>
@@ -332,11 +372,11 @@ const CompEhrEmrDevelopment = () => {
               <Box className="patient-left">
                 <Box className="heading-content">
                   <Typography variant="h2" sx={{ mb: 2, fontWeight: 700 }}>
-                    EHR/EMR Features{" "}
+                    Key Features{" "}
                     <span className="primary-color">
-                      That Transform{" "}
+                      of Our Hospital Manageme
                       <span className="span-text">
-                        Care
+                        nt System
                         <div className="line-container">
                           <div className="line-wrapper"></div>
                           <div className="line"></div>
@@ -346,14 +386,13 @@ const CompEhrEmrDevelopment = () => {
                     </span>
                   </Typography>
                   <Typography className="patient-subheading">
-                    From secure data to AI support, our EHR/ EMR streamlines
-                    care.
+                    Empower your hospital with advanced tools to manage patients, staff operations, compliance, billing, and inventory from one centralized Hospital Management System.
                   </Typography>
                 </Box>
                 <Box className="patient-image-wrapper">
                   <Image
-                    src={EmrErhBanner}
-                    alt="Medical Billing Features"
+                    src={HospitalBanner}
+                    alt="Smart Features for Modern Hospitals"
                     width={400}
                     height={300}
                   />
@@ -397,9 +436,9 @@ const CompEhrEmrDevelopment = () => {
                 <Box className="opportunity-card opportunity-text-card md-order-1">
                   <Box className="heading-content">
                     <Typography variant="h2" sx={{ mb: 5, fontWeight: 700 }}>
-                      Expand business opportunities <br />
+                      Benefits of Our <br />
                       <span className="span-text primary-color">
-                        of Software
+                        Hospital Management System
                         <div className="line-container">
                           <div className="line-wrapper"></div>
                           <div className="line"></div>
@@ -471,11 +510,7 @@ const CompEhrEmrDevelopment = () => {
                     variant="body2"
                     className="opportunity-description"
                   >
-                    Our Patient Management Portal helps you scale smart — with
-                    online bookings, teleconsults, and real-time insights. Serve
-                    more patients, reduce no-shows, and explore new revenue
-                    streams, all while keeping your workflow smooth and your
-                    team focused.
+                    Our Hospital Management System helps healthcare organizations improve operational efficiency, automate administrative processes, optimize resource utilization, streamline billing workflows, and enhance patient care through a centralized digital platform.
                   </Typography>
                 </Box>
               </Box>
@@ -496,11 +531,11 @@ const CompEhrEmrDevelopment = () => {
               align="center"
               sx={{ mb: 5, fontWeight: 700 }}
             >
-              End to End{" "}
+              Why Choose Our {" "}
               <span className="primary-color">
-                EHR/EMR Development Solutions for Modern Heal
+                Hospital Management {" "}
                 <span className="span-text">
-                  thcare
+                  System
                   <div className="line-container">
                     <div className="line-wrapper"></div>
                     <div className="line"></div>
@@ -545,7 +580,10 @@ const CompEhrEmrDevelopment = () => {
           >
             <Box className="heading-content pr">
               <Typography variant="h2" sx={{ my: 2, color: "white" }}>
-                Let's Build Your Next‑Gen EHR/EMR Together
+                Transform Hospital Operations with a Modern Hospital Management System
+              </Typography>
+              <Typography variant="body1">
+                Improve patient care, streamline hospital administration, automate workflows, and increase operational efficiency with a scalable Hospital Management System tailored to your healthcare organization.
               </Typography>
             </Box>
 
@@ -593,12 +631,12 @@ const CompEhrEmrDevelopment = () => {
             >
               <Box
                 className="trust-uss-box"
-                onMouseEnter={() => handleHover("Doctor Centric")}
+                onMouseEnter={() => handleHover("Provider-Centric Design")}
                 onMouseLeave={handleMouseLeave}
-                onClick={() => handleClick("Doctor Centric")}
+                onClick={() => handleClick("Provider-Centric Design")}
               >
                 <Image src={TrustIcon2} alt="TrustIcon1" />
-                <Typography variant="h6">Doctor Centric</Typography>
+                <Typography variant="h6">Provider-Centric Design</Typography>
               </Box>
               <Image
                 src={OrangeStar}
@@ -618,12 +656,12 @@ const CompEhrEmrDevelopment = () => {
             >
               <Box
                 className="trust-uss-box"
-                onMouseEnter={() => handleHover("Secure Privacy")}
+                onMouseEnter={() => handleHover("HIPAA-Compliant Security")}
                 onMouseLeave={handleMouseLeave}
-                onClick={() => handleClick("Secure Privacy")}
+                onClick={() => handleClick("HIPAA-Compliant Security")}
               >
                 <Image src={TrustIcon3} alt="TrustIcon1" />
-                <Typography variant="h6">Secure Privacy</Typography>
+                <Typography variant="h6">HIPAA-Compliant Security</Typography>
               </Box>
               <Image
                 src={BlueStar}
@@ -688,12 +726,12 @@ const CompEhrEmrDevelopment = () => {
             >
               <Box
                 className="trust-uss-box"
-                onMouseEnter={() => handleHover("Seamless Integration")}
+                onMouseEnter={() => handleHover("EHR & EMR Integration")}
                 onMouseLeave={handleMouseLeave}
-                onClick={() => handleClick("Seamless Integration")}
+                onClick={() => handleClick("EHR & EMR Integration")}
               >
                 <Image src={TrustIcon4} alt="TrustIcon1" />
-                <Typography variant="h6">Seamless Integration</Typography>
+                <Typography variant="h6">EHR & EMR Integration</Typography>
               </Box>
               <Image
                 src={OrangeStar}
@@ -713,12 +751,12 @@ const CompEhrEmrDevelopment = () => {
             >
               <Box
                 className="trust-uss-box"
-                onMouseEnter={() => handleHover("Custom Solutions")}
+                onMouseEnter={() => handleHover("Customizable Hospital Workflows")}
                 onMouseLeave={handleMouseLeave}
-                onClick={() => handleClick("Custom Solutions")}
+                onClick={() => handleClick("Customizable Hospital Workflows")}
               >
                 <Image src={TrustIcon1} alt="TrustIcon1" />
-                <Typography variant="h6">Custom Solutions</Typography>
+                <Typography variant="h6">Customizable Hospital Workflows</Typography>
               </Box>
               <Image
                 src={BlueStar}
@@ -743,12 +781,12 @@ const CompEhrEmrDevelopment = () => {
             >
               <Box
                 className="trust-uss-box"
-                onMouseEnter={() => handleHover("Ongoing Support")}
+                onMouseEnter={() => handleHover("Dedicated Healthcare Support")}
                 onMouseLeave={handleMouseLeave}
-                onClick={() => handleClick("Ongoing Support")}
+                onClick={() => handleClick("Dedicated Healthcare Support")}
               >
                 <Image src={TrustIcon6} alt="TrustIcon1" />
-                <Typography variant="h6">Ongoing Support</Typography>
+                <Typography variant="h6">Dedicated Healthcare Support</Typography>
               </Box>
               <Image
                 src={OrangeStar}
@@ -773,12 +811,12 @@ const CompEhrEmrDevelopment = () => {
             >
               <Box
                 className="trust-uss-box"
-                onMouseEnter={() => handleHover("Clinic Trusted")}
+                onMouseEnter={() => handleHover("Trusted by Hospitals & Healthcare Organizations")}
                 onMouseLeave={handleMouseLeave}
-                onClick={() => handleClick("Clinic Trusted")}
+                onClick={() => handleClick("Trusted by Hospitals & Healthcare Organizations")}
               >
                 <Image src={TrustIcon5} alt="TrustIcon1" />
-                <Typography variant="h6">Clinic Trusted</Typography>
+                <Typography variant="h6">Trusted by Hospitals & Healthcare Organizations</Typography>
               </Box>
               <Image
                 src={OrangeStar}
@@ -807,11 +845,11 @@ const CompEhrEmrDevelopment = () => {
               align="center"
               sx={{ mb: 5, fontWeight: 700 }}
             >
-              Next-Gen{" "}
+              Let's Talk{" "}
               <span className="primary-color">
-                Healthcar
+                About Your Hospital's{" "}
                 <span className="span-text">
-                  e Tech
+                  Needs
                   <div className="line-container">
                     <div className="line-wrapper"></div>
                     <div className="line"></div>
@@ -892,12 +930,12 @@ const CompEhrEmrDevelopment = () => {
             align="center"
             sx={{ mt: 6, mb: 4, fontWeight: 700 }}
           >
-            Talk to{" "}
+            Let’s Talk About Your
             <span className="primary-color">
               {" "}
-              an EHR Expert{" "}
+              Hospital’s {" "}
               <span className="span-text">
-                Today
+                Needs
                 <div className="line-container">
                   <div className="line-wrapper"></div>
                   <div className="line"></div>
@@ -909,8 +947,70 @@ const CompEhrEmrDevelopment = () => {
         </Box>
       </Container>
       <Contact />
+
+      <Box className="patient-section" sx={{ py: { xs: 3, md: 4, lg: 5 } }}>
+        <Container className="custom-container" maxWidth="lg">
+          <Grid container spacing={4}>
+            {/* Left Section */}
+            <Grid size={{ xs: 12, md: 4 }}>
+              <Box className="patient-left">
+                <Box className="heading-content">
+                  <Typography variant="h2" sx={{ mb: 2, fontWeight: 700 }}>
+                    Frequently Asked{" "}
+                    <span className="primary-color">
+                      <span className="span-text">
+                        Questions
+                        <div className="line-container">
+                          <div className="line-wrapper"></div>
+                          <div className="line"></div>
+                          <div className="moving-box"></div>
+                        </div>
+                      </span>
+                    </span>
+                  </Typography>
+                  <Typography className="patient-subheading">
+                    Need More Information?<br /> Start Here.
+                  </Typography>
+                </Box>
+              </Box>
+            </Grid>
+
+            {/* Right Section */}
+            <Grid size={{ xs: 12, md: 8 }}>
+              <Box className="faq-accordion">
+                {faqItems.map((item, index) => (
+                  <Accordion
+                    key={item.question}
+                    expanded={openFaqIndex === index}
+                    onChange={() =>
+                      setOpenFaqIndex((prevIndex) =>
+                        prevIndex === index ? null : index
+                      )
+                    }
+                    className="faq-item"
+                  >
+                    <AccordionSummary
+                      expandIcon={
+                        openFaqIndex === index ? <RemoveIcon sx={{ color: "#222222" }} /> : <AddIcon sx={{ color: "#222222" }} />
+                      }
+                      aria-controls={`faq-content-${index}`}
+                      id={`faq-header-${index}`}
+                      className="faq-question"
+                    >
+                      <Typography variant="h6">{item.question}</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails className="faq-answer">
+                      <Typography variant="body1">{item.answer}</Typography>
+                    </AccordionDetails>
+                  </Accordion>
+                ))}
+              </Box>
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
     </>
   );
 };
 
-export default CompEhrEmrDevelopment;
+export default CompHospitalManagement;

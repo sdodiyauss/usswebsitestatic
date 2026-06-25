@@ -7,24 +7,26 @@ import {
   Typography,
   Paper,
   Avatar,
-  AvatarGroup, useMediaQuery, useTheme
+  AvatarGroup, 
+  useMediaQuery, 
+  useTheme,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
 } from "@mui/material";
 import React, { useState, useEffect, useRef } from "react";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Mousewheel, Navigation } from "swiper/modules";
 import "swiper/css";
 
-import PagesBannerBg from "@/healthcare-bg.webp";
-import PatientBanner from "@/patient-banner.svg?url";
-import opportunity3 from "@/opportunity3.webp";
-import opportunity1 from "@/opportunity1.webp";
-// import ExpandbusinessImge from "@/expand-business-img.webp";
-// import PagesBannerBg from "@/pages-banner-bg.webp";
+import callIcon from "@/call-icon.svg?url";
+import CircleType from "circletype";
+
 import DigitalMap from "~/verticalmap.json";
 import DigitalMapMobile from "~/horizontalmap.json";
-import callIcon from "@/call-icon.svg?url";
-
 import HalfBlue from "@/half-blue-circle.svg?url";
 import HalfOrange from "@/half-orange-circle.svg?url";
 import BlueStar from "@/star-blue.svg?url";
@@ -38,6 +40,7 @@ import TrustIcon5 from "@/medical-kit.svg?url";
 import TrustIcon6 from "@/setting-2.svg?url";
 
 import ActiveBG from "@/trust-uss-vector.svg?url";
+import EmrErhBanner from "@/ehr-emr-bg.svg?url";
 
 import Slider1 from "@/slider1.webp";
 import Slider2 from "@/slider2.webp";
@@ -48,17 +51,19 @@ import Slider6 from "@/slider6.webp";
 import Slider7 from "@/slider7.webp";
 import RoundOrangeRighticon from "@/round-orange-right.svg?url";
 
-import Frame from "@/frame.svg?url";
-import Note from "@/note.svg?url";
-import Message from "@/messages-3.svg?url";
-import WalletMoney from "@/wallet-money.svg?url";
-import StatusUp from "@/status-up.svg?url";
-import ShieldTick from "@/shield-tick.svg?url";
+import CodeCircle from "@/code-circle.svg?url";
+import ShieldSecurity from "@/shield-security.svg?url";
+import Monitor from "@/monitor.svg?url";
+import MonitorMobile from "@/monitor-mobbile.svg?url";
+import Data from "@/data.svg?url";
+import Support24 from "@/24-support.svg?url";
+
+import opportunity3 from "@/opportunity3.webp";
+import opportunity1 from "@/opportunity1.webp";
+import opportunity2 from "@/opportunity2.webp";
 
 import Contact from "~/contact/Contact";
 import Link from "next/link";
-
-import CircleType from "circletype";
 import Metadata from "~/meta/Metadata";
 import minitsCircle from "~/minitsCircle.json";
 import Lottie from "lottie-react";
@@ -66,70 +71,70 @@ import Lottie from "lottie-react";
 const features = [
   {
     number: "01",
-    title: "Secure Registration & Patient Profile Management",
+    title: "Custom EHR & EMR Workflows",
     description:
-      "Register patients in seconds and track every detail—from first visit to follow-up. No digging through files or toggling between tabs—just clean, connected records at your fingertips. Secure, intuitive, and built for teams who'd rather spend time on people, not paperwork.",
+      "Easily tailor workflows to fit your specialty and daily processes for smoother adoption and better productivity. Empower your team with tools that adapt to them—not the other way around. Deliver care your way, with a system built around your unique practice needs.",
   },
   {
     number: "02",
-    title: "Appointment Schedule & Reminder",
+    title: "Secure Patient Data & Records Management",
     description:
-      "Let patients book appointments anytime with ease, while automated reminders reduce no-shows. Save staff time, streamline scheduling, and keep your clinic running smoothly, on time, and hassle-free—every single day, without manual follow-ups.",
+      "Keep sensitive health information safe. Our HIPAA‑compliant encryption protects patient data while allowing secure, anytime access for authorized users. Give patients and providers peace of mind knowing their data is always protected.",
   },
   {
     number: "03",
-    title: "Telehealth & Virtual Consultations",
+    title: "Healthcare System Integration & Interoperability",
     description:
-      "Connect with patients anytime, anywhere through secure telehealth and virtual consultations. Provide timely, flexible care beyond clinic walls, reduce waiting room visits, and make healthcare more accessible — all from a single, easy-to-use platform.",
+      "Connect effortlessly with labs, pharmacies, imaging centers, and other systems so you always have a complete, up‑to‑date patient record in one place. Improve collaboration and care coordination with a fully connected healthcare ecosystem.",
   },
   {
     number: "04",
-    title: "Medical History & Documentation",
+    title: "AI-Powered Clinical Decision Support",
     description:
-      "Tired of flipping through files to find patient details?Access complete medical histories, notes, and documents instantly — all in one place. Stay informed, make faster decisions, and deliver better care. Try smarter record-keeping today!",
+      "Get real time guidance when it matters most. AI powered alerts, reminders, and evidence‑based recommendations help you make faster, more accurate clinical decisions. Reduce errors and enhance patient outcomes with intelligent support at every step.",
   },
   {
     number: "05",
-    title: "Billing & Insurance Integration",
+    title: "Electronic Prescribing & Medication Management",
     description:
-      "Still juggling invoices and insurance claims manually? Integrate billing and insurance into one seamless flow. Track payments, file claims faster, and reduce errors — all while giving patients a smoother, transparent experience. Simplify billing today!",
+      "Send prescriptions directly to pharmacies in seconds. Track refills, monitor drug interactions, and cut down on medication errors with built‑in safety checks. Improve medication accuracy and save valuable time for both providers and patients.",
   },
   {
     number: "06",
-    title: "Patient Centric Care Delivery",
+    title: "Healthcare Analytics & Reporting",
     description:
-      "Put patients at the center with personalized care plans, seamless communication, and ongoing engagement—making every interaction meaningful, efficient, and truly focused on their comfort, outcomes, and overall well-being.",
+      "Build a secure, HIPAA‑compliant EHR/EMR system tailored to your workflow. Enhance patient care, streamline operations, and accelerate decision making. Empower your practice with technology designed for the future of healthcare.",
   },
 ];
 
 const trustBoxes = [
   {
-    title: "Doctor Centric",
+    title: "Provider-Centric Design",
     description:
       "We collaborate closely with healthcare teams to design practical, real-world workflows that simplify operations and truly fit clinical needs.",
   },
   {
-    title: "Secure Privacy",
+    title: "HIPAA-Compliant Security",
     description:
       "HIPAA, GDPR, and FHIR compliant system ensures your patients' sensitive data is always protected, encrypted, and handled with care.",
   },
   {
-    title: "Seamless Integration",
+    title: "Healthcare Interoperability & Integration",
     description:
       "From EHRs to billing, our portal seamlessly integrates with your current systems — no disruptions, just smooth and simple connectivity.",
   },
   {
-    title: "Custom Solutions",
+    title: "Custom EHR & EMR Development",
     description:
       "Fits solo clinics or multi-location hospitals — the portal is fully customizable to match your workflows, scale, and daily operations.",
   },
   {
-    title: "Ongoing Support",
+    title: "Dedicated Healthcare Support",
     description:
       "Real support, real people — our team's always here to help, with healthcare expertise and zero chatbot frustration.",
   },
   {
-    title: "Clinic Trusted",
+    title: "Trusted by Healthcare Providers",
     description:
       "Our portal streamlines check-ins, enhances communication, and creates a smoother, more satisfying experience for both healthcare staff and patients alike.",
   },
@@ -140,7 +145,7 @@ const cardData = [
     title: "Patient Management Portal for your Clinic",
     desc: "Streamline clinic operations with a secure, intuitive patient management portal for scheduling, records, and seamless communication.",
     image: Slider1,
-    link: "/healthcare-tech/patient-management-portal",
+    link: "/healthcare-tech/patient-management-system-solution",
   },
   {
     title: "Online/Offline Pharmacy Development",
@@ -164,13 +169,13 @@ const cardData = [
     title: "EHR/EMR Development",
     desc: "Develop intelligent EHR/EMR solutions with secure data, automated workflows, and real-time patient management to enhance efficiency, accuracy, & healthcare delivery.",
     image: Slider5,
-    link: "/healthcare-tech/ehr-emr-development",
+    link: "/healthcare-tech/emr-software-development-company",
   },
   {
     title: "Hospital Management Portal Development",
     desc: "Create a smart hospital management portal with automated workflows, real-time data access, and secure patient administration for enhanced efficiency and care delivery.",
     image: Slider6,
-    link: "/healthcare-tech/hospital-management",
+    link: "/healthcare-tech/hospital-management-system-solution",
   },
   {
     title: "Compliance Software Development",
@@ -182,46 +187,81 @@ const cardData = [
 
 const solutions = [
   {
-    title: "Centralized Patient Information",
+    title: "Custom EHR & EMR Software Development",
     description:
-      "Avoid scattered records by storing patient histories, appointments, and medical updates in one secure, centralized system that's easy to access, manage, and update from anywhere, at any time.",
-    icon: Frame,
+      "Your practice is unique, and your EHR/EMR should be too. We build systems from the ground up that match your specialty, simplify your workflow, and stay fully compliant with healthcare regulations.",
+    icon: CodeCircle,
   },
   {
-    title: "Smart Appointment Management",
+    title: "Legacy Healthcare System Modernization",
     description:
-      "Empower patients to schedule, cancel, or reschedule appointments anytime, while you maintain an organized, efficient calendar that enhances workflow, reduces no-shows, and supports smooth, hassle-free operations daily.",
-    icon: Note,
+      "Still using an outdated system? We'll help you upgrade to a faster, more connected platform without slowing down your work. Seamlessly transition to modern technology and stay ahead in healthcare innovation.",
+    icon: Monitor,
   },
   {
-    title: "Seamless Patient Communication",
+    title: "Healthcare System Integration Services",
     description:
-      "Secure chat features and automated reminders foster trust; improve communication and significantly reduce no-shows—ensuring both patients and providers stay informed, connected, and on schedule effortlessly.",
-    icon: Message,
+      "No more jumping between platforms. We connect your EHR/EMR with labs, pharmacies, billing systems & imaging tools so everything you need is in one place. Work smarter with a unified system that saves time & reduces error.",
+    icon: Data,
   },
   {
-    title: "Simplified Billing & Payments",
+    title: "Healthcare Mobile & Web Application Development",
     description:
-      "Easily manage invoices, insurance claims, and online payments from a single, integrated platform—eliminating the need for extra tools and streamlining your entire billing workflow seamlessly.",
-    icon: WalletMoney,
+      "Access patient records anytime, anywhere. Our secure, intuitive apps let providers and staff work on the go without compromising security. Deliver faster, informed care with instant data access.",
+    icon: MonitorMobile,
   },
   {
-    title: "Real-Time Insights & Reports",
+    title: "Secure Data Migration & Compliance Management",
     description:
-      "Monitor everything across your clinic—patient flow, staff activity, and performance trends—using intuitive, easy-to-read dashboards that provide real-time insights to support smarter, faster decision-making every day.",
-    icon: StatusUp,
+      "Switching systems doesn't have to be risky. We handle migration with precision, ensuring every record is secure, accurate, & HIPAA compliant. Make the move confidently, knowing your data is safe every step of the way.",
+    icon: ShieldSecurity,
   },
   {
-    title: "HIPAA & Global Compliance",
+    title: "EHR & EMR Support and Maintenance Services",
     description:
-      "The portal is designed to comply with healthcare regulations like HIPAA, GDPR, and more—ensuring patient data stays secure while keeping your practice fully compliant and protected.",
-    icon: ShieldTick,
+      "Technology should keep improving. We provide continuous support, timely updates, and performance checks so your EHR/EMR always runs smoothly. Focus on patient care while we keep your system at peak performance.",
+    icon: Support24,
   },
 ];
 
-const CompPatientManagentPortal = () => {
+const faqItems = [
+  {
+    question: "What is an EMR Software Development Company?",
+    answer:
+      "An EMR Software Development Company specializes in designing, developing, and implementing Electronic Medical Record systems that help healthcare providers manage patient records, clinical documentation, prescriptions, and workflows digitally.",
+  },
+  {
+    question: "What is the difference between EHR and EMR?",
+    answer:
+      "EMR focuses on digital patient records within a single organization, while EHR enables secure sharing across multiple healthcare providers and facilities.",
+  },
+  {
+    question: "Why should healthcare organizations invest in custom EHR and EMR software?",
+    answer:
+      "Custom solutions align with specific workflows, specialties, compliance requirements, and operational goals.",
+  },
+  {
+    question: "Is EHR and EMR software HIPAA compliant?",
+    answer:
+      "Yes. Modern solutions include encryption, audit trails, access controls, and security measures designed to support HIPAA compliance.",
+  },
+  {
+    question: "Can EHR and EMR software integrate with other healthcare systems?",
+    answer:
+      "Yes. They can integrate with laboratories, pharmacies, billing systems, imaging platforms, telehealth solutions, and other healthcare applications.",
+  },
+  {
+    question: "Why choose USS as your EMR Software Development Company?",
+    answer:
+      "USS provides custom healthcare software solutions, HIPAA-compliant development, seamless integrations, scalable architectures, and dedicated support.",
+  },
+];
+
+const CompEhrEmrDevelopment = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
+  const [openFaqIndex, setOpenFaqIndex] = useState(0);
 
   //trust-uss
   const [hoverContent, setHoverContent] = useState(null);
@@ -259,9 +299,9 @@ const CompPatientManagentPortal = () => {
     }
   };
 
+
   //circle text
   const textRef = useRef(null);
-
   useEffect(() => {
     if (textRef.current) {
       const circleType = new CircleType(textRef.current);
@@ -272,7 +312,7 @@ const CompPatientManagentPortal = () => {
       // let animationFrame;
 
       // const animate = () => {
-      //   rotation += 0.5; 
+      //   rotation += 0.5; // rotation speed (degrees per frame)
       //   textRef.current.style.transform = `rotate(${rotation}deg)`;
       //   animationFrame = requestAnimationFrame(animate);
       // };
@@ -283,60 +323,45 @@ const CompPatientManagentPortal = () => {
     }
   }, []);
 
-
   return (
     <>
       {/* <Metadata
-        title="Patient Management Software for Clinics & Hospitals | USS"
-        description="USS offers patient management software for hospitals and clinics with features like appointment scheduling, EHR integration, billing, and secure data handling."
+        title="EHR & EMR Development Services"
+        description="Custom EHR/EMR solutions to digitize patient records, streamline workflows, and ensure secure, HIPAA‑compliant healthcare management."
       /> */}
 
       {/* patient-banner */}
-      <Box className="healthcare-banner-section-inner">
-        <Image
-          src={PagesBannerBg}
-          fill
-          alt="Patient Management Portal Banner"
-          className="pages-banner-bg-main"
-          priority
-          fetchPriority="high"
-        />
+      <Box className="healthcare-banner-section">
         <Container className="custom-container" maxWidth="lg">
           <Grid container spacing={2} justifyContent="center">
             <Grid size={{ xs: 12, md: 10 }}>
               <Box className="heading-content healthcare-banner-content">
                 <Typography variant="h1" sx={{ color: "#f28c38", mb: 2 }}>
-                  Patient Management Portal
+                  EMR Software Development Company for Modern Healthcare
                 </Typography>
                 <Typography variant="h6" paragraph sx={{ mb: 3 }}>
-                  A centralized platform to manage patient records,
-                  appointments, billing, and communication. Designed to
-                  streamline clinical workflows and enhance the overall patient
-                  experience.
+                  As a trusted EMR Software Development Company, we build secure, HIPAA-compliant EHR and EMR solutions tailored to your healthcare workflows. Improve patient care, streamline clinical operations, and enhance decision-making with custom healthcare technology.
                 </Typography>
               </Box>
               <Box className="heading-content" align="center">
                 <Link href="/contactus" variant="contained" className="main-primary-btn">
-                  Get Started
+                  Request Free Consultation
                 </Link>
               </Box>
             </Grid>
           </Grid>
         </Container>
-        {/* <Image src={PagesBannerBg} alt="shape" className="pages-banner-bg-main" priority={true}
-          fetchPriority="high" /> */}
-
         <Image src={HalfBlue} alt="shape" className="half-blue-shape" />
         <Image
           src={HalfOrange}
           alt="shape"
           className="half-orange-shape"
         />
-        <Image src={OrangeStar} alt="shape" className="star1" loading="lazy" />
-        <Image src={OrangeStar} alt="shape" className="star2" loading="lazy" />
-        <Image src={BlueStar} alt="shape" className="star3" loading="lazy" />
-        <Image src={BlueStar} alt="shape" className="star4" loading="lazy" />
-        <Image src={BlueStar} alt="shape" className="star5" loading="lazy" />
+        <Image src={OrangeStar} alt="shape" className="star1" />
+        <Image src={OrangeStar} alt="shape" className="star2" />
+        <Image src={BlueStar} alt="shape" className="star3" />
+        <Image src={BlueStar} alt="shape" className="star4" />
+        <Image src={BlueStar} alt="shape" className="star5" />
       </Box>
 
       <Box className="patient-section" sx={{ py: { xs: 3, md: 4, lg: 5 } }}>
@@ -347,11 +372,11 @@ const CompPatientManagentPortal = () => {
               <Box className="patient-left">
                 <Box className="heading-content">
                   <Typography variant="h2" sx={{ mb: 2, fontWeight: 700 }}>
-                    Smart & Simplified{" "}
+                    Key Features of Our{" "}
                     <span className="primary-color">
-                      Patient Manag
+                      EHR & EMR Software Development{" "}
                       <span className="span-text">
-                        ement
+                        Services
                         <div className="line-container">
                           <div className="line-wrapper"></div>
                           <div className="line"></div>
@@ -361,18 +386,15 @@ const CompPatientManagentPortal = () => {
                     </span>
                   </Typography>
                   <Typography className="patient-subheading">
-                    Everything you need — from appointments to billing — in one
-                    seamless, easy-to-use Patient Management portal
+                    Our EMR Software Development Company delivers intelligent, secure, and scalable EHR/EMR solutions that improve clinical workflows, patient engagement, interoperability, and healthcare outcomes.
                   </Typography>
                 </Box>
                 <Box className="patient-image-wrapper">
                   <Image
-                    src={PatientBanner}
-                    alt="Smart & Simplified Patient Management"
+                    src={EmrErhBanner}
+                    alt="Medical Billing Features"
                     width={400}
                     height={300}
-                    priority={true}
-                    fetchPriority="high"
                   />
                 </Box>
               </Box>
@@ -414,9 +436,9 @@ const CompPatientManagentPortal = () => {
                 <Box className="opportunity-card opportunity-text-card md-order-1">
                   <Box className="heading-content">
                     <Typography variant="h2" sx={{ mb: 5, fontWeight: 700 }}>
-                      Expand business opportunities <br />
+                      Benefits of Our <br />
                       <span className="span-text primary-color">
-                        of Software
+                        EHR & EMR Software Solutions
                         <div className="line-container">
                           <div className="line-wrapper"></div>
                           <div className="line"></div>
@@ -455,7 +477,6 @@ const CompPatientManagentPortal = () => {
                     width={400}
                     height={250}
                     className="opportunity-image"
-                    loading="lazy"
                   />
                 </Box>
               </Box>
@@ -468,14 +489,6 @@ const CompPatientManagentPortal = () => {
                   animationData={isMobile ? DigitalMapMobile : DigitalMap}
                   loop={true}
                 />
-                {/* <Image
-                    src={ExpandbusinessImge}
-                    alt="Expand business Imge"
-                    width={450}
-                    height={874}
-                    className="expand-business-image"
-                    loading="lazy"
-                  /> */}
               </Box>
             </Grid>
 
@@ -489,7 +502,6 @@ const CompPatientManagentPortal = () => {
                     width={400}
                     height={250}
                     className="opportunity-image"
-                    loading="lazy"
                   />
                 </Box>
 
@@ -498,11 +510,7 @@ const CompPatientManagentPortal = () => {
                     variant="body2"
                     className="opportunity-description"
                   >
-                    Our Patient Management Portal helps you scale smart — with
-                    online bookings, teleconsults, and real-time insights. Serve
-                    more patients, reduce no-shows, and explore new revenue
-                    streams, all while keeping your workflow smooth and your
-                    team focused.
+                    Our EHR and EMR software solutions help healthcare organizations streamline patient data management, improve clinical efficiency, reduce administrative burdens, enhance interoperability, and support better patient outcomes through secure, scalable technology.
                   </Typography>
                 </Box>
               </Box>
@@ -523,11 +531,11 @@ const CompPatientManagentPortal = () => {
               align="center"
               sx={{ mb: 5, fontWeight: 700 }}
             >
-              Explore Our Smart{" "}
+              Comprehensive{" "}
               <span className="primary-color">
-                Solutions for your Bu
+                EHR & EMR Software Development{" "}
                 <span className="span-text">
-                  siness
+                  Services
                   <div className="line-container">
                     <div className="line-wrapper"></div>
                     <div className="line"></div>
@@ -548,7 +556,6 @@ const CompPatientManagentPortal = () => {
                       alt={item.title}
                       width={24}
                       height={24}
-                      loading="lazy"
                     />
                   </Box>
                   <Typography variant="h6" className="solution-title">
@@ -573,8 +580,10 @@ const CompPatientManagentPortal = () => {
           >
             <Box className="heading-content pr">
               <Typography variant="h2" sx={{ my: 2, color: "white" }}>
-                Experience Hassle-Free Patient Management Transform How You
-                Manage Patients
+                Partner with a Trusted EMR Software Development Company
+              </Typography>
+              <Typography variant="body1">
+                Build secure, scalable, and fully compliant EHR and EMR solutions that streamline healthcare workflows, improve patient care, and support long-term digital transformation.
               </Typography>
             </Box>
 
@@ -600,11 +609,11 @@ const CompPatientManagentPortal = () => {
         <Container className="custom-container" maxWidth="lg">
           <Box className="heading-content">
             <Typography variant="h2" sx={{ mb: 5, mt: 3, fontWeight: 700 }}>
-              Why Healthcare Client{" "}
+              Why Healthcare Organizations Choose{" "}
               <span className="primary-color">
-                Trus
+                Our EMR Software Development{" "}
                 <span className="span-text">
-                  t USS
+                  Company
                   <div className="line-container">
                     <div className="line-wrapper"></div>
                     <div className="line"></div>
@@ -622,22 +631,22 @@ const CompPatientManagentPortal = () => {
             >
               <Box
                 className="trust-uss-box"
-                onMouseEnter={() => handleHover("Doctor Centric")}
+                onMouseEnter={() => handleHover("Provider-Centric Design")}
                 onMouseLeave={handleMouseLeave}
-                onClick={() => handleClick("Doctor Centric")}
+                onClick={() => handleClick("Provider-Centric Design")}
               >
-                <Image src={TrustIcon2} alt="TrustIcon1" loading="lazy" />
-                <Typography variant="h6">Doctor Centric</Typography>
+                <Image src={TrustIcon2} alt="TrustIcon1" />
+                <Typography variant="h6">Provider-Centric Design</Typography>
               </Box>
               <Image
                 src={OrangeStar}
                 alt="shape"
-                className="corner-star star-a" loading="lazy"
+                className="corner-star star-a"
               />
               <Image
                 src={BlueStar}
                 alt="shape"
-                className="corner-star star-b" loading="lazy"
+                className="corner-star star-b"
               />
             </Grid>
 
@@ -647,27 +656,27 @@ const CompPatientManagentPortal = () => {
             >
               <Box
                 className="trust-uss-box"
-                onMouseEnter={() => handleHover("Secure Privacy")}
+                onMouseEnter={() => handleHover("HIPAA-Compliant Security")}
                 onMouseLeave={handleMouseLeave}
-                onClick={() => handleClick("Secure Privacy")}
+                onClick={() => handleClick("HIPAA-Compliant Security")}
               >
-                <Image src={TrustIcon3} alt="TrustIcon1" loading="lazy" />
-                <Typography variant="h6">Secure Privacy</Typography>
+                <Image src={TrustIcon3} alt="TrustIcon1" />
+                <Typography variant="h6">HIPAA-Compliant Security</Typography>
               </Box>
               <Image
                 src={BlueStar}
                 alt="shape"
-                className="corner-star star-c" loading="lazy"
+                className="corner-star star-c"
               />
               <Image
                 src={OrangeStar}
                 alt="shape"
-                className="corner-star star-d" loading="lazy"
+                className="corner-star star-d"
               />
               <Image
                 src={OrangeStar}
                 alt="shape"
-                className="corner-star star-md-d" loading="lazy"
+                className="corner-star star-md-d"
               />
             </Grid>
 
@@ -679,7 +688,6 @@ const CompPatientManagentPortal = () => {
                 src={ActiveBG}
                 alt="Active Background"
                 className="hover-content-bg"
-                loading="lazy"
               />
               <Box ref={hoverBoxRef} className={`hover-content-box ${isVisible ? 'visible' : ''}`}>
                 {hoverContent && (
@@ -698,17 +706,17 @@ const CompPatientManagentPortal = () => {
               <Image
                 src={OrangeStar}
                 alt="shape"
-                className="corner-star star-e" loading="lazy"
+                className="corner-star star-e"
               />
               <Image
                 src={OrangeStar}
                 alt="shape"
-                className="corner-star star-f" loading="lazy"
+                className="corner-star star-f"
               />
               <Image
                 src={BlueStar}
                 alt="shape"
-                className="corner-star star-md-f" loading="lazy"
+                className="corner-star star-md-f"
               />
             </Grid>
 
@@ -718,22 +726,22 @@ const CompPatientManagentPortal = () => {
             >
               <Box
                 className="trust-uss-box"
-                onMouseEnter={() => handleHover("Seamless Integration")}
+                onMouseEnter={() => handleHover("Healthcare Interoperability & Integration")}
                 onMouseLeave={handleMouseLeave}
-                onClick={() => handleClick("Seamless Integration")}
+                onClick={() => handleClick("Healthcare Interoperability & Integration")}
               >
-                <Image src={TrustIcon4} alt="TrustIcon1" loading="lazy" />
-                <Typography variant="h6">Seamless Integration</Typography>
+                <Image src={TrustIcon4} alt="TrustIcon1" />
+                <Typography variant="h6">Healthcare Interoperability & Integration</Typography>
               </Box>
               <Image
                 src={OrangeStar}
                 alt="shape"
-                className="corner-star star-g" loading="lazy"
+                className="corner-star star-g"
               />
               <Image
                 src={BlueStar}
                 alt="shape"
-                className="corner-star star-h" loading="lazy"
+                className="corner-star star-h"
               />
             </Grid>
 
@@ -743,27 +751,27 @@ const CompPatientManagentPortal = () => {
             >
               <Box
                 className="trust-uss-box"
-                onMouseEnter={() => handleHover("Custom Solutions")}
+                onMouseEnter={() => handleHover("Custom EHR & EMR Development")}
                 onMouseLeave={handleMouseLeave}
-                onClick={() => handleClick("Custom Solutions")}
+                onClick={() => handleClick("Custom EHR & EMR Development")}
               >
-                <Image src={TrustIcon1} alt="TrustIcon1" loading="lazy" />
-                <Typography variant="h6">Custom Solutions</Typography>
+                <Image src={TrustIcon1} alt="TrustIcon1" />
+                <Typography variant="h6">Custom EHR & EMR Development</Typography>
               </Box>
               <Image
                 src={BlueStar}
                 alt="shape"
-                className="corner-star star-i" loading="lazy"
+                className="corner-star star-i"
               />
               <Image
                 src={BlueStar}
                 alt="shape"
-                className="corner-star star-md-i" loading="lazy"
+                className="corner-star star-md-i"
               />
               <Image
                 src={OrangeStar}
                 alt="shape"
-                className="corner-star star-j" loading="lazy"
+                className="corner-star star-j"
               />
             </Grid>
 
@@ -773,27 +781,27 @@ const CompPatientManagentPortal = () => {
             >
               <Box
                 className="trust-uss-box"
-                onMouseEnter={() => handleHover("Ongoing Support")}
+                onMouseEnter={() => handleHover("Dedicated Healthcare Support")}
                 onMouseLeave={handleMouseLeave}
-                onClick={() => handleClick("Ongoing Support")}
+                onClick={() => handleClick("Dedicated Healthcare Support")}
               >
-                <Image src={TrustIcon6} alt="TrustIcon1" loading="lazy" />
-                <Typography variant="h6">Ongoing Support</Typography>
+                <Image src={TrustIcon6} alt="TrustIcon1" />
+                <Typography variant="h6">Dedicated Healthcare Support</Typography>
               </Box>
               <Image
                 src={OrangeStar}
                 alt="shape"
-                className="corner-star star-k" loading="lazy"
+                className="corner-star star-k"
               />
               <Image
                 src={BlueStar}
                 alt="shape"
-                className="corner-star star-l" loading="lazy"
+                className="corner-star star-l"
               />
               <Image
                 src={BlueStar}
                 alt="shape"
-                className="corner-star star-md-l" loading="lazy"
+                className="corner-star star-md-l"
               />
             </Grid>
 
@@ -803,22 +811,22 @@ const CompPatientManagentPortal = () => {
             >
               <Box
                 className="trust-uss-box"
-                onMouseEnter={() => handleHover("Clinic Trusted")}
+                onMouseEnter={() => handleHover("Trusted by Healthcare Providers")}
                 onMouseLeave={handleMouseLeave}
-                onClick={() => handleClick("Clinic Trusted")}
+                onClick={() => handleClick("Trusted by Healthcare Providers")}
               >
-                <Image src={TrustIcon5} alt="TrustIcon1" loading="lazy" />
-                <Typography variant="h6">Clinic Trusted</Typography>
+                <Image src={TrustIcon5} alt="TrustIcon1" />
+                <Typography variant="h6">Trusted by Healthcare Providers</Typography>
               </Box>
               <Image
                 src={OrangeStar}
                 alt="shape"
-                className="corner-star star-m" loading="lazy"
+                className="corner-star star-m"
               />
               <Image
                 src={BlueStar}
                 alt="shape"
-                className="corner-star star-n" loading="lazy"
+                className="corner-star star-n"
               />
             </Grid>
           </Grid>
@@ -857,14 +865,13 @@ const CompPatientManagentPortal = () => {
           <Grid size={{ xs: 12 }}>
             <Swiper
               className="healthcare-swiper patient-healthcare-swiper"
-              // modules={[Mousewheel, Navigation]}
-              modules={[Navigation]}
+              modules={[Mousewheel, Navigation]}
               loop={false}
               navigation
-              // mousewheel={{
-              //   sensitivity: 1,
-              //   releaseOnEdges: true,
-              // }}
+              mousewheel={{
+                sensitivity: 1,
+                releaseOnEdges: true,
+              }}
               spaceBetween={20}
               slidesPerView={2.5}
               breakpoints={{
@@ -886,7 +893,7 @@ const CompPatientManagentPortal = () => {
                           {card.title}
                         </Typography>
                         <Link href={card.link || "#"} className="inline-flex">
-                          <Image src={RoundOrangeRighticon} alt={card.title} loading="lazy" />
+                          <Image src={RoundOrangeRighticon} alt={card.title} />
                         </Link>
                       </Box>
                       <Box className="gray-spacer"></Box>
@@ -904,7 +911,7 @@ const CompPatientManagentPortal = () => {
                           width: "100%",
                           height: "auto",
                           objectFit: "cover",
-                        }} loading="lazy"
+                        }}
                       />
                     </Box>
                   </Paper>
@@ -923,12 +930,12 @@ const CompPatientManagentPortal = () => {
             align="center"
             sx={{ mt: 6, mb: 4, fontWeight: 700 }}
           >
-            Need A Custom Patient Portal?
+            Talk to{" "}
             <span className="primary-color">
               {" "}
-              We're Here To{" "}
+              an EHR Expert{" "}
               <span className="span-text">
-                Help
+                Today
                 <div className="line-container">
                   <div className="line-wrapper"></div>
                   <div className="line"></div>
@@ -940,8 +947,70 @@ const CompPatientManagentPortal = () => {
         </Box>
       </Container>
       <Contact />
+
+       <Box className="patient-section" sx={{ py: { xs: 3, md: 4, lg: 5 } }}>
+        <Container className="custom-container" maxWidth="lg">
+          <Grid container spacing={4}>
+            {/* Left Section */}
+            <Grid size={{ xs: 12, md: 4 }}>
+              <Box className="patient-left">
+                <Box className="heading-content">
+                  <Typography variant="h2" sx={{ mb: 2, fontWeight: 700 }}>
+                    Frequently Asked{" "}
+                    <span className="primary-color">
+                      <span className="span-text">
+                        Questions
+                        <div className="line-container">
+                          <div className="line-wrapper"></div>
+                          <div className="line"></div>
+                          <div className="moving-box"></div>
+                        </div>
+                      </span>
+                    </span>
+                  </Typography>
+                  <Typography className="patient-subheading">
+                    Need More Information?<br /> Start Here.
+                  </Typography>
+                </Box>
+              </Box>
+            </Grid>
+
+            {/* Right Section */}
+            <Grid size={{ xs: 12, md: 8 }}>
+              <Box className="faq-accordion">
+                {faqItems.map((item, index) => (
+                  <Accordion
+                    key={item.question}
+                    expanded={openFaqIndex === index}
+                    onChange={() =>
+                      setOpenFaqIndex((prevIndex) =>
+                        prevIndex === index ? null : index
+                      )
+                    }
+                    className="faq-item"
+                  >
+                    <AccordionSummary
+                      expandIcon={
+                        openFaqIndex === index ? <RemoveIcon sx={{ color: "#222222" }} /> : <AddIcon sx={{ color: "#222222" }} />
+                      }
+                      aria-controls={`faq-content-${index}`}
+                      id={`faq-header-${index}`}
+                      className="faq-question"
+                    >
+                      <Typography variant="h6">{item.question}</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails className="faq-answer">
+                      <Typography variant="body1">{item.answer}</Typography>
+                    </AccordionDetails>
+                  </Accordion>
+                ))}
+              </Box>
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
     </>
   );
 };
 
-export default CompPatientManagentPortal;
+export default CompEhrEmrDevelopment;

@@ -146,12 +146,12 @@ import VectorIcon from '@/vector.svg?url';
 
 const HealthcaretabData = [
   { label: "Healthcare", url: "/healthcare", class: "healthcare-menu" },
-  { label: "Patient Management Portal", url: "/healthcare-tech/patient-management-portal" },
+  { label: "Patient Management Portal", url: "/healthcare-tech/patient-management-system-solution" },
   { label: "Online/Offline Pharmacy", url: "/healthcare-tech/online-offline-pharmacy" },
   { label: "Prescription Assistance Portal", url: "/healthcare-tech/prescription-assistance-portal" },
   { label: "Medical Billing", url: "/healthcare-tech/medical-billing" },
-  { label: "EHR/EMR Development", url: "/healthcare-tech/ehr-emr-development" },
-  { label: "Hospital Management", url: "/healthcare-tech/hospital-management" },
+  { label: "EHR/EMR Development", url: "/healthcare-tech/emr-software-development-company" },
+  { label: "Hospital Management", url: "/healthcare-tech/hospital-management-system-solution" },
   { label: "Compliance Software", url: "/healthcare-tech/compliance-software" },
 ];
 
@@ -427,7 +427,7 @@ const Header = () => {
                         Track patients, manage appointments, & streamline healthcare all from one simple, powerful platform.
                       </Typography>
                     </Box>
-                    <Link href="/healthcare-tech/patient-management-portal">
+                    <Link href="/healthcare-tech/patient-management-system-solution">
                       <Button
                         variant="contained"
                         className='main-btn megamenu-btn'
@@ -712,7 +712,7 @@ const Header = () => {
                         Digitize patient records, improve workflows, and access data instantly — all in a secure, intuitive system.
                       </Typography>
                     </Box>
-                    <Link href="/healthcare-tech/ehr-emr-development">
+                    <Link href="/healthcare-tech/emr-software-development-company">
                       <Button
                         variant="contained"
                         className='main-btn megamenu-btn'
@@ -787,7 +787,7 @@ const Header = () => {
                         Simplify hospital operations — from admission to discharge — with one powerful platform.
                       </Typography>
                     </Box>
-                    <Link href="/healthcare-tech/hospital-management">
+                    <Link href="/healthcare-tech/hospital-management-system-solution">
                       <Button
                         variant="contained"
                         className='main-btn megamenu-btn'

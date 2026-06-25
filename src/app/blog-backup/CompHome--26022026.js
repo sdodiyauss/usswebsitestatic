@@ -99,7 +99,7 @@ const cardData = [
     title: "Patient Management Portal for your Clinic",
     desc: "Streamline clinic operations with a secure, intuitive patient management portal for scheduling, records, and seamless communication.",
     image: Slider1,
-    link: "/healthcare-tech/patient-management-portal",
+    link: "/healthcare-tech/patient-management-system-solution",
     alttext: "Patient Mangement Portal Services",
   },
   {
@@ -127,14 +127,14 @@ const cardData = [
     title: "EHR/EMR Development",
     desc: "Develop intelligent EHR/EMR solutions with secure data, automated workflows, and real-time patient management to enhance efficiency, accuracy, & healthcare delivery.",
     image: Slider5,
-    link: "/healthcare-tech/ehr-emr-development",
+    link: "/healthcare-tech/emr-software-development-company",
     alttext: "EHR/EMR Development Services",
   },
   {
     title: "Hospital Management Portal Development",
     desc: "Create a smart hospital management portal with automated workflows, real-time data access, and secure patient administration for enhanced efficiency and care delivery.",
     image: Slider6,
-    link: "/healthcare-tech/hospital-management",
+    link: "/healthcare-tech/hospital-management-system-solution",
     alttext: "Hospital Management Portal Development Services",
   },
   {

@@ -7,7 +7,7 @@ export const metadata = {
   openGraph: {
     title: 'EHR & EMR Development Services',
     description: 'Custom EHR/EMR solutions to digitize patient records, streamline workflows, and ensure secure, HIPAA‑compliant healthcare management.',
-    url: 'https://www.universalstreamsolution.com/healthcare-tech/ehr-emr-development',
+    url: 'https://www.universalstreamsolution.com/healthcare-tech/emr-software-development-company',
     siteName: 'USS IT Services',
     images: [
       {
