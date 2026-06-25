@@ -921,33 +921,7 @@ const CompHospitalManagement = () => {
           </Grid>
         </Grid>
       </Box>
-
-      {/* contact form */}
-      <Container className="custom-container" maxWidth="lg">
-        <Box className="heading-content">
-          <Typography
-            variant="h2"
-            align="center"
-            sx={{ mt: 6, mb: 4, fontWeight: 700 }}
-          >
-            Let’s Talk About Your
-            <span className="primary-color">
-              {" "}
-              Hospital’s {" "}
-              <span className="span-text">
-                Needs
-                <div className="line-container">
-                  <div className="line-wrapper"></div>
-                  <div className="line"></div>
-                  <div className="moving-box"></div>
-                </div>
-              </span>
-            </span>
-          </Typography>
-        </Box>
-      </Container>
-      <Contact />
-
+      
       <Box className="patient-section" sx={{ py: { xs: 3, md: 4, lg: 5 } }}>
         <Container className="custom-container" maxWidth="lg">
           <Grid container spacing={4}>
@@ -1009,6 +983,33 @@ const CompHospitalManagement = () => {
           </Grid>
         </Container>
       </Box>
+
+      {/* contact form */}
+      <Container className="custom-container" maxWidth="lg">
+        <Box className="heading-content">
+          <Typography
+            variant="h2"
+            align="center"
+            sx={{ mt: 6, mb: 4, fontWeight: 700 }}
+          >
+            Let’s Talk About Your
+            <span className="primary-color">
+              {" "}
+              Hospital’s {" "}
+              <span className="span-text">
+                Needs
+                <div className="line-container">
+                  <div className="line-wrapper"></div>
+                  <div className="line"></div>
+                  <div className="moving-box"></div>
+                </div>
+              </span>
+            </span>
+          </Typography>
+        </Box>
+      </Container>
+      <Contact />
+
     </>
   );
 };
