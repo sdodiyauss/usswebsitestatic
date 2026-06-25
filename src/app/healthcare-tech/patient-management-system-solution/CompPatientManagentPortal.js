@@ -258,7 +258,7 @@ const CompPatientManagentPortal = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
-  const [openFaqIndex, setOpenFaqIndex] = useState(null);
+  const [openFaqIndex, setOpenFaqIndex] = useState(0);
 
   //trust-uss
   const [hoverContent, setHoverContent] = useState(null);
