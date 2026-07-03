@@ -139,10 +139,10 @@ const CompProductDesignUXRevenue = () => {
 
     // Demo posts data with same dummy content; replace with real data later
     const posts = [
-        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh khatwani", date: "May 5th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
-        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "May 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
+        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
+        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "April 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
         // { id: "p8", title: "DeepSeek vs ChatGPT: A Comprehensive Comparison of AI-Powered Chatbots", excerpt: "Artificial Intelligence (AI) has transformed the way we engage with technology, and AI-driven cha...", author: "Dilip Tiwari", date: "March 10th, 2025", readTime: "6 min read", category: "AI", image: Blog4, featured: false, url: "/blog-details8" },
-        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
+        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "May 28th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
     ];
 
 
@@ -166,15 +166,16 @@ const CompProductDesignUXRevenue = () => {
                             </CardMedia>
 
                             <CardContent className="blog-card-content">
-                                <Chip label={post.category} size="small" className="blog-card-chip" />
+                                <Box>
+                                    <Chip label={post.category} size="small" className="blog-card-chip" />
 
-                                <Box className="blog-card-title-row">
-                                    <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
-                                        {post.title}
-                                    </Typography>
-                                    <Image src={BtnIcon} alt="btn-icon" />
+                                    <Box className="blog-card-title-row">
+                                        <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
+                                            {post.title}
+                                        </Typography>
+                                        <Image src={BtnIcon} alt="btn-icon" />
+                                    </Box>
                                 </Box>
-
                                 <Box className="blog-card-meta">
                                     <Box className="avtar-box">
                                         <Avatar
@@ -333,7 +334,7 @@ const CompProductDesignUXRevenue = () => {
                                     1. What is Product Design?
                                 </Typography>
                                 <Typography variant="body1">
-                                    Product design is a comprehensive process that involves conceptualizing, structuring, and refining a digital product to ensure it delivers maximum value to users while achieving business objectives. It goes beyond visual appeal and focuses on the entire user journey—from discovery to interaction to retention. 
+                                    Product design is a comprehensive process that involves conceptualizing, structuring, and refining a digital product to ensure it delivers maximum value to users while achieving business objectives. It goes beyond visual appeal and focuses on the entire user journey—from discovery to interaction to retention.
                                     <br />
                                     <br />
                                     At its core, product design integrates multiple disciplines, including user experience (UX) design, user interface (UI) design, interaction design, and usability testing. It requires a deep understanding of user behavior, market trends, and technological capabilities.
@@ -341,7 +342,7 @@ const CompProductDesignUXRevenue = () => {
                                     <br />
                                     Unlike traditional design approaches that prioritize aesthetics, modern product design emphasizes functionality, usability, accessibility, and emotional engagement. By leveraging advanced <Link href="https://www.universalstreamsolution.com/blog/essential-tools-modern-ui-ux-designer-should-master">UI UX design tools and technologies</Link>, designers can create experiences that are not only visually appealing but also highly intuitive and efficient to use, ensuring users can navigate products seamlessly while achieving their goals with minimal effort.
                                     <br />
-                                    <br /> 
+                                    <br />
                                 </Typography>
                                 <Typography variant="body1">
                                     A successful product design answers key questions:
@@ -368,7 +369,7 @@ const CompProductDesignUXRevenue = () => {
                                     User expectations have evolved significantly. Today’s users demand speed, simplicity, and personalization. They expect digital products to be intuitive from the very first interaction. If a product fails to meet these expectations, users quickly abandon it and move to alternatives.
                                     <br />
                                     <br />
-                                    Poor product design often results in: 
+                                    Poor product design often results in:
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
                                     <ListItem component="li" disablePadding>
@@ -385,15 +386,15 @@ const CompProductDesignUXRevenue = () => {
                                     </ListItem>
                                 </List>
                                 <Typography variant="body1">
-                                    On the other hand, well-executed product design creates a seamless experience that keeps users engaged and encourages them to take action. 
+                                    On the other hand, well-executed product design creates a seamless experience that keeps users engaged and encourages them to take action.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Beyond usability, product design also plays a critical role in building brand perception. A polished and consistent interface signals professionalism and reliability, while a poorly designed product can damage credibility—even if the underlying functionality is strong. 
+                                    Beyond usability, product design also plays a critical role in building brand perception. A polished and consistent interface signals professionalism and reliability, while a poorly designed product can damage credibility—even if the underlying functionality is strong.
                                     <br />
                                     <br />
-                                    In essence, product design is not just a design function—it is a strategic business tool that directly impacts customer acquisition, retention, and revenue. 
+                                    In essence, product design is not just a design function—it is a strategic business tool that directly impacts customer acquisition, retention, and revenue.
                                 </Typography>
                             </Box>
 
@@ -412,10 +413,10 @@ const CompProductDesignUXRevenue = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    The foundation of any successful product is a clear understanding of the problem it aims to solve. This stage involves gathering insights through user interviews, surveys, analytics, and competitor research. 
+                                    The foundation of any successful product is a clear understanding of the problem it aims to solve. This stage involves gathering insights through user interviews, surveys, analytics, and competitor research.
                                     <br />
                                     <br />
-                                    Instead of relying on assumptions, businesses must identify real user pain points and unmet needs. This helps in defining a clear value proposition and ensures that the product is built with purpose. 
+                                    Instead of relying on assumptions, businesses must identify real user pain points and unmet needs. This helps in defining a clear value proposition and ensures that the product is built with purpose.
                                     <br />
                                     <br />
                                 </Typography>
@@ -424,13 +425,13 @@ const CompProductDesignUXRevenue = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    User personas are detailed representations of target users based on research and data. They help teams understand user motivations, behaviors, and expectations. 
+                                    User personas are detailed representations of target users based on research and data. They help teams understand user motivations, behaviors, and expectations.
                                     <br />
                                     <br />
-                                   Journey mapping takes this a step further by visualizing how users interact with the product across different stages. It highlights key touchpoints, potential friction areas, and opportunities for improvement. 
+                                    Journey mapping takes this a step further by visualizing how users interact with the product across different stages. It highlights key touchpoints, potential friction areas, and opportunities for improvement.
                                     <br />
                                     <br />
-                                    This approach ensures that design decisions are aligned with real user needs rather than internal assumptions. 
+                                    This approach ensures that design decisions are aligned with real user needs rather than internal assumptions.
                                     <br />
                                     <br />
                                 </Typography>
@@ -439,13 +440,13 @@ const CompProductDesignUXRevenue = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Information architecture focuses on organizing content and features in a way that makes navigation intuitive and efficient.  
+                                    Information architecture focuses on organizing content and features in a way that makes navigation intuitive and efficient.
                                     <br />
                                     <br />
-                                  A well-structured product allows users to find what they need quickly without confusion. It reduces cognitive load and enhances the overall experience. 
+                                    A well-structured product allows users to find what they need quickly without confusion. It reduces cognitive load and enhances the overall experience.
                                     <br />
                                     <br />
-                                    Poor structure, on the other hand, leads to frustration and increased bounce rates. 
+                                    Poor structure, on the other hand, leads to frustration and increased bounce rates.
                                     <br />
                                     <br />
                                 </Typography>
@@ -454,13 +455,13 @@ const CompProductDesignUXRevenue = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Wireframes provide a skeletal structure of the product, outlining layouts and functionality without distractions from visual design.  
+                                    Wireframes provide a skeletal structure of the product, outlining layouts and functionality without distractions from visual design.
                                     <br />
                                     <br />
-                                  Prototypes bring these wireframes to life by simulating real interactions. They allow teams to test usability and validate ideas before development begins. 
+                                    Prototypes bring these wireframes to life by simulating real interactions. They allow teams to test usability and validate ideas before development begins.
                                     <br />
                                     <br />
-                                    This stage is crucial for identifying potential issues early, saving both time and development costs. 
+                                    This stage is crucial for identifying potential issues early, saving both time and development costs.
                                     <br />
                                     <br />
                                 </Typography>
@@ -469,10 +470,10 @@ const CompProductDesignUXRevenue = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    UI design focuses on the visual and interactive aspects of the product. It includes elements like typography, color schemes, spacing, and component design. 
+                                    UI design focuses on the visual and interactive aspects of the product. It includes elements like typography, color schemes, spacing, and component design.
                                     <br />
                                     <br />
-                                  A strong UI not only enhances aesthetics but also improves usability by guiding users through the interface. Consistency in design elements builds familiarity and trust, making the product easier to use. 
+                                    A strong UI not only enhances aesthetics but also improves usability by guiding users through the interface. Consistency in design elements builds familiarity and trust, making the product easier to use.
                                     <br />
                                     <br />
                                 </Typography>
@@ -481,10 +482,10 @@ const CompProductDesignUXRevenue = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Usability testing involves observing real users as they interact with the product. This helps identify issues that may not be apparent during the design phase. 
+                                    Usability testing involves observing real users as they interact with the product. This helps identify issues that may not be apparent during the design phase.
                                     <br />
                                     <br />
-                                  Feedback collected during testing is used to refine and optimize the product, ensuring a smoother user experience. 
+                                    Feedback collected during testing is used to refine and optimize the product, ensuring a smoother user experience.
                                     <br />
                                     <br />
                                 </Typography>
@@ -493,10 +494,10 @@ const CompProductDesignUXRevenue = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Product design is an ongoing process. After launch, user behavior and feedback provide valuable insights for further improvements. 
+                                    Product design is an ongoing process. After launch, user behavior and feedback provide valuable insights for further improvements.
                                     <br />
                                     <br />
-                                  Regular updates and iterations help keep the product relevant, competitive, and aligned with evolving user expectations. 
+                                    Regular updates and iterations help keep the product relevant, competitive, and aligned with evolving user expectations.
                                     <br />
                                     <br />
                                 </Typography>
@@ -505,27 +506,27 @@ const CompProductDesignUXRevenue = () => {
                             {/* Section 5 */}
                             <Box id="section5" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    4. How Product Design Enhances User Experience 
+                                    4. How Product Design Enhances User Experience
                                 </Typography>
                                 <Typography variant="body1">
-                                    User experience is the overall perception users have when interacting with a product. It is shaped by how easy, enjoyable, and efficient those interactions are. This is why businesses invest in professional <Link href="/how-we-help/graphics-and-ui-ux-design">UI UX design services</Link> to create seamless, user-friendly experiences that not only meet user expectations but also drive engagement and satisfaction. 
+                                    User experience is the overall perception users have when interacting with a product. It is shaped by how easy, enjoyable, and efficient those interactions are. This is why businesses invest in professional <Link href="/how-we-help/graphics-and-ui-ux-design">UI UX design services</Link> to create seamless, user-friendly experiences that not only meet user expectations but also drive engagement and satisfaction.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    First Impressions Matter 
+                                    First Impressions Matter
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Users form an opinion about a product within seconds. A clean, modern, and visually appealing interface creates a positive first impression and encourages users to explore further. 
+                                    Users form an opinion about a product within seconds. A clean, modern, and visually appealing interface creates a positive first impression and encourages users to explore further.
                                     <br />
                                     <br />
-                                    A poor first impression, however, can result in immediate abandonment. 
+                                    A poor first impression, however, can result in immediate abandonment.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Simplicity Improves Usability 
+                                    Simplicity Improves Usability
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
@@ -537,7 +538,7 @@ const CompProductDesignUXRevenue = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Emotional Engagement Builds Loyalty 
+                                    Emotional Engagement Builds Loyalty
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
@@ -549,14 +550,14 @@ const CompProductDesignUXRevenue = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                   Accessibility Expands Reach 
+                                    Accessibility Expands Reach
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                   Accessible design ensures that products can be used by people with different abilities and limitations. 
+                                    Accessible design ensures that products can be used by people with different abilities and limitations.
                                     <br />
                                     <br />
-                                   By prioritizing inclusivity, businesses can reach a broader audience while also improving usability for all users. 
+                                    By prioritizing inclusivity, businesses can reach a broader audience while also improving usability for all users.
                                     <br />
                                     <br />
                                 </Typography>
@@ -568,12 +569,12 @@ const CompProductDesignUXRevenue = () => {
                                     5. How Product Design Impacts Revenue
                                 </Typography>
                                 <Typography variant="body1">
-                                    Product design has a direct and measurable impact on business performance. 
+                                    Product design has a direct and measurable impact on business performance.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Increased Conversions 
+                                    Increased Conversions
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
@@ -582,11 +583,11 @@ const CompProductDesignUXRevenue = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                   Better Customer Retention 
+                                    Better Customer Retention
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Users are more likely to return to products that are easy to use and provide consistent value. Retention leads to repeat purchases and long-term revenue growth. 
+                                    Users are more likely to return to products that are easy to use and provide consistent value. Retention leads to repeat purchases and long-term revenue growth.
                                     <br />
                                     <br />
                                 </Typography>
@@ -595,16 +596,16 @@ const CompProductDesignUXRevenue = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                   Satisfied users often recommend products to others, generating organic growth and reducing reliance on paid marketing. 
+                                    Satisfied users often recommend products to others, generating organic growth and reducing reliance on paid marketing.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Reduced Development Costs 
+                                    Reduced Development Costs
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Identifying and fixing issues early in the design phase prevents costly changes after development. 
+                                    Identifying and fixing issues early in the design phase prevents costly changes after development.
                                     <br />
                                     <br />
                                 </Typography>
@@ -613,7 +614,7 @@ const CompProductDesignUXRevenue = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                   High-quality design enhances brand perception, allowing businesses to differentiate themselves and even charge premium prices.
+                                    High-quality design enhances brand perception, allowing businesses to differentiate themselves and even charge premium prices.
                                     <br />
                                     <br />
                                 </Typography>
@@ -626,7 +627,7 @@ const CompProductDesignUXRevenue = () => {
                                     6. Key Elements of Revenue-Driven Product Design
                                 </Typography>
                                 <Typography variant="body1">
-                                    To maximize impact, businesses should focus on: 
+                                    To maximize impact, businesses should focus on:
                                     <br />
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
@@ -651,10 +652,10 @@ const CompProductDesignUXRevenue = () => {
                             {/* Section 8 */}
                             <Box id="section8" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    7. Common Product Design Mistakes to Avoid 
+                                    7. Common Product Design Mistakes to Avoid
                                 </Typography>
                                 <Typography variant="body1">
-                                    Many businesses fail to realize the importance of design until it’s too late. 
+                                    Many businesses fail to realize the importance of design until it’s too late.
                                     <br />
                                     <br />
                                 </Typography>
@@ -680,14 +681,14 @@ const CompProductDesignUXRevenue = () => {
                                     </ListItem>
                                 </List>
                                 <Typography variant="body1">
-                                    Avoiding these pitfalls can significantly improve both user experience and business outcomes. 
+                                    Avoiding these pitfalls can significantly improve both user experience and business outcomes.
                                 </Typography>
                             </Box>
 
                             {/* Section 9 */}
                             <Box id="section9" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    8. Future Trends in Product Design 
+                                    8. Future Trends in Product Design
                                 </Typography>
                                 <Typography variant="body1">
                                     The future of product design is being shaped by innovation and emerging technologies.
@@ -712,14 +713,14 @@ const CompProductDesignUXRevenue = () => {
                                     </ListItem>
                                 </List>
                                 <Typography variant="body1">
-                                    Businesses that adopt these trends early will be better positioned for long-term success. 
+                                    Businesses that adopt these trends early will be better positioned for long-term success.
                                 </Typography>
                             </Box>
 
                             {/* Section 10 */}
                             <Box id="section10" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Conclusion 
+                                    Conclusion
                                 </Typography>
                                 <Typography variant="body1">
                                     The journey from idea to interface is where innovation transforms into real-world impact.
@@ -727,12 +728,12 @@ const CompProductDesignUXRevenue = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                   Product design plays a critical role in shaping how users perceive, interact with, and ultimately value a product. It bridges the gap between functionality and experience, ensuring that products are not only useful but also enjoyable to use. 
+                                    Product design plays a critical role in shaping how users perceive, interact with, and ultimately value a product. It bridges the gap between functionality and experience, ensuring that products are not only useful but also enjoyable to use.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    In a world where user expectations continue to rise, investing in product design is no longer optional—it is essential for growth, competitiveness, and long-term success. To make the most of this opportunity, businesses should <Link href="https://calendly.com/jvaghasiya-universalstreamsolution/30min">get expert UI UX consultation</Link> to build user-centric products that deliver real results and sustainable growth. 
+                                    In a world where user expectations continue to rise, investing in product design is no longer optional—it is essential for growth, competitiveness, and long-term success. To make the most of this opportunity, businesses should <Link href="https://calendly.com/jvaghasiya-universalstreamsolution/30min">get expert UI UX consultation</Link> to build user-centric products that deliver real results and sustainable growth.
                                 </Typography>
                             </Box>
 

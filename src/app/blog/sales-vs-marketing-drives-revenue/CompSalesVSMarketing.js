@@ -140,10 +140,10 @@ const CompSalesVSMarketing = () => {
 
     // Demo posts data with same dummy content; replace with real data later
     const posts = [
-        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh Khatwani", date: "May 5th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
-        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "May 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
+        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
+        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "April 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
         // { id: "p8", title: "DeepSeek vs ChatGPT: A Comprehensive Comparison of AI-Powered Chatbots", excerpt: "Artificial Intelligence (AI) has transformed the way we engage with technology, and AI-driven cha...", author: "Dilip Tiwari", date: "March 10th, 2025", readTime: "6 min read", category: "AI", image: Blog4, featured: false, url: "/blog-details8" },
-        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
+        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "May 28th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
     ];
 
 
@@ -167,15 +167,16 @@ const CompSalesVSMarketing = () => {
                             </CardMedia>
 
                             <CardContent className="blog-card-content">
-                                <Chip label={post.category} size="small" className="blog-card-chip" />
+                                <Box>
+                                    <Chip label={post.category} size="small" className="blog-card-chip" />
 
-                                <Box className="blog-card-title-row">
-                                    <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
-                                        {post.title}
-                                    </Typography>
-                                    <Image src={BtnIcon} alt="btn-icon" />
+                                    <Box className="blog-card-title-row">
+                                        <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
+                                            {post.title}
+                                        </Typography>
+                                        <Image src={BtnIcon} alt="btn-icon" />
+                                    </Box>
                                 </Box>
-
                                 <Box className="blog-card-meta">
                                     <Box className="avtar-box">
                                         <Avatar
@@ -446,7 +447,7 @@ const CompSalesVSMarketing = () => {
                             {/* Section 4 */}
                             <Box id="section4" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    3. Key Differences Between Sales and Marketing 
+                                    3. Key Differences Between Sales and Marketing
                                 </Typography>
                                 <Typography variant="body1">
                                     Although both departments share the same ultimate goal — revenue growth — they approach it differently.
@@ -712,7 +713,7 @@ const CompSalesVSMarketing = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Both are essential. 
+                                    Both are essential.
                                 </Typography>
                             </Box>
 
@@ -722,32 +723,32 @@ const CompSalesVSMarketing = () => {
                                     Conclusion
                                 </Typography>
                                 <Typography variant="body1">
-                                    The debate between sales vs marketing is outdated. Modern businesses recognize that revenue growth depends on alignment, shared data, unified goals, and customer-centric strategy — and many forward-thinking companies choose to <strong>book a digital marketing consultation</strong> to identify alignment gaps and unlock scalable growth. 
+                                    The debate between sales vs marketing is outdated. Modern businesses recognize that revenue growth depends on alignment, shared data, unified goals, and customer-centric strategy — and many forward-thinking companies choose to <strong>book a digital marketing consultation</strong> to identify alignment gaps and unlock scalable growth.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Companies that integrate marketing intelligence with sales execution outperform competitors consistently. Businesses that book a digital marketing consultation often discover new opportunities to streamline lead generation, improve conversion processes, and strengthen collaboration between teams. 
+                                    Companies that integrate marketing intelligence with sales execution outperform competitors consistently. Businesses that book a digital marketing consultation often discover new opportunities to streamline lead generation, improve conversion processes, and strengthen collaboration between teams.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Instead of asking, “Who drives revenue more?” leaders should ask: 
+                                    Instead of asking, “Who drives revenue more?” leaders should ask:
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    “How can we create a seamless system where marketing and sales amplify each other?” 
+                                    “How can we create a seamless system where marketing and sales amplify each other?”
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    One of the smartest first steps is to <Link href="https://calendly.com/jvaghasiya-universalstreamsolution/30min?month=2026-02">book a digital marketing consultation</Link> to evaluate current performance metrics, sales workflows, and marketing ROI. 
+                                    One of the smartest first steps is to <Link href="https://calendly.com/jvaghasiya-universalstreamsolution/30min?month=2026-02">book a digital marketing consultation</Link> to evaluate current performance metrics, sales workflows, and marketing ROI.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Because sustainable revenue is not driven by one department — it is driven by collaboration. 
+                                    Because sustainable revenue is not driven by one department — it is driven by collaboration.
                                 </Typography>
                             </Box>
 

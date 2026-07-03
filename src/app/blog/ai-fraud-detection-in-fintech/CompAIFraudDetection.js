@@ -138,10 +138,10 @@ const CompAIFraudDetection = () => {
 
     // Demo posts data with same dummy content; replace with real data later
     const posts = [
-        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh khatwani", date: "May 5th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
-        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "May 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
+        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
+        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "April 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
         // { id: "p8", title: "DeepSeek vs ChatGPT: A Comprehensive Comparison of AI-Powered Chatbots", excerpt: "Artificial Intelligence (AI) has transformed the way we engage with technology, and AI-driven cha...", author: "Dilip Tiwari", date: "March 10th, 2025", readTime: "6 min read", category: "AI", image: Blog4, featured: false, url: "/blog-details8" },
-        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
+        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "May 28th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
     ];
 
 
@@ -165,15 +165,16 @@ const CompAIFraudDetection = () => {
                             </CardMedia>
 
                             <CardContent className="blog-card-content">
-                                <Chip label={post.category} size="small" className="blog-card-chip" />
+                                <Box>
+                                    <Chip label={post.category} size="small" className="blog-card-chip" />
 
-                                <Box className="blog-card-title-row">
-                                    <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
-                                        {post.title}
-                                    </Typography>
-                                    <Image src={BtnIcon} alt="btn-icon" />
+                                    <Box className="blog-card-title-row">
+                                        <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
+                                            {post.title}
+                                        </Typography>
+                                        <Image src={BtnIcon} alt="btn-icon" />
+                                    </Box>
                                 </Box>
-
                                 <Box className="blog-card-meta">
                                     <Box className="avtar-box">
                                         <Avatar
@@ -628,72 +629,72 @@ const CompAIFraudDetection = () => {
                                     6. Benefits of AI-Powered Fraud Detection
                                 </Typography>
                                 <Typography variant="body1">
-                                    The adoption of AI in fintech fraud prevention offers numerous advantages. 
+                                    The adoption of AI in fintech fraud prevention offers numerous advantages.
                                     <br />
                                     <br />
                                     Blockchain offers:
-                                </Typography> 
-                                <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                   Improved Accuracy 
-                                </Typography>
-                                <Typography variant="body1">
-                                   AI can analyze multiple variables simultaneously, resulting in more accurate fraud detection.
-                                    <br />
-                                    <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                   Faster Detection
+                                    Improved Accuracy
                                 </Typography>
                                 <Typography variant="body1">
-                                   Real-time monitoring enables immediate identification of suspicious activities.
+                                    AI can analyze multiple variables simultaneously, resulting in more accurate fraud detection.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                   Faster Detection
+                                    Faster Detection
                                 </Typography>
                                 <Typography variant="body1">
-                                   Real-time monitoring enables immediate identification of suspicious activities.
+                                    Real-time monitoring enables immediate identification of suspicious activities.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                   Reduced False Positives 
+                                    Faster Detection
                                 </Typography>
                                 <Typography variant="body1">
-                                   AI evaluates contextual information, minimizing disruptions for legitimate customers. 
+                                    Real-time monitoring enables immediate identification of suspicious activities.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                   Enhanced Customer Experience
+                                    Reduced False Positives
                                 </Typography>
                                 <Typography variant="body1">
-                                   Customers enjoy smoother transactions and fewer unnecessary security interruptions. 
+                                    AI evaluates contextual information, minimizing disruptions for legitimate customers.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                   Scalability
+                                    Enhanced Customer Experience
                                 </Typography>
                                 <Typography variant="body1">
-                                   AI systems can process millions of transactions without compromising performance. 
+                                    Customers enjoy smoother transactions and fewer unnecessary security interruptions.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                   Cost Savings 
+                                    Scalability
                                 </Typography>
                                 <Typography variant="body1">
-                                  Automation reduces the need for extensive manual reviews and investigations.
+                                    AI systems can process millions of transactions without compromising performance.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                   Adaptive Security 
+                                    Cost Savings
                                 </Typography>
                                 <Typography variant="body1">
-                                 AI continuously learns and evolves to address new fraud tactics.
+                                    Automation reduces the need for extensive manual reviews and investigations.
+                                    <br />
+                                    <br />
+                                </Typography>
+                                <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
+                                    Adaptive Security
+                                </Typography>
+                                <Typography variant="body1">
+                                    AI continuously learns and evolves to address new fraud tactics.
                                     <br />
                                     <br />
                                     These benefits make AI an essential investment for fintech companies seeking to strengthen security and maintain customer trust.
@@ -706,13 +707,13 @@ const CompAIFraudDetection = () => {
                                     7. Challenges of Implementing AI in Fraud Detection
                                 </Typography>
                                 <Typography variant="body1">
-                                    Despite its advantages, AI implementation comes with certain challenges. 
+                                    Despite its advantages, AI implementation comes with certain challenges.
                                     <br />
                                     <br />
-                                    Organizations must ensure access to high-quality data, as poor data can negatively impact model performance. Privacy concerns also require careful management to comply with regulations such as GDPR and other data protection laws. 
+                                    Organizations must ensure access to high-quality data, as poor data can negatively impact model performance. Privacy concerns also require careful management to comply with regulations such as GDPR and other data protection laws.
                                     <br />
                                     <br />
-                                    Additionally, AI systems can be complex to develop and maintain, requiring significant investment in infrastructure, expertise, and ongoing optimization. 
+                                    Additionally, AI systems can be complex to develop and maintain, requiring significant investment in infrastructure, expertise, and ongoing optimization.
                                     <br />
                                     <br />
                                     Explainability is another challenge, as some machine learning models operate as "black boxes," making it difficult to understand how decisions are made.
@@ -725,19 +726,19 @@ const CompAIFraudDetection = () => {
                             {/* Section 9 */}
                             <Box id="section9" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    8. The Future of AI in Fintech Security 
+                                    8. The Future of AI in Fintech Security
                                 </Typography>
                                 <Typography variant="body1">
                                     The future of fraud detection is increasingly AI-driven. Emerging technologies such as Explainable AI (XAI), Graph Analytics, Federated Learning, and Generative AI are expected to further enhance fraud prevention capabilities.
                                     <br />
                                     <br />
-                                    Future systems will become more predictive, enabling organizations to identify potential fraud risks before attacks occur.  
+                                    Future systems will become more predictive, enabling organizations to identify potential fraud risks before attacks occur.
                                     <br />
                                     <br />
                                     Advanced AI models will be capable of detecting complex fraud networks, deepfake-based identity fraud, and highly coordinated cybercrime operations.
                                     <br />
                                     <br />
-                                    As digital financial services continue to evolve, AI will play an even greater role in protecting customers, ensuring compliance, and maintaining trust within the financial ecosystem. 
+                                    As digital financial services continue to evolve, AI will play an even greater role in protecting customers, ensuring compliance, and maintaining trust within the financial ecosystem.
                                 </Typography>
                             </Box>
 
@@ -747,13 +748,13 @@ const CompAIFraudDetection = () => {
                                     Conclusion
                                 </Typography>
                                 <Typography variant="body1">
-                                    Fraud remains one of the most significant challenges facing the fintech industry. As cybercriminals develop increasingly sophisticated attack methods, traditional fraud detection systems are struggling to keep pace. Artificial Intelligence offers a smarter, faster, and more effective approach to fraud prevention. 
+                                    Fraud remains one of the most significant challenges facing the fintech industry. As cybercriminals develop increasingly sophisticated attack methods, traditional fraud detection systems are struggling to keep pace. Artificial Intelligence offers a smarter, faster, and more effective approach to fraud prevention.
                                     <br />
                                     <br />
-                                    By leveraging machine learning, behavioral analytics, real-time monitoring, biometric verification, and predictive intelligence, AI empowers fintech companies to detect suspicious activities before they result in financial losses. These technologies not only improve security but also enhance customer experiences by reducing false positives and streamlining verification processes. 
+                                    By leveraging machine learning, behavioral analytics, real-time monitoring, biometric verification, and predictive intelligence, AI empowers fintech companies to detect suspicious activities before they result in financial losses. These technologies not only improve security but also enhance customer experiences by reducing false positives and streamlining verification processes.
                                     <br />
                                     <br />
-                                    As the fintech sector continues to grow, AI-powered fraud detection will become a cornerstone of digital financial security. Organizations that embrace AI today will be better positioned to combat emerging threats, protect customer assets, and build long-term trust in an increasingly connected financial world. Businesses looking to implement advanced fraud prevention strategies and secure digital financial ecosystems can <Link href="https://calendly.com/jvaghasiya-universalstreamsolution/30min?month=2026-06">talk to our fintech experts</Link> to explore customized AI-driven solutions tailored to their specific needs and growth objectives. 
+                                    As the fintech sector continues to grow, AI-powered fraud detection will become a cornerstone of digital financial security. Organizations that embrace AI today will be better positioned to combat emerging threats, protect customer assets, and build long-term trust in an increasingly connected financial world. Businesses looking to implement advanced fraud prevention strategies and secure digital financial ecosystems can <Link href="https://calendly.com/jvaghasiya-universalstreamsolution/30min?month=2026-06">talk to our fintech experts</Link> to explore customized AI-driven solutions tailored to their specific needs and growth objectives.
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
                                     <ListItem component="li" disablePadding>

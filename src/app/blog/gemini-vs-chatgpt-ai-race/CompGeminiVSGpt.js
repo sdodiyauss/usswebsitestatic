@@ -135,10 +135,10 @@ const CompGeminiVSGpt = () => {
 
     // Demo posts data with same dummy content; replace with real data later
     const posts = [
-        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh khatwani", date: "May 5th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
-        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "May 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
+        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
+        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "April 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
         // { id: "p8", title: "DeepSeek vs ChatGPT: A Comprehensive Comparison of AI-Powered Chatbots", excerpt: "Artificial Intelligence (AI) has transformed the way we engage with technology, and AI-driven cha...", author: "Dilip Tiwari", date: "March 10th, 2025", readTime: "6 min read", category: "AI", image: Blog4, featured: false, url: "/blog-details8" },
-        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
+        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "May 28th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
     ];
 
 
@@ -162,15 +162,16 @@ const CompGeminiVSGpt = () => {
                             </CardMedia>
 
                             <CardContent className="blog-card-content">
-                                <Chip label={post.category} size="small" className="blog-card-chip" />
+                                <Box>
+                                    <Chip label={post.category} size="small" className="blog-card-chip" />
 
-                                <Box className="blog-card-title-row">
-                                    <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
-                                        {post.title}
-                                    </Typography>
-                                    <Image src={BtnIcon} alt="btn-icon" />
+                                    <Box className="blog-card-title-row">
+                                        <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
+                                            {post.title}
+                                        </Typography>
+                                        <Image src={BtnIcon} alt="btn-icon" />
+                                    </Box>
                                 </Box>
-
                                 <Box className="blog-card-meta">
                                     <Box className="avtar-box">
                                         <Avatar
@@ -727,7 +728,7 @@ const CompGeminiVSGpt = () => {
                                     variant="body1"
                                     className="written-by-box-description"
                                 >
-                                    Jignesh Vaghasiya is a visionary tech entrepreneur and CEO with over 15 years of experience in driving digital transformation and business growth. He specializes in AI, mobile app innovation, and scalable tech strategies that empower global enterprises. 
+                                    Jignesh Vaghasiya is a visionary tech entrepreneur and CEO with over 15 years of experience in driving digital transformation and business growth. He specializes in AI, mobile app innovation, and scalable tech strategies that empower global enterprises.
                                 </Typography>
                             </Box>
                         </Grid>

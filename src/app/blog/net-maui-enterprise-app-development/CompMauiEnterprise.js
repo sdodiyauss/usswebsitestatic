@@ -139,10 +139,10 @@ const CompMauiEnterprise = () => {
 
     // Demo posts data with same dummy content; replace with real data later
     const posts = [
-        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh Khatwani", date: "May 5th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
-        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "May 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
+        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
+        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "April 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
         // { id: "p8", title: "DeepSeek vs ChatGPT: A Comprehensive Comparison of AI-Powered Chatbots", excerpt: "Artificial Intelligence (AI) has transformed the way we engage with technology, and AI-driven cha...", author: "Dilip Tiwari", date: "March 10th, 2025", readTime: "6 min read", category: "AI", image: Blog4, featured: false, url: "/blog-details8" },
-        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
+        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "May 28th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
     ];
 
 
@@ -166,15 +166,16 @@ const CompMauiEnterprise = () => {
                             </CardMedia>
 
                             <CardContent className="blog-card-content">
-                                <Chip label={post.category} size="small" className="blog-card-chip" />
+                                <Box>
+                                    <Chip label={post.category} size="small" className="blog-card-chip" />
 
-                                <Box className="blog-card-title-row">
-                                    <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
-                                        {post.title}
-                                    </Typography>
-                                    <Image src={BtnIcon} alt="btn-icon" />
+                                    <Box className="blog-card-title-row">
+                                        <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
+                                            {post.title}
+                                        </Typography>
+                                        <Image src={BtnIcon} alt="btn-icon" />
+                                    </Box>
                                 </Box>
-
                                 <Box className="blog-card-meta">
                                     <Box className="avtar-box">
                                         <Avatar
@@ -343,7 +344,7 @@ const CompMauiEnterprise = () => {
                                     Additionally, <Link href="https://www.universalstreamsolution.com/blog/modern-backend-development-cloud-computing">.NET MAUI backend integration</Link> enables these applications to seamlessly connect with cloud-based services, APIs, and enterprise systems, ensuring real-time data synchronization, scalability, and high performance across all platforms.
                                     <br />
                                     <br />
-                                    For instance, consider a healthcare organization building a patient management system. With MAUI, they can create one application that works for doctors using tablets, administrative staff on desktops, and patients accessing mobile apps. Instead of maintaining three separate systems, everything is managed through a single, centralized codebase—reducing complexity and improving efficiency. 
+                                    For instance, consider a healthcare organization building a patient management system. With MAUI, they can create one application that works for doctors using tablets, administrative staff on desktops, and patients accessing mobile apps. Instead of maintaining three separate systems, everything is managed through a single, centralized codebase—reducing complexity and improving efficiency.
                                 </Typography>
                             </Box>
 
@@ -375,10 +376,10 @@ const CompMauiEnterprise = () => {
                                     Performance is crucial for enterprise applications, especially those handling real-time data and critical operations. .NET MAUI provides true native performance by directly interacting with platform-specific APIs, ensuring smooth execution and responsiveness.
                                     <br />
                                     <br />
-                                   For example, in a financial services company, a trading dashboard built with MAUI can process live market data and update charts in real time without lag. Similarly, in a logistics application, GPS tracking and route optimization features can run efficiently, providing real-time updates to drivers and managers.
-                                   <br />
-                                   <br />
-                                   Unlike hybrid frameworks that rely on web views, MAUI ensures that applications feel fast and responsive, which is essential for productivity-driven enterprise environments.  
+                                    For example, in a financial services company, a trading dashboard built with MAUI can process live market data and update charts in real time without lag. Similarly, in a logistics application, GPS tracking and route optimization features can run efficiently, providing real-time updates to drivers and managers.
+                                    <br />
+                                    <br />
+                                    Unlike hybrid frameworks that rely on web views, MAUI ensures that applications feel fast and responsive, which is essential for productivity-driven enterprise environments.
                                 </Typography>
                             </Box>
 
@@ -413,7 +414,7 @@ const CompMauiEnterprise = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                   For example, a startup in the fintech space can build its mobile banking app for both Android and iOS using MAUI, instead of hiring separate teams for each platform. This not only reduces initial development costs but also lowers long-term maintenance expenses, as updates and bug fixes are implemented in one place.
+                                    For example, a startup in the fintech space can build its mobile banking app for both Android and iOS using MAUI, instead of hiring separate teams for each platform. This not only reduces initial development costs but also lowers long-term maintenance expenses, as updates and bug fixes are implemented in one place.
                                     <br />
                                     <br />
                                 </Typography>
@@ -433,12 +434,12 @@ const CompMauiEnterprise = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                   For instance, an eCommerce company launching a new mobile app can quickly test features like product search, checkout, and payment integration across platforms simultaneously. This reduces development cycles and allows faster deployment. 
+                                    For instance, an eCommerce company launching a new mobile app can quickly test features like product search, checkout, and payment integration across platforms simultaneously. This reduces development cycles and allows faster deployment.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                   By shortening time-to-market, MAUI helps businesses respond quickly to market demands and seize new opportunities. 
+                                    By shortening time-to-market, MAUI helps businesses respond quickly to market demands and seize new opportunities.
                                 </Typography>
                             </Box>
 
@@ -459,7 +460,7 @@ const CompMauiEnterprise = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                   This makes MAUI a reliable choice for industries where data security is critical.
+                                    This makes MAUI a reliable choice for industries where data security is critical.
                                 </Typography>
                             </Box>
 
@@ -475,7 +476,7 @@ const CompMauiEnterprise = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    For example, a SaaS company can start with a basic application and gradually add features like analytics dashboards, AI-based recommendations, and third-party integrations without rebuilding the system. 
+                                    For example, a SaaS company can start with a basic application and gradually add features like analytics dashboards, AI-based recommendations, and third-party integrations without rebuilding the system.
                                     <br />
                                     <br />
                                     This flexibility ensures that applications can evolve alongside the business, providing long-term value.
@@ -506,10 +507,10 @@ const CompMauiEnterprise = () => {
                                     Conclusion
                                 </Typography>
                                 <Typography variant="body1">
-                                   .NET MAUI is not just a development framework—it’s a strategic tool for enterprises looking to build scalable, high-performance, and cost-efficient applications. With its unified codebase, native performance, seamless integrations, and real-world applicability across industries, it stands out as one of the best choices for cross-platform enterprise development. For organizations aiming to innovate and stay competitive, it also provides a strong foundation to <Link href="https://calendly.com/jvaghasiya-universalstreamsolution/30min?month=2026-04">explore custom software solutions</Link> tailored to specific business needs, workflows, and long-term growth strategies.
+                                    .NET MAUI is not just a development framework—it’s a strategic tool for enterprises looking to build scalable, high-performance, and cost-efficient applications. With its unified codebase, native performance, seamless integrations, and real-world applicability across industries, it stands out as one of the best choices for cross-platform enterprise development. For organizations aiming to innovate and stay competitive, it also provides a strong foundation to <Link href="https://calendly.com/jvaghasiya-universalstreamsolution/30min?month=2026-04">explore custom software solutions</Link> tailored to specific business needs, workflows, and long-term growth strategies.
                                     <br />
                                     <br />
-                                   From logistics and healthcare to finance and retail, businesses can leverage MAUI to streamline operations, reduce costs, and accelerate innovation. For enterprises aiming to stay competitive in the digital era, adopting .NET MAUI is a smart and future-ready decision.
+                                    From logistics and healthcare to finance and retail, businesses can leverage MAUI to streamline operations, reduce costs, and accelerate innovation. For enterprises aiming to stay competitive in the digital era, adopting .NET MAUI is a smart and future-ready decision.
                                 </Typography>
                             </Box>
 

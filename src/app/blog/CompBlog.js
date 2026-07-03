@@ -168,7 +168,7 @@ const CompBlog = () => {
       title: "The Future of Telemedicine & Prescription Delivery",
       excerpt: "The healthcare sector is experiencing a huge shift, fuelled by developments in digital technology. Once considered futuristic concepts, telemedicine and prescription delivery are now integral parts of modern healthcare. The COVID-19 pandemic accelerated their adoption, proving that remote healthcare services are both...",
       author: "Bharat Katariya",
-      date: "April 28th, 2025",
+      date: "March 10th, 2025",
       readTime: "6 min read",
       category: "Healthcare",
       image: Blog1,
@@ -181,7 +181,7 @@ const CompBlog = () => {
       title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS",
       excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among developers: ReactJS or AngularJS—which is the better choice for your project? Each has its strengths, benefits, and use cases, making them formidable contenders in the frontend arena. Let’s dive into this ultimate face-off...",
       author: "Hitesh Khatwani",
-      date: "May 5th, 2025",
+      date: "April 14th, 2025",
       readTime: "6 min read",
       category: "Web Development",
       image: Blog2,
@@ -194,7 +194,7 @@ const CompBlog = () => {
       title: "Why Flutter Remains the MVP King in 2025",
       excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and efficiently is crucial for startups and businesses aiming to validate their ideas and capture market share. Flutter, Google’s open-source UI toolkit, continues to dominate as the preferred framework for MVP development...",
       author: "Bharat Katariya",
-      date: "May 28th, 2025",
+      date: "April 28th, 2025",
       readTime: "6 min read",
       category: "Mobile App Development",
       image: Blog3,
@@ -207,7 +207,7 @@ const CompBlog = () => {
       title: "DeepSeek vs ChatGPT: A Comprehensive Comparison of AI-Powered Chatbots",
       excerpt: "Artificial Intelligence (AI) has transformed the way we engage with technology, and AI-driven chatbots are leading the charge. DeepSeek and ChatGPT are two of the leading players in this field. Both are sophisticated conversational AI models that can help users perform a variety of tasks, from answering questions to...",
       author: "Bharat Katariya",
-      date: "March 10th, 2025",
+      date: "May 5th, 2025",
       readTime: "6 min read",
       category: "AI",
       image: Blog4,
@@ -220,7 +220,7 @@ const CompBlog = () => {
     // { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh Khatwani", date: "May 5th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
     // { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "May 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
     // { id: "p8", title: "DeepSeek vs ChatGPT: A Comprehensive Comparison of AI-Powered Chatbots", excerpt: "Artificial Intelligence (AI) has transformed the way we engage with technology, and AI-driven cha...", author: "Bharat Katariya", date: "March 10th, 2025", readTime: "6 min read", category: "AI", image: Blog4, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "blog/deepseek-vs-chatgpt-ai-chatbot" },
-    { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "In the world of Python web development, two frameworks stand tall: Django and Flask. These powerful tools have revolutionized how developers build web applications, but they take fundamentally different approaches. At USSLLC, we’ve helped countless clients navigate this critical decision – and today, we’re sharing our expert...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
+    { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "In the world of Python web development, two frameworks stand tall: Django and Flask. These powerful tools have revolutionized how developers build web applications, but they take fundamentally different approaches. At USSLLC, we’ve helped countless clients navigate this critical decision – and today, we’re sharing our expert...", author: "Hitesh Khatwani", date: "May 28th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
     { id: "p10", title: "AI and Machine Learning Are Transforming Healthcare", excerpt: "Healthcare has changed dramatically over the last decade. A few years ago, patient records were scattered across labs, clinics, and paper files. Doctors spent more time looking for information than treating patients. Today, artificial intelligence (AI) and machine learning (ML) help healthcare teams make smarter decisions...", author: "Kinjal Vaghasiya", date: "November 3rd, 2025", readTime: "6 min read", category: "AI", image: Blog6, avatarImage: "/images/blog-avtar-kinjal.webp", featured: false, url: "/blog/ai-machine-learning-transforming-healthcare" },
     { id: "p11", title: "Gemini 1.5 vs ChatGPT 5: Who’s Really Leading the AI Race? ", excerpt: "AI is moving at lightning speed. From chatbots that answer simple questions to models that can generate complex content, it’s reshaping the way we work, create, and communicate. In 2025, two names are making headlines: Google’s Gemini 1.5 and OpenAI’s ChatGPT 5. Both...", author: "Jignesh Vaghasiya", date: "November 7th, 2025", readTime: "6 min read", category: "AI", image: Blog7, avatarImage: "/images/written-by-jignesh.webp", featured: false, url: "/blog/gemini-vs-chatgpt-ai-race" },
     { id: "p12", title: "Top Mobile App Development Trends to Watch in 2025", excerpt: "Mobile apps… wow, they’ve really changed, haven’t they? Not just tiny tools anymore. Now they’re more like experiences, sometimes even the first handshake between a brand and a user. And in 2025? The pace is only speeding up. Businesses, startups, and developers are all scrambling to make apps smarter, faster, and more indispensable. From AI-powered features to immersive...", author: "Raj Shah", date: "November 19th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog8, avatarImage: "/images/written-by-raj.webp", featured: false, url: "/blog/mobile-app-development-trends-2025" },
@@ -346,12 +346,14 @@ const CompBlog = () => {
                       <Image src={post.image} alt={post.title} />
                     </CardMedia>
                     <CardContent className="blog-card-content">
-                      <Chip label={post.category} size="small" className="blog-card-chip" />
-                      <Box className="blog-card-title-row">
-                        <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
-                          {post.title}
-                        </Typography>
-                        <Image src={BtnIcon} alt="btn-icon" />
+                      <Box>
+                        <Chip label={post.category} size="small" className="blog-card-chip" />
+                        <Box className="blog-card-title-row">
+                          <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
+                            {post.title}
+                          </Typography>
+                          <Image src={BtnIcon} alt="btn-icon" />
+                        </Box>
                       </Box>
                       <Box className="blog-card-meta">
                         <Box className="avtar-box">
@@ -393,15 +395,16 @@ const CompBlog = () => {
                 </CardMedia>
 
                 <CardContent className="blog-card-content">
-                  <Chip label={post.category} size="small" className="blog-card-chip" />
+                  <Box>
+                    <Chip label={post.category} size="small" className="blog-card-chip" />
 
-                  <Box className="blog-card-title-row">
-                    <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
-                      {post.title}
-                    </Typography>
-                    <Image src={BtnIcon} alt="btn-icon" />
+                    <Box className="blog-card-title-row">
+                      <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
+                        {post.title}
+                      </Typography>
+                      <Image src={BtnIcon} alt="btn-icon" />
+                    </Box>
                   </Box>
-
                   <Box className="blog-card-meta">
                     <Box className="avtar-box">
                       <Avatar

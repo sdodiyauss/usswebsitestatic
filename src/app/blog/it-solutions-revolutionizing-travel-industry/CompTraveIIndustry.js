@@ -141,10 +141,10 @@ const CompGeminiVSGpt = () => {
 
     // Demo posts data with same dummy content; replace with real data later
     const posts = [
-        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh khatwani", date: "May 5th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
-        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "May 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
+        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
+        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "April 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
         // { id: "p8", title: "DeepSeek vs ChatGPT: A Comprehensive Comparison of AI-Powered Chatbots", excerpt: "Artificial Intelligence (AI) has transformed the way we engage with technology, and AI-driven cha...", author: "Dilip Tiwari", date: "March 10th, 2025", readTime: "6 min read", category: "AI", image: Blog4, featured: false, url: "/blog-details8" },
-        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
+        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "May 28th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
     ];
 
 
@@ -168,15 +168,16 @@ const CompGeminiVSGpt = () => {
                             </CardMedia>
 
                             <CardContent className="blog-card-content">
-                                <Chip label={post.category} size="small" className="blog-card-chip" />
+                                <Box>
+                                    <Chip label={post.category} size="small" className="blog-card-chip" />
 
-                                <Box className="blog-card-title-row">
-                                    <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
-                                        {post.title}
-                                    </Typography>
-                                    <Image src={BtnIcon} alt="btn-icon" />
+                                    <Box className="blog-card-title-row">
+                                        <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
+                                            {post.title}
+                                        </Typography>
+                                        <Image src={BtnIcon} alt="btn-icon" />
+                                    </Box>
                                 </Box>
-
                                 <Box className="blog-card-meta">
                                     <Box className="avtar-box">
                                         <Avatar
@@ -372,7 +373,7 @@ const CompGeminiVSGpt = () => {
                                     3. Streamlined Operations and Efficiency
                                 </Typography>
                                 <Typography variant="body1">
-                                    Behind every seamless customer interaction lies a robust operational framework. Technology enhances efficiency by automating repetitive tasks, reducing human error, and enabling better resource management. 
+                                    Behind every seamless customer interaction lies a robust operational framework. Technology enhances efficiency by automating repetitive tasks, reducing human error, and enabling better resource management.
                                     <br />
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
@@ -403,7 +404,7 @@ const CompGeminiVSGpt = () => {
                                 </Typography>
                                 <Typography variant="body1">
                                     Data-driven insights have become essential in travel management. Predictive analytics allows companies to anticipate demand, optimize pricing, and plan resources efficiently.
-                                    <br /> 
+                                    <br />
                                     <br />
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
@@ -418,18 +419,18 @@ const CompGeminiVSGpt = () => {
                                     </ListItem>
                                 </List>
                                 <Typography variant="body1">
-                                   By integrating predictive insights into travel operations, companies not only save costs but also improve the traveler journey. These analytics help enhance satisfaction, reduce frustration, and deliver an overall better experience for customers.
+                                    By integrating predictive insights into travel operations, companies not only save costs but also improve the traveler journey. These analytics help enhance satisfaction, reduce frustration, and deliver an overall better experience for customers.
                                 </Typography>
                             </Box>
 
                             {/* Section 6 */}
                             <Box id="section6" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    5. Safety, Security, and Traveler Confidence 
+                                    5. Safety, Security, and Traveler Confidence
                                 </Typography>
                                 <Typography variant="body1">
-                                   Safety is a top priority for both travelers and travel companies. Modern IT solutions play a crucial role in improving security at every touchpoint. 
-                                    <br /> 
+                                    Safety is a top priority for both travelers and travel companies. Modern IT solutions play a crucial role in improving security at every touchpoint.
+                                    <br />
                                     <br />
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
@@ -444,19 +445,19 @@ const CompGeminiVSGpt = () => {
                                     </ListItem>
                                 </List>
                                 <Typography variant="body1">
-                                   By prioritizing safety through technological tools, travel companies build trust while ensuring travelers feel confident and secure throughout their journey. 
+                                    By prioritizing safety through technological tools, travel companies build trust while ensuring travelers feel confident and secure throughout their journey.
                                 </Typography>
                             </Box>
 
 
                             {/* Section 7 */}
-                             <Box id="section7" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
+                            <Box id="section7" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    6. Emerging Technologies in Travel 
+                                    6. Emerging Technologies in Travel
                                 </Typography>
                                 <Typography variant="body1">
-                                  Emerging technologies continue to revolutionize the travel experience, offering innovative ways for travelers to engage with destinations and services.
-                                    <br /> 
+                                    Emerging technologies continue to revolutionize the travel experience, offering innovative ways for travelers to engage with destinations and services.
+                                    <br />
                                     <br />
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
@@ -471,17 +472,17 @@ const CompGeminiVSGpt = () => {
                                     </ListItem>
                                 </List>
                                 <Typography variant="body1">
-                                   Implementing these technologies requires careful planning and expertise. For companies seeking<strong> custom IT solutions</strong> to adopt advanced innovations effectively, professional guidance ensures smooth implementation and long-term value.
+                                    Implementing these technologies requires careful planning and expertise. For companies seeking<strong> custom IT solutions</strong> to adopt advanced innovations effectively, professional guidance ensures smooth implementation and long-term value.
                                 </Typography>
                             </Box>
 
-                             <Box id="section8" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
+                            <Box id="section8" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
                                     7. Customer Engagement and Loyalty
                                 </Typography>
                                 <Typography variant="body1">
-                                   <strong>Travel engagement</strong> improves retention and builds brand trust. 
-                                    <br /> 
+                                    <strong>Travel engagement</strong> improves retention and builds brand trust.
+                                    <br />
                                     <br />
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
@@ -496,17 +497,17 @@ const CompGeminiVSGpt = () => {
                                     </ListItem>
                                 </List>
                                 <Typography variant="body1">
-                                   These <strong>digital engagement</strong> strategies increase customer satisfaction and repeat bookings.
+                                    These <strong>digital engagement</strong> strategies increase customer satisfaction and repeat bookings.
                                 </Typography>
                             </Box>
 
-                             <Box id="section9" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
+                            <Box id="section9" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
                                     8. Sustainable and Eco-Friendly Travel
                                 </Typography>
                                 <Typography variant="body1">
-                                   Sustainability is becoming a central focus in the travel industry, and IT solutions are key to supporting eco-friendly practices. 
-                                    <br /> 
+                                    Sustainability is becoming a central focus in the travel industry, and IT solutions are key to supporting eco-friendly practices.
+                                    <br />
                                     <br />
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
@@ -521,16 +522,16 @@ const CompGeminiVSGpt = () => {
                                     </ListItem>
                                 </List>
                                 <Typography variant="body1">
-                                   Integrating sustainable practices with technology ensures travelers enjoy a seamless, convenient journey while contributing to responsible tourism practices.
+                                    Integrating sustainable practices with technology ensures travelers enjoy a seamless, convenient journey while contributing to responsible tourism practices.
                                 </Typography>
                             </Box>
 
-                             <Box id="section10" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
+                            <Box id="section10" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
                                     9. Challenges in Travel IT
                                 </Typography>
                                 <Typography variant="body1">
-                                   While IT solutions offer immense benefits, travel companies face several challenges:
+                                    While IT solutions offer immense benefits, travel companies face several challenges:
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
                                     <ListItem component="li" disablePadding>
@@ -544,7 +545,7 @@ const CompGeminiVSGpt = () => {
                                     </ListItem>
                                 </List>
                                 <Typography variant="body1">
-                                  Despite these challenges, the adoption of modern IT solutions is critical to improving operations, enhancing services, and delivering exceptional travel experiences.
+                                    Despite these challenges, the adoption of modern IT solutions is critical to improving operations, enhancing services, and delivering exceptional travel experiences.
                                 </Typography>
                             </Box>
 
@@ -553,7 +554,7 @@ const CompGeminiVSGpt = () => {
                                     10. The Future of Travel
                                 </Typography>
                                 <Typography variant="body1">
-                                  The future of the travel industry promises increasingly tech-driven experiences. Key trends include: 
+                                    The future of the travel industry promises increasingly tech-driven experiences. Key trends include:
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
                                     <ListItem component="li" disablePadding>
@@ -573,7 +574,7 @@ const CompGeminiVSGpt = () => {
                                     </ListItem>
                                 </List>
                                 <Typography variant="body1">
-                                   Travel companies that embrace advanced technology and integrate it into daily operations will lead the industry in providing seamless, efficient, and personalized services. 
+                                    Travel companies that embrace advanced technology and integrate it into daily operations will lead the industry in providing seamless, efficient, and personalized services.
                                 </Typography>
                             </Box>
 
@@ -582,12 +583,12 @@ const CompGeminiVSGpt = () => {
                                     Conclusion
                                 </Typography>
                                 <Typography variant="body1">
-                                  Technology is transforming every aspect of the travel industry, from operational efficiency and predictive analytics to security enhancements and sustainable practices. By leveraging modern IT solutions, travel companies can deliver exceptional service while streamlining operations and reducing errors.
-                                  <br />
-                                  <br />
+                                    Technology is transforming every aspect of the travel industry, from operational efficiency and predictive analytics to security enhancements and sustainable practices. By leveraging modern IT solutions, travel companies can deliver exceptional service while streamlining operations and reducing errors.
+                                    <br />
+                                    <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                   By implementing<strong> travel agency software</strong> in the middle of operations and focusing on delivering a superior<Link href="/contactus"> customer travel experience</Link> at the final stage, businesses can ensure every journey is smooth, personalized, and memorable. Companies looking to adopt such solutions and elevate their travel services can explore expert guidance and support here. 
+                                    By implementing<strong> travel agency software</strong> in the middle of operations and focusing on delivering a superior<Link href="/contactus"> customer travel experience</Link> at the final stage, businesses can ensure every journey is smooth, personalized, and memorable. Companies looking to adopt such solutions and elevate their travel services can explore expert guidance and support here.
                                 </Typography>
                             </Box>
 

@@ -140,10 +140,10 @@ const CompFutureOfAIResearch = () => {
 
     // Demo posts data with same dummy content; replace with real data later
     const posts = [
-        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh khatwani", date: "May 5th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
-        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "May 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
+        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
+        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "April 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
         // { id: "p8", title: "DeepSeek vs ChatGPT: A Comprehensive Comparison of AI-Powered Chatbots", excerpt: "Artificial Intelligence (AI) has transformed the way we engage with technology, and AI-driven cha...", author: "Dilip Tiwari", date: "March 10th, 2025", readTime: "6 min read", category: "AI", image: Blog4, featured: false, url: "/blog-details8" },
-        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
+        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "May 28th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
     ];
 
 
@@ -167,15 +167,16 @@ const CompFutureOfAIResearch = () => {
                             </CardMedia>
 
                             <CardContent className="blog-card-content">
-                                <Chip label={post.category} size="small" className="blog-card-chip" />
+                                <Box>
+                                    <Chip label={post.category} size="small" className="blog-card-chip" />
 
-                                <Box className="blog-card-title-row">
-                                    <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
-                                        {post.title}
-                                    </Typography>
-                                    <Image src={BtnIcon} alt="btn-icon" />
+                                    <Box className="blog-card-title-row">
+                                        <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
+                                            {post.title}
+                                        </Typography>
+                                        <Image src={BtnIcon} alt="btn-icon" />
+                                    </Box>
                                 </Box>
-
                                 <Box className="blog-card-meta">
                                     <Box className="avtar-box">
                                         <Avatar
@@ -705,9 +706,9 @@ const CompFutureOfAIResearch = () => {
                             {/* Section 7 */}
                             <Box id="section7" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    6. Industry-Wise Impact of Future AI Research 
+                                    6. Industry-Wise Impact of Future AI Research
                                 </Typography>
-                                 <Typography variant="h6" sx={{ fontWeight: 600, mb: 1 }}>
+                                <Typography variant="h6" sx={{ fontWeight: 600, mb: 1 }}>
                                     Healthcare
                                     <br />
                                 </Typography>
@@ -735,7 +736,7 @@ const CompFutureOfAIResearch = () => {
                                     <br />
                                 </Typography>
 
-                                 <Typography variant="h6" sx={{ fontWeight: 600, mb: 1 }}>
+                                <Typography variant="h6" sx={{ fontWeight: 600, mb: 1 }}>
                                     Education
                                     <br />
                                 </Typography>
@@ -763,12 +764,12 @@ const CompFutureOfAIResearch = () => {
                                     <br />
                                 </Typography>
 
-                                 <Typography variant="h6" sx={{ fontWeight: 600, mb: 1 }}>
+                                <Typography variant="h6" sx={{ fontWeight: 600, mb: 1 }}>
                                     Business and Enterprise
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    AI research will continue to optimize: 
+                                    AI research will continue to optimize:
                                     <br />
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
@@ -791,7 +792,7 @@ const CompFutureOfAIResearch = () => {
                                     <br />
                                 </Typography>
 
-                                 <Typography variant="h6" sx={{ fontWeight: 600, mb: 1 }}>
+                                <Typography variant="h6" sx={{ fontWeight: 600, mb: 1 }}>
                                     Smart Cities and Infrastructure
                                     <br />
                                 </Typography>
@@ -910,9 +911,9 @@ const CompFutureOfAIResearch = () => {
                                     Conclusion: Preparing for an AI-Driven Future
                                 </Typography>
                                 <Typography variant="body1">
-                                   The future of AI research is not just about smarter machines—it’s about building systems that are <strong>ethical, transparent, collaborative, and beneficial to humanity.</strong> As AI becomes more embedded in daily life, research priorities will shift toward responsibility, trust, and long-term impact.
-                                   <br />
-                                   <br />
+                                    The future of AI research is not just about smarter machines—it’s about building systems that are <strong>ethical, transparent, collaborative, and beneficial to humanity.</strong> As AI becomes more embedded in daily life, research priorities will shift toward responsibility, trust, and long-term impact.
+                                    <br />
+                                    <br />
                                 </Typography>
                                 <Typography variant="body1">
                                     Organizations that invest early in AI research and align it with human values will lead the next wave of digital transformation. The future belongs not just to advanced algorithms, but to <strong>intelligent systems designed with purpose and care.</strong>

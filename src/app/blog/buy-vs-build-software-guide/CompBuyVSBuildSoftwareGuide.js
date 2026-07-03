@@ -143,10 +143,10 @@ const CompBuyVSBuildSoftwareGuide = () => {
 
     // Demo posts data with same dummy content; replace with real data later
     const posts = [
-        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh khatwani", date: "May 5th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
-        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "May 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
+        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
+        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "April 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
         // { id: "p8", title: "DeepSeek vs ChatGPT: A Comprehensive Comparison of AI-Powered Chatbots", excerpt: "Artificial Intelligence (AI) has transformed the way we engage with technology, and AI-driven cha...", author: "Dilip Tiwari", date: "March 10th, 2025", readTime: "6 min read", category: "AI", image: Blog4, featured: false, url: "/blog-details8" },
-        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
+        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "May 28th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
     ];
 
 
@@ -170,15 +170,16 @@ const CompBuyVSBuildSoftwareGuide = () => {
                             </CardMedia>
 
                             <CardContent className="blog-card-content">
-                                <Chip label={post.category} size="small" className="blog-card-chip" />
+                                <Box>
+                                    <Chip label={post.category} size="small" className="blog-card-chip" />
 
-                                <Box className="blog-card-title-row">
-                                    <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
-                                        {post.title}
-                                    </Typography>
-                                    <Image src={BtnIcon} alt="btn-icon" />
+                                    <Box className="blog-card-title-row">
+                                        <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
+                                            {post.title}
+                                        </Typography>
+                                        <Image src={BtnIcon} alt="btn-icon" />
+                                    </Box>
                                 </Box>
-
                                 <Box className="blog-card-meta">
                                     <Box className="avtar-box">
                                         <Avatar
@@ -906,65 +907,65 @@ const CompBuyVSBuildSoftwareGuide = () => {
                             {/* Section 14 */}
                             <Box id="section14" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    13. Strategic Framework for Decision-Making 
+                                    13. Strategic Framework for Decision-Making
                                 </Typography>
                                 <Typography variant="body1">
-                                    To make the right decision, businesses should follow a structured approach: 
+                                    To make the right decision, businesses should follow a structured approach:
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Step 1: Define Business Goals 
+                                    Step 1: Define Business Goals
                                 </Typography>
                                 <Typography variant="body1">
-                                    Understand what you want to achieve. 
+                                    Understand what you want to achieve.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Step 2: Identify Core vs Non-Core Functions 
+                                    Step 2: Identify Core vs Non-Core Functions
                                 </Typography>
                                 <Typography variant="body1">
-                                    Focus your investment on what drives value. 
+                                    Focus your investment on what drives value.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Step 3: Evaluate Total Cost of Ownership 
+                                    Step 3: Evaluate Total Cost of Ownership
                                 </Typography>
                                 <Typography variant="body1">
-                                    Look beyond upfront costs. 
+                                    Look beyond upfront costs.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Step 4: Consider Scalability 
+                                    Step 4: Consider Scalability
                                 </Typography>
                                 <Typography variant="body1">
-                                    Plan for future growth.  
+                                    Plan for future growth.
                                     <br />
                                     <br />
                                 </Typography>
-                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Step 5: Assess Integration Needs 
+                                <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
+                                    Step 5: Assess Integration Needs
                                 </Typography>
                                 <Typography variant="body1">
-                                   Ensure systems can work together. 
+                                    Ensure systems can work together.
                                 </Typography>
                             </Box>
 
                             {/* Section 15 */}
                             <Box id="section15" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Final Takeaway 
+                                    Final Takeaway
                                 </Typography>
                                 <Typography variant="body1">
-                                   The buy vs build software decision is no longer just about cost or convenience—it’s about strategy, scalability, and long-term growth. To make the right choice for your business, it’s always a smart move to <Link href="https://calendly.com/jvaghasiya-universalstreamsolution/30min?month=2026-03">schedule a free consultation</Link> and evaluate the best approach based on your specific goals and future plans. 
+                                    The buy vs build software decision is no longer just about cost or convenience—it’s about strategy, scalability, and long-term growth. To make the right choice for your business, it’s always a smart move to <Link href="https://calendly.com/jvaghasiya-universalstreamsolution/30min?month=2026-03">schedule a free consultation</Link> and evaluate the best approach based on your specific goals and future plans.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Businesses that succeed today are those that: 
+                                    Businesses that succeed today are those that:
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
                                     <ListItem component="li" disablePadding>
@@ -978,12 +979,12 @@ const CompBuyVSBuildSoftwareGuide = () => {
                                     </ListItem>
                                 </List>
                                 <Typography variant="body1">
-                                    Instead of choosing one approach, they build ecosystems that combine the best of both worlds. 
+                                    Instead of choosing one approach, they build ecosystems that combine the best of both worlds.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                   Because in today’s competitive environment, <strong>the smartest move isn’t buying or building it’s knowing when to do each.</strong>
+                                    Because in today’s competitive environment, <strong>the smartest move isn’t buying or building it’s knowing when to do each.</strong>
                                 </Typography>
                             </Box>
 

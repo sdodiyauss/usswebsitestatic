@@ -140,10 +140,10 @@ const CompERHERMSystemPatientRecord = () => {
 
     // Demo posts data with same dummy content; replace with real data later
     const posts = [
-        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh Khatwani", date: "May 5th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
-        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "May 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
+        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
+        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "April 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
         // { id: "p8", title: "DeepSeek vs ChatGPT: A Comprehensive Comparison of AI-Powered Chatbots", excerpt: "Artificial Intelligence (AI) has transformed the way we engage with technology, and AI-driven cha...", author: "Dilip Tiwari", date: "March 10th, 2025", readTime: "6 min read", category: "AI", image: Blog4, featured: false, url: "/blog-details8" },
-        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
+        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "May 28th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
     ];
 
 
@@ -167,15 +167,16 @@ const CompERHERMSystemPatientRecord = () => {
                             </CardMedia>
 
                             <CardContent className="blog-card-content">
-                                <Chip label={post.category} size="small" className="blog-card-chip" />
+                                <Box>
+                                    <Chip label={post.category} size="small" className="blog-card-chip" />
 
-                                <Box className="blog-card-title-row">
-                                    <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
-                                        {post.title}
-                                    </Typography>
-                                    <Image src={BtnIcon} alt="btn-icon" />
+                                    <Box className="blog-card-title-row">
+                                        <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
+                                            {post.title}
+                                        </Typography>
+                                        <Image src={BtnIcon} alt="btn-icon" />
+                                    </Box>
                                 </Box>
-
                                 <Box className="blog-card-meta">
                                     <Box className="avtar-box">
                                         <Avatar
@@ -328,7 +329,7 @@ const CompERHERMSystemPatientRecord = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Today’s healthcare IT solutions are no longer just about going paperless. They’re about connecting information, improving decision-making, and helping clinicians spend time caring for patients instead of chasing down documents. 
+                                    Today’s healthcare IT solutions are no longer just about going paperless. They’re about connecting information, improving decision-making, and helping clinicians spend time caring for patients instead of chasing down documents.
                                 </Typography>
                             </Box>
 
@@ -338,7 +339,7 @@ const CompERHERMSystemPatientRecord = () => {
                                     1. Why Patient Records Used to Be a Mess (and Still Can Be)
                                 </Typography>
                                 <Typography variant="body1">
-                                    Many healthcare professionals will tell you the same thing: <strong>good care depends on good information</strong>. But getting that information hasn’t always been simple. 
+                                    Many healthcare professionals will tell you the same thing: <strong>good care depends on good information</strong>. But getting that information hasn’t always been simple.
                                     <br />
                                     <br />
                                 </Typography>
@@ -355,14 +356,14 @@ const CompERHERMSystemPatientRecord = () => {
                                     <ListItem component="li" disablePadding>
                                         <ListItemText primary="Paper reports stuck in filing cabinets" />
                                     </ListItem>
-                                      <ListItem component="li" disablePadding>
+                                    <ListItem component="li" disablePadding>
                                         <ListItemText primary="Emails or faxes that took hours or days to arrive" />
                                     </ListItem>
                                 </List>
                                 <Typography variant="body1">
-                                   Imagine being a doctor trying to make a decision without all the facts — a patient’s allergy not documented, or a test result filed under a different name. Mistakes happen, not because people don’t care, but because the systems they were given weren’t built for complexity.
-                                   <br />
-                                   <br />
+                                    Imagine being a doctor trying to make a decision without all the facts — a patient’s allergy not documented, or a test result filed under a different name. Mistakes happen, not because people don’t care, but because the systems they were given weren’t built for complexity.
+                                    <br />
+                                    <br />
                                 </Typography>
                                 <Typography variant="body1">
                                     This chaos is what drove the development of <strong>EHR and EMR systems</strong> — tools that organize data so healthcare professionals don’t have to guess or double-check every detail manually.
@@ -376,7 +377,7 @@ const CompERHERMSystemPatientRecord = () => {
                                 </Typography>
 
                                 <Typography variant="body1">
-                                   Technically, EMR and EHR can seem similar, but their practical impact varies a lot. 
+                                    Technically, EMR and EHR can seem similar, but their practical impact varies a lot.
                                     <br />
                                     <br />
                                 </Typography>
@@ -385,7 +386,7 @@ const CompERHERMSystemPatientRecord = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                  An Electronic Medical Record is essentially a digital version of the paper chart a doctor used to carry. It includes things like: 
+                                    An Electronic Medical Record is essentially a digital version of the paper chart a doctor used to carry. It includes things like:
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
                                     <ListItem component="li" disablePadding>
@@ -406,21 +407,21 @@ const CompERHERMSystemPatientRecord = () => {
                                     <br />
                                     <br />
                                 </Typography>
-                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
+                                <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
                                     EHR — The Connected Health Record
                                     <br />
                                 </Typography>
-                                 <Typography variant="body1">
+                                <Typography variant="body1">
                                     An <strong>Electronic Health</strong> Record takes things further. It’s not just a digital file — it is designed to be shared securely between various healthcare providers.
                                     <br />
                                     <br />
                                 </Typography>
-                                 <Typography variant="body1">
+                                <Typography variant="body1">
                                     So if you visited your local primary care doctor last month and a specialist today, both doctors could see the same up-to-date information. Your records follow you across systems in a safe way.
                                     <br />
                                     <br />
                                 </Typography>
-                                 <Typography variant="body1">
+                                <Typography variant="body1">
                                     That’s where healthcare starts to feel coordinated instead of fragmented.
                                 </Typography>
                             </Box>
@@ -435,13 +436,13 @@ const CompERHERMSystemPatientRecord = () => {
                                     <br />
                                     <br />
                                 </Typography>
-                                 <Typography variant="body1">
+                                <Typography variant="body1">
                                     The real power comes from the <strong>information technology infrastructure around the EHR/EMR systems</strong> — the tools that make data reliable, retrievable, and secure.
                                     <br />
                                     <br />
                                 </Typography>
-                                 <Typography variant="body1">
-                                    A well-designed <strong><Link href="/healthcare-tech/patient-management-system-solution">patient management portal solution</Link> for healthcare organizations</strong> enables real-time access to records, smoother coordination between departments, and a better patient experience, while maintaining compliance and data security standards. This is where technology moves beyond software installation and becomes a true enabler of efficient, patient-centric care. 
+                                <Typography variant="body1">
+                                    A well-designed <strong><Link href="/healthcare-tech/patient-management-system-solution">patient management portal solution</Link> for healthcare organizations</strong> enables real-time access to records, smoother coordination between departments, and a better patient experience, while maintaining compliance and data security standards. This is where technology moves beyond software installation and becomes a true enabler of efficient, patient-centric care.
                                     <br />
                                     <br />
                                 </Typography>
@@ -450,7 +451,7 @@ const CompERHERMSystemPatientRecord = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    A well-designed EHR/EMR platform brings all patient records into a central system. No more tracking down paper files or waiting for lab reports to be faxed. Everything is structured so that when a clinician needs it, the information is there — fast. 
+                                    A well-designed EHR/EMR platform brings all patient records into a central system. No more tracking down paper files or waiting for lab reports to be faxed. Everything is structured so that when a clinician needs it, the information is there — fast.
                                     <br />
                                     <br />
                                 </Typography>
@@ -483,7 +484,7 @@ const CompERHERMSystemPatientRecord = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                   Modern EHR/EMR platforms include clinical decision support tools. These aren’t meant to replace doctors, but they help by pointing out:
+                                    Modern EHR/EMR platforms include clinical decision support tools. These aren’t meant to replace doctors, but they help by pointing out:
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
                                     <ListItem component="li" disablePadding>
@@ -499,7 +500,7 @@ const CompERHERMSystemPatientRecord = () => {
                                 <Typography variant="body1">
                                     It’s like having a built-in second pair of eyes, guiding without overwhelming.
                                 </Typography>
-                               
+
                             </Box>
 
                             {/* Section 5 */}
@@ -514,9 +515,9 @@ const CompERHERMSystemPatientRecord = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Modern<strong><Link href="/healthcare-tech/emr-software-development-company"> EHR/EMR development solutions</Link> for healthcare providers</strong> are designed to reduce this burden by automating critical administrative workflows, including: 
+                                    Modern<strong><Link href="/healthcare-tech/emr-software-development-company"> EHR/EMR development solutions</Link> for healthcare providers</strong> are designed to reduce this burden by automating critical administrative workflows, including:
                                 </Typography>
-                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
+                                <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
                                     <ListItem component="li" disablePadding>
                                         <ListItemText primary="Scheduling and reminders" />
                                     </ListItem>
@@ -545,8 +546,8 @@ const CompERHERMSystemPatientRecord = () => {
                                     <br />
                                     <br />
                                 </Typography>
-                                 <Typography variant="body1">
-                                    Through <strong>digital patient management solutions,</strong> patients can: 
+                                <Typography variant="body1">
+                                    Through <strong>digital patient management solutions,</strong> patients can:
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
                                     <ListItem component="li" disablePadding>
@@ -578,7 +579,7 @@ const CompERHERMSystemPatientRecord = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                   When implementing an EHR/EMR system, security must come first, not second. That means:
+                                    When implementing an EHR/EMR system, security must come first, not second. That means:
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
                                     <ListItem component="li" disablePadding>
@@ -625,11 +626,11 @@ const CompERHERMSystemPatientRecord = () => {
                                     8. Interoperability — The Unsung Hero
                                 </Typography>
                                 <Typography variant="body1">
-                                     Healthcare isn’t a closed system. Labs, pharmacies, diagnostic tools, specialists — they all need to connect. 
+                                    Healthcare isn’t a closed system. Labs, pharmacies, diagnostic tools, specialists — they all need to connect.
                                     <br />
                                     <br />
                                 </Typography>
-                                 <Typography variant="body1">
+                                <Typography variant="body1">
                                     Interoperability means that data flows smoothly between systems without human intervention. It means:
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
@@ -658,7 +659,7 @@ const CompERHERMSystemPatientRecord = () => {
                                     <br />
                                     <br />
                                 </Typography>
-                                 <Typography variant="body1">
+                                <Typography variant="body1">
                                     That’s where analytics enter the picture. Integrated tools can help answer questions like:
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
@@ -682,7 +683,7 @@ const CompERHERMSystemPatientRecord = () => {
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
                                     10. Challenges Are Real, But Also Solvable
                                 </Typography>
-                                 <Typography variant="body1">
+                                <Typography variant="body1">
                                     No one should pretend moving to these systems is easy. Real challenges include:
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
@@ -706,7 +707,7 @@ const CompERHERMSystemPatientRecord = () => {
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
                                     11. Where EHR/EMR Systems Are Headed Next
                                 </Typography>
-                                 <Typography variant="body1">
+                                <Typography variant="body1">
                                     The future is already here in many places. There’s increasing adoption of:
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
@@ -734,12 +735,12 @@ const CompERHERMSystemPatientRecord = () => {
                                     Final Thoughts — What Really Matters
                                 </Typography>
                                 <Typography variant="body1">
-                                   At the end of the day, EHR and EMR systems shouldn’t feel like software you tolerate. The best ones feel like tools that help clinicians do their job better and patients feel heard and supported.
+                                    At the end of the day, EHR and EMR systems shouldn’t feel like software you tolerate. The best ones feel like tools that help clinicians do their job better and patients feel heard and supported.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                   Optimizing patient records isn’t just a technical project — it’s an improvement in how care is delivered. With the right<strong> IT support, custom solutions, and patient-focused tools like meaningful patient management portals,</strong> healthcare becomes safer, faster, and more humane. 
+                                    Optimizing patient records isn’t just a technical project — it’s an improvement in how care is delivered. With the right<strong> IT support, custom solutions, and patient-focused tools like meaningful patient management portals,</strong> healthcare becomes safer, faster, and more humane.
                                     <br />
                                     <br />
                                 </Typography>

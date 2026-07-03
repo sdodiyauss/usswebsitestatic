@@ -147,10 +147,10 @@ const CompMasteringVueJS = () => {
 
     // Demo posts data with same dummy content; replace with real data later
     const posts = [
-        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh Khatwani", date: "May 5th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
-        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "May 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
+        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
+        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "April 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
         // { id: "p8", title: "DeepSeek vs ChatGPT: A Comprehensive Comparison of AI-Powered Chatbots", excerpt: "Artificial Intelligence (AI) has transformed the way we engage with technology, and AI-driven cha...", author: "Dilip Tiwari", date: "March 10th, 2025", readTime: "6 min read", category: "AI", image: Blog4, featured: false, url: "/blog-details8" },
-        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
+        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "May 28th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
     ];
 
 
@@ -174,15 +174,16 @@ const CompMasteringVueJS = () => {
                             </CardMedia>
 
                             <CardContent className="blog-card-content">
-                                <Chip label={post.category} size="small" className="blog-card-chip" />
+                                <Box>
+                                    <Chip label={post.category} size="small" className="blog-card-chip" />
 
-                                <Box className="blog-card-title-row">
-                                    <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
-                                        {post.title}
-                                    </Typography>
-                                    <Image src={BtnIcon} alt="btn-icon" />
+                                    <Box className="blog-card-title-row">
+                                        <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
+                                            {post.title}
+                                        </Typography>
+                                        <Image src={BtnIcon} alt="btn-icon" />
+                                    </Box>
                                 </Box>
-
                                 <Box className="blog-card-meta">
                                     <Box className="avtar-box">
                                         <Avatar
@@ -893,15 +894,15 @@ const CompMasteringVueJS = () => {
                             {/* Section 17 */}
                             <Box id="section17" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    16. Real-World Use Cases of Vue.js 3 
+                                    16. Real-World Use Cases of Vue.js 3
                                 </Typography>
                                 <Typography variant="body1">
-                                    Vue.js 3 is widely adopted across industries. 
+                                    Vue.js 3 is widely adopted across industries.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Common Applications 
+                                    Common Applications
                                     <br />
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
@@ -919,37 +920,37 @@ const CompMasteringVueJS = () => {
                                     </ListItem>
                                 </List>
                                 <Typography variant="body1">
-                                    Companies prefer Vue.js 3 for its flexibility and performance. 
+                                    Companies prefer Vue.js 3 for its flexibility and performance.
                                 </Typography>
                             </Box>
 
                             {/* Section 18 */}
                             <Box id="section18" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    17. Future of Vue.js 3 
+                                    17. Future of Vue.js 3
                                 </Typography>
                                 <Typography variant="body1">
-                                    Vue.js continues to evolve with strong community support and regular updates. With its modern architecture, Vue.js 3 is future-ready and well-positioned for long-term projects. 
+                                    Vue.js continues to evolve with strong community support and regular updates. With its modern architecture, Vue.js 3 is future-ready and well-positioned for long-term projects.
                                 </Typography>
                             </Box>
 
-                             {/* Section 19 */}
+                            {/* Section 19 */}
                             <Box id="section19" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Conclusion  
+                                    Conclusion
                                 </Typography>
                                 <Typography variant="body1">
-                                    Mastering Vue.js 3 opens the door to building fast, scalable, and modern web applications. With its improved performance, Composition API, strong ecosystem, and developer-friendly design, Vue.js 3 stands out as a top choice for frontend development and is often discussed during a <strong>web development consultation booking</strong> for businesses planning modern digital solutions. 
-                                    <br />
-                                    <br />
-                                </Typography>
-                                <Typography variant="body1">
-                                    Whether you’re creating a simple website or a complex enterprise application, Vue.js 3 provides the tools and flexibility needed to deliver exceptional user experiences, making it an ideal focus point during a web development consultation booking to define the right frontend strategy. 
+                                    Mastering Vue.js 3 opens the door to building fast, scalable, and modern web applications. With its improved performance, Composition API, strong ecosystem, and developer-friendly design, Vue.js 3 stands out as a top choice for frontend development and is often discussed during a <strong>web development consultation booking</strong> for businesses planning modern digital solutions.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Vue.js 3 is not just a framework upgrade—it’s a modern foundation for building the future of web applications and a strong recommendation highlighted in every strategic <Link href="https://calendly.com/jvaghasiya-universalstreamsolution/30min?month=2026-02">web development consultation booking</Link>. 
+                                    Whether you’re creating a simple website or a complex enterprise application, Vue.js 3 provides the tools and flexibility needed to deliver exceptional user experiences, making it an ideal focus point during a web development consultation booking to define the right frontend strategy.
+                                    <br />
+                                    <br />
+                                </Typography>
+                                <Typography variant="body1">
+                                    Vue.js 3 is not just a framework upgrade—it’s a modern foundation for building the future of web applications and a strong recommendation highlighted in every strategic <Link href="https://calendly.com/jvaghasiya-universalstreamsolution/30min?month=2026-02">web development consultation booking</Link>.
                                 </Typography>
                             </Box>
 

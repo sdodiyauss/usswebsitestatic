@@ -140,10 +140,10 @@ const CompFullStackDevelopment = () => {
 
     // Demo posts data with same dummy content; replace with real data later
     const posts = [
-        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh Khatwani", date: "May 5th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
-        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "May 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
+        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
+        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "April 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
         // { id: "p8", title: "DeepSeek vs ChatGPT: A Comprehensive Comparison of AI-Powered Chatbots", excerpt: "Artificial Intelligence (AI) has transformed the way we engage with technology, and AI-driven cha...", author: "Dilip Tiwari", date: "March 10th, 2025", readTime: "6 min read", category: "AI", image: Blog4, featured: false, url: "/blog-details8" },
-        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
+        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "May 28th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
     ];
 
 
@@ -167,15 +167,16 @@ const CompFullStackDevelopment = () => {
                             </CardMedia>
 
                             <CardContent className="blog-card-content">
-                                <Chip label={post.category} size="small" className="blog-card-chip" />
+                                <Box>
+                                    <Chip label={post.category} size="small" className="blog-card-chip" />
 
-                                <Box className="blog-card-title-row">
-                                    <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
-                                        {post.title}
-                                    </Typography>
-                                    <Image src={BtnIcon} alt="btn-icon" />
+                                    <Box className="blog-card-title-row">
+                                        <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
+                                            {post.title}
+                                        </Typography>
+                                        <Image src={BtnIcon} alt="btn-icon" />
+                                    </Box>
                                 </Box>
-
                                 <Box className="blog-card-meta">
                                     <Box className="avtar-box">
                                         <Avatar
@@ -333,7 +334,7 @@ const CompFullStackDevelopment = () => {
                                     1. Understanding Full Stack Development
                                 </Typography>
                                 <Typography variant="body1">
-                                    Full stack development refers to the ability to work across both the <strong>frontend (client-side)</strong> and <strong>backend (server-side)</strong> of an application. 
+                                    Full stack development refers to the ability to work across both the <strong>frontend (client-side)</strong> and <strong>backend (server-side)</strong> of an application.
                                     <br />
                                     <br />
                                 </Typography>
@@ -343,10 +344,10 @@ const CompFullStackDevelopment = () => {
                                     <br />
                                     b. Backend Development deals with data processing, server logic, APIs, and database management.
                                     <br />
-                                    <br />  
+                                    <br />
                                 </Typography>
-                                 <Typography variant="body1">
-                                    A full stack developer combines both skill sets, along with knowledge of deployment, security, and performance optimization. 
+                                <Typography variant="body1">
+                                    A full stack developer combines both skill sets, along with knowledge of deployment, security, and performance optimization.
                                     <br />
                                     <br />
                                     This dual capability eliminates silos between teams and ensures that applications are built with a unified vision rather than fragmented efforts.
@@ -356,7 +357,7 @@ const CompFullStackDevelopment = () => {
                             {/* Section 3 */}
                             <Box id="section3" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    2. The Frontend: Where Business Meets the User 
+                                    2. The Frontend: Where Business Meets the User
                                 </Typography>
                                 <Typography variant="body1">
                                     The frontend is the first point of contact between a business and its customers. It directly impacts brand perception, user satisfaction, and conversion rates.
@@ -384,16 +385,16 @@ const CompFullStackDevelopment = () => {
                                     From a business perspective, frontend development is not just about aesthetics—it’s about delivering value. Every button, animation, and interaction should guide the user toward a desired outcome, whether that’s making a purchase, signing up, or consuming content.
                                     <br />
                                     <br />
-                                    Full stack developers understand how frontend decisions affect backend performance and vice versa, ensuring that user experience is not compromised by technical limitations. 
+                                    Full stack developers understand how frontend decisions affect backend performance and vice versa, ensuring that user experience is not compromised by technical limitations.
                                 </Typography>
                             </Box>
 
                             {/* Section 4 */}
                             <Box id="section4" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    3. The Backend: Powering Business Logic and Scalability 
+                                    3. The Backend: Powering Business Logic and Scalability
                                 </Typography>
-                                 <Typography variant="body1">
+                                <Typography variant="body1">
                                     While the frontend captures attention, the backend ensures everything works smoothly behind the scenes. It handles:
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
@@ -414,10 +415,10 @@ const CompFullStackDevelopment = () => {
                                     </ListItem>
                                 </List>
                                 <Typography variant="body1">
-                                   For businesses, backend systems are critical for maintaining reliability and efficiency. A poorly designed backend can lead to slow performance, security vulnerabilities, and operational bottlenecks.
-                                   <br />
-                                   <br />
-                                   Full stack developers understand how frontend decisions affect backend performance and vice versa, ensuring that user experience is not compromised by technical limitations. This is especially important in <Link href="/solutions/enterprise-software-development">enterprise software development solutions</Link>, where seamless integration, scalability, and performance are critical to delivering efficient and reliable business applications. 
+                                    For businesses, backend systems are critical for maintaining reliability and efficiency. A poorly designed backend can lead to slow performance, security vulnerabilities, and operational bottlenecks.
+                                    <br />
+                                    <br />
+                                    Full stack developers understand how frontend decisions affect backend performance and vice versa, ensuring that user experience is not compromised by technical limitations. This is especially important in <Link href="/solutions/enterprise-software-development">enterprise software development solutions</Link>, where seamless integration, scalability, and performance are critical to delivering efficient and reliable business applications.
                                 </Typography>
                             </Box>
 
@@ -427,10 +428,10 @@ const CompFullStackDevelopment = () => {
                                     4. Bridging the Gap Between Business and Technology
                                 </Typography>
                                 <Typography variant="body1">
-                                    One of the biggest challenges organizations face is the disconnect between business teams and technical teams. Business leaders think in terms of outcomes, while developers often focus on implementation details. 
+                                    One of the biggest challenges organizations face is the disconnect between business teams and technical teams. Business leaders think in terms of outcomes, while developers often focus on implementation details.
                                     <br />
                                     <br />
-                                    Full stack development bridges this gap in several ways: 
+                                    Full stack development bridges this gap in several ways:
                                     <br />
                                     <br />
                                 </Typography>
@@ -442,42 +443,42 @@ const CompFullStackDevelopment = () => {
                                     <br />
                                     <br />
                                 </Typography>
-                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Faster Decision-Making 
+                                <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
+                                    Faster Decision-Making
                                 </Typography>
                                 <Typography variant="body1">
                                     Instead of waiting for multiple teams to coordinate, a full stack approach enables quicker iterations and faster time-to-market.
                                     <br />
                                     <br />
                                 </Typography>
-                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                   Improved Communication 
+                                <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
+                                    Improved Communication
                                 </Typography>
                                 <Typography variant="body1">
-                                    With knowledge across the stack, developers can communicate more clearly with designers, product managers, and stakeholders, reducing misunderstandings. 
+                                    With knowledge across the stack, developers can communicate more clearly with designers, product managers, and stakeholders, reducing misunderstandings.
                                     <br />
                                     <br />
                                 </Typography>
-                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                   End-to-End Ownership
+                                <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
+                                    End-to-End Ownership
                                 </Typography>
                                 <Typography variant="body1">
-                                    Full stack developers take responsibility for the entire application, ensuring consistency, quality, and alignment with business goals. 
+                                    Full stack developers take responsibility for the entire application, ensuring consistency, quality, and alignment with business goals.
                                 </Typography>
                             </Box>
 
                             {/* Section 6 */}
                             <Box id="section6" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    5. Enhancing Agility in Product Development 
+                                    5. Enhancing Agility in Product Development
                                 </Typography>
                                 <Typography variant="body1">
                                     In a competitive market, speed and adaptability are crucial. Businesses need to launch quickly, gather feedback, and iterate continuously.
                                     <br />
                                     <br />
-                                    Full stack development supports agile methodologies by: 
+                                    Full stack development supports agile methodologies by:
                                 </Typography>
-                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
+                                <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
                                     <ListItem component="li" disablePadding>
                                         <ListItemText primary="Reducing dependencies between teams" />
                                     </ListItem>
@@ -492,22 +493,22 @@ const CompFullStackDevelopment = () => {
                                     </ListItem>
                                 </List>
                                 <Typography variant="body1">
-                                   This agility helps businesses stay ahead of competitors and respond effectively to changing market demands. 
+                                    This agility helps businesses stay ahead of competitors and respond effectively to changing market demands.
                                 </Typography>
                             </Box>
 
                             {/* Section 7 */}
                             <Box id="section7" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    6. Cost Efficiency and Resource Optimization 
+                                    6. Cost Efficiency and Resource Optimization
                                 </Typography>
                                 <Typography variant="body1">
-                                    Hiring separate frontend and backend teams can be expensive and resource-intensive. Full stack developers offer a cost-effective alternative, especially for startups and growing businesses. 
+                                    Hiring separate frontend and backend teams can be expensive and resource-intensive. Full stack developers offer a cost-effective alternative, especially for startups and growing businesses.
                                     <br />
                                     <br />
-                                    Benefits include: 
+                                    Benefits include:
                                 </Typography>
-                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
+                                <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
                                     <ListItem component="li" disablePadding>
                                         <ListItemText primary="Fewer resources required for development  " />
                                     </ListItem>
@@ -522,7 +523,7 @@ const CompFullStackDevelopment = () => {
                                     </ListItem>
                                 </List>
                                 <Typography variant="body1">
-                                   While full stack developers may not replace specialized experts in complex scenarios, they provide significant value in building and maintaining most applications. 
+                                    While full stack developers may not replace specialized experts in complex scenarios, they provide significant value in building and maintaining most applications.
                                 </Typography>
                             </Box>
 
@@ -530,15 +531,15 @@ const CompFullStackDevelopment = () => {
                             {/* Section 8 */}
                             <Box id="section8" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    7. Driving Innovation Through Integration 
+                                    7. Driving Innovation Through Integration
                                 </Typography>
                                 <Typography variant="body1">
-                                    Modern applications often rely on multiple technologies, including cloud platforms, APIs, AI tools, and third-party services. Full stack developers play a crucial role in integrating these components seamlessly. 
+                                    Modern applications often rely on multiple technologies, including cloud platforms, APIs, AI tools, and third-party services. Full stack developers play a crucial role in integrating these components seamlessly.
                                     <br />
                                     <br />
                                     They ensure that:
                                 </Typography>
-                                  <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
+                                <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
                                     <ListItem component="li" disablePadding>
                                         <ListItemText primary="Frontend interfaces communicate effectively with backend services" />
                                     </ListItem>
@@ -550,7 +551,7 @@ const CompFullStackDevelopment = () => {
                                     </ListItem>
                                 </List>
                                 <Typography variant="body1">
-                                   This ability to integrate and innovate is essential for businesses looking to scale and differentiate themselves.
+                                    This ability to integrate and innovate is essential for businesses looking to scale and differentiate themselves.
                                 </Typography>
                             </Box>
 
@@ -563,7 +564,7 @@ const CompFullStackDevelopment = () => {
                                 <Typography variant="body1">
                                     Full stack development directly influences key business outcomes:
                                 </Typography>
-                                  <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
+                                <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
                                     <ListItem component="li" disablePadding>
                                         <ListItemText primary="Customer Experience: Faster, smoother, and more intuitive applications" />
                                     </ListItem>
@@ -578,7 +579,7 @@ const CompFullStackDevelopment = () => {
                                     </ListItem>
                                 </List>
                                 <Typography variant="body1">
-                                   Companies that adopt a <Link href="https://www.universalstreamsolution.com/blog/modern-backend-development-cloud-computing">full stack development with cloud backend</Link> approach often see better alignment between their digital products and strategic goals.
+                                    Companies that adopt a <Link href="https://www.universalstreamsolution.com/blog/modern-backend-development-cloud-computing">full stack development with cloud backend</Link> approach often see better alignment between their digital products and strategic goals.
                                 </Typography>
                             </Box>
 
@@ -588,9 +589,9 @@ const CompFullStackDevelopment = () => {
                                     9. Challenges and Considerations
                                 </Typography>
                                 <Typography variant="body1">
-                                    While full stack development offers many advantages, it also comes with challenges: 
+                                    While full stack development offers many advantages, it also comes with challenges:
                                 </Typography>
-                                  <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
+                                <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
                                     <ListItem component="li" disablePadding>
                                         <ListItemText primary="Keeping up with rapidly evolving technologies" />
                                     </ListItem>
@@ -605,19 +606,19 @@ const CompFullStackDevelopment = () => {
                                     </ListItem>
                                 </List>
                                 <Typography variant="body1">
-                                   Businesses must support full stack developers with proper tools, training, and collaboration frameworks to maximize their effectiveness. 
+                                    Businesses must support full stack developers with proper tools, training, and collaboration frameworks to maximize their effectiveness.
                                 </Typography>
                             </Box>
 
                             {/* Section 11 */}
                             <Box id="section11" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    10. The Future of Full Stack Development 
+                                    10. The Future of Full Stack Development
                                 </Typography>
                                 <Typography variant="body1">
-                                   As technology continues to evolve, the role of full stack developers is becoming even more critical. Trends shaping the future include:  
+                                    As technology continues to evolve, the role of full stack developers is becoming even more critical. Trends shaping the future include:
                                 </Typography>
-                                  <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
+                                <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
                                     <ListItem component="li" disablePadding>
                                         <ListItemText primary="Increased adoption of cloud-native architectures " />
                                     </ListItem>
@@ -632,20 +633,20 @@ const CompFullStackDevelopment = () => {
                                     </ListItem>
                                 </List>
                                 <Typography variant="body1">
-                                   Full stack developers who continuously upskill and adapt will remain at the forefront of innovation, driving both technical excellence and business success.
+                                    Full stack developers who continuously upskill and adapt will remain at the forefront of innovation, driving both technical excellence and business success.
                                 </Typography>
                             </Box>
 
                             {/* Section 12 */}
                             <Box id="section12" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Conclusion: A Strategic Advantage for Modern Businesses 
+                                    Conclusion: A Strategic Advantage for Modern Businesses
                                 </Typography>
                                 <Typography variant="body1">
-                                   Full stack development is more than a technical skill set—it is a strategic capability that connects business vision with technological execution. By bridging the gap between frontend user experiences and backend systems, full stack developers enable organizations to build cohesive, scalable, and impactful digital solutions. If you're looking to implement these strategies effectively, you can book a free software consultation to explore the best approach for your business needs. 
-                                   <br />
-                                   <br />
-                                   In a world where technology defines competitive advantage, businesses that embrace full stack development are better positioned to innovate, adapt, and grow. It’s not just about building applications—it’s about building solutions that truly align with business goals and deliver real value. 
+                                    Full stack development is more than a technical skill set—it is a strategic capability that connects business vision with technological execution. By bridging the gap between frontend user experiences and backend systems, full stack developers enable organizations to build cohesive, scalable, and impactful digital solutions. If you're looking to implement these strategies effectively, you can book a free software consultation to explore the best approach for your business needs.
+                                    <br />
+                                    <br />
+                                    In a world where technology defines competitive advantage, businesses that embrace full stack development are better positioned to innovate, adapt, and grow. It’s not just about building applications—it’s about building solutions that truly align with business goals and deliver real value.
                                 </Typography>
                             </Box>
 
@@ -686,7 +687,7 @@ const CompFullStackDevelopment = () => {
                                     variant="body1"
                                     className="written-by-box-description"
                                 >
-                                   Arzeb Mansuri is a full-stack developer with expertise in Next.js, React.js, Node.js, TypeScript, JavaScript and PHP, delivering high-quality digital solutions in fast-moving environments. With a strong focus on building user-centric web applications, Arzeb helps organizations enhance their digital presence and operational performance.
+                                    Arzeb Mansuri is a full-stack developer with expertise in Next.js, React.js, Node.js, TypeScript, JavaScript and PHP, delivering high-quality digital solutions in fast-moving environments. With a strong focus on building user-centric web applications, Arzeb helps organizations enhance their digital presence and operational performance.
                                 </Typography>
                             </Box>
                         </Grid>

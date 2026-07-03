@@ -141,10 +141,10 @@ const CompBackendDevCloudComputing = () => {
 
     // Demo posts data with same dummy content; replace with real data later
     const posts = [
-        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh Khatwani", date: "May 5th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
-        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "May 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
+        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
+        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "April 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
         // { id: "p8", title: "DeepSeek vs ChatGPT: A Comprehensive Comparison of AI-Powered Chatbots", excerpt: "Artificial Intelligence (AI) has transformed the way we engage with technology, and AI-driven cha...", author: "Dilip Tiwari", date: "March 10th, 2025", readTime: "6 min read", category: "AI", image: Blog4, featured: false, url: "/blog-details8" },
-        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
+        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "May 28th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
     ];
 
 
@@ -168,15 +168,16 @@ const CompBackendDevCloudComputing = () => {
                             </CardMedia>
 
                             <CardContent className="blog-card-content">
-                                <Chip label={post.category} size="small" className="blog-card-chip" />
+                                <Box>
+                                    <Chip label={post.category} size="small" className="blog-card-chip" />
 
-                                <Box className="blog-card-title-row">
-                                    <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
-                                        {post.title}
-                                    </Typography>
-                                    <Image src={BtnIcon} alt="btn-icon" />
+                                    <Box className="blog-card-title-row">
+                                        <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
+                                            {post.title}
+                                        </Typography>
+                                        <Image src={BtnIcon} alt="btn-icon" />
+                                    </Box>
                                 </Box>
-
                                 <Box className="blog-card-meta">
                                     <Box className="avtar-box">
                                         <Avatar
@@ -826,10 +827,10 @@ const CompBackendDevCloudComputing = () => {
                             {/* Section 12 */}
                             <Box id="section12" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    11. Future Trends in Backend Development and Cloud Computing 
+                                    11. Future Trends in Backend Development and Cloud Computing
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                     AI-Driven Backend Systems
+                                    AI-Driven Backend Systems
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
@@ -878,12 +879,12 @@ const CompBackendDevCloudComputing = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                   By embracing cloud-native architectures, microservices, serverless computing, and DevOps practices, backend developers can create resilient and future-ready applications. At , we leverage these modern backend strategies to build scalable, secure, and high-performing solutions tailored to real-world business needs.
+                                    By embracing cloud-native architectures, microservices, serverless computing, and DevOps practices, backend developers can create resilient and future-ready applications. At , we leverage these modern backend strategies to build scalable, secure, and high-performing solutions tailored to real-world business needs.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                   As cloud technologies continue to advance, backend development will play a crucial role in driving digital innovation and sustainable growth. Organizations that <Link href="/about-us">explore our expertise and approach</Link> to modern backend development gain a competitive edge in today’s fast-paced digital ecosystem.
+                                    As cloud technologies continue to advance, backend development will play a crucial role in driving digital innovation and sustainable growth. Organizations that <Link href="/about-us">explore our expertise and approach</Link> to modern backend development gain a competitive edge in today’s fast-paced digital ecosystem.
                                 </Typography>
                             </Box>
 

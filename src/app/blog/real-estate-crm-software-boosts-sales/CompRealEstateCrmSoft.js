@@ -142,10 +142,10 @@ const CompRealEstateCrmSoft = () => {
 
     // Demo posts data with same dummy content; replace with real data later
     const posts = [
-        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh Khatwani", date: "May 5th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
-        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "May 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
+        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
+        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "April 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
         // { id: "p8", title: "DeepSeek vs ChatGPT: A Comprehensive Comparison of AI-Powered Chatbots", excerpt: "Artificial Intelligence (AI) has transformed the way we engage with technology, and AI-driven cha...", author: "Dilip Tiwari", date: "March 10th, 2025", readTime: "6 min read", category: "AI", image: Blog4, featured: false, url: "/blog-details8" },
-        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
+        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "May 28th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
     ];
 
 
@@ -169,15 +169,16 @@ const CompRealEstateCrmSoft = () => {
                             </CardMedia>
 
                             <CardContent className="blog-card-content">
-                                <Chip label={post.category} size="small" className="blog-card-chip" />
+                                <Box>
+                                    <Chip label={post.category} size="small" className="blog-card-chip" />
 
-                                <Box className="blog-card-title-row">
-                                    <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
-                                        {post.title}
-                                    </Typography>
-                                    <Image src={BtnIcon} alt="btn-icon" />
+                                    <Box className="blog-card-title-row">
+                                        <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
+                                            {post.title}
+                                        </Typography>
+                                        <Image src={BtnIcon} alt="btn-icon" />
+                                    </Box>
                                 </Box>
-
                                 <Box className="blog-card-meta">
                                     <Box className="avtar-box">
                                         <Avatar
@@ -386,17 +387,17 @@ const CompRealEstateCrmSoft = () => {
                                     3. Turning Listings into Lead Magnets
                                 </Typography>
                                 <Typography variant="body1">
-                                   Listings are the foundation of any real estate business. However, simply having properties listed online does not guarantee leads.
+                                    Listings are the foundation of any real estate business. However, simply having properties listed online does not guarantee leads.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                   A real estate CRM helps optimize listings by connecting them directly to lead capture systems. When a prospect clicks on a property ad, fills out a form, or sends an inquiry, the CRM instantly records the lead along with the property they are interested in.
+                                    A real estate CRM helps optimize listings by connecting them directly to lead capture systems. When a prospect clicks on a property ad, fills out a form, or sends an inquiry, the CRM instantly records the lead along with the property they are interested in.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                   This creates immediate context. Instead of calling a lead blindly, the agent knows exactly what the prospect viewed, which location they prefer, and their budget range. This makes the first interaction more personalized and relevant.
+                                    This creates immediate context. Instead of calling a lead blindly, the agent knows exactly what the prospect viewed, which location they prefer, and their budget range. This makes the first interaction more personalized and relevant.
                                     <br />
                                     <br />
                                 </Typography>
@@ -461,7 +462,7 @@ const CompRealEstateCrmSoft = () => {
                                     </ListItem>
                                 </List>
                                 <Typography variant="body1">
-                                   This structured follow-up system ensures consistency without sounding robotic, especially when templates are personalized properly.
+                                    This structured follow-up system ensures consistency without sounding robotic, especially when templates are personalized properly.
                                 </Typography>
                             </Box>
 
@@ -498,7 +499,7 @@ const CompRealEstateCrmSoft = () => {
                                     </ListItem>
                                 </List>
                                 <Typography variant="body1">
-                                   Personalization is one of the strongest drivers of sales, and CRM systems make it scalable.
+                                    Personalization is one of the strongest drivers of sales, and CRM systems make it scalable.
                                 </Typography>
                             </Box>
 
@@ -513,7 +514,7 @@ const CompRealEstateCrmSoft = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Real estate CRMs simplify this by allowing agents to schedule site visits directly within the system. Clients receive automatic confirmations and reminders, reducing no-shows. 
+                                    Real estate CRMs simplify this by allowing agents to schedule site visits directly within the system. Clients receive automatic confirmations and reminders, reducing no-shows.
                                     <br />
                                     <br />
                                 </Typography>
@@ -540,7 +541,7 @@ const CompRealEstateCrmSoft = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    CRM software creates transparency. Every call, message, email, and meeting is logged under the lead’s profile. Team members can see what has already been discussed and what needs to be done next. 
+                                    CRM software creates transparency. Every call, message, email, and meeting is logged under the lead’s profile. Team members can see what has already been discussed and what needs to be done next.
                                     <br />
                                     <br />
                                 </Typography>
@@ -668,8 +669,8 @@ const CompRealEstateCrmSoft = () => {
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
                                     13. Choosing the Right Real Estate CRM
                                 </Typography>
-                               <Typography variant="body1">
-                                    Not all CRM solutions are created equal. When selecting a real estate CRM, it’s important to consider factors such as: 
+                                <Typography variant="body1">
+                                    Not all CRM solutions are created equal. When selecting a real estate CRM, it’s important to consider factors such as:
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
                                     <ListItem component="li" disablePadding>

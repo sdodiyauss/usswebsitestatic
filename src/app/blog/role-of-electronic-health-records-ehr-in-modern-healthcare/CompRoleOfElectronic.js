@@ -47,14 +47,14 @@ const tocItems = [
     { id: "section6", label: "Improved Care Coordination with EHR Systems" },
     { id: "section7", label: "Operational Efficiency and Cost Optimization" },
     { id: "section8", label: "Role of EHR in Patient Engagement" },
-    { id: "section9", label: "Data Security and Compliance in EHR Systems"},
+    { id: "section9", label: "Data Security and Compliance in EHR Systems" },
     { id: "section10", label: "Challenges in EHR Implementation" },
     { id: "section11", label: "Role of Healthcare Software Development Services" },
     { id: "section12", label: "Cloud-Based EHR Solutions and Digital Transformation" },
     { id: "section13", label: "Importance of EHR Integration Services" },
     { id: "section14", label: "Why Custom EHR Software Development Is Essential" },
     { id: "section15", label: "Future of EHR with Custom EHR Software Development" },
-    { id: "section16", label: "Conclusion"},
+    { id: "section16", label: "Conclusion" },
 ];
 
 const CompRoleOfElectronic = () => {
@@ -143,10 +143,10 @@ const CompRoleOfElectronic = () => {
 
     // Demo posts data with same dummy content; replace with real data later
     const posts = [
-        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh Khatwani", date: "May 5th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
-        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "May 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
+        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
+        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "April 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
         // { id: "p8", title: "DeepSeek vs ChatGPT: A Comprehensive Comparison of AI-Powered Chatbots", excerpt: "Artificial Intelligence (AI) has transformed the way we engage with technology, and AI-driven cha...", author: "Dilip Tiwari", date: "March 10th, 2025", readTime: "6 min read", category: "AI", image: Blog4, featured: false, url: "/blog-details8" },
-        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
+        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "May 28th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
     ];
 
 
@@ -170,15 +170,16 @@ const CompRoleOfElectronic = () => {
                             </CardMedia>
 
                             <CardContent className="blog-card-content">
-                                <Chip label={post.category} size="small" className="blog-card-chip" />
+                                <Box>
+                                    <Chip label={post.category} size="small" className="blog-card-chip" />
 
-                                <Box className="blog-card-title-row">
-                                    <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
-                                        {post.title}
-                                    </Typography>
-                                    <Image src={BtnIcon} alt="btn-icon" />
+                                    <Box className="blog-card-title-row">
+                                        <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
+                                            {post.title}
+                                        </Typography>
+                                        <Image src={BtnIcon} alt="btn-icon" />
+                                    </Box>
                                 </Box>
-
                                 <Box className="blog-card-meta">
                                     <Box className="avtar-box">
                                         <Avatar
@@ -336,12 +337,12 @@ const CompRoleOfElectronic = () => {
                                     1. What Are Electronic Health Records (EHR)?
                                 </Typography>
                                 <Typography variant="body1">
-                                   <strong>Electronic Health Records (EHR)</strong> are secure digital records that store comprehensive patient health information in one centralized system. Unlike traditional medical files, <strong>EHR systems</strong> are designed to be shared across different healthcare settings, ensuring continuity of care. 
+                                    <strong>Electronic Health Records (EHR)</strong> are secure digital records that store comprehensive patient health information in one centralized system. Unlike traditional medical files, <strong>EHR systems</strong> are designed to be shared across different healthcare settings, ensuring continuity of care.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    In <strong>EHR in modern healthcare</strong>, these systems include patient demographics, medical history, diagnoses, medications, lab results, radiology reports, and treatment plans. This centralized approach improves data accuracy and supports better clinical decision-making. 
+                                    In <strong>EHR in modern healthcare</strong>, these systems include patient demographics, medical history, diagnoses, medications, lab results, radiology reports, and treatment plans. This centralized approach improves data accuracy and supports better clinical decision-making.
                                 </Typography>
                             </Box>
 
@@ -357,7 +358,7 @@ const CompRoleOfElectronic = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                   Today, <strong>EHR systems</strong> support interoperability, analytics, compliance, and automation, making them a vital part of healthcare digital transformation. Government initiatives and healthcare regulations have further accelerated <strong>EHR implementation</strong> across global healthcare ecosystems. 
+                                    Today, <strong>EHR systems</strong> support interoperability, analytics, compliance, and automation, making them a vital part of healthcare digital transformation. Government initiatives and healthcare regulations have further accelerated <strong>EHR implementation</strong> across global healthcare ecosystems.
                                 </Typography>
                             </Box>
 
@@ -367,43 +368,43 @@ const CompRoleOfElectronic = () => {
                                     3. Key Features of Modern EHR Systems
                                 </Typography>
                                 <Typography variant="body1">
-                                   Modern <strong>Electronic Health Records (EHR)</strong> are built to support both clinical and administrative workflows efficiently. These features enhance usability, security, and performance across healthcare organizations.
+                                    Modern <strong>Electronic Health Records (EHR)</strong> are built to support both clinical and administrative workflows efficiently. These features enhance usability, security, and performance across healthcare organizations.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                   Centralized Patient Data Management
+                                    Centralized Patient Data Management
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                   Centralized storage in <strong>EHR systems</strong> allows healthcare professionals to access accurate and up-to-date patient information instantly, reducing delays and errors. 
+                                    Centralized storage in <strong>EHR systems</strong> allows healthcare professionals to access accurate and up-to-date patient information instantly, reducing delays and errors.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                   Interoperability and Integration
+                                    Interoperability and Integration
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                   Interoperability in <Link href="/healthcare-tech/emr-software-development-company">EHR in modern healthcare</Link> enables seamless data exchange between hospitals, laboratories, pharmacies, and insurance systems, improving care coordination.
+                                    Interoperability in <Link href="/healthcare-tech/emr-software-development-company">EHR in modern healthcare</Link> enables seamless data exchange between hospitals, laboratories, pharmacies, and insurance systems, improving care coordination.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                   Clinical Decision Support
+                                    Clinical Decision Support
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                   Advanced Electronic Health Records software offers alerts, reminders, and evidence-based recommendations, helping clinicians reduce medical errors and improve outcomes.
+                                    Advanced Electronic Health Records software offers alerts, reminders, and evidence-based recommendations, helping clinicians reduce medical errors and improve outcomes.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                   E-Prescriptions and Digital Documentation
+                                    E-Prescriptions and Digital Documentation
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                  E-prescribing through <strong>EHR systems</strong> minimizes medication errors while speeding up prescription workflows and improving patient safety. 
+                                    E-prescribing through <strong>EHR systems</strong> minimizes medication errors while speeding up prescription workflows and improving patient safety.
                                 </Typography>
                             </Box>
 
@@ -474,7 +475,7 @@ const CompRoleOfElectronic = () => {
                                     8. Data Security and Compliance in EHR Systems
                                 </Typography>
                                 <Typography variant="body1">
-                                   Data security is a major concern in Electronic Health Records (EHR) due to the sensitive nature of healthcare data. Modern EHR systems use encryption, access control, and audit trails to protect patient information.
+                                    Data security is a major concern in Electronic Health Records (EHR) due to the sensitive nature of healthcare data. Modern EHR systems use encryption, access control, and audit trails to protect patient information.
                                     <br />
                                     <br />
                                 </Typography>
@@ -494,7 +495,7 @@ const CompRoleOfElectronic = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Interoperability limitations and cybersecurity risks also affect <strong>EHR systems</strong>, making strategic planning and vendor expertise essential for successful implementation. 
+                                    Interoperability limitations and cybersecurity risks also affect <strong>EHR systems</strong>, making strategic planning and vendor expertise essential for successful implementation.
                                 </Typography>
                             </Box>
 
@@ -534,12 +535,12 @@ const CompRoleOfElectronic = () => {
                                     12. Importance of EHR Integration Services
                                 </Typography>
                                 <Typography variant="body1">
-                                   Interoperability is essential for successful EHR in modern healthcare, making EHR integration services a critical component. These services enable seamless data exchange between EHR systems and third-party platforms such as labs, pharmacies, and billing software.
+                                    Interoperability is essential for successful EHR in modern healthcare, making EHR integration services a critical component. These services enable seamless data exchange between EHR systems and third-party platforms such as labs, pharmacies, and billing software.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                   With robust healthcare IT solutions, organizations can eliminate data silos and improve operational efficiency across the healthcare ecosystem.
+                                    With robust healthcare IT solutions, organizations can eliminate data silos and improve operational efficiency across the healthcare ecosystem.
                                 </Typography>
                             </Box>
 
@@ -548,13 +549,13 @@ const CompRoleOfElectronic = () => {
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
                                     13. Why Custom EHR Software Development Is Essential
                                 </Typography>
-                               <Typography variant="body1">
+                                <Typography variant="body1">
                                     As healthcare workflows become increasingly specialized, <Link href="/contactus">Custom EHR Software Development</Link> has become a necessity rather than a luxury. Generic platforms often fail to address unique clinical requirements, whereas custom-built <strong>Electronic Health Records (EHR)</strong> are designed around specific workflows, specialties, and patient volumes.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Through Custom EHR Software Development, healthcare providers gain greater flexibility, enhanced usability, and seamless system integration, ensuring that <strong>EHR in modern healthcare</strong> truly supports clinical and operational needs. 
+                                    Through Custom EHR Software Development, healthcare providers gain greater flexibility, enhanced usability, and seamless system integration, ensuring that <strong>EHR in modern healthcare</strong> truly supports clinical and operational needs.
                                 </Typography>
                             </Box>
 
@@ -564,7 +565,7 @@ const CompRoleOfElectronic = () => {
                                     14. Future of EHR with Custom EHR Software Development
                                 </Typography>
                                 <Typography variant="body1">
-                                    The future of <strong>Electronic Health Records (EHR)</strong> is closely tied to innovation driven by <strong>Custom EHR Software Development</strong>. Emerging technologies such as artificial intelligence, machine learning, and predictive analytics are being integrated into custom EHR platforms to enable smarter clinical decisions. 
+                                    The future of <strong>Electronic Health Records (EHR)</strong> is closely tied to innovation driven by <strong>Custom EHR Software Development</strong>. Emerging technologies such as artificial intelligence, machine learning, and predictive analytics are being integrated into custom EHR platforms to enable smarter clinical decisions.
                                     <br />
                                     <br />
                                 </Typography>

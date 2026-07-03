@@ -139,10 +139,10 @@ const CompSkillIndustryExperts = () => {
 
     // Demo posts data with same dummy content; replace with real data later
     const posts = [
-        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh Khatwani", date: "May 5th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
-        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "May 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
+        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
+        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "April 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
         // { id: "p8", title: "DeepSeek vs ChatGPT: A Comprehensive Comparison of AI-Powered Chatbots", excerpt: "Artificial Intelligence (AI) has transformed the way we engage with technology, and AI-driven cha...", author: "Dilip Tiwari", date: "March 10th, 2025", readTime: "6 min read", category: "AI", image: Blog4, featured: false, url: "/blog-details8" },
-        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
+        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "May 28th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
     ];
 
 
@@ -166,15 +166,16 @@ const CompSkillIndustryExperts = () => {
                             </CardMedia>
 
                             <CardContent className="blog-card-content">
-                                <Chip label={post.category} size="small" className="blog-card-chip" />
+                                <Box>
+                                    <Chip label={post.category} size="small" className="blog-card-chip" />
 
-                                <Box className="blog-card-title-row">
-                                    <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
-                                        {post.title}
-                                    </Typography>
-                                    <Image src={BtnIcon} alt="btn-icon" />
+                                    <Box className="blog-card-title-row">
+                                        <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
+                                            {post.title}
+                                        </Typography>
+                                        <Image src={BtnIcon} alt="btn-icon" />
+                                    </Box>
                                 </Box>
-
                                 <Box className="blog-card-meta">
                                     <Box className="avtar-box">
                                         <Avatar
@@ -381,7 +382,7 @@ const CompSkillIndustryExperts = () => {
                                     Many professionals today have access to data, but very few truly understand how to interpret it—making this one of the most critical skills required for IT jobs in 2026. The real advantage no longer lies in simply having data, but in making sense of it quickly and accurately to drive meaningful outcomes.
                                     <br />
                                     <br />
-                                    Industry experts must develop the ability to connect data points with business results. For example, instead of just tracking website traffic, professionals should analyze user behavior, conversion patterns, and drop-off points to uncover actionable opportunities. This shift from basic reporting to deep insight generation is what defines the <Link href="/career">skills required for IT jobs in 2026</Link> and separates average performers from high-impact decision-makers. 
+                                    Industry experts must develop the ability to connect data points with business results. For example, instead of just tracking website traffic, professionals should analyze user behavior, conversion patterns, and drop-off points to uncover actionable opportunities. This shift from basic reporting to deep insight generation is what defines the <Link href="/career">skills required for IT jobs in 2026</Link> and separates average performers from high-impact decision-makers.
                                 </Typography>
                             </Box>
 
@@ -396,7 +397,7 @@ const CompSkillIndustryExperts = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    But personal branding is not just about posting content—it’s about positioning yourself with clarity and consistency. Whether you're working in or representing a <strong>scalable software development company</strong>, you need to clearly communicate what you stand for, the problems you solve, and the value you bring to the table. What do you stand for? What problems do you solve? What insights can you offer? 
+                                    But personal branding is not just about posting content—it’s about positioning yourself with clarity and consistency. Whether you're working in or representing a <strong>scalable software development company</strong>, you need to clearly communicate what you stand for, the problems you solve, and the value you bring to the table. What do you stand for? What problems do you solve? What insights can you offer?
                                     <br />
                                     <br />
                                 </Typography>
@@ -408,27 +409,27 @@ const CompSkillIndustryExperts = () => {
                             {/* Section 6 */}
                             <Box id="section6" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    5. Adaptability: The Skill That Keeps You Relevant 
+                                    5. Adaptability: The Skill That Keeps You Relevant
                                 </Typography>
                                 <Typography variant="body1">
-                                    If there’s one skill that ensures long-term success, it’s adaptability. The pace of change in technology, business models, and market demands means that what works today may become obsolete tomorrow. 
-                                    <br />
-                                    <br />
-                                </Typography>
-                                <Typography variant="body1">
-                                   Professionals who resist change often find themselves struggling to keep up, while those who embrace learning stay ahead. Adaptability is not just about learning new tools—it’s about being open to new ways of thinking, experimenting with new approaches, and evolving your mindset. 
+                                    If there’s one skill that ensures long-term success, it’s adaptability. The pace of change in technology, business models, and market demands means that what works today may become obsolete tomorrow.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    In 2026, the most successful experts will not be the ones who know everything, but the ones who are willing to learn anything. 
+                                    Professionals who resist change often find themselves struggling to keep up, while those who embrace learning stay ahead. Adaptability is not just about learning new tools—it’s about being open to new ways of thinking, experimenting with new approaches, and evolving your mindset.
+                                    <br />
+                                    <br />
+                                </Typography>
+                                <Typography variant="body1">
+                                    In 2026, the most successful experts will not be the ones who know everything, but the ones who are willing to learn anything.
                                 </Typography>
                             </Box>
 
                             {/* Section 7 */}
                             <Box id="section7" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    6. The Growing Importance of Human Skills in a Tech-Driven World 
+                                    6. The Growing Importance of Human Skills in a Tech-Driven World
                                 </Typography>
                                 <Typography variant="body1">
                                     While technology is advancing rapidly, human skills are becoming even more valuable. Emotional intelligence, communication, and empathy are now essential for leadership, collaboration, and client relationships.
@@ -436,12 +437,12 @@ const CompSkillIndustryExperts = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                   In high-stakes business environments, decisions are not made purely on logic—they are influenced by trust, relationships, and understanding. Experts who can communicate ideas clearly, handle conflicts effectively, and build strong professional relationships will always have an edge. 
+                                    In high-stakes business environments, decisions are not made purely on logic—they are influenced by trust, relationships, and understanding. Experts who can communicate ideas clearly, handle conflicts effectively, and build strong professional relationships will always have an edge.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                   This balance between technical expertise and human understanding is what defines a truly well-rounded professional. 
+                                    This balance between technical expertise and human understanding is what defines a truly well-rounded professional.
                                 </Typography>
                             </Box>
 
@@ -449,20 +450,20 @@ const CompSkillIndustryExperts = () => {
                             {/* Section 8 */}
                             <Box id="section8" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    7. Collaboration Is the New Competitive Advantage 
+                                    7. Collaboration Is the New Competitive Advantage
                                 </Typography>
                                 <Typography variant="body1">
-                                    No major success today happens in isolation. Whether it’s launching a product, running a campaign, or scaling a business, collaboration across teams is essential. 
-                                    <br />
-                                    <br />
-                                </Typography>
-                                <Typography variant="body1">
-                                    In 2026, industry experts must be comfortable working with people from different backgrounds, skill sets, and perspectives. This requires not only communication skills but also the ability to align everyone toward a common goal. 
+                                    No major success today happens in isolation. Whether it’s launching a product, running a campaign, or scaling a business, collaboration across teams is essential.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                   Cross-functional collaboration leads to better ideas, faster execution, and more innovative solutions. Experts who can bridge gaps between teams—such as marketing and tech or sales and operations—become invaluable assets to any organization. 
+                                    In 2026, industry experts must be comfortable working with people from different backgrounds, skill sets, and perspectives. This requires not only communication skills but also the ability to align everyone toward a common goal.
+                                    <br />
+                                    <br />
+                                </Typography>
+                                <Typography variant="body1">
+                                    Cross-functional collaboration leads to better ideas, faster execution, and more innovative solutions. Experts who can bridge gaps between teams—such as marketing and tech or sales and operations—become invaluable assets to any organization.
                                 </Typography>
                             </Box>
 
@@ -470,18 +471,18 @@ const CompSkillIndustryExperts = () => {
                             {/* Section 9 */}
                             <Box id="section9" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    8. Execution: Turning Knowledge Into Results 
+                                    8. Execution: Turning Knowledge Into Results
                                 </Typography>
                                 <Typography variant="body1">
-                                    Knowledge without execution has no value. One of the biggest gaps in today’s professional world is the ability to turn ideas into action. 
+                                    Knowledge without execution has no value. One of the biggest gaps in today’s professional world is the ability to turn ideas into action.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Industry experts must develop a strong execution mindset—setting clear goals, taking ownership, and consistently delivering results. This includes tracking performance, identifying what’s working, and optimizing strategies accordingly. 
+                                    Industry experts must develop a strong execution mindset—setting clear goals, taking ownership, and consistently delivering results. This includes tracking performance, identifying what’s working, and optimizing strategies accordingly.
                                     <br />
                                     <br />
-                                    In a competitive landscape, those who execute effectively will always outperform those who only plan or analyze. 
+                                    In a competitive landscape, those who execute effectively will always outperform those who only plan or analyze.
                                 </Typography>
                             </Box>
 
@@ -491,12 +492,12 @@ const CompSkillIndustryExperts = () => {
                                     9. Building a Future-Ready Mindset
                                 </Typography>
                                 <Typography variant="body1">
-                                    Ultimately, success in 2026 is not just about skills—it’s about mindset. A future-ready professional is someone who is curious, proactive, and resilient. They don’t wait for change to happen; they anticipate it and prepare for it. 
+                                    Ultimately, success in 2026 is not just about skills—it’s about mindset. A future-ready professional is someone who is curious, proactive, and resilient. They don’t wait for change to happen; they anticipate it and prepare for it.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    This mindset allows experts to stay ahead of trends, identify opportunities early, and navigate challenges with confidence. It also encourages continuous improvement, which is essential in a world where standing still means falling behind. 
+                                    This mindset allows experts to stay ahead of trends, identify opportunities early, and navigate challenges with confidence. It also encourages continuous improvement, which is essential in a world where standing still means falling behind.
                                 </Typography>
                             </Box>
 
@@ -512,7 +513,7 @@ const CompSkillIndustryExperts = () => {
                                     In 2026, expertise will be defined by a combination of AI understanding, strategic thinking, data intelligence, communication skills, and execution ability. Professionals who invest in these areas will not only stay relevant but also lead their industries.
                                     <br />
                                     <br />
-                                    The future belongs to those who are not just skilled—but continuously evolving. 
+                                    The future belongs to those who are not just skilled—but continuously evolving.
                                 </Typography>
                             </Box>
 

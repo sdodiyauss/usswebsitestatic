@@ -136,10 +136,10 @@ const CompSaveMoneyOnExpensiveMedi = () => {
 
     // Demo posts data with same dummy content; replace with real data later
     const posts = [
-        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh Khatwani", date: "May 5th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
-        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "May 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
+        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
+        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "April 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
         // { id: "p8", title: "DeepSeek vs ChatGPT: A Comprehensive Comparison of AI-Powered Chatbots", excerpt: "Artificial Intelligence (AI) has transformed the way we engage with technology, and AI-driven cha...", author: "Dilip Tiwari", date: "March 10th, 2025", readTime: "6 min read", category: "AI", image: Blog4, featured: false, url: "/blog-details8" },
-        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
+        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "May 28th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
     ];
 
 
@@ -163,15 +163,16 @@ const CompSaveMoneyOnExpensiveMedi = () => {
                             </CardMedia>
 
                             <CardContent className="blog-card-content">
-                                <Chip label={post.category} size="small" className="blog-card-chip" />
+                                <Box>
+                                    <Chip label={post.category} size="small" className="blog-card-chip" />
 
-                                <Box className="blog-card-title-row">
-                                    <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
-                                        {post.title}
-                                    </Typography>
-                                    <Image src={BtnIcon} alt="btn-icon" />
+                                    <Box className="blog-card-title-row">
+                                        <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
+                                            {post.title}
+                                        </Typography>
+                                        <Image src={BtnIcon} alt="btn-icon" />
+                                    </Box>
                                 </Box>
-
                                 <Box className="blog-card-meta">
                                     <Box className="avtar-box">
                                         <Avatar
@@ -531,43 +532,43 @@ const CompSaveMoneyOnExpensiveMedi = () => {
                                     </ListItem>
                                 </List>
                                 <Typography variant="body1">
-                                    Some platforms also integrate telehealth services, allowing patients to consult doctors online and obtain prescription renewals without scheduling in-person appointments. 
+                                    Some platforms also integrate telehealth services, allowing patients to consult doctors online and obtain prescription renewals without scheduling in-person appointments.
                                     <br />
                                     <br />
-                                    This convenience not only saves time but can also reduce consultation costs. 
+                                    This convenience not only saves time but can also reduce consultation costs.
                                     <br />
                                     <br />
                                 </Typography>
 
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Access to Mail-Order Pharmacy Services 
+                                    Access to Mail-Order Pharmacy Services
                                 </Typography>
                                 <Typography variant="body1">
-                                    Mail-order pharmacies have become increasingly popular due to their cost-saving potential and convenience. 
-                                    <br />
-                                    <br />
-                                </Typography>
-                                <Typography variant="body1">
-                                    Many online prescription assistance platforms partner with licensed mail-order pharmacies that offer medications at lower prices than traditional retail pharmacies. 
+                                    Mail-order pharmacies have become increasingly popular due to their cost-saving potential and convenience.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Patients can receive their prescriptions delivered directly to their homes, often with discounted rates for bulk or long-term prescriptions. 
+                                    Many online prescription assistance platforms partner with licensed mail-order pharmacies that offer medications at lower prices than traditional retail pharmacies.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Mail-order services are particularly beneficial for individuals who require <strong>maintenance medications</strong> for chronic conditions such as hypertension, diabetes, or asthma. 
+                                    Patients can receive their prescriptions delivered directly to their homes, often with discounted rates for bulk or long-term prescriptions.
+                                    <br />
+                                    <br />
+                                </Typography>
+                                <Typography variant="body1">
+                                    Mail-order services are particularly beneficial for individuals who require <strong>maintenance medications</strong> for chronic conditions such as hypertension, diabetes, or asthma.
                                     <br />
                                     <br />
                                 </Typography>
 
-                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Support for Insurance Navigation 
+                                <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
+                                    Support for Insurance Navigation
                                 </Typography>
                                 <Typography variant="body1">
-                                    Health insurance coverage for medications can be complicated. Formularies, copay structures, and prior authorization requirements often make it difficult for patients to understand their true medication costs.  
+                                    Health insurance coverage for medications can be complicated. Formularies, copay structures, and prior authorization requirements often make it difficult for patients to understand their true medication costs.
                                     <br />
                                     <br />
                                 </Typography>
@@ -590,7 +591,7 @@ const CompSaveMoneyOnExpensiveMedi = () => {
                                     </ListItem>
                                 </List>
                                 <Typography variant="body1">
-                                    By understanding how insurance works with prescription medications, patients can make more informed decisions and reduce unexpected expenses. 
+                                    By understanding how insurance works with prescription medications, patients can make more informed decisions and reduce unexpected expenses.
                                 </Typography>
                             </Box>
 
@@ -601,34 +602,34 @@ const CompSaveMoneyOnExpensiveMedi = () => {
                                 </Typography>
 
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Improved Medication Affordability 
+                                    Improved Medication Affordability
                                 </Typography>
                                 <Typography variant="body1">
-                                    The most obvious benefit of online prescription assistance is reduced medication costs. By combining discount programs, price comparisons, and assistance services, these platforms help patients access affordable treatment options. 
+                                    The most obvious benefit of online prescription assistance is reduced medication costs. By combining discount programs, price comparisons, and assistance services, these platforms help patients access affordable treatment options.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Greater Transparency in Drug Pricing 
+                                    Greater Transparency in Drug Pricing
                                 </Typography>
                                 <Typography variant="body1">
-                                    Traditional pharmacy pricing often lacks transparency. Online platforms provide clear price comparisons that allow patients to make informed purchasing decisions. 
+                                    Traditional pharmacy pricing often lacks transparency. Online platforms provide clear price comparisons that allow patients to make informed purchasing decisions.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Convenience and Time Savings 
+                                    Convenience and Time Savings
                                 </Typography>
                                 <Typography variant="body1">
-                                    Digital prescription management tools eliminate the need for repeated pharmacy visits and paperwork. Patients can manage prescriptions, renew medications, and apply for assistance programs online.  
+                                    Digital prescription management tools eliminate the need for repeated pharmacy visits and paperwork. Patients can manage prescriptions, renew medications, and apply for assistance programs online.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Better Medication Adherence 
+                                    Better Medication Adherence
                                 </Typography>
                                 <Typography variant="body1">
-                                    When medications are more affordable and easier to manage, patients are more likely to follow their prescribed treatment plans consistently. This improves long-term health outcomes. 
+                                    When medications are more affordable and easier to manage, patients are more likely to follow their prescribed treatment plans consistently. This improves long-term health outcomes.
                                     <br />
                                     <br />
                                 </Typography>
@@ -636,22 +637,22 @@ const CompSaveMoneyOnExpensiveMedi = () => {
                                     Enhanced Access to Healthcare Resources
                                 </Typography>
                                 <Typography variant="body1">
-                                    Many online prescription platforms integrate telehealth services, educational resources, and medication management tools that empower patients to take control of their healthcare. 
+                                    Many online prescription platforms integrate telehealth services, educational resources, and medication management tools that empower patients to take control of their healthcare.
                                 </Typography>
                             </Box>
 
                             {/* Section 6 */}
                             <Box id="section6" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    5. Tips for Maximizing Savings on Prescription Medications 
+                                    5. Tips for Maximizing Savings on Prescription Medications
                                 </Typography>
                                 <Typography variant="body1">
-                                    While online prescription assistance platforms are powerful tools, patients can take additional steps to further reduce medication costs. 
+                                    While online prescription assistance platforms are powerful tools, patients can take additional steps to further reduce medication costs.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Discuss Cost Concerns with Your Doctor 
+                                    Discuss Cost Concerns with Your Doctor
                                 </Typography>
                                 <Typography variant="body1">
                                     Many patients hesitate to talk about medication costs with their healthcare providers. However, doctors can often recommend affordable alternatives, adjust treatment plans, or suggest generic medications.
@@ -662,49 +663,49 @@ const CompSaveMoneyOnExpensiveMedi = () => {
                                     Ask About 90-Day Prescription Supplies
                                 </Typography>
                                 <Typography variant="body1">
-                                    Purchasing medications in a 90-day supply can sometimes reduce the cost per dose compared to monthly refills. 
+                                    Purchasing medications in a 90-day supply can sometimes reduce the cost per dose compared to monthly refills.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Check Manufacturer Savings Programs 
+                                    Check Manufacturer Savings Programs
                                 </Typography>
                                 <Typography variant="body1">
-                                    Some pharmaceutical companies offer coupons, copay cards, or rebate programs that significantly lower medication costs.   
+                                    Some pharmaceutical companies offer coupons, copay cards, or rebate programs that significantly lower medication costs.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Compare Pharmacies Regularly 
+                                    Compare Pharmacies Regularly
                                 </Typography>
                                 <Typography variant="body1">
-                                    Medication prices can change frequently. Checking prices periodically ensures you continue getting the best deal available. 
+                                    Medication prices can change frequently. Checking prices periodically ensures you continue getting the best deal available.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Use Digital Prescription Tools 
+                                    Use Digital Prescription Tools
                                 </Typography>
                                 <Typography variant="body1">
-                                    Taking advantage of prescription management apps and online platforms can help track refills, apply discounts, and access assistance programs more efficiently. 
+                                    Taking advantage of prescription management apps and online platforms can help track refills, apply discounts, and access assistance programs more efficiently.
                                 </Typography>
                             </Box>
 
                             {/* Section 7 */}
                             <Box id="section7" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    6. Challenges to Consider 
+                                    6. Challenges to Consider
                                 </Typography>
                                 <Typography variant="body1">
-                                    Although online prescription assistance platforms offer many benefits, patients should be aware of certain considerations. 
+                                    Although online prescription assistance platforms offer many benefits, patients should be aware of certain considerations.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Privacy and Data Security  
+                                    Privacy and Data Security
                                 </Typography>
                                 <Typography variant="body1">
-                                    Patients should ensure that any platform they use complies with healthcare privacy regulations and uses secure systems to protect personal medical information. 
+                                    Patients should ensure that any platform they use complies with healthcare privacy regulations and uses secure systems to protect personal medical information.
                                     <br />
                                     <br />
                                 </Typography>
@@ -712,7 +713,7 @@ const CompSaveMoneyOnExpensiveMedi = () => {
                                     Eligibility Requirements
                                 </Typography>
                                 <Typography variant="body1">
-                                    Some assistance programs have strict eligibility criteria based on income, insurance status, or medical condition. 
+                                    Some assistance programs have strict eligibility criteria based on income, insurance status, or medical condition.
                                     <br />
                                     <br />
                                 </Typography>
@@ -720,7 +721,7 @@ const CompSaveMoneyOnExpensiveMedi = () => {
                                     Medication Availability
                                 </Typography>
                                 <Typography variant="body1">
-                                    Not all medications may be eligible for discounts or assistance programs, particularly certain specialty drugs. 
+                                    Not all medications may be eligible for discounts or assistance programs, particularly certain specialty drugs.
                                     <br />
                                     <br />
                                 </Typography>
@@ -735,37 +736,37 @@ const CompSaveMoneyOnExpensiveMedi = () => {
                                     7. The Future of Prescription Assistance
                                 </Typography>
                                 <Typography variant="body1">
-                                    Technology continues to transform healthcare, and prescription assistance is evolving rapidly. Artificial intelligence, predictive analytics, and integrated healthcare systems are making it easier for patients to find affordable medications and manage prescriptions digitally. 
+                                    Technology continues to transform healthcare, and prescription assistance is evolving rapidly. Artificial intelligence, predictive analytics, and integrated healthcare systems are making it easier for patients to find affordable medications and manage prescriptions digitally.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Future platforms may offer even more personalized medication recommendations, automated savings programs, and seamless integration with electronic health records. 
+                                    Future platforms may offer even more personalized medication recommendations, automated savings programs, and seamless integration with electronic health records.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    As these innovations continue to develop, online prescription assistance will play an increasingly important role in improving medication affordability and accessibility worldwide. 
+                                    As these innovations continue to develop, online prescription assistance will play an increasingly important role in improving medication affordability and accessibility worldwide.
                                 </Typography>
                             </Box>
 
                             {/* Section 9 */}
                             <Box id="section9" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Conclusion 
+                                    Conclusion
                                 </Typography>
                                 <Typography variant="body1">
-                                    The high cost of prescription medications remains a major challenge for many patients. However, online prescription assistance platforms are providing effective solutions that make medications more affordable and accessible. 
-                                    <br />
-                                    <br />
-                                </Typography>
-                                <Typography variant="body1">
-                                    For individuals struggling with high medication costs, exploring online prescription assistance options can lead to significant savings while ensuring consistent access to essential treatments. Healthcare providers, pharmacies, or organizations interested in implementing such solutions can <Link href="https://calendly.com/jvaghasiya-universalstreamsolution/30min?month=2026-03">book a meeting with our experts</Link> to better understand how digital prescription assistance platforms can improve medication access and cost management. 
+                                    The high cost of prescription medications remains a major challenge for many patients. However, online prescription assistance platforms are providing effective solutions that make medications more affordable and accessible.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    As digital healthcare solutions continue to grow, patients will have more opportunities than ever to reduce medication expenses and maintain better health outcomes. 
+                                    For individuals struggling with high medication costs, exploring online prescription assistance options can lead to significant savings while ensuring consistent access to essential treatments. Healthcare providers, pharmacies, or organizations interested in implementing such solutions can <Link href="https://calendly.com/jvaghasiya-universalstreamsolution/30min?month=2026-03">book a meeting with our experts</Link> to better understand how digital prescription assistance platforms can improve medication access and cost management.
+                                    <br />
+                                    <br />
+                                </Typography>
+                                <Typography variant="body1">
+                                    As digital healthcare solutions continue to grow, patients will have more opportunities than ever to reduce medication expenses and maintain better health outcomes.
                                 </Typography>
                             </Box>
 

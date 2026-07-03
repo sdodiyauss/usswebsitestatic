@@ -137,10 +137,10 @@ const CompFutureOfPrescriptions = () => {
 
     // Demo posts data with same dummy content; replace with real data later
     const posts = [
-        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh Khatwani", date: "May 5th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
-        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "May 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
+        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
+        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "April 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
         // { id: "p8", title: "DeepSeek vs ChatGPT: A Comprehensive Comparison of AI-Powered Chatbots", excerpt: "Artificial Intelligence (AI) has transformed the way we engage with technology, and AI-driven cha...", author: "Dilip Tiwari", date: "March 10th, 2025", readTime: "6 min read", category: "AI", image: Blog4, featured: false, url: "/blog-details8" },
-        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
+        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "May 28th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
     ];
 
 
@@ -164,15 +164,16 @@ const CompFutureOfPrescriptions = () => {
                             </CardMedia>
 
                             <CardContent className="blog-card-content">
-                                <Chip label={post.category} size="small" className="blog-card-chip" />
+                                <Box>
+                                    <Chip label={post.category} size="small" className="blog-card-chip" />
 
-                                <Box className="blog-card-title-row">
-                                    <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
-                                        {post.title}
-                                    </Typography>
-                                    <Image src={BtnIcon} alt="btn-icon" />
+                                    <Box className="blog-card-title-row">
+                                        <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
+                                            {post.title}
+                                        </Typography>
+                                        <Image src={BtnIcon} alt="btn-icon" />
+                                    </Box>
                                 </Box>
-
                                 <Box className="blog-card-meta">
                                     <Box className="avtar-box">
                                         <Avatar
@@ -457,7 +458,7 @@ const CompFutureOfPrescriptions = () => {
                                     <br />
                                     <br />
                                 </Typography>
-                                
+
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
                                     Faster Prescription Processing
                                     <br />
@@ -473,13 +474,13 @@ const CompFutureOfPrescriptions = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    For busy pharmacies handling hundreds of prescriptions daily, this streamlined process can greatly improve productivity. 
+                                    For busy pharmacies handling hundreds of prescriptions daily, this streamlined process can greatly improve productivity.
                                     <br />
                                     <br />
                                 </Typography>
 
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Improved Workflow for Pharmacists 
+                                    Improved Workflow for Pharmacists
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
@@ -488,7 +489,7 @@ const CompFutureOfPrescriptions = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    This automation helps pharmacists: 
+                                    This automation helps pharmacists:
                                     <br />
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
@@ -506,7 +507,7 @@ const CompFutureOfPrescriptions = () => {
                                     </ListItem>
                                 </List>
                                 <Typography variant="body1">
-                                    As a result, pharmacy operations become more organized and scalable. 
+                                    As a result, pharmacy operations become more organized and scalable.
                                     <br />
                                     <br />
                                 </Typography>
@@ -516,12 +517,12 @@ const CompFutureOfPrescriptions = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Patient safety is at the core of modern healthcare, and e-prescriptions play a major role in protecting patients from medication-related risks. 
+                                    Patient safety is at the core of modern healthcare, and e-prescriptions play a major role in protecting patients from medication-related risks.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Electronic prescribing systems can automatically check for: 
+                                    Electronic prescribing systems can automatically check for:
                                     <br />
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
@@ -539,22 +540,22 @@ const CompFutureOfPrescriptions = () => {
                                     </ListItem>
                                 </List>
                                 <Typography variant="body1">
-                                    These automated checks allow doctors and pharmacists to identify potential risks before the medication reaches the patient. 
+                                    These automated checks allow doctors and pharmacists to identify potential risks before the medication reaches the patient.
                                     <br />
                                     <br />
                                 </Typography>
-                                
+
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
                                     Improved Prescription Tracking
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    E-prescriptions create a <strong>digital trail</strong> that makes it easier to track prescriptions and maintain accurate patient records. 
+                                    E-prescriptions create a <strong>digital trail</strong> that makes it easier to track prescriptions and maintain accurate patient records.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Pharmacies can quickly access prescription histories, refill data, and medication details, which helps in: 
+                                    Pharmacies can quickly access prescription histories, refill data, and medication details, which helps in:
                                     <br />
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
@@ -572,12 +573,12 @@ const CompFutureOfPrescriptions = () => {
                                     </ListItem>
                                 </List>
                                 <Typography variant="body1">
-                                    Digital records also make it easier for pharmacies to comply with regulatory requirements. 
+                                    Digital records also make it easier for pharmacies to comply with regulatory requirements.
                                     <br />
                                     <br />
                                 </Typography>
 
-                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
+                                <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
                                     Reduced Prescription Fraud
                                     <br />
                                 </Typography>
@@ -587,17 +588,17 @@ const CompFutureOfPrescriptions = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    By using <Link href="/healthcare-tech/online-offline-pharmacy">digital prescription management software</Link>, healthcare providers and pharmacies can maintain accurate prescription records, track medication histories, and ensure that prescriptions are authentic and compliant with regulatory standards. This approach strengthens trust between healthcare providers, pharmacies, and regulatory authorities while improving overall prescription security. 
+                                    By using <Link href="/healthcare-tech/online-offline-pharmacy">digital prescription management software</Link>, healthcare providers and pharmacies can maintain accurate prescription records, track medication histories, and ensure that prescriptions are authentic and compliant with regulatory standards. This approach strengthens trust between healthcare providers, pharmacies, and regulatory authorities while improving overall prescription security.
                                     <br />
                                     <br />
                                 </Typography>
 
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Pharmacy Software Integration 
+                                    Pharmacy Software Integration
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Modern pharmacy management systems are increasingly designed to integrate with electronic prescribing platforms.  
+                                    Modern pharmacy management systems are increasingly designed to integrate with electronic prescribing platforms.
                                     <br />
                                     <br />
                                 </Typography>
@@ -627,25 +628,25 @@ const CompFutureOfPrescriptions = () => {
                             {/* Section 5 */}
                             <Box id="section5" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    4. E-Prescriptions and Patient Experience 
+                                    4. E-Prescriptions and Patient Experience
                                 </Typography>
 
                                 <Typography variant="body1">
-                                    Patients also benefit significantly from electronic prescribing systems. 
+                                    Patients also benefit significantly from electronic prescribing systems.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Shorter Wait Times 
+                                    Shorter Wait Times
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Since prescriptions are sent directly to the pharmacy, medications can be prepared before the patient arrives. 
+                                    Since prescriptions are sent directly to the pharmacy, medications can be prepared before the patient arrives.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Greater Convenience 
+                                    Greater Convenience
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
@@ -654,20 +655,20 @@ const CompFutureOfPrescriptions = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Better Medication Adherence 
+                                    Better Medication Adherence
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Digital systems often include automated reminders for refills and medication schedules, helping patients follow their treatment plans more effectively. 
+                                    Digital systems often include automated reminders for refills and medication schedules, helping patients follow their treatment plans more effectively.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Improved Communication 
+                                    Improved Communication
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Doctors, pharmacists, and patients can communicate more efficiently through integrated healthcare platforms. 
+                                    Doctors, pharmacists, and patients can communicate more efficiently through integrated healthcare platforms.
                                 </Typography>
                             </Box>
 
@@ -676,18 +677,18 @@ const CompFutureOfPrescriptions = () => {
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
                                     5. Role of E-Prescriptions in Online Pharmacies
                                 </Typography>
-                               <Typography variant="body1">
-                                    The growth of online pharmacies and telemedicine services has further accelerated the adoption of e-prescriptions. 
+                                <Typography variant="body1">
+                                    The growth of online pharmacies and telemedicine services has further accelerated the adoption of e-prescriptions.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                   When patients consult doctors through telehealth platforms, prescriptions are typically issued electronically. These prescriptions can be sent directly to online pharmacies, which then deliver medications to the patient’s doorstep. 
+                                    When patients consult doctors through telehealth platforms, prescriptions are typically issued electronically. These prescriptions can be sent directly to online pharmacies, which then deliver medications to the patient’s doorstep.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    This digital workflow enables: 
+                                    This digital workflow enables:
                                     <br />
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
@@ -712,28 +713,28 @@ const CompFutureOfPrescriptions = () => {
                             {/* Section 7*/}
                             <Box id="section7" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    6. E-Prescribing Implementation Challenges 
+                                    6. E-Prescribing Implementation Challenges
                                 </Typography>
-                               <Typography variant="body1">
-                                    Despite the benefits, the transition to e-prescriptions is not without challenges. 
+                                <Typography variant="body1">
+                                    Despite the benefits, the transition to e-prescriptions is not without challenges.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Technology Adoption 
+                                    Technology Adoption
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Some smaller pharmacies and clinics may struggle with adopting new digital systems due to cost or training requirements. 
+                                    Some smaller pharmacies and clinics may struggle with adopting new digital systems due to cost or training requirements.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    System Compatibility 
+                                    System Compatibility
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Healthcare providers often use different software platforms, which can sometimes create integration challenges. 
+                                    Healthcare providers often use different software platforms, which can sometimes create integration challenges.
                                     <br />
                                     <br />
                                 </Typography>
@@ -742,19 +743,19 @@ const CompFutureOfPrescriptions = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Since e-prescriptions involve sensitive patient data, strong cybersecurity measures are required to protect patient privacy. 
+                                    Since e-prescriptions involve sensitive patient data, strong cybersecurity measures are required to protect patient privacy.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                   Regulatory Compliance 
+                                    Regulatory Compliance
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Different countries and regions have varying regulations for electronic prescribing, which healthcare providers must follow carefully. 
+                                    Different countries and regions have varying regulations for electronic prescribing, which healthcare providers must follow carefully.
                                     <br />
                                     <br />
-                                    However, ongoing advancements in healthcare technology are continuously addressing these challenges. 
+                                    However, ongoing advancements in healthcare technology are continuously addressing these challenges.
                                 </Typography>
                             </Box>
 
@@ -764,62 +765,62 @@ const CompFutureOfPrescriptions = () => {
                                     7. Future of E-Prescriptions in Pharmacy
                                 </Typography>
                                 <Typography variant="body1">
-                                    The role of e-prescriptions will continue to expand as healthcare becomes more digitally connected. 
+                                    The role of e-prescriptions will continue to expand as healthcare becomes more digitally connected.
                                     <br />
                                     <br />
-                                    Several emerging trends will shape the future of pharmacy services. 
-                                    <br />
-                                    <br />
-                                </Typography>
-                                <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                   AI-Powered Prescription Verification 
-                                    <br />
-                                </Typography>
-                                <Typography variant="body1">
-                                    Artificial intelligence will help analyze prescription patterns, detect anomalies, and identify potential medication risks more quickly.  
+                                    Several emerging trends will shape the future of pharmacy services.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                   Integration with Digital Health Records 
+                                    AI-Powered Prescription Verification
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                   E-prescriptions will become fully integrated with electronic health records, providing a comprehensive view of patient medication history. 
+                                    Artificial intelligence will help analyze prescription patterns, detect anomalies, and identify potential medication risks more quickly.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Mobile Prescription Access 
+                                    Integration with Digital Health Records
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Patients will increasingly manage prescriptions through mobile apps, allowing them to track medications, request refills, and communicate with pharmacists. 
+                                    E-prescriptions will become fully integrated with electronic health records, providing a comprehensive view of patient medication history.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                   Automated Pharmacy Systems 
+                                    Mobile Prescription Access
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Automation technologies such as robotic dispensing and smart inventory management will work alongside e-prescriptions to improve pharmacy efficiency. 
+                                    Patients will increasingly manage prescriptions through mobile apps, allowing them to track medications, request refills, and communicate with pharmacists.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                   Data-Driven Healthcare Insights 
+                                    Automated Pharmacy Systems
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Digital prescription data will enable healthcare providers to analyze medication trends, improve treatment plans, and enhance public health monitoring. 
+                                    Automation technologies such as robotic dispensing and smart inventory management will work alongside e-prescriptions to improve pharmacy efficiency.
+                                    <br />
+                                    <br />
+                                </Typography>
+                                <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
+                                    Data-Driven Healthcare Insights
+                                    <br />
+                                </Typography>
+                                <Typography variant="body1">
+                                    Digital prescription data will enable healthcare providers to analyze medication trends, improve treatment plans, and enhance public health monitoring.
                                 </Typography>
                             </Box>
 
                             {/* Section 9 */}
                             <Box id="section9" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    8. Why Pharmacies Must Adapt to Digital Prescribing 
+                                    8. Why Pharmacies Must Adapt to Digital Prescribing
                                 </Typography>
                                 <Typography variant="body1">
                                     Pharmacies that adopt e-prescription systems early gain several competitive advantages.
@@ -827,10 +828,10 @@ const CompFutureOfPrescriptions = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    They can: 
+                                    They can:
                                     <br />
                                 </Typography>
-                                
+
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
                                     <ListItem component="li" disablePadding>
                                         <ListItemText primary="Process prescriptions faster " />
@@ -849,7 +850,7 @@ const CompFutureOfPrescriptions = () => {
                                     </ListItem>
                                 </List>
                                 <Typography variant="body1">
-                                    As healthcare systems continue evolving, pharmacies that remain dependent on manual processes risk falling behind. 
+                                    As healthcare systems continue evolving, pharmacies that remain dependent on manual processes risk falling behind.
                                     <br />
                                     <br />
                                 </Typography>
@@ -861,25 +862,25 @@ const CompFutureOfPrescriptions = () => {
                             {/* Section 10 */}
                             <Box id="section10" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Conclusion 
+                                    Conclusion
                                 </Typography>
                                 <Typography variant="body1">
-                                    E-prescriptions are revolutionizing the way pharmacies operate and how patients receive medications. By replacing traditional paper prescriptions with secure digital systems, healthcare providers can reduce medication errors, streamline workflows, and improve patient safety. 
-                                    <br />
-                                    <br />
-                                </Typography>
-                                <Typography variant="body1">
-                                    For pharmacies, electronic prescribing offers significant benefits, including faster prescription processing, better record management, and enhanced integration with healthcare technologies. As healthcare organizations look to modernize their systems, many are choosing to <strong>schedule a healthcare software consultation</strong> to explore advanced digital solutions that support secure e-prescription workflows and pharmacy management. 
+                                    E-prescriptions are revolutionizing the way pharmacies operate and how patients receive medications. By replacing traditional paper prescriptions with secure digital systems, healthcare providers can reduce medication errors, streamline workflows, and improve patient safety.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    As telemedicine, online pharmacies, and digital healthcare platforms continue to expand, the importance of e-prescriptions will only grow. Pharmacies that embrace this transformation will be better positioned to deliver efficient, safe, and patient-centered services in the evolving healthcare landscape. 
+                                    For pharmacies, electronic prescribing offers significant benefits, including faster prescription processing, better record management, and enhanced integration with healthcare technologies. As healthcare organizations look to modernize their systems, many are choosing to <strong>schedule a healthcare software consultation</strong> to explore advanced digital solutions that support secure e-prescription workflows and pharmacy management.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    The future of pharmacy is digital—and e-prescriptions are at the center of that transformation. Organizations planning to adopt or upgrade digital prescribing systems can <Link href="https://calendly.com/jvaghasiya-universalstreamsolution/30min?month=2026-03">schedule a healthcare software consultation</Link> to understand how the right technology can support scalable, secure, and efficient pharmacy operations. 
+                                    As telemedicine, online pharmacies, and digital healthcare platforms continue to expand, the importance of e-prescriptions will only grow. Pharmacies that embrace this transformation will be better positioned to deliver efficient, safe, and patient-centered services in the evolving healthcare landscape.
+                                    <br />
+                                    <br />
+                                </Typography>
+                                <Typography variant="body1">
+                                    The future of pharmacy is digital—and e-prescriptions are at the center of that transformation. Organizations planning to adopt or upgrade digital prescribing systems can <Link href="https://calendly.com/jvaghasiya-universalstreamsolution/30min?month=2026-03">schedule a healthcare software consultation</Link> to understand how the right technology can support scalable, secure, and efficient pharmacy operations.
                                 </Typography>
                             </Box>
 

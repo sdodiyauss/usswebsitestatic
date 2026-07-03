@@ -134,10 +134,10 @@ const CompEHRForModernHealthcare = () => {
 
     // Demo posts data with same dummy content; replace with real data later
     const posts = [
-        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh Khatwani", date: "May 5th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
-        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "May 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
+        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
+        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "April 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
         // { id: "p8", title: "DeepSeek vs ChatGPT: A Comprehensive Comparison of AI-Powered Chatbots", excerpt: "Artificial Intelligence (AI) has transformed the way we engage with technology, and AI-driven cha...", author: "Dilip Tiwari", date: "March 10th, 2025", readTime: "6 min read", category: "AI", image: Blog4, featured: false, url: "/blog-details8" },
-        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
+        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "May 28th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
     ];
 
 
@@ -161,15 +161,16 @@ const CompEHRForModernHealthcare = () => {
                             </CardMedia>
 
                             <CardContent className="blog-card-content">
-                                <Chip label={post.category} size="small" className="blog-card-chip" />
+                                <Box>
+                                    <Chip label={post.category} size="small" className="blog-card-chip" />
 
-                                <Box className="blog-card-title-row">
-                                    <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
-                                        {post.title}
-                                    </Typography>
-                                    <Image src={BtnIcon} alt="btn-icon" />
+                                    <Box className="blog-card-title-row">
+                                        <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
+                                            {post.title}
+                                        </Typography>
+                                        <Image src={BtnIcon} alt="btn-icon" />
+                                    </Box>
                                 </Box>
-
                                 <Box className="blog-card-meta">
                                     <Box className="avtar-box">
                                         <Avatar
@@ -327,7 +328,7 @@ const CompEHRForModernHealthcare = () => {
                                     1. What is EHR Interoperability?
                                 </Typography>
                                 <Typography variant="body1">
-                                    EHR interoperability refers to the ability of different healthcare information systems and applications to <strong>access, exchange, interpret, and use</strong> patient data in a unified way. Ideally, a patient’s medical history, lab reports, prescriptions, imaging results, and treatment plans should be accessible to any authorized healthcare provider—regardless of which system they use. 
+                                    EHR interoperability refers to the ability of different healthcare information systems and applications to <strong>access, exchange, interpret, and use</strong> patient data in a unified way. Ideally, a patient’s medical history, lab reports, prescriptions, imaging results, and treatment plans should be accessible to any authorized healthcare provider—regardless of which system they use.
                                     <br />
                                     <br />
                                 </Typography>
@@ -345,7 +346,7 @@ const CompEHRForModernHealthcare = () => {
                                     Fragmented and Legacy Systems
                                 </Typography>
                                 <Typography variant="body1">
-                                    One of the biggest challenges is the widespread use of legacy EHR systems that were not designed with interoperability in mind. Many hospitals have invested heavily in their existing systems over the years, making it difficult to replace or upgrade them. 
+                                    One of the biggest challenges is the widespread use of legacy EHR systems that were not designed with interoperability in mind. Many hospitals have invested heavily in their existing systems over the years, making it difficult to replace or upgrade them.
                                     <br />
                                     <br />
                                     These systems often:
@@ -377,7 +378,7 @@ const CompEHRForModernHealthcare = () => {
                                     Although standards like <strong>HL7 (Health Level Seven)</strong> and <strong>FHIR (Fast Healthcare Interoperability Resources)</strong> have been introduced to improve data exchange, adoption is still inconsistent.
                                     <br />
                                     <br />
-                                    Different vendors interpret and implement these standards differently, leading to: 
+                                    Different vendors interpret and implement these standards differently, leading to:
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
                                     <ListItem component="li" disablePadding>
@@ -400,7 +401,7 @@ const CompEHRForModernHealthcare = () => {
                                     Vendor Lock-In and Competitive Barriers
                                 </Typography>
                                 <Typography variant="body1">
-                                    Many EHR vendors intentionally design systems that are difficult to integrate with competitors. This creates a phenomenon known as vendor lock-in, where hospitals are dependent on a single provider. In such cases, adopting <Link href="/healthcare-tech/emr-software-development-company">healthcare EHR development solutions</Link>  becomes essential to build flexible, scalable, and interoperable systems that reduce dependency and improve data exchange across platforms. 
+                                    Many EHR vendors intentionally design systems that are difficult to integrate with competitors. This creates a phenomenon known as vendor lock-in, where hospitals are dependent on a single provider. In such cases, adopting <Link href="/healthcare-tech/emr-software-development-company">healthcare EHR development solutions</Link>  becomes essential to build flexible, scalable, and interoperable systems that reduce dependency and improve data exchange across platforms.
                                     <br />
                                     <br />
                                     Hospitals face:
@@ -422,14 +423,14 @@ const CompEHRForModernHealthcare = () => {
                                     <br />
                                 </Typography>
 
-                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
+                                <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
                                     Data Privacy and Security Regulations
                                 </Typography>
                                 <Typography variant="body1">
-                                    Healthcare data is highly sensitive, and strict regulations such as <strong>HIPAA (Health Insurance Portability and Accountability Act)</strong> in the US or equivalent laws in other countries make data sharing complex. 
+                                    Healthcare data is highly sensitive, and strict regulations such as <strong>HIPAA (Health Insurance Portability and Accountability Act)</strong> in the US or equivalent laws in other countries make data sharing complex.
                                     <br />
                                     <br />
-                                    Hospitals must ensure: 
+                                    Hospitals must ensure:
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
                                     <ListItem component="li" disablePadding>
@@ -448,14 +449,14 @@ const CompEHRForModernHealthcare = () => {
                                     <br />
                                 </Typography>
 
-                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
+                                <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
                                     Data Silos Within Hospitals
                                 </Typography>
                                 <Typography variant="body1">
-                                    Even within a single hospital, data often resides in separate departments such as: 
+                                    Even within a single hospital, data often resides in separate departments such as:
                                     <br />
                                     <br />
-                                    Hospitals must ensure: 
+                                    Hospitals must ensure:
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
                                     <ListItem component="li" disablePadding>
@@ -489,7 +490,7 @@ const CompEHRForModernHealthcare = () => {
                                     </ListItem>
                                 </List>
 
-                                  <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
+                                <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
                                     High Implementation and Integration Costs
                                 </Typography>
                                 <Typography variant="body1">
@@ -515,7 +516,7 @@ const CompEHRForModernHealthcare = () => {
                                     <br />
                                 </Typography>
 
-                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
+                                <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
                                     Resistance to Change and Training Gaps
                                 </Typography>
                                 <Typography variant="body1">
@@ -546,7 +547,7 @@ const CompEHRForModernHealthcare = () => {
                                     Delayed Patient Care
                                 </Typography>
                                 <Typography variant="body1">
-                                    When doctors cannot access complete patient records, it leads to: 
+                                    When doctors cannot access complete patient records, it leads to:
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
                                     <ListItem component="li" disablePadding>
@@ -565,8 +566,8 @@ const CompEHRForModernHealthcare = () => {
                                     <br />
                                 </Typography>
 
-                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                     Increased Healthcare Costs
+                                <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
+                                    Increased Healthcare Costs
                                 </Typography>
                                 <Typography variant="body1">
                                     Lack of interoperability results in:
@@ -588,8 +589,8 @@ const CompEHRForModernHealthcare = () => {
                                     <br />
                                 </Typography>
 
-                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                     Medical Errors and Risks
+                                <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
+                                    Medical Errors and Risks
                                 </Typography>
                                 <Typography variant="body1">
                                     Incomplete or inaccessible data can lead to:
@@ -612,10 +613,10 @@ const CompEHRForModernHealthcare = () => {
                                 </Typography>
 
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                     Poor Patient Experience
+                                    Poor Patient Experience
                                 </Typography>
                                 <Typography variant="body1">
-                                    Patients often need to: 
+                                    Patients often need to:
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
                                     <ListItem component="li" disablePadding>
@@ -640,10 +641,10 @@ const CompEHRForModernHealthcare = () => {
                                 </Typography>
 
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                     Adoption of FHIR-Based APIs
+                                    Adoption of FHIR-Based APIs
                                 </Typography>
                                 <Typography variant="body1">
-                                    Modern healthcare systems are increasingly adopting FHIR APIs, which allow secure and standardized data exchange between applications. In this evolving ecosystem, <Link href="https://www.universalstreamsolution.com/blog/mhealth-apps-empowering-patients-doctors">mHealth apps empowering patients and doctors</Link> are playing a vital role by enabling seamless access to health data, improving real-time communication, and enhancing overall patient care. 
+                                    Modern healthcare systems are increasingly adopting FHIR APIs, which allow secure and standardized data exchange between applications. In this evolving ecosystem, <Link href="https://www.universalstreamsolution.com/blog/mhealth-apps-empowering-patients-doctors">mHealth apps empowering patients and doctors</Link> are playing a vital role by enabling seamless access to health data, improving real-time communication, and enhancing overall patient care.
                                     <br />
                                     <br />
                                     FHIR enables:
@@ -660,11 +661,11 @@ const CompEHRForModernHealthcare = () => {
                                     </ListItem>
                                 </List>
 
-                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                     Cloud-Based EHR Systems
+                                <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
+                                    Cloud-Based EHR Systems
                                 </Typography>
                                 <Typography variant="body1">
-                                    Cloud-based EHRs improve interoperability by: 
+                                    Cloud-based EHRs improve interoperability by:
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
                                     <ListItem component="li" disablePadding>
@@ -678,16 +679,16 @@ const CompEHRForModernHealthcare = () => {
                                     </ListItem>
                                 </List>
                                 <Typography variant="body1">
-                                    This reduces dependency on legacy infrastructure.  
+                                    This reduces dependency on legacy infrastructure.
                                     <br />
                                     <br />
                                 </Typography>
 
-                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                     Government Initiatives and Policies
+                                <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
+                                    Government Initiatives and Policies
                                 </Typography>
                                 <Typography variant="body1">
-                                    Governments are actively pushing interoperability through regulations and incentives. Initiatives encourage: 
+                                    Governments are actively pushing interoperability through regulations and incentives. Initiatives encourage:
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
                                     <ListItem component="li" disablePadding>
@@ -702,7 +703,7 @@ const CompEHRForModernHealthcare = () => {
                                 </List>
 
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                     Use of Middleware and Integration Platforms
+                                    Use of Middleware and Integration Platforms
                                 </Typography>
                                 <Typography variant="body1">
                                     Healthcare organizations are increasingly using middleware solutions that act as a bridge between different systems, enabling communication without replacing existing infrastructure.
@@ -710,11 +711,11 @@ const CompEHRForModernHealthcare = () => {
                                     <br />
                                 </Typography>
 
-                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                     AI and Data Mapping Technologies
+                                <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
+                                    AI and Data Mapping Technologies
                                 </Typography>
                                 <Typography variant="body1">
-                                    Artificial Intelligence is playing a growing role in: 
+                                    Artificial Intelligence is playing a growing role in:
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
                                     <ListItem component="li" disablePadding>
@@ -762,15 +763,15 @@ const CompEHRForModernHealthcare = () => {
                             {/* Section 7 */}
                             <Box id="section7" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Final Thoughts 
+                                    Final Thoughts
                                 </Typography>
                                 <Typography variant="body1">
-                                    EHR interoperability remains a critical issue because it sits at the intersection of technology, regulation, and human behavior. While significant progress has been made, hospitals still face challenges related to legacy systems, lack of standardization, and high implementation costs. 
+                                    EHR interoperability remains a critical issue because it sits at the intersection of technology, regulation, and human behavior. While significant progress has been made, hospitals still face challenges related to legacy systems, lack of standardization, and high implementation costs.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    However, with advancements in APIs, cloud computing, and AI-driven integration, the healthcare industry is steadily moving toward a more connected future. To explore how these innovations can be implemented effectively, you can <Link href="https://calendly.com/jvaghasiya-universalstreamsolution/30min?month=2026-04">book a demo call for healthcare tech solutions</Link> and discover tailored approaches to improve interoperability and streamline healthcare operations. 
+                                    However, with advancements in APIs, cloud computing, and AI-driven integration, the healthcare industry is steadily moving toward a more connected future. To explore how these innovations can be implemented effectively, you can <Link href="https://calendly.com/jvaghasiya-universalstreamsolution/30min?month=2026-04">book a demo call for healthcare tech solutions</Link> and discover tailored approaches to improve interoperability and streamline healthcare operations.
                                     <br />
                                     <br />
                                     For hospitals, investing in interoperability is no longer optional—it is essential for improving patient outcomes, reducing costs, and delivering high-quality care in the digital age.

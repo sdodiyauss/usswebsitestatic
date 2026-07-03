@@ -144,10 +144,10 @@ const CompModenUIUXDesignerMaster = () => {
 
     // Demo posts data with same dummy content; replace with real data later
     const posts = [
-        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh khatwani", date: "May 5th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
-        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "May 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
+        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
+        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "April 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
         // { id: "p8", title: "DeepSeek vs ChatGPT: A Comprehensive Comparison of AI-Powered Chatbots", excerpt: "Artificial Intelligence (AI) has transformed the way we engage with technology, and AI-driven cha...", author: "Dilip Tiwari", date: "March 10th, 2025", readTime: "6 min read", category: "AI", image: Blog4, featured: false, url: "/blog-details8" },
-        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
+        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "May 28th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
     ];
 
 
@@ -171,15 +171,16 @@ const CompModenUIUXDesignerMaster = () => {
                             </CardMedia>
 
                             <CardContent className="blog-card-content">
-                                <Chip label={post.category} size="small" className="blog-card-chip" />
+                                <Box>
+                                    <Chip label={post.category} size="small" className="blog-card-chip" />
 
-                                <Box className="blog-card-title-row">
-                                    <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
-                                        {post.title}
-                                    </Typography>
-                                    <Image src={BtnIcon} alt="btn-icon" />
+                                    <Box className="blog-card-title-row">
+                                        <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
+                                            {post.title}
+                                        </Typography>
+                                        <Image src={BtnIcon} alt="btn-icon" />
+                                    </Box>
                                 </Box>
-
                                 <Box className="blog-card-meta">
                                     <Box className="avtar-box">
                                         <Avatar
@@ -875,30 +876,30 @@ const CompModenUIUXDesignerMaster = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Some key trends include: 
-                                    <br /> 
+                                    Some key trends include:
+                                    <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    AI-Powered Design Assistance 
+                                    AI-Powered Design Assistance
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    AI tools are helping designers automate repetitive tasks such as layout generation, design suggestions, and accessibility improvements. 
+                                    AI tools are helping designers automate repetitive tasks such as layout generation, design suggestions, and accessibility improvements.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Real-Time Collaboration 
+                                    Real-Time Collaboration
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Cloud-based platforms are making it easier for distributed teams to collaborate in real time. 
+                                    Cloud-based platforms are making it easier for distributed teams to collaborate in real time.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Advanced Prototyping 
+                                    Advanced Prototyping
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
@@ -907,11 +908,11 @@ const CompModenUIUXDesignerMaster = () => {
                                     <br />
                                 </Typography>
                                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
-                                    Integration with Development Platforms 
+                                    Integration with Development Platforms
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Modern design tools are increasingly integrating with coding environments to streamline the transition from design to development. 
+                                    Modern design tools are increasingly integrating with coding environments to streamline the transition from design to development.
                                     <br />
                                     <br />
                                 </Typography>
@@ -923,24 +924,24 @@ const CompModenUIUXDesignerMaster = () => {
                                     Final Thoughts
                                 </Typography>
                                 <Typography variant="body1">
-                                    The role of a UI/UX designer has evolved significantly over the past decade. Today’s designers are expected to combine creativity with technical knowledge, research skills, and data-driven decision-making. 
+                                    The role of a UI/UX designer has evolved significantly over the past decade. Today’s designers are expected to combine creativity with technical knowledge, research skills, and data-driven decision-making.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    Mastering the right tools is essential for delivering intuitive, engaging, and high-performing digital experiences. 
+                                    Mastering the right tools is essential for delivering intuitive, engaging, and high-performing digital experiences.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                    From collaborative platforms like Figma to usability testing tools like Maze and Hotjar, each tool plays a unique role in the design process. By leveraging these technologies effectively, designers can build products that not only look great but also provide meaningful value to users. 
+                                    From collaborative platforms like Figma to usability testing tools like Maze and Hotjar, each tool plays a unique role in the design process. By leveraging these technologies effectively, designers can build products that not only look great but also provide meaningful value to users.
                                     <br />
                                     <br />
                                 </Typography>
                                 <Typography variant="body1">
-                                   As digital experiences continue to evolve, staying updated with the latest UI/UX design tools and trends will be key to remaining competitive in the industry. If you want to create user-focused digital products for your business, <Link href="/contactus">speak with our experts</Link> to explore the best UI/UX design strategies tailored to your needs. 
+                                    As digital experiences continue to evolve, staying updated with the latest UI/UX design tools and trends will be key to remaining competitive in the industry. If you want to create user-focused digital products for your business, <Link href="/contactus">speak with our experts</Link> to explore the best UI/UX design strategies tailored to your needs.
                                 </Typography>
-                                    
+
                             </Box>
 
                             <Box className="written-by-box">

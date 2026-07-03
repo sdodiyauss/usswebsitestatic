@@ -140,10 +140,10 @@ const CompTransparencyVSOverexposure = () => {
 
     // Demo posts data with same dummy content; replace with real data later
     const posts = [
-        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh khatwani", date: "May 5th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
-        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "May 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
+        { id: "p6", title: "The Ultimate Frontend Face-Off: AngularJS vs ReactJS", excerpt: "In today’s fast-moving world of frontend web development, one debate keeps coming up among develop...", author: "Hitesh khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog2, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/angularjs-vs-reactjs-frontend-faceoff" },
+        { id: "p7", title: "Why Flutter Remains the MVP King in 2025", excerpt: "In today’s fast-paced digital landscape, launching a Minimum Viable Product (MVP) swiftly and effi...", author: "Bharat Katariya", date: "April 28th, 2025", readTime: "6 min read", category: "Mobile App Development", image: Blog3, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/flutter-mvp-king-2025" },
         // { id: "p8", title: "DeepSeek vs ChatGPT: A Comprehensive Comparison of AI-Powered Chatbots", excerpt: "Artificial Intelligence (AI) has transformed the way we engage with technology, and AI-driven cha...", author: "Dilip Tiwari", date: "March 10th, 2025", readTime: "6 min read", category: "AI", image: Blog4, featured: false, url: "/blog-details8" },
-        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "April 14th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
+        { id: "p9", title: "Django vs. Flask: Which Web Framework Should You Choose?", excerpt: "Introduction: Choosing Your Python Web Framework In the world of Python web development, two framew...", author: "Hitesh Khatwani", date: "May 28th, 2025", readTime: "6 min read", category: "Web Development", image: Blog5, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/django-vs-flask-which-python-web-framework" },
     ];
 
 
@@ -167,15 +167,16 @@ const CompTransparencyVSOverexposure = () => {
                             </CardMedia>
 
                             <CardContent className="blog-card-content">
-                                <Chip label={post.category} size="small" className="blog-card-chip" />
+                                <Box>
+                                    <Chip label={post.category} size="small" className="blog-card-chip" />
 
-                                <Box className="blog-card-title-row">
-                                    <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
-                                        {post.title}
-                                    </Typography>
-                                    <Image src={BtnIcon} alt="btn-icon" />
+                                    <Box className="blog-card-title-row">
+                                        <Typography component={NextLink} href={post.url} variant="h6" className="blog-card-title">
+                                            {post.title}
+                                        </Typography>
+                                        <Image src={BtnIcon} alt="btn-icon" />
+                                    </Box>
                                 </Box>
-
                                 <Box className="blog-card-meta">
                                     <Box className="avtar-box">
                                         <Avatar
@@ -321,13 +322,13 @@ const CompTransparencyVSOverexposure = () => {
                                     In modern workplaces, trust is no longer built only through policies, leadership behavior, or performance outcomes. It is increasingly shaped by how information flows inside an organization. Companies today are more connected, more digital, and more communicative than ever before.
                                     <br />
                                     <br />
-                                   Transparency has become a symbol of healthy workplace culture. Leaders are encouraged to be open, share decisions, involve teams, and reduce secrecy. However, as organizations push toward greater openness, a new challenge has emerged that is often ignored<strong>—overexposure of information.</strong>
+                                    Transparency has become a symbol of healthy workplace culture. Leaders are encouraged to be open, share decisions, involve teams, and reduce secrecy. However, as organizations push toward greater openness, a new challenge has emerged that is often ignored<strong>—overexposure of information.</strong>
                                     <br />
                                     <br />
                                     While transparency is meant to build clarity and confidence, too much uncontrolled visibility can actually create confusion, emotional overload, and decision fatigue. Employees may feel informed, but not necessarily reassured.
                                     <br />
                                     <br />
-                                    This raises a critical question for modern organizations: 
+                                    This raises a critical question for modern organizations:
                                     <br />
                                     <strong>When does transparency stop building trust and start breaking it?</strong>
                                 </Typography>
@@ -345,7 +346,7 @@ const CompTransparencyVSOverexposure = () => {
                                     In healthy organizations, transparency ensures that employees are not left in the dark about major changes. It helps teams align with company goals and reduces uncertainty in day-to-day operations.
                                     <br />
                                     <br />
-                                   However, transparency is not meant to eliminate boundaries. It is not about exposing every conversation, draft idea, or leadership debate. Instead, it is about structured communication that delivers clarity without unnecessary complexity.
+                                    However, transparency is not meant to eliminate boundaries. It is not about exposing every conversation, draft idea, or leadership debate. Instead, it is about structured communication that delivers clarity without unnecessary complexity.
                                     <br />
                                     <br />
                                     True transparency should simplify understanding—not multiply confusion.
@@ -367,7 +368,7 @@ const CompTransparencyVSOverexposure = () => {
                                     The intention was positive: reduce hierarchy, increase inclusion, and build trust through openness. However, in practice, this shift also created an unintended consequence<strong>—information overload.</strong>
                                     <br />
                                     <br />
-                                    The more organizations try to communicate everything, the harder it becomes for employees to identify what actually matters. 
+                                    The more organizations try to communicate everything, the harder it becomes for employees to identify what actually matters.
                                 </Typography>
                             </Box>
 
@@ -383,7 +384,7 @@ const CompTransparencyVSOverexposure = () => {
                                     Instead of clarity, employees are exposed to fragmented updates, evolving discussions, and incomplete decisions. This creates a sense of instability, even when no real problem exists.
                                     <br />
                                     <br />
-                                    In such environments, employees may start to feel: 
+                                    In such environments, employees may start to feel:
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
                                     <ListItem component="li" disablePadding>
@@ -413,7 +414,7 @@ const CompTransparencyVSOverexposure = () => {
                                     4. The Hidden Cost of Too Much Information
                                 </Typography>
                                 <Typography variant="body1">
-                                    Many leaders assume that more information automatically leads to better decision-making and stronger alignment. However, when it comes to <Link href="https://www.universalstreamsolution.com/blog/essential-skills-industry-experts-2026">emerging skills for professionals 2026</Link>, psychology suggests the opposite can often be true. 
+                                    Many leaders assume that more information automatically leads to better decision-making and stronger alignment. However, when it comes to <Link href="https://www.universalstreamsolution.com/blog/essential-skills-industry-experts-2026">emerging skills for professionals 2026</Link>, psychology suggests the opposite can often be true.
                                     <br />
                                     <br />
                                     Human attention is limited. When employees are exposed to too many internal signals at once, their ability to prioritize weakens. They may spend more time processing updates than executing meaningful work.
@@ -446,13 +447,13 @@ const CompTransparencyVSOverexposure = () => {
                             {/* Section 6 */}
                             <Box id="section6" className="toc-content" sx={{ mb: 6, scrollMarginTop: isMobile ? 80 : HEADER_OFFSET + 20 }}>
                                 <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
-                                    5. Psychological Impact: Why Overexposure Reduces Trust 
+                                    5. Psychological Impact: Why Overexposure Reduces Trust
                                 </Typography>
                                 <Typography variant="body1">
                                     Trust is not only a rational concept—it is deeply emotional. Employees do not just evaluate what they are told; they also evaluate how information makes them feel.
                                     <br />
                                     <br />
-                                    Three psychological factors are especially important: 
+                                    Three psychological factors are especially important:
                                     <br />
                                     <br />
                                 </Typography>
@@ -476,7 +477,7 @@ const CompTransparencyVSOverexposure = () => {
                                     Perceived Control
                                 </Typography>
                                 <Typography variant="body1">
-                                    Trust increases when employees feel they understand their environment. Overexposure can create the opposite effect—making people feel overwhelmed and less in control. 
+                                    Trust increases when employees feel they understand their environment. Overexposure can create the opposite effect—making people feel overwhelmed and less in control.
                                     <br />
                                     <br />
                                     When these three elements are disrupted, trust naturally weakens.
@@ -493,13 +494,13 @@ const CompTransparencyVSOverexposure = () => {
                                     Many organizations fall into a communication trap: they believe that silence creates distrust, so they respond by increasing communication volume.
                                     <br />
                                     <br />
-                                     However, this often results in a noisy environment where important messages get buried under routine updates.
+                                    However, this often results in a noisy environment where important messages get buried under routine updates.
                                     <br />
                                     <br />
-                                     In the context of <Link  href="https://www.linkedin.com/pulse/building-company-culture-outperforms-strategy-jignesh-vaghasiya-vwlmc">organizational culture and business success</Link>, such systems cause employees to ignore communication altogether not because they lack interest, but because they cannot mentally process everything they receive. 
+                                    In the context of <Link href="https://www.linkedin.com/pulse/building-company-culture-outperforms-strategy-jignesh-vaghasiya-vwlmc">organizational culture and business success</Link>, such systems cause employees to ignore communication altogether not because they lack interest, but because they cannot mentally process everything they receive.
                                     <br />
                                     <br />
-                                     This leads to a paradox: 
+                                    This leads to a paradox:
                                     <br />
                                     <br />
                                     <strong>The more organizations communicate, the less communication is actually absorbed. </strong>
@@ -512,13 +513,13 @@ const CompTransparencyVSOverexposure = () => {
                                     7. Remote Work Has Amplified the Problem
                                 </Typography>
                                 <Typography variant="body1">
-                                    The shift toward remote and hybrid work has significantly increased transparency—but also increased exposure to unnecessary information. 
+                                    The shift toward remote and hybrid work has significantly increased transparency—but also increased exposure to unnecessary information.
                                     <br />
                                     <br />
                                     Digital platforms make it easy to share updates instantly, but they also remove natural filters that previously existed in physical workplaces.
                                     <br />
                                     <br />
-                                    As a result, employees are now exposed to: 
+                                    As a result, employees are now exposed to:
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
                                     <ListItem component="li" disablePadding>
@@ -538,7 +539,7 @@ const CompTransparencyVSOverexposure = () => {
                                     This creates an environment where employees are always “on,” even when they are not working.
                                     <br />
                                     <br />
-                                    Without boundaries, transparency becomes digital exhaustion. 
+                                    Without boundaries, transparency becomes digital exhaustion.
                                 </Typography>
                             </Box>
 
@@ -551,10 +552,10 @@ const CompTransparencyVSOverexposure = () => {
                                     The solution is not to reduce transparency, but to make it more intentional. This approach is known as strategic transparency.
                                     <br />
                                     <br />
-                                   Strategic transparency focuses on delivering the right level of information based on relevance, timing, and audience.
+                                    Strategic transparency focuses on delivering the right level of information based on relevance, timing, and audience.
                                     <br />
                                     <br />
-                                    Instead of sharing everything broadly, organizations should focus on: 
+                                    Instead of sharing everything broadly, organizations should focus on:
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
                                     <ListItem component="li" disablePadding>
@@ -587,10 +588,10 @@ const CompTransparencyVSOverexposure = () => {
                                     Leadership plays a central role in balancing transparency and information overload. Effective leaders act as filters, not just broadcasters.
                                     <br />
                                     <br />
-                                    They ensure that employees are informed, but not overloaded. They provide context, not just updates. And most importantly, they understand that trust is built through clarity, not volume. 
+                                    They ensure that employees are informed, but not overloaded. They provide context, not just updates. And most importantly, they understand that trust is built through clarity, not volume.
                                     <br />
                                     <br />
-                                    Strong leadership communication focuses on: 
+                                    Strong leadership communication focuses on:
                                 </Typography>
                                 <List component="ul" className=" list-style-disc" sx={{ pb: 2, pt: 0 }}>
                                     <ListItem component="li" disablePadding>
@@ -607,7 +608,7 @@ const CompTransparencyVSOverexposure = () => {
                                     </ListItem>
                                 </List>
                                 <Typography variant="body1">
-                                    When leaders communicate with intention, transparency becomes a source of stability rather than stress. 
+                                    When leaders communicate with intention, transparency becomes a source of stability rather than stress.
                                 </Typography>
                             </Box>
 
@@ -617,7 +618,7 @@ const CompTransparencyVSOverexposure = () => {
                                     10. The Future of Workplace Transparency
                                 </Typography>
                                 <Typography variant="body1">
-                                    As workplaces continue to evolve, transparency will remain a core expectation. However, its definition is shifting. 
+                                    As workplaces continue to evolve, transparency will remain a core expectation. However, its definition is shifting.
                                     <br />
                                     <br />
                                     The future will not reward organizations that share the most information. Instead, it will reward those that share information in the most meaningful way.
@@ -639,16 +640,16 @@ const CompTransparencyVSOverexposure = () => {
                                     Conclusion: Redefining Trust for Modern Workplaces
                                 </Typography>
                                 <Typography variant="body1">
-                                   Transparency remains one of the most important pillars of modern organizational culture. However, when it becomes excessive or unstructured, it turns into overexposure—creating confusion instead of clarity. 
+                                    Transparency remains one of the most important pillars of modern organizational culture. However, when it becomes excessive or unstructured, it turns into overexposure—creating confusion instead of clarity.
                                     <br />
                                     <br />
-                                    The key to building long-term trust is not maximum openness, but meaningful communication. In today’s digital landscape, the <Link  href="/about-us">role of technology in business growth</Link> also plays a crucial part in enabling structured and effective communication. 
+                                    The key to building long-term trust is not maximum openness, but meaningful communication. In today’s digital landscape, the <Link href="/about-us">role of technology in business growth</Link> also plays a crucial part in enabling structured and effective communication.
                                     <br />
                                     <br />
-                                     When organizations learn to balance transparency with structure, employees feel informed without being overwhelmed, included without being exposed, and engaged without being mentally overloaded.
+                                    When organizations learn to balance transparency with structure, employees feel informed without being overwhelmed, included without being exposed, and engaged without being mentally overloaded.
                                     <br />
                                     <br />
-                                    In the end, true workplace trust is not about how much people know—it is about how clearly they understand what they need to know. 
+                                    In the end, true workplace trust is not about how much people know—it is about how clearly they understand what they need to know.
                                 </Typography>
                             </Box>
 
@@ -676,7 +677,7 @@ const CompTransparencyVSOverexposure = () => {
                                             <Link
                                                 href="https://www.linkedin.com/in/jignesh-vaghasiya24/"
                                                 className="written-by-icon"
-                                                
+
                                                 rel="noopener noreferrer"
                                             >
                                                 <Image src={SmallLinkedIN} alt="linkedin" />
