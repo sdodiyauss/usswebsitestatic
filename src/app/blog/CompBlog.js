@@ -81,6 +81,7 @@ import Blog48 from "@/blog-ai-fraud-detection.webp";
 import Blog49 from "@/blog-how-ai-change-seo.webp";
 import Blog50 from "@/blog-rebranding-vs-refreshing.webp";
 import Blog51 from "@/blog-top-career-skills-companies.webp";
+import Blog52 from "@/blog-future-ai-healthcare-opportunities.webp";
 
 import CircleType from "circletype";
 import minitsCircle from "~/minitsCircle.json";
@@ -269,6 +270,7 @@ const CompBlog = () => {
     { id: "p53", title: "How AI Search Is Changing Traditional SEO in 2026", excerpt: "The search landscape is experiencing its biggest transformation since Google revolutionized the internet. For years, businesses relied on traditional Search Engine Optimization (SEO) strategies to improve rankings, increase organic traffic, and generate leads. Success was measured by keyword rankings, backlinks, click-through rates...", author: "Jignesh Vaghasiya", date: "June 16th, 2026", readTime: "6 min read", category: "Business Strategy", image: Blog49, avatarImage: "/images/written-by-jignesh.webp", featured: false, url: "/blog/how-ai-search-is-changing-traditional-seo-in-2026" },
     { id: "p54", title: "Rebranding vs Refreshing: Which One Does Your Business Need?", excerpt: "In today's competitive digital landscape, businesses must continuously evolve to stay relevant, attract customers, and maintain a strong market presence. However, many organizations face a common dilemma: Should they rebrand completely or simply refresh their existing brand? While both strategies...", author: "Jignesh Vaghasiya", date: "June 24th, 2026", readTime: "6 min read", category: "Business Strategy", image: Blog50, avatarImage: "/images/written-by-jignesh.webp", featured: false, url: "/blog/rebrand-or-refresh-your-business" },
     { id: "p55", title: "Top Career Skills Companies Will Value in 2026", excerpt: "The workplace is evolving faster than ever. Artificial intelligence, automation, hybrid work, digital transformation, and changing customer expectations are redefining what companies expect from employees. While technical expertise remains important, employers in 2026 are increasingly looking for professionals who combine digital...", author: "Kinjal Vaghasiya", date: "July 2nd, 2026", readTime: "6 min read", category: "Business Strategy", image: Blog51, avatarImage: "/images/blog-avtar-kinjal.webp", featured: false, url: "/blog/top-career-skills-companies-will-value-in-2026" },
+    { id: "p56", title: "The Future of AI in Healthcare: Opportunities, Challenges, and Innovations", excerpt: "Artificial Intelligence (AI) is no longer a futuristic concept in healthcare—it is rapidly transforming how hospitals, clinics, pharmaceutical companies, and healthcare providers deliver care. From improving diagnostic accuracy to streamlining administrative workflows, AI is reshaping every aspect of the healthcare ecosystem. As healthcare organizations face increasing patient...", author: "Kinjal Vaghasiya", date: "July 8th, 2026", readTime: "6 min read", category: "AI", image: Blog52, avatarImage: "/images/blog-avtar-kinjal.webp", featured: false, url: "/blog/future-ai-healthcare-opportunities-challenges-innovations" },
   ];
 
 
