@@ -868,7 +868,7 @@ const CompCasestudies = (options = {}) => {
                 sx={{
                   position: "absolute",
                   top: "50%",
-                  left: 0,
+                  left: "-20px",
                   zIndex: 10,
                   transform: "translateY(-50%)",
                 }}
@@ -882,7 +882,7 @@ const CompCasestudies = (options = {}) => {
                 sx={{
                   position: "absolute",
                   top: "50%",
-                  right: 0,
+                  right: "-20px",
                   zIndex: 10,
                   transform: "translateY(-50%)",
                 }}
