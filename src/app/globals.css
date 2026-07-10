@@ -1514,6 +1514,15 @@ a {
   padding-bottom: 0 !important;
 }
 
+/* .testimonial-swiper .swiper-slide {
+  height: auto;
+  display: flex;
+}
+
+.testimonial-swiper .swiper-slide .testimonial-swiper-inner {
+  height: 100%;
+} */
+
 .testi-shape1 {
   position: absolute;
   left: 0;
@@ -1536,8 +1545,10 @@ a {
 }
 
 .testimonial-image img {
-  width: 100% !important;
-  height: auto;
+  /* width: 100% !important;
+  height: auto; */
+  height: 430px !important;
+  width: auto !important;
   display: block;
 }
 
@@ -1550,8 +1561,8 @@ a {
 }
 
 .testimonial-content .testimonial-content-logo img {
-  width: 200px;
-  height: auto;
+  width: auto;
+  height: 70px;
 }
 
 .testimonial-content .testimonial-content-disc {
@@ -7774,6 +7785,15 @@ text {
   .faq-accordion .faq-answer p {
     font-size: 1rem;
   }
+
+  .testimonial-image img {
+    height: 350px !important;
+  }
+
+  .testimonial-content .testimonial-content-logo img {
+    height: 50px;
+  }
+
 }
 
 @media (max-width: 1400px) {
@@ -8410,6 +8430,14 @@ text {
   .verticle-tab-content-wrapper {
     display: none;
   }
+
+  .testimonial-image img {
+    height: 295px !important;
+  }
+
+  .testimonial-content .testimonial-content-logo img {
+    height: 40px;
+  }
 }
 
 @media screen and (max-width: 1366px) and (min-height: 900px) {
@@ -8458,6 +8486,10 @@ text {
 
   .wheel-right {
     display: none;
+  }
+
+  .testimonial-image img {
+    height: 295px !important;
   }
 
 }
@@ -8947,6 +8979,10 @@ text {
 
   .job-card .job-info {
     flex-direction: column;
+  }
+
+  .testimonial-image img {
+    height: 270px !important;
   }
 }
 
@@ -10520,6 +10556,10 @@ text {
   .faq-accordion .faq-answer p {
     font-size: 0.875rem;
   }
+
+  .testimonial-image img {
+    height: 320px !important;
+  }
 }
 
 @media (max-width: 390px) {
@@ -10635,6 +10675,10 @@ text {
 
   .error-animation-box {
     top: 60px;
+  }
+
+  .testimonial-image img {
+    height: 285px !important;
   }
 }
 
