@@ -953,8 +953,6 @@ const CompCasestudies = (options = {}) => {
                             <Image
                               src={item.photo}
                               alt={item.name}
-                              width={200}
-                              height={250}
                             />
                           </Box>
                         </Grid>
