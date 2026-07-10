@@ -909,7 +909,7 @@ const CompCasestudies = (options = {}) => {
                       <Grid container spacing={2} alignItems="center">
                         {/* Left Content - 9 columns */}
                         <Grid
-                          size={{ xs: 12, sm: 7, md: 8.3 }}
+                          size={{ xs: 15, sm: 8.3 }}
                           className="testimonial-content"
                         >
                           <Box className="testimonial-content-logo">
@@ -943,7 +943,7 @@ const CompCasestudies = (options = {}) => {
                         </Grid>
 
                         {/* Right Image - 3 columns */}
-                        <Grid size={{ xs: 12, sm: 5, md: 3.7 }}>
+                        <Grid size={{ xs: 15, sm: 3.7 }}>
                           <Box
                             className="testimonial-image"
                             sx={{
