@@ -1,4 +1,34 @@
-﻿User-agent: *
-Allow: /
-Disallow: /author/
+Disallow: /*.php$
+Disallow: /*.php/page/*
+Disallow: .mp4
+
+# Allow all search engines
+User-agent: *
+Disallow: /admin/
+Disallow: /*.php$
+
+# OpenAI
+User-agent: OAI-SearchBot
+Disallow: /*.php$
+
+User-agent: ChatGPT-User
+Disallow: /*.php$
+
+# Anthropic
+User-agent: ClaudeBot
+Disallow: /*.php$
+
+# Google AI
+User-agent: Google-Extended
+Disallow: /*.php$
+
+# Common AI crawlers
+User-agent: PerplexityBot
+Disallow: /*.php$
+
+User-agent: Applebot-Extended
+Disallow: /*.php$
+
+
+# Sitemap
 Sitemap: https://www.universalstreamsolution.com/sitemap.xml

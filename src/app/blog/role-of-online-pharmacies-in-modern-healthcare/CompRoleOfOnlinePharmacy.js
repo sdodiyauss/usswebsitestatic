@@ -217,7 +217,7 @@ const CompRoleOfOnlinePharmacy = () => {
                                 <CardContent className="blog-card-content">
                                     <Box>
                                         <Chip
-                                            label="Business Strategy"
+                                            label="Healthcare"
                                             size="small"
                                             className="blog-card-chip"
                                         />
