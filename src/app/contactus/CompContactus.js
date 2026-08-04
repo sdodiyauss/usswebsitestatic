@@ -172,7 +172,7 @@ const contactInfoMap = {
   IN: {
     email: "sales@universalstreamsolution.com",
     visitUrl: "https://maps.app.goo.gl/xPK9n1RcUQSeo2RB9", // replace with actual URL
-    call: "+91 9638225579",
+    call: "+91 9638225549",
   },
   US: {
     email: "sales@universalstreamsolution.com",

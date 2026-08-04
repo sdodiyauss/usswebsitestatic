@@ -100,7 +100,7 @@ const CompSecurityRisk = (options = {}) => {
                   <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
                     <Image src={IconCall} alt="Phone Icon" width={24} height={24} style={{ marginRight: '12px' }} />
                     <Typography variant="p" paragraph sx={{ mb: 0 }}>
-                      Phone: +91 9638225579
+                      Phone: +91 9638225549
                     </Typography>
                   </Box>
                 </Box>
