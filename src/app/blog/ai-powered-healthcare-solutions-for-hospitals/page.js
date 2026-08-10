@@ -8,7 +8,7 @@ export const metadata = {
     title: 'AI-Powered Healthcare Solutions Every Hospital Needs | USS',
     description:
       'Discover AI-powered healthcare solutions that help hospitals improve patient care, automate workflows, reduce costs, and accelerate digital transformation.',
-    url: 'https://www.universalstreamsolution.com/blog/top-career-skills-companies-will-value-in-2026',
+    url: 'https://www.universalstreamsolution.com/blog/ai-powered-healthcare-solutions-for-hospitals',
     siteName: 'USS IT Services',
     images: [
       {
