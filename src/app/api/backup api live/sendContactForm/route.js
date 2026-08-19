@@ -2,19 +2,20 @@ import nodemailer from "nodemailer";
 import dotenv from "dotenv";
 import { executeQuery } from "../../../lib/db";
 
+// Load env vars
 dotenv.config();
 
 export async function POST(request) {
   try {
     const formData = await request.formData();
 
+    // Extract fields
     const firstName = formData.get("firstName");
     const lastName = formData.get("lastName");
     const email = formData.get("email");
     const contactNo = formData.get("contactNo");
     const subject = formData.get("subject");
-    const developerTitle = formData.get("developerTitle");
-    const aboutProject = formData.get("aboutProject");
+    const description = formData.get("description");
     // const captchaToken = formData.get("captchaToken");
 
     // Verify reCAPTCHA token
@@ -42,44 +43,45 @@ export async function POST(request) {
     //   );
     // }
 
+    // Setup transporter
     const transporter = nodemailer.createTransport({
-      host: process.env.MAIL_HOST, // smtp.office365.com
+      host: process.env.MAIL_HOST, // e.g. smtp.office365.com
       port: Number(process.env.MAIL_PORT) || 587,
-      secure: false, // MUST be false for STARTTLS
+      secure: false,
       auth: {
         user: process.env.MAIL_USERNAME,
         pass: process.env.MAIL_PASSWORD,
       },
       tls: {
-        rejectUnauthorized: true // usually safe for Office365
-        // ciphers: 'SSLv3'   // only add if you still get cipher errors
-      }
+        rejectUnauthorized: true,
+      },
     });
 
     // Parse multiple email addresses from MAIL_TO (comma-separated)
     // Supports formats like: "email1@domain.com,email2@domain.com" or "email1@domain.com, email2@domain.com"
     const mailToAddresses = process.env.MAIL_TO
       ? process.env.MAIL_TO
-        .split(',') // Split by comma
-        .map(email => email.trim()) // Remove whitespace
-        .filter(email => email && email.includes('@')) // Filter out empty strings and validate basic email format
+          .split(',') // Split by comma
+          .map(email => email.trim()) // Remove whitespace
+          .filter(email => email && email.includes('@')) // Filter out empty strings and validate basic email format
       : [];
 
+    // Email options
     const mailOptions = {
       from: process.env.MAIL_FROM_ADDRESS,
       to: mailToAddresses,
-      subject: "New Hire Request Submission",
+      subject: `Inquiry : ${subject}`,
       text: `
         First Name: ${firstName}
         Last Name: ${lastName}
         Email: ${email}
         Contact No: ${contactNo}
-        Subject: ${subject || "-"}
-        Developer: ${developerTitle || "-"}
-        About Project: ${aboutProject || "-"}
+        Subject: ${subject}
+        Description: ${description}
       `,
     };
 
+    // Send email
     await transporter.sendMail(mailOptions);
 
     // =============================
@@ -88,7 +90,7 @@ export async function POST(request) {
     const autoReplyOptions = {
       from: process.env.MAIL_FROM_ADDRESS,
       to: email, // user's email
-      subject: "Thank You for Your Hire Request — Universal Stream Solution Pvt Ltd",
+      subject: "Thank You for Contacting Us — Universal Stream Solution Pvt Ltd",
       html: `<!DOCTYPE html>
 <html>
 
@@ -132,31 +134,31 @@ export async function POST(request) {
                     <!-- TITLE -->
                     <tr>
                         <td style="font-size:24px; color:#4E4E4E; font-weight:600; padding:24px 40px 15px 40px;">
-                            We’ve Received Your Hiring Request
+                            We’ve Received Your Message
                         </td>
                     </tr>
 
                     <!-- MAIN PARAGRAPH -->
                     <tr>
                         <td style="font-size:15px; color:#333333; padding:8px 40px; line-height:24px;">
-                            Thank you for showing interest in hiring our dedicated developers/team at Universal Stream Solution. Your request has been successfully submitted.
+                            Thank you for contacting Universal Stream Solution. Your message has been successfully submitted, and we truly appreciate your interest in our services.
                         </td>
                     </tr>
                     <tr>
                         <td style="font-size:15px; color:#333333; padding:8px 40px; line-height:24px;">
-                             Our resource allocation team is reviewing your requirements, including skills, project scope, and timelines. You can expect a response within 24–48 hours with available developer options, engagement models, and next steps.
+                             Our team is currently reviewing the details you shared. One of our experts will reach out to you within 24–48 hours to discuss your requirements and guide you through the next steps.
                         </td>
                     </tr>
                     <tr>
                         <td style="font-size:15px; color:#333333; padding:8px 40px; line-height:24px;">
-                            If you’d like to share additional project details—such as tech stack, deadlines, or documentation—feel free to reply to this email anytime.
+                            If you’d like to share any additional information—such as documents, links, or clarifications—feel free to reply to this email anytime.
                         </td>
                     </tr>
                     <tr>
                         <td style="font-size:15px; color:#333333; padding:8px 40px; line-height:24px;">
-                            Learn more about our hiring models: <a href="https://www.universalstreamsolution.com/how-we-help/dedicated-development-services"
+                            You can learn more about us at: <a href="https://www.universalstreamsolution.com/contactus"
                                 target="_blank"
-                                style="color:#03B0EF; text-decoration: underline;"><em>https://www.universalstreamsolution.com/how-we-help/dedicated-development-services</em></a>
+                                style="color:#03B0EF; text-decoration: underline;"><em>https://www.universalstreamsolution.com/contactus</em></a>
                         </td>
                     </tr>
 
@@ -230,7 +232,7 @@ export async function POST(request) {
                     <!-- FOOTER TEXT -->
                     <tr>
                         <td align="center" style="font-size:12px; color:#4E4E4E; line-height:16px; padding:8px 40px;">
-                            © Copyright 2026 Universal Stream Solution Pvt Ltd. All rights reserved.
+                            © Copyright 2025 Universal Stream Solution Pvt Ltd. All rights reserved.
                         </td>
                     </tr>
                     <tr>
@@ -282,41 +284,41 @@ export async function POST(request) {
     await transporter.sendMail(autoReplyOptions);
     console.log(`Auto-reply email sent to ${email}`);
 
-    // Store data in database (no extra fields)
+    // Save to database
     try {
       const insertQuery = `
-        INSERT INTO hire_request_submissions
-        (first_name, last_name, email, contact_no, subject, developer_title, about_project)
-        VALUES (?, ?, ?, ?, ?, ?, ?)
+        INSERT INTO contact_submissions 
+        (first_name, last_name, email, contact_no, subject, description)
+        VALUES (?, ?, ?, ?, ?, ?)
       `;
-
       const insertParams = [
         firstName,
         lastName,
         email,
         contactNo,
-        subject || null,
-        developerTitle || null,
-        aboutProject || null,
+        subject,
+        description,
       ];
-
       await executeQuery(insertQuery, insertParams);
     } catch (dbError) {
-      console.error("Database error (hire_request_submissions):", dbError);
-      // Do not fail the response if DB insert fails
+      console.error("Database error:", dbError);
     }
 
     return new Response(
-      JSON.stringify({ success: true, message: "Your form has been successfully sent" }),
+      JSON.stringify({
+        success: true,
+        message: "Your form has been successfully sent",
+      }),
       { status: 200 }
     );
   } catch (error) {
     console.error("Error sending email:", error);
     return new Response(
-      JSON.stringify({ success: false, message: `Failed to send form: ${error.message}` }),
+      JSON.stringify({
+        success: false,
+        message: `Failed to send form: ${error.message}`,
+      }),
       { status: 500 }
     );
   }
 }
-
-

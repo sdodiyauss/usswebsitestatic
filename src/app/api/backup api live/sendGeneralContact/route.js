@@ -2,6 +2,7 @@ import nodemailer from "nodemailer";
 import dotenv from "dotenv";
 import { executeQuery } from "../../../lib/db";
 
+// Load environment variables from .env file
 dotenv.config();
 
 export async function POST(request) {
@@ -13,7 +14,7 @@ export async function POST(request) {
     const email = formData.get("email");
     const contactNo = formData.get("contactNo");
     const subject = formData.get("subject");
-    const developerTitle = formData.get("developerTitle");
+    const projectStatus = formData.get("projectStatus");
     const aboutProject = formData.get("aboutProject");
     // const captchaToken = formData.get("captchaToken");
 
@@ -42,6 +43,7 @@ export async function POST(request) {
     //   );
     // }
 
+
     const transporter = nodemailer.createTransport({
       host: process.env.MAIL_HOST, // smtp.office365.com
       port: Number(process.env.MAIL_PORT) || 587,
@@ -68,14 +70,14 @@ export async function POST(request) {
     const mailOptions = {
       from: process.env.MAIL_FROM_ADDRESS,
       to: mailToAddresses,
-      subject: "New Hire Request Submission",
+      subject: "Inquiry For General",
       text: `
         First Name: ${firstName}
         Last Name: ${lastName}
         Email: ${email}
         Contact No: ${contactNo}
         Subject: ${subject || "-"}
-        Developer: ${developerTitle || "-"}
+        Project Status: ${projectStatus || "-"}
         About Project: ${aboutProject || "-"}
       `,
     };
@@ -88,8 +90,9 @@ export async function POST(request) {
     const autoReplyOptions = {
       from: process.env.MAIL_FROM_ADDRESS,
       to: email, // user's email
-      subject: "Thank You for Your Hire Request — Universal Stream Solution Pvt Ltd",
-      html: `<!DOCTYPE html>
+      subject: "Thank You for Contacting Us — Universal Stream Solution Pvt Ltd",
+      html: `
+    <!DOCTYPE html>
 <html>
 
 <head>
@@ -132,31 +135,31 @@ export async function POST(request) {
                     <!-- TITLE -->
                     <tr>
                         <td style="font-size:24px; color:#4E4E4E; font-weight:600; padding:24px 40px 15px 40px;">
-                            We’ve Received Your Hiring Request
+                            We’ve Received Your Message
                         </td>
                     </tr>
 
                     <!-- MAIN PARAGRAPH -->
                     <tr>
                         <td style="font-size:15px; color:#333333; padding:8px 40px; line-height:24px;">
-                            Thank you for showing interest in hiring our dedicated developers/team at Universal Stream Solution. Your request has been successfully submitted.
+                            Thank you for contacting Universal Stream Solution. Your message has been successfully received, and we truly appreciate your interest in connecting with us.
                         </td>
                     </tr>
                     <tr>
                         <td style="font-size:15px; color:#333333; padding:8px 40px; line-height:24px;">
-                             Our resource allocation team is reviewing your requirements, including skills, project scope, and timelines. You can expect a response within 24–48 hours with available developer options, engagement models, and next steps.
+                             Our team is currently reviewing the details you shared. One of our experts will reach out to you within 24–48 hours to assist you and provide the next steps.
                         </td>
                     </tr>
                     <tr>
                         <td style="font-size:15px; color:#333333; padding:8px 40px; line-height:24px;">
-                            If you’d like to share additional project details—such as tech stack, deadlines, or documentation—feel free to reply to this email anytime.
+                            If you’d like to share any additional information—such as documents, links, or clarifications—feel free to reply to this email anytime.
                         </td>
                     </tr>
                     <tr>
                         <td style="font-size:15px; color:#333333; padding:8px 40px; line-height:24px;">
-                            Learn more about our hiring models: <a href="https://www.universalstreamsolution.com/how-we-help/dedicated-development-services"
+                            You can learn more about us at: <a href="https://www.universalstreamsolution.com"
                                 target="_blank"
-                                style="color:#03B0EF; text-decoration: underline;"><em>https://www.universalstreamsolution.com/how-we-help/dedicated-development-services</em></a>
+                                style="color:#03B0EF; text-decoration: underline;"><em>www.universalstreamsolution.com</em></a>
                         </td>
                     </tr>
 
@@ -230,7 +233,7 @@ export async function POST(request) {
                     <!-- FOOTER TEXT -->
                     <tr>
                         <td align="center" style="font-size:12px; color:#4E4E4E; line-height:16px; padding:8px 40px;">
-                            © Copyright 2026 Universal Stream Solution Pvt Ltd. All rights reserved.
+                            © Copyright 2025 Universal Stream Solution Pvt Ltd. All rights reserved.
                         </td>
                     </tr>
                     <tr>
@@ -285,8 +288,8 @@ export async function POST(request) {
     // Store data in database (no extra fields)
     try {
       const insertQuery = `
-        INSERT INTO hire_request_submissions
-        (first_name, last_name, email, contact_no, subject, developer_title, about_project)
+        INSERT INTO general_contact_submissions 
+        (first_name, last_name, email, contact_no, subject, project_status, about_project)
         VALUES (?, ?, ?, ?, ?, ?, ?)
       `;
 
@@ -296,13 +299,13 @@ export async function POST(request) {
         email,
         contactNo,
         subject || null,
-        developerTitle || null,
+        projectStatus || null,
         aboutProject || null,
       ];
 
       await executeQuery(insertQuery, insertParams);
     } catch (dbError) {
-      console.error("Database error (hire_request_submissions):", dbError);
+      console.error("Database error (general_contact_submissions):", dbError);
       // Do not fail the response if DB insert fails
     }
 

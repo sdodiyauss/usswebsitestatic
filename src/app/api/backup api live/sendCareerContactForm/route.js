@@ -1,20 +1,47 @@
 import nodemailer from "nodemailer";
 import dotenv from "dotenv";
 import { executeQuery } from "../../../lib/db";
+import fs from "fs/promises";
+import path from "path";
 
+// Load environment variables from .env file
 dotenv.config();
+
+export const runtime = "nodejs";
+
+async function persistUpload(buffer, originalName) {
+  try {
+    const uploadsDir = path.join(process.cwd(), "uploads");
+    await fs.mkdir(uploadsDir, { recursive: true });
+    const timeSafe = Date.now();
+    const safeName = String(originalName || "upload").replace(/[^a-zA-Z0-9._-]/g, "_");
+    const uniqueName = `${timeSafe}_${safeName}`;
+    const destPath = path.join(uploadsDir, uniqueName);
+    await fs.writeFile(destPath, buffer);
+    return {
+      fileName: uniqueName,
+      filePath: `/uploads/${uniqueName}`,
+    };
+  } catch (error) {
+    console.error("Failed to persist uploaded file:", error);
+    return {
+      fileName: String(originalName || "upload"),
+      filePath: null,
+    };
+  }
+}
 
 export async function POST(request) {
   try {
     const formData = await request.formData();
 
+    // Get all inputs from the form
     const firstName = formData.get("firstName");
     const lastName = formData.get("lastName");
     const email = formData.get("email");
     const contactNo = formData.get("contactNo");
-    const subject = formData.get("subject");
-    const developerTitle = formData.get("developerTitle");
-    const aboutProject = formData.get("aboutProject");
+    const designation = formData.get("designation");
+    const experience = formData.get("experience");
     // const captchaToken = formData.get("captchaToken");
 
     // Verify reCAPTCHA token
@@ -42,18 +69,41 @@ export async function POST(request) {
     //   );
     // }
 
+    // Get uploaded file
+    const file = formData.get("file");
+    let attachments = [];
+    let fileName = "";
+    let filePath = "";
+
+    // Handle file attachments if provided
+    if (file && typeof file.arrayBuffer === "function") {
+      const buffer = Buffer.from(await file.arrayBuffer());
+      const originalName = String(file.name || "upload");
+
+      // Persist file to disk (best-effort)
+      const persisted = await persistUpload(buffer, originalName);
+      fileName = persisted.fileName;
+      filePath = persisted.filePath || "";
+
+      // Keep email attachment as before
+      attachments.push({
+        filename: originalName,
+        content: buffer,
+      });
+    }
+
+    // Setup transporter
     const transporter = nodemailer.createTransport({
-      host: process.env.MAIL_HOST, // smtp.office365.com
+      host: process.env.MAIL_HOST, // e.g. smtp.office365.com
       port: Number(process.env.MAIL_PORT) || 587,
-      secure: false, // MUST be false for STARTTLS
+      secure: false,
       auth: {
         user: process.env.MAIL_USERNAME,
         pass: process.env.MAIL_PASSWORD,
       },
       tls: {
-        rejectUnauthorized: true // usually safe for Office365
-        // ciphers: 'SSLv3'   // only add if you still get cipher errors
-      }
+        rejectUnauthorized: true,
+      },
     });
 
     // Parse multiple email addresses from MAIL_TO (comma-separated)
@@ -65,21 +115,24 @@ export async function POST(request) {
         .filter(email => email && email.includes('@')) // Filter out empty strings and validate basic email format
       : [];
 
+    // Email options, including subject and body
     const mailOptions = {
       from: process.env.MAIL_FROM_ADDRESS,
       to: mailToAddresses,
-      subject: "New Hire Request Submission",
+      subject: `Career Inquiry: ${designation}`,
       text: `
         First Name: ${firstName}
         Last Name: ${lastName}
         Email: ${email}
         Contact No: ${contactNo}
-        Subject: ${subject || "-"}
-        Developer: ${developerTitle || "-"}
-        About Project: ${aboutProject || "-"}
+        Designation: ${designation}
+        Experience: ${experience}
+        ${fileName ? `Attached File: ${fileName}` : ''}
       `,
+      attachments,
     };
 
+    // Send the email
     await transporter.sendMail(mailOptions);
 
     // =============================
@@ -88,8 +141,9 @@ export async function POST(request) {
     const autoReplyOptions = {
       from: process.env.MAIL_FROM_ADDRESS,
       to: email, // user's email
-      subject: "Thank You for Your Hire Request — Universal Stream Solution Pvt Ltd",
-      html: `<!DOCTYPE html>
+      subject: "Thank You for Applying — Universal Stream Solution Pvt Ltd",
+      html: `
+    <!DOCTYPE html>
 <html>
 
 <head>
@@ -132,31 +186,31 @@ export async function POST(request) {
                     <!-- TITLE -->
                     <tr>
                         <td style="font-size:24px; color:#4E4E4E; font-weight:600; padding:24px 40px 15px 40px;">
-                            We’ve Received Your Hiring Request
+                            We've Received Your Message
                         </td>
                     </tr>
 
                     <!-- MAIN PARAGRAPH -->
                     <tr>
                         <td style="font-size:15px; color:#333333; padding:8px 40px; line-height:24px;">
-                            Thank you for showing interest in hiring our dedicated developers/team at Universal Stream Solution. Your request has been successfully submitted.
+                            Thank you for applying to Universal Stream Solution. Your application has been successfully submitted, and we truly appreciate your interest in joining our team.
                         </td>
                     </tr>
                     <tr>
                         <td style="font-size:15px; color:#333333; padding:8px 40px; line-height:24px;">
-                             Our resource allocation team is reviewing your requirements, including skills, project scope, and timelines. You can expect a response within 24–48 hours with available developer options, engagement models, and next steps.
+                             Our HR team is currently reviewing the details you shared. If your experience aligns with our open positions, one of our recruiters will contact you within 24-48 hours to discuss the next steps.
                         </td>
                     </tr>
                     <tr>
                         <td style="font-size:15px; color:#333333; padding:8px 40px; line-height:24px;">
-                            If you’d like to share additional project details—such as tech stack, deadlines, or documentation—feel free to reply to this email anytime.
+                            If you have any additional information to share, feel free to reach out to our support team at sales@universalstreamsolution.com
                         </td>
                     </tr>
                     <tr>
                         <td style="font-size:15px; color:#333333; padding:8px 40px; line-height:24px;">
-                            Learn more about our hiring models: <a href="https://www.universalstreamsolution.com/how-we-help/dedicated-development-services"
+                            Explore more opportunities at: <a href="https://www.universalstreamsolution.com/career"
                                 target="_blank"
-                                style="color:#03B0EF; text-decoration: underline;"><em>https://www.universalstreamsolution.com/how-we-help/dedicated-development-services</em></a>
+                                style="color:#03B0EF; text-decoration: underline;"><em>https://www.universalstreamsolution.com/career</em></a>
                         </td>
                     </tr>
 
@@ -230,7 +284,7 @@ export async function POST(request) {
                     <!-- FOOTER TEXT -->
                     <tr>
                         <td align="center" style="font-size:12px; color:#4E4E4E; line-height:16px; padding:8px 40px;">
-                            © Copyright 2026 Universal Stream Solution Pvt Ltd. All rights reserved.
+                            © Copyright 2025 Universal Stream Solution Pvt Ltd. All rights reserved.
                         </td>
                     </tr>
                     <tr>
@@ -282,12 +336,12 @@ export async function POST(request) {
     await transporter.sendMail(autoReplyOptions);
     console.log(`Auto-reply email sent to ${email}`);
 
-    // Store data in database (no extra fields)
+    // Store data in database
     try {
       const insertQuery = `
-        INSERT INTO hire_request_submissions
-        (first_name, last_name, email, contact_no, subject, developer_title, about_project)
-        VALUES (?, ?, ?, ?, ?, ?, ?)
+        INSERT INTO contact_career_submissions 
+        (first_name, last_name, email, contact_no, designation, experience, file_name, file_path)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
       `;
 
       const insertParams = [
@@ -295,28 +349,37 @@ export async function POST(request) {
         lastName,
         email,
         contactNo,
-        subject || null,
-        developerTitle || null,
-        aboutProject || null,
+        designation,
+        experience,
+        fileName || null,
+        filePath || null
       ];
 
       await executeQuery(insertQuery, insertParams);
+      console.log('Data saved to database successfully');
     } catch (dbError) {
-      console.error("Database error (hire_request_submissions):", dbError);
-      // Do not fail the response if DB insert fails
+      console.error('Database error:', dbError);
     }
 
+    // Return a successful response
     return new Response(
-      JSON.stringify({ success: true, message: "Your form has been successfully sent" }),
+      JSON.stringify({
+        success: true,
+        message: "Your form has been successfully sent",
+      }),
       { status: 200 }
     );
   } catch (error) {
+    // Log full error for debugging
     console.error("Error sending email:", error);
+
+    // Return a failed response with the error message
     return new Response(
-      JSON.stringify({ success: false, message: `Failed to send form: ${error.message}` }),
+      JSON.stringify({
+        success: false,
+        message: `Failed to send form: ${error.message}`,
+      }),
       { status: 500 }
     );
   }
 }
-
-

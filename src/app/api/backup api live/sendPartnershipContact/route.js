@@ -12,9 +12,9 @@ export async function POST(request) {
     const lastName = formData.get("lastName");
     const email = formData.get("email");
     const contactNo = formData.get("contactNo");
-    const subject = formData.get("subject");
-    const developerTitle = formData.get("developerTitle");
-    const aboutProject = formData.get("aboutProject");
+    const organization = formData.get("organization");
+    const typeOfPartnership = formData.get("typeOfPartnership");
+    const message = formData.get("message");
     // const captchaToken = formData.get("captchaToken");
 
     // Verify reCAPTCHA token
@@ -68,19 +68,20 @@ export async function POST(request) {
     const mailOptions = {
       from: process.env.MAIL_FROM_ADDRESS,
       to: mailToAddresses,
-      subject: "New Hire Request Submission",
+      subject: "New Partnership Contact Submission",
       text: `
         First Name: ${firstName}
         Last Name: ${lastName}
         Email: ${email}
         Contact No: ${contactNo}
-        Subject: ${subject || "-"}
-        Developer: ${developerTitle || "-"}
-        About Project: ${aboutProject || "-"}
+        Organization: ${organization}
+        Type of Partnership: ${typeOfPartnership}
+        Message: ${message || "-"}
       `,
     };
 
     await transporter.sendMail(mailOptions);
+
 
     // =============================
     // AUTO-REPLY EMAIL TO USER
@@ -88,7 +89,7 @@ export async function POST(request) {
     const autoReplyOptions = {
       from: process.env.MAIL_FROM_ADDRESS,
       to: email, // user's email
-      subject: "Thank You for Your Hire Request — Universal Stream Solution Pvt Ltd",
+      subject: "Thank You for Your Partnership Request — Universal Stream Solution Pvt Ltd",
       html: `<!DOCTYPE html>
 <html>
 
@@ -132,31 +133,31 @@ export async function POST(request) {
                     <!-- TITLE -->
                     <tr>
                         <td style="font-size:24px; color:#4E4E4E; font-weight:600; padding:24px 40px 15px 40px;">
-                            We’ve Received Your Hiring Request
+                            Your Partnership Inquiry Is Received
                         </td>
                     </tr>
 
                     <!-- MAIN PARAGRAPH -->
                     <tr>
                         <td style="font-size:15px; color:#333333; padding:8px 40px; line-height:24px;">
-                            Thank you for showing interest in hiring our dedicated developers/team at Universal Stream Solution. Your request has been successfully submitted.
+                            Thank you for your interest in partnering with Universal Stream Solution. Your inquiry has been successfully submitted, and we appreciate your willingness to explore collaborative opportunities with us.
                         </td>
                     </tr>
                     <tr>
                         <td style="font-size:15px; color:#333333; padding:8px 40px; line-height:24px;">
-                             Our resource allocation team is reviewing your requirements, including skills, project scope, and timelines. You can expect a response within 24–48 hours with available developer options, engagement models, and next steps.
+                             Our partnership team is currently reviewing your details. You can expect to hear from us within 24–48 hours with next steps or any additional questions we may need to proceed.
                         </td>
                     </tr>
                     <tr>
                         <td style="font-size:15px; color:#333333; padding:8px 40px; line-height:24px;">
-                            If you’d like to share additional project details—such as tech stack, deadlines, or documentation—feel free to reply to this email anytime.
+                            If you’d like to share more details—such as your company profile, partnership goals, or collaboration model—feel free to reply to this email anytime.
                         </td>
                     </tr>
                     <tr>
                         <td style="font-size:15px; color:#333333; padding:8px 40px; line-height:24px;">
-                            Learn more about our hiring models: <a href="https://www.universalstreamsolution.com/how-we-help/dedicated-development-services"
+                            Explore partnership opportunities: <a href="https://www.universalstreamsolution.com/partnership-program"
                                 target="_blank"
-                                style="color:#03B0EF; text-decoration: underline;"><em>https://www.universalstreamsolution.com/how-we-help/dedicated-development-services</em></a>
+                                style="color:#03B0EF; text-decoration: underline;"><em>https://www.universalstreamsolution.com/partnership-program</em></a>
                         </td>
                     </tr>
 
@@ -230,7 +231,7 @@ export async function POST(request) {
                     <!-- FOOTER TEXT -->
                     <tr>
                         <td align="center" style="font-size:12px; color:#4E4E4E; line-height:16px; padding:8px 40px;">
-                            © Copyright 2026 Universal Stream Solution Pvt Ltd. All rights reserved.
+                            © Copyright 2025 Universal Stream Solution Pvt Ltd. All rights reserved.
                         </td>
                     </tr>
                     <tr>
@@ -282,11 +283,11 @@ export async function POST(request) {
     await transporter.sendMail(autoReplyOptions);
     console.log(`Auto-reply email sent to ${email}`);
 
-    // Store data in database (no extra fields)
+    // Store data in database
     try {
       const insertQuery = `
-        INSERT INTO hire_request_submissions
-        (first_name, last_name, email, contact_no, subject, developer_title, about_project)
+        INSERT INTO partnership_contact_submissions
+        (first_name, last_name, email, contact_no, organization, type_of_partnership, message)
         VALUES (?, ?, ?, ?, ?, ?, ?)
       `;
 
@@ -295,14 +296,14 @@ export async function POST(request) {
         lastName,
         email,
         contactNo,
-        subject || null,
-        developerTitle || null,
-        aboutProject || null,
+        organization,
+        typeOfPartnership,
+        message || null,
       ];
 
       await executeQuery(insertQuery, insertParams);
     } catch (dbError) {
-      console.error("Database error (hire_request_submissions):", dbError);
+      console.error("Database error (partnership_contact_submissions):", dbError);
       // Do not fail the response if DB insert fails
     }
 
