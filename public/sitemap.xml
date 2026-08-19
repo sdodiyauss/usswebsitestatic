@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
   <url>
     <loc>https://www.universalstreamsolution.com/</loc>
@@ -166,6 +168,53 @@
     <priority>0.8</priority>
   </url>
 
+
+  <!-- Other Pages -->
+  <url>
+    <loc>https://www.universalstreamsolution.com/life</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.universalstreamsolution.com/career</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.universalstreamsolution.com/casestudies</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.universalstreamsolution.com/casestudies/rxvalet-case-study</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.universalstreamsolution.com/casestudies/pb-case-study</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.universalstreamsolution.com/casestudies/cosmo-chem-case-study</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://www.universalstreamsolution.com/contactus</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+  </url>
   <!-- Blogs -->
   <url>
     <loc>https://www.universalstreamsolution.com/blog/top-web-app-trends-2025</loc>
@@ -229,62 +278,302 @@
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Other Pages -->
   <url>
-    <loc>https://www.universalstreamsolution.com/life-at-uss</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://www.universalstreamsolution.com/career</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://www.universalstreamsolution.com/casestudies</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://www.universalstreamsolution.com/contactus</loc>
+    <loc>https://www.universalstreamsolution.com/blog/future-ready-technology-infrastructure</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://www.universalstreamsolution.com/partnership-program</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://www.universalstreamsolution.com/cookie-policy</loc>
+    <loc>https://www.universalstreamsolution.com/blog/role-of-online-pharmacies-in-modern-healthcare</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://www.universalstreamsolution.com/disclaimer</loc>
+    <loc>https://www.universalstreamsolution.com/blog/minimal-apis-vs-traditional-apis-aspnet-core</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://www.universalstreamsolution.com/security-risk</loc>
+    <loc>
+      https://www.universalstreamsolution.com/blog/future-ai-healthcare-opportunities-challenges-innovations</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.8</priority>
   </url>
-
+  <url>
+    <loc>https://www.universalstreamsolution.com/blog/mhealth-apps-empowering-patients-doctors</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.universalstreamsolution.com/blog/erp-systems-real-estate-development-2025</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.universalstreamsolution.com/blog/minimalist-vs-maximalist-branding</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.universalstreamsolution.com/blog/digital-banking-property-financing</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.universalstreamsolution.com/blog/ai-powered-custom-software-solutions</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>
+      https://www.universalstreamsolution.com/blog/how-small-businesses-survive-without-big-budgets</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.universalstreamsolution.com/blog/ehr-emr-systems-patient-record-management</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.universalstreamsolution.com/blog/it-solutions-revolutionizing-travel-industry</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.universalstreamsolution.com/blog/real-estate-crm-software-boosts-sales</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.universalstreamsolution.com/blog/ui-development-guide-basics-advanced</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.universalstreamsolution.com/blog/modern-backend-development-cloud-computing</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.universalstreamsolution.com/blog/future-of-ai-research-trends-predictions</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>
+      https://www.universalstreamsolution.com/blog/role-of-electronic-health-records-ehr-in-modern-healthcare</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.universalstreamsolution.com/blog/mastering-vuejs-3-modern-web-development</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>
+      https://www.universalstreamsolution.com/blog/dark-mode-design-ui-ux-developers-digital-solutions-provider</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>
+      https://www.universalstreamsolution.com/blog/digital-transformation-airlines-faster-check-ins</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>
+      https://www.universalstreamsolution.com/blog/mobile-app-services-real-estate-crm-client-experience</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.universalstreamsolution.com/blog/android-vs-ios-2026-ecosystem-comparison</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.universalstreamsolution.com/blog/sales-vs-marketing-drives-revenue</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>
+      https://www.universalstreamsolution.com/blog/essential-tools-modern-ui-ux-designer-should-master</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.universalstreamsolution.com/blog/future-of-e-prescriptions-in-pharmacies</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>
+      https://www.universalstreamsolution.com/blog/save-money-on-expensive-medications-online-prescription-assistance</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>
+      https://www.universalstreamsolution.com/blog/custom-vs-off-the-shelf-software-for-growing-businesses</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.universalstreamsolution.com/blog/buy-vs-build-software-guide</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.universalstreamsolution.com/blog/essential-skills-industry-experts-2026</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.universalstreamsolution.com/blog/swiftui-modern-apple-app-development-2026</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>
+      https://www.universalstreamsolution.com/blog/ehr-interoperability-challenges-solutions-healthcare</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.universalstreamsolution.com/blog/frontend-to-backend-full-stack-development</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>
+      https://www.universalstreamsolution.com/blog/transparency-vs-overexposure-organizational-culture-business-growth</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.universalstreamsolution.com/blog/net-maui-enterprise-app-development</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.universalstreamsolution.com/blog/ui-ux-immersive-experience-trends</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>
+      https://www.universalstreamsolution.com/blog/from-patient-portals-to-digital-front-door-future-of-patient-experience</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.universalstreamsolution.com/blog/product-design-user-experience-revenue</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>
+      https://www.universalstreamsolution.com/blog/how-fintech-is-disrupting-traditional-banking-fintech-software-consultation</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>
+      https://www.universalstreamsolution.com/blog/why-enterprises-are-switching-to-react-native-for-mobile-apps</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.universalstreamsolution.com/blog/ui-design-to-frontend-development-challenges</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>
+      https://www.universalstreamsolution.com/blog/why-dotnet-8-is-a-game-changer-for-enterprise-applications</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.universalstreamsolution.com/blog/nodejs-in-2026-trends-changes-skills</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.universalstreamsolution.com/blog/ai-fraud-detection-in-fintecFFFFFh</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>
+      https://www.universalstreamsolution.com/blog/how-ai-search-is-changing-traditional-seo-in-2026</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.universalstreamsolution.com/blog/rebrand-or-refresh-your-business</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.universalstreamsolution.com/blog/top-career-skills-companies-will-value-in-2026</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.universalstreamsolution.com/blog/top-career-skills-companies-will-value-in-2026</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
