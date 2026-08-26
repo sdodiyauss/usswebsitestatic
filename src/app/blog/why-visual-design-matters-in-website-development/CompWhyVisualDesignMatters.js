@@ -825,7 +825,7 @@ const CompWhyVisualDesignMatters = () => {
                                     Visual design and SEO may seem like separate areas, but they can influence each other.
                                     <br />
                                     <br />
-                                    Search engines primarily need to understand the content and structure of a website, while users need to understand and interact with that content. This is why <strong>how UX design impacts revenue</strong> is important when creating a website that supports both user needs and business goals.
+                                    Search engines primarily need to understand the content and structure of a website, while users need to understand and interact with that content. This is why <Link href="https://www.universalstreamsolution.com/blog/product-design-user-experience-revenue">how UX design impacts revenue</Link> is important when creating a website that supports both user needs and business goals.
                                     <br />
                                     <br />
                                     Good design can support SEO by improving user experience.
