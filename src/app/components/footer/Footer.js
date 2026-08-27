@@ -130,14 +130,14 @@ const Footer = () => {
                       <Typography variant="body1">
                         712-713-714, Shaligram Arcade, Ambali T Junction, Vakil Bridge, Bopal, Ahmedabad, Gujarat - 380058
                       </Typography>
-                      <Link href="tel:+919638225579" sx={{ textDecoration: "none" }}>
+                      <Link href="tel:+919638225549" sx={{ textDecoration: "none" }}>
                         <Typography variant="h5">
                           <Image
                             src={IconPhone}
                             alt="Phone"
                             className="icon-call"
                           />{" "}
-                          +91 9638225579
+                          +91 9638225549
                         </Typography>
                       </Link>
                     </Box>
