@@ -115,29 +115,29 @@ export const jobData = [
     //         "Proficiency in MS Office tools (Word, Excel, PowerPoint).",
     //     ]
     // },
-    {
-        title: "React, NodeJS & NextJS Developer",
-        logo: MernstackDeveloperIcon,
-        alt: "React, NodeJS & NextJS",
-        position: "01 Position",
-        experience: "Minimum 1 Year",
-        location: "Ahmedabad",
-        aboutRole: "We are looking for a junior to mid-level developer with at least 1 year of hands-on experience in modern JavaScript frameworks to support ongoing development projects.",
-        responsibilities: [
-            "Build UI components using React.js",
-            "Assist in backend development using Node.js",
-            "Work with Next.js for basic implementations",
-            "Fix bugs and support feature enhancements",
-            "Collaborate with senior developers and designers"
-        ],
-        requiredSkills: [
-            "Minimum 1 year experience in React and Node.js",
-            "Basic understanding of Next.js",
-            "Knowledge of JavaScript, APIs, and database basics",
-            "Familiarity with Git",
-            "Willingness to learn and grow"
-        ]
-    },
+    // {
+    //     title: "React, NodeJS & NextJS Developer",
+    //     logo: MernstackDeveloperIcon,
+    //     alt: "React, NodeJS & NextJS",
+    //     position: "01 Position",
+    //     experience: "Minimum 1 Year",
+    //     location: "Ahmedabad",
+    //     aboutRole: "We are looking for a junior to mid-level developer with at least 1 year of hands-on experience in modern JavaScript frameworks to support ongoing development projects.",
+    //     responsibilities: [
+    //         "Build UI components using React.js",
+    //         "Assist in backend development using Node.js",
+    //         "Work with Next.js for basic implementations",
+    //         "Fix bugs and support feature enhancements",
+    //         "Collaborate with senior developers and designers"
+    //     ],
+    //     requiredSkills: [
+    //         "Minimum 1 year experience in React and Node.js",
+    //         "Basic understanding of Next.js",
+    //         "Knowledge of JavaScript, APIs, and database basics",
+    //         "Familiarity with Git",
+    //         "Willingness to learn and grow"
+    //     ]
+    // },
     // {
     //     title: "Software Tester",
     //     logo: SoftwareTesterIcon,
