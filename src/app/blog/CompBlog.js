@@ -92,6 +92,7 @@ import Blog59 from "@/blog-ai-prescription-cost-savings.webp";
 import Blog60 from "@/blog-ai-is-transforming-pap-healthcare.webp";
 import Blog61 from "@/blog-custom-wordpress-development-vs-ready-made-themes.webp";
 import Blog62 from "@/blog-laravel-vs-core-php.webp";
+import Blog63 from "@/blog-expressjs-for-nodejs.webp";
 
 import CircleType from "circletype";
 import minitsCircle from "~/minitsCircle.json";
@@ -292,6 +293,7 @@ const CompBlog = () => {
     { id: "p64", title: "How AI Is Transforming Prescription Assistance Portals in Healthcare", excerpt: "Prescription assistance portals have an important part of the healthcare experience, It's portals used to be simple digital forms is helping patients understand medication costs, find financial assistance, complete details, and track the status of support programs. However, many of these processes still...", author: "Jignesh Vaghasiya", date: "September 10th, 2026", readTime: "6 min read", category: "AI", image: Blog60, avatarImage: "/images/written-by-jignesh.webp", featured: false, url: "/blog/ai-is-transforming-prescription-assistance-portals" },
     { id: "p65", title: "Custom WordPress Development vs. Ready-Made Themes: Which Is Better?", excerpt: "Choosing custom WordPress theme development and ready-made website templates is one of the biggest, important decisions a business makes when building its online presence. This guide breaks down the real differences in cost, performance, design flexibility, and long-term value, so you can decide which path fits your goals...", author: "Sandeep Dodiya", date: "September 14th, 2026", readTime: "6 min read", category: "Web Development", image: Blog61, avatarImage: "/images/written-by-sandip.webp", featured: false, url: "/blog/custom-wordpress-development-vs-ready-made-themes" },
     { id: "p66", title: "Laravel vs Core PHP: Which One Should You Choose?", excerpt: "Starting a new web project, setting up the right technology can have a major impact on project development speed, scalability, security, and maintenance. Two options in PHP web development are Laravel and Core PHP. While both can be used to...", author: "Hitesh Khatwani", date: "September 18th, 2026", readTime: "6 min read", category: "Web Development", image: Blog62, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/laravel-vs-core-which-one-should-you-choose" },
+    { id: "p67", title: "Why Express.js Is the Preferred Framework for Node.js Development", excerpt: "When an organisation plans a new web application, the backend framework can have a lasting impact on development, maintenance, integrations, and future growth. For organisations using Node.js, Express.js is one of the most widely considered options because it offers a simple foundation without placing unnecessary restrictions...", author: "Arzeb Mansuri", date: "September 22nd, 2026", readTime: "6 min read", category: "Web Development", image: Blog63, avatarImage: "/images/blog-avtar-arzeb.webp", featured: false, url: "/blog/expressjs-is-the-preferred-framework-for-nodejs" },
   ];
 
 
