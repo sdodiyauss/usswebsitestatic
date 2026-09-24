@@ -15,6 +15,7 @@ import {
     Card,
     CardContent,
     CardMedia,
+    Button 
 } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
@@ -512,8 +513,13 @@ const CompExpressForNodeJS = () => {
                                     <br />
                                     Express.js should not be selected simply because it is popular. The right technology depends on the application's functionality, expected workload, security requirements, integrations, development team, and long-term maintenance plans.
                                     <br />
-                                    <Link href="https://calendly.com/jvaghasiya-universalstreamsolution/30min"><strong>Book a Free Consulting Call</strong></Link>
+                                    {/* <Link href="https://calendly.com/jvaghasiya-universalstreamsolution/30min"><strong>Book a Free Consulting Call</strong></Link> */}
                                 </Typography>
+                                    <Box className="heading-content" sx={{ mt: 2, mb: 2 }}>
+                                        <Button variant="contained" className="main-primary-btn btn-small" onClick={() => { window.location.href = "https://calendly.com/jvaghasiya-universalstreamsolution/30min"; }}>
+                                            Book a Free Consulting Call
+                                        </Button>
+                                    </Box>
                             </Box>
 
                             {/* Section 6 */}

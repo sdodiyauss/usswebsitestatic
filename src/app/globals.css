@@ -504,6 +504,15 @@ a {
   width: 100%;
 }
 
+.heading-content .main-primary-btn.btn-small{
+  font-size: 0.875rem;
+  padding: 3px 15px;
+}
+
+.heading-content .main-primary-btn.btn-small::after{
+  content: none;
+}
+
 .heading-content .main-primary-btn {
   background: #03b0ef;
   border: 1px solid #43cdff;
