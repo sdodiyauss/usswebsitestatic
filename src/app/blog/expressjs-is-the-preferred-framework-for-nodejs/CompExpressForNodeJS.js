@@ -429,11 +429,11 @@ const CompExpressForNodeJS = () => {
                                     After the request passes through the necessary layers, the application sends a response back to the client. This could be data for a web interface, information requested by a mobile application, or a response consumed by another service.
                                     <br />
                                     <br />
-                                    Simple Express.js architecture flow:
+                                    {/* Simple Express.js architecture flow:
                                     <br />
                                     <strong>“Add an image to this location, pasting its link into the "Blog Other Image" cell in the sheet.”</strong>
                                     <br />
-                                    <br />
+                                    <br /> */}
                                     <strong>Client → Routes → Middleware → Controllers → Services → Data Access → Database → Response</strong>
                                     <br />
                                     <br />
@@ -512,7 +512,7 @@ const CompExpressForNodeJS = () => {
                                     <br />
                                     Express.js should not be selected simply because it is popular. The right technology depends on the application's functionality, expected workload, security requirements, integrations, development team, and long-term maintenance plans.
                                     <br />
-                                    CTA Button:  <Link href="https://calendly.com/jvaghasiya-universalstreamsolution/30min">Book a Free Consulting Call</Link>
+                                    <Link href="https://calendly.com/jvaghasiya-universalstreamsolution/30min"><strong>Book a Free Consulting Call</strong></Link>
                                 </Typography>
                             </Box>
 
