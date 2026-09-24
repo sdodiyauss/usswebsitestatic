@@ -24,6 +24,7 @@ import MicrosoftDOTNETIcon from "@/microsoftdotnet.svg?url";
 import hrIcon from "@/hr.svg?url";
 import MernstackDeveloperIcon from "@/mernstackdeveloper.png";
 import SoftwareTesterIcon from "@/softwaretester.png";
+import PHPIcon from "@/php.svg?url";
 
 
 import HalfBlue from "@/half-blue-circle.svg?url";
@@ -90,6 +91,32 @@ export const jobData = [
             "Good problem-solving and debugging skills",
         ]
     },
+    {
+        title: "PHP Laravel Intern",
+        logo: PHPIcon,
+        alt: "PHP Laravel",
+        position: "01 Position",
+        experience: "Fresher / Recently Passed Out",
+        location: "Ahmedabad",
+        aboutRole: "We are looking for a motivated and enthusiastic PHP Laravel Intern to join our development team. This opportunity is ideal for recently graduated candidates who have basic knowledge of PHP and Laravel and are looking to start their career in web development.",
+        responsibilities: [
+            "Assist in developing and maintaining web applications using PHP and Laravel.",
+            "Write clean and basic PHP/Laravel code under the guidance of senior developers",
+            "Work with MySQL databases and perform basic database operations",
+            "Fix bugs and assist in troubleshooting application issues",
+            "Learn and follow development best practices and coding standards",
+            "Work collaboratively with the development team on assigned tasks"
+        ],
+        requiredSkills: [
+            "Basic knowledge of PHP",
+            "Basic understanding of Laravel Framework",
+            "Basic knowledge of MySQL and database concepts",
+            "Understanding of HTML, CSS, and JavaScript will be an advantage",
+            "Good logical and problem-solving skills",
+            "Willingness to learn and grow as a developer",
+            "Good communication and teamwork skills"
+        ]
+    },
     // {
     //     title: "HR Executive",
     //     logo: hrIcon,
@@ -115,29 +142,29 @@ export const jobData = [
     //         "Proficiency in MS Office tools (Word, Excel, PowerPoint).",
     //     ]
     // },
-    {
-        title: "React, NodeJS & NextJS Developer",
-        logo: MernstackDeveloperIcon,
-        alt: "React, NodeJS & NextJS",
-        position: "01 Position",
-        experience: "Minimum 1 Year",
-        location: "Ahmedabad",
-        aboutRole: "We are looking for a junior to mid-level developer with at least 1 year of hands-on experience in modern JavaScript frameworks to support ongoing development projects.",
-        responsibilities: [
-            "Build UI components using React.js",
-            "Assist in backend development using Node.js",
-            "Work with Next.js for basic implementations",
-            "Fix bugs and support feature enhancements",
-            "Collaborate with senior developers and designers"
-        ],
-        requiredSkills: [
-            "Minimum 1 year experience in React and Node.js",
-            "Basic understanding of Next.js",
-            "Knowledge of JavaScript, APIs, and database basics",
-            "Familiarity with Git",
-            "Willingness to learn and grow"
-        ]
-    },
+    // {
+    //     title: "React, NodeJS & NextJS Developer",
+    //     logo: MernstackDeveloperIcon,
+    //     alt: "React, NodeJS & NextJS",
+    //     position: "01 Position",
+    //     experience: "Minimum 1 Year",
+    //     location: "Ahmedabad",
+    //     aboutRole: "We are looking for a junior to mid-level developer with at least 1 year of hands-on experience in modern JavaScript frameworks to support ongoing development projects.",
+    //     responsibilities: [
+    //         "Build UI components using React.js",
+    //         "Assist in backend development using Node.js",
+    //         "Work with Next.js for basic implementations",
+    //         "Fix bugs and support feature enhancements",
+    //         "Collaborate with senior developers and designers"
+    //     ],
+    //     requiredSkills: [
+    //         "Minimum 1 year experience in React and Node.js",
+    //         "Basic understanding of Next.js",
+    //         "Knowledge of JavaScript, APIs, and database basics",
+    //         "Familiarity with Git",
+    //         "Willingness to learn and grow"
+    //     ]
+    // },
     // {
     //     title: "Software Tester",
     //     logo: SoftwareTesterIcon,

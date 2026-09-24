@@ -232,7 +232,7 @@ export async function POST(request) {
                     <!-- FOOTER TEXT -->
                     <tr>
                         <td align="center" style="font-size:12px; color:#4E4E4E; line-height:16px; padding:8px 40px;">
-                            © Copyright 2025 Universal Stream Solution Pvt Ltd. All rights reserved.
+                            © Copyright 2026 Universal Stream Solution Pvt Ltd. All rights reserved.
                         </td>
                     </tr>
                     <tr>
