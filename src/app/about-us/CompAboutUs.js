@@ -40,6 +40,11 @@ import USSgallery9 from "@/uss-gallery9.webp";
 import USSgallery10 from "@/uss-gallery10.webp";
 import USSgallery11 from "@/uss-gallery11.webp";
 import USSgallery12 from "@/uss-gallery12.webp";
+import USSgallery13 from "@/uss-gallery13.webp";
+import USSgallery14 from "@/uss-gallery14.webp";
+import USSgallery15 from "@/uss-gallery15.webp";
+import USSgallery16 from "@/uss-gallery16.webp";
+import USSgallery17 from "@/uss-gallery17.webp";
 import Metadata from "~/meta/Metadata";
 import { motion, AnimatePresence } from "framer-motion";
 import Ussjourneysection from "~/ussjourney/Ussjourneysection";
@@ -90,6 +95,9 @@ const USSGalleryimages1 = [
   USSgallery4,
   USSgallery5,
   USSgallery6,
+  USSgallery13,
+  USSgallery14,
+  USSgallery17,
 ];
 const USSGalleryimages2 = [
   USSgallery7,
@@ -97,7 +105,8 @@ const USSGalleryimages2 = [
   USSgallery9,
   USSgallery10,
   USSgallery11,
-  USSgallery12,
+  USSgallery15,
+  USSgallery16,
 ];
 
 const values = [
