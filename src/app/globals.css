@@ -2831,7 +2831,7 @@ text {
 
 .marquee__group img {
   width: auto;
-  height: auto;
+  height: 500px;
 }
 
 .marquee-reverse .marquee__group {
@@ -9426,6 +9426,10 @@ text {
   .faq-accordion .faq-question h6 {
     font-size: 1.275rem;
     line-height: 1.4;
+  }
+  
+  .marquee__group img {
+    height: 250px;
   }
 }
 
