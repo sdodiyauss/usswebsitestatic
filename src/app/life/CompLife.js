@@ -179,6 +179,40 @@ const tripImages = {
     "/images/openingdoors6.webp",
     "/images/openingdoors7.webp",
   ],
+  client: [
+    "/images/client-img-1.webp",
+    "/images/client-img-2.webp",
+    "/images/client-img-3.webp",
+    "/images/client-img-4.webp",
+    "/images/client-img-5.webp",
+    "/images/client-img-6.webp",
+  ],
+  holi: [
+    "/images/holi-img-1.webp",
+    "/images/holi-img-2.webp",
+    "/images/holi-img-3.webp",
+    "/images/holi-img-4.webp",
+    "/images/holi-img-5.webp",
+    "/images/holi-img-6.webp",
+    "/images/holi-img-7.webp",
+  ],
+  ootytrip: [
+    "/images/ooty-img-1.webp",
+    "/images/ooty-img-2.webp",
+    "/images/ooty-img-3.webp",
+    "/images/ooty-img-4.webp",
+    "/images/ooty-img-5.webp",
+    "/images/ooty-img-6.webp",
+    "/images/ooty-img-7.webp",
+    "/images/ooty-img-8.webp",
+    "/images/ooty-img-9.webp",
+  ],
+  sandwichpotluck: [
+    "/images/sandwich-potluck-img-1.webp",
+    "/images/sandwich-potluck-img-2.webp",
+    "/images/sandwich-potluck-img-3.webp",
+    "/images/sandwich-potluck-img-4.webp",
+  ],
 };
 
 // Custom titles for each trip group
@@ -189,6 +223,10 @@ const tripTitles = {
   funactivity: "Play, Laugh, Celebrate!",
   udaipurtrip: "Jaipur Diaries: Adventure Awaits", 
   openingdoors: "Opening Doors to Success This Diwali",
+  client: "Creating Value Through Connection",
+  holi: "Rang Reloaded 2026",
+  ootytrip: "Ctrl + Alt + Ooty Memories",
+  sandwichpotluck: "Sandwich Potluck",
 };
 
 const fadeInUp = {
