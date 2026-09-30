@@ -107,6 +107,7 @@ const USSGalleryimages2 = [
   USSgallery11,
   USSgallery15,
   USSgallery16,
+  USSgallery12,
 ];
 
 const values = [

@@ -7783,6 +7783,11 @@ text {
   .faq-accordion .faq-answer p {
     font-size: 1rem;
   }
+
+  .about-banner-wwa {
+    bottom: -170px;
+  }
+
 }
 
 @media (max-width: 1400px) {
@@ -8522,7 +8527,7 @@ text {
   }
 
   .about-banner-wwa {
-    bottom: -100px;
+    bottom: -125px;
     right: 15px;
   }
 
