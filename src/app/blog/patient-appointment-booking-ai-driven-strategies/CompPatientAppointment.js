@@ -249,7 +249,7 @@ const CompPatientAppointment = () => {
                                                 className="blog-meta-icon"
                                             />
                                             <Typography variant="caption" className="blog-card-date">
-                                                5th September, 2026
+                                                5th October, 2026
                                             </Typography>
                                         </Box>
 
