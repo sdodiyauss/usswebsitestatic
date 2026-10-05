@@ -48,11 +48,15 @@ const Contactcareer = ({ selectedJobTitle = null }) => {
   });
   const fileInputId = useId();
   const fileInputRef = useRef(null);
+  const isIntern = (Designation || "").toLowerCase().includes("intern");
 
   // Set designation when selectedJobTitle prop changes
   useEffect(() => {
     if (selectedJobTitle) {
       setDesignation(selectedJobTitle);
+      if (selectedJobTitle.toLowerCase().includes("intern")) {
+        setExperience("0 Year");
+      }
     }
   }, [selectedJobTitle]);
 
@@ -109,13 +113,14 @@ const Contactcareer = ({ selectedJobTitle = null }) => {
   };
 
   const validateAll = () => {
+    const experienceValue = isIntern ? "0 Year" : Experience;
     const newErrors = {
       FirstName: validate("FirstName", FirstName),
       LastName: validate("LastName", LastName),
       Email: validate("Email", Email),
       ContactNo: validate("ContactNo", ContactNo),
       Designation: validate("Designation", Designation),
-      Experience: validate("Experience", Experience),
+      Experience: validate("Experience", experienceValue),
       File: validate("File", File),
       // captcha: validate("captcha", captchaToken),
     };
@@ -138,7 +143,7 @@ const Contactcareer = ({ selectedJobTitle = null }) => {
     formData.append("contactNo", ContactNo);
     formData.append("email", Email);
     formData.append("designation", Designation);
-    formData.append("experience", Experience);
+    formData.append("experience", isIntern ? "0 Year" : Experience);
     // formData.append("captchaToken", captchaToken);
     if (File) formData.append("file", File);
 
@@ -306,8 +311,12 @@ const Contactcareer = ({ selectedJobTitle = null }) => {
                     IconComponent={KeyboardArrowDownIcon}
                     value={Designation}
                     onChange={(e) => {
-                      setDesignation(e.target.value);
-                      setErrors((prev) => ({ ...prev, Designation: validate("Designation", e.target.value) }));
+                      const value = e.target.value;
+                      setDesignation(value);
+                      setErrors((prev) => ({ ...prev, Designation: validate("Designation", value) }));
+                      if (value.toLowerCase().includes("intern")) {
+                        setExperience("0 Year");
+                      }
                     }}
                     displayEmpty
                     className="custom-input"
@@ -336,7 +345,7 @@ const Contactcareer = ({ selectedJobTitle = null }) => {
                   <label className="custom-label">No. of Experience <Typography variant="span"> * </Typography></label>
                   <Select
                     IconComponent={KeyboardArrowDownIcon}
-                    value={Experience}
+                    value={isIntern ? "0 Year" : Experience}
                     onChange={(e) => {
                       setExperience(e.target.value);
                       setErrors((prev) => ({ ...prev, Experience: validate("Experience", e.target.value) }));
@@ -344,25 +353,27 @@ const Contactcareer = ({ selectedJobTitle = null }) => {
                     displayEmpty
                     className="custom-input"
                   >
-                    <MenuItem value="">
-                      Select your experience
-                    </MenuItem>
+                    {!isIntern && (
+                      <MenuItem value="">
+                        Select your experience
+                      </MenuItem>
+                    )}
                     <MenuItem value="0 Year">0</MenuItem>
-                    <MenuItem value="1 Year">1</MenuItem>
-                    <MenuItem value="2 Year">2</MenuItem>
-                    <MenuItem value="3 Year">3</MenuItem>
-                    <MenuItem value="4 Year">4</MenuItem>
-                    <MenuItem value="5 Year">5</MenuItem>
-                    <MenuItem value="6 Year">6</MenuItem>
-                    <MenuItem value="7 Year">7</MenuItem>
-                    <MenuItem value="8 Year">8</MenuItem>
-                    <MenuItem value="9 Year">9</MenuItem>
-                    <MenuItem value="10 Year">10</MenuItem>
-                    <MenuItem value="11 Year">11</MenuItem>
-                    <MenuItem value="12 Year">12</MenuItem>
-                    <MenuItem value="13 Year">13</MenuItem>
-                    <MenuItem value="14 Year">14</MenuItem>
-                    <MenuItem value="15 Year">15</MenuItem>
+                    {!isIntern && <MenuItem value="1 Year">1</MenuItem>}
+                    {!isIntern && <MenuItem value="2 Year">2</MenuItem>}
+                    {!isIntern && <MenuItem value="3 Year">3</MenuItem>}
+                    {!isIntern && <MenuItem value="4 Year">4</MenuItem>}
+                    {!isIntern && <MenuItem value="5 Year">5</MenuItem>}
+                    {!isIntern && <MenuItem value="6 Year">6</MenuItem>}
+                    {!isIntern && <MenuItem value="7 Year">7</MenuItem>}
+                    {!isIntern && <MenuItem value="8 Year">8</MenuItem>}
+                    {!isIntern && <MenuItem value="9 Year">9</MenuItem>}
+                    {!isIntern && <MenuItem value="10 Year">10</MenuItem>}
+                    {!isIntern && <MenuItem value="11 Year">11</MenuItem>}
+                    {!isIntern && <MenuItem value="12 Year">12</MenuItem>}
+                    {!isIntern && <MenuItem value="13 Year">13</MenuItem>}
+                    {!isIntern && <MenuItem value="14 Year">14</MenuItem>}
+                    {!isIntern && <MenuItem value="15 Year">15</MenuItem>}
                   </Select>
                   {errors.Experience && (
                     <Typography variant="caption" color="error" mt={0.5} display="block">

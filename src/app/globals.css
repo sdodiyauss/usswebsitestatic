@@ -4915,7 +4915,7 @@ text {
 }
 
 .job-card .info-row p {
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-family: var(--font-outfit);
 }
 

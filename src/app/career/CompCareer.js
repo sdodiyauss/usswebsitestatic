@@ -67,127 +67,97 @@ import Urja from "@/uss-employee/urja.webp";
 
 export const jobData = [
     {
-        title: "DotNet Developer (Core & MVC)",
+        title: "DotNet Intern",
         logo: MicrosoftDOTNETIcon,
         alt: ".NET",
         position: "01 Position",
-        experience: "Minimum 3 Years",
-        location: "Ahmedabad",
-        aboutRole: "We are looking for an experienced DotNet Developer who can independently handle development tasks and contribute to building robust, scalable applications. The ideal candidate should be comfortable working on production-level projects.",
-        responsibilities: [
-            "Develop and maintain web applications using .NET Core and MVC",
-            "Handle end-to-end feature development with minimal supervision",
-            "Optimize application performance and fix bugs",
-            "Work closely with team members on project delivery",
-            "Integrate APIs and manage database operations",
-            "Ensure code quality and best practices"
-        ],
-        requiredSkills: [
-            "3+ years of hands-on experience in .NET Core & MVC",
-            "Strong knowledge of C#, ASP.NET, Web API",
-            "Experience with SQL Server",
-            "Basic understanding of frontend technologies",
-            "Familiarity with Git/version control",
-            "Good problem-solving and debugging skills",
-        ]
-    },
-    {
-        title: "PHP Laravel Intern",
-        logo: PHPIcon,
-        alt: "PHP Laravel",
-        position: "01 Position",
         experience: "Fresher / Recently Passed Out",
         location: "Ahmedabad",
-        aboutRole: "We are looking for a motivated and enthusiastic PHP Laravel Intern to join our development team. This opportunity is ideal for recently graduated candidates who have basic knowledge of PHP and Laravel and are looking to start their career in web development.",
+        aboutRole: "We are looking for a motivated and enthusiastic .NET Intern to join our development team. This opportunity is ideal for recently graduated candidates who have a basic understanding of C# and .NET and are looking to start their career in software development. The intern will get practical exposure to real-world projects, application development, debugging, database operations, and software development practices while working closely with senior developers.",
         responsibilities: [
-            "Assist in developing and maintaining web applications using PHP and Laravel.",
-            "Write clean and basic PHP/Laravel code under the guidance of senior developers",
-            "Work with MySQL databases and perform basic database operations",
-            "Fix bugs and assist in troubleshooting application issues",
-            "Learn and follow development best practices and coding standards",
-            "Work collaboratively with the development team on assigned tasks"
+            "Assist in developing and maintaining web applications using .NET / ASP.NET.",
+            "Write clean and basic C# code under the guidance of senior developers.",
+            "Understand project requirements and assist in implementing assigned features.",
+            "Work with SQL Server and perform basic database operations.",
+            "Assist in debugging and fixing application issues.",
+            "Perform basic testing of developed features and ensure functionality works as expected.",
+            "Participate in code reviews and follow development best practices.",
+            "Maintain proper documentation of assigned development tasks.",
+            "Work closely with developers and other team members on assigned projects.",
+            "Learn and follow coding standards and software development practices.",
+            "Contribute to improving application functionality and performance.",
         ],
         requiredSkills: [
-            "Basic knowledge of PHP",
-            "Basic understanding of Laravel Framework",
-            "Basic knowledge of MySQL and database concepts",
-            "Understanding of HTML, CSS, and JavaScript will be an advantage",
-            "Good logical and problem-solving skills",
-            "Willingness to learn and grow as a developer",
-            "Good communication and teamwork skills"
+            "Basic knowledge of C# programming.",
+            "Basic understanding of .NET / ASP.NET Framework.",
+            "Basic knowledge of OOP concepts.",
+            "Basic knowledge of SQL Server / Database concepts.",
+            "Understanding of HTML, CSS, and JavaScript will be an advantage.",
+            "Good logical and problem-solving skills.",
+            "Basic understanding of web application development.",
+            "Willingness to learn new technologies and development practices.",
+            "Good communication and teamwork skills.",
         ]
     },
     // {
-    //     title: "HR Executive",
-    //     logo: hrIcon,
-    //     alt: "HR",
+    //     title: "PHP Laravel Intern",
+    //     logo: PHPIcon,
+    //     alt: "PHP Laravel",
     //     position: "01 Position",
-    //     experience: "0-1 years",
+    //     experience: "Fresher / Recently Passed Out",
     //     location: "Ahmedabad",
-    //     aboutRole: "We are looking for an enthusiastic HR Executive to join our growing team. The ideal candidate will be responsible for handling the end-to-end recruitment process, employee engagement activities, and HR operations. This is a great opportunity for someone who wants to start their career in human resources and grow in a dynamic and supportive environment.",
+    //     aboutRole: "We are looking for a motivated and enthusiastic PHP Laravel Intern to join our development team. This opportunity is ideal for recently graduated candidates who have basic knowledge of PHP and Laravel and are looking to start their career in web development.",
     //     responsibilities: [
-    //         "Manage the recruitment and onboarding process.",
-    //         "Conduct employee engagement activities to build a positive work culture.",
-    //         "Maintain HR documentation and employee records.",
-    //         "Support daily HR operations and assist with payroll coordination.",
-    //         "Ensure compliance with company policies and labor laws.",
-    //         "Assist in performance management and employee relations.",
+    //         "Assist in developing and maintaining web applications using PHP and Laravel.",
+    //         "Write clean and basic PHP/Laravel code under the guidance of senior developers",
+    //         "Work with MySQL databases and perform basic database operations",
+    //         "Fix bugs and assist in troubleshooting application issues",
+    //         "Learn and follow development best practices and coding standards",
+    //         "Work collaboratively with the development team on assigned tasks"
     //     ],
     //     requiredSkills: [
-    //         "Master's Degree in MBA (Human Resources).",
-    //         "Excellent communication and interpersonal skills.",
-    //         "Good understanding of HR policies, procedures, and documentation.",
-    //         "Strong organizational and multitasking abilities.",
-    //         "Detail-oriented with problem-solving and teamwork skills.",
-    //         "Proficiency in MS Office tools (Word, Excel, PowerPoint).",
+    //         "Basic knowledge of PHP",
+    //         "Basic understanding of Laravel Framework",
+    //         "Basic knowledge of MySQL and database concepts",
+    //         "Understanding of HTML, CSS, and JavaScript will be an advantage",
+    //         "Good logical and problem-solving skills",
+    //         "Willingness to learn and grow as a developer",
+    //         "Good communication and teamwork skills"
     //     ]
     // },
-    // {
-    //     title: "React, NodeJS & NextJS Developer",
-    //     logo: MernstackDeveloperIcon,
-    //     alt: "React, NodeJS & NextJS",
-    //     position: "01 Position",
-    //     experience: "Minimum 1 Year",
-    //     location: "Ahmedabad",
-    //     aboutRole: "We are looking for a junior to mid-level developer with at least 1 year of hands-on experience in modern JavaScript frameworks to support ongoing development projects.",
-    //     responsibilities: [
-    //         "Build UI components using React.js",
-    //         "Assist in backend development using Node.js",
-    //         "Work with Next.js for basic implementations",
-    //         "Fix bugs and support feature enhancements",
-    //         "Collaborate with senior developers and designers"
-    //     ],
-    //     requiredSkills: [
-    //         "Minimum 1 year experience in React and Node.js",
-    //         "Basic understanding of Next.js",
-    //         "Knowledge of JavaScript, APIs, and database basics",
-    //         "Familiarity with Git",
-    //         "Willingness to learn and grow"
-    //     ]
-    // },
-    // {
-    //     title: "Software Tester",
-    //     logo: SoftwareTesterIcon,
-    //     alt: "QA",
-    //     position: "01 Position",
-    //     experience: "Minimum 1 Year",
-    //     location: "Ahmedabad",
-    //     aboutRole: "We are looking for a Software Tester with at least 1 year of experience who can handle testing tasks and ensure application quality.",
-    //     responsibilities: [
-    //         "Perform manual testing of applications",
-    //         "Identify and report bugs clearly",
-    //         "Execute test cases and scenarios",
-    //         "Work with developers to resolve issues",
-    //         "Support regression testing"
-    //     ],
-    //     requiredSkills: [
-    //         "Minimum 1 year experience in software testing",
-    //         "Understanding of testing concepts and SDLC",
-    //         "Attention to detail",
-    //         "Basic knowledge of bug tracking tools",
-    //         "Good communication skills"
-    //     ]
-    // }
+    {
+        title: "QA Intern",
+        logo: SoftwareTesterIcon,
+        alt: "QA",
+        position: "01 Position",
+        experience: "Internship – 6 Months",
+        location: "Ahmedabad",
+        aboutRole: "We are looking for a motivated and detail-oriented QA Intern to join our team. This opportunity is ideal for recently graduated candidates who have a basic understanding of software testing and are looking to start their career in Quality Assurance and Software Testing. The intern will get practical exposure to real-world projects, testing processes, bug reporting, and QA practices while working closely with the development team.",
+        responsibilities: [
+            "Understand project requirements and prepare basic test scenarios and test cases.",
+            "Perform functional testing of web applications.",
+            "Identify, document, and report bugs clearly to the development team.",
+            "Perform regression testing after bug fixes and new feature updates.",
+            "Verify reported issues and ensure they are properly resolved.",
+            "Perform UI and usability testing to identify inconsistencies.",
+            "Test applications across different browsers and devices when required.",
+            "Maintain test cases, bug reports, and other QA documentation.",
+            "Work closely with developers and senior team members to understand and resolve issues.",
+            "Follow QA processes, testing standards, and best practices.",
+            "Learn and contribute to improving the overall quality of the application.",
+        ],
+        requiredSkills: [
+            "Basic understanding of Software Testing / QA concepts.",
+            "Basic knowledge of manual testing and test case creation.",
+            "Understanding of bug life cycle and bug reporting.",
+            "Basic knowledge of SDLC / STLC will be an advantage.",
+            "Good logical and analytical skills.",
+            "Strong attention to detail.",
+            "Good problem-solving skills.",
+            "Willingness to learn new tools and testing methodologies.",
+            "Good communication and teamwork skills.",
+        ]
+    },
 ];
 
 export const teamDescriptions = {
