@@ -94,6 +94,7 @@ import Blog61 from "@/blog-custom-wordpress-development-vs-ready-made-themes.web
 import Blog62 from "@/blog-laravel-vs-core-php.webp";
 import Blog63 from "@/blog-expressjs-for-nodejs.webp";
 import Blog64 from "@/blog-mongodb-vs-sql.webp";
+import Blog65 from "@/blog-patient-appointment-booking-ai.webp";
 
 import CircleType from "circletype";
 import minitsCircle from "~/minitsCircle.json";
@@ -296,6 +297,7 @@ const CompBlog = () => {
     { id: "p66", title: "Laravel vs Core PHP: Which One Should You Choose?", excerpt: "Starting a new web project, setting up the right technology can have a major impact on project development speed, scalability, security, and maintenance. Two options in PHP web development are Laravel and Core PHP. While both can be used to...", author: "Hitesh Khatwani", date: "September 18th, 2026", readTime: "6 min read", category: "Web Development", image: Blog62, avatarImage: "/images/blog-avtar-hitesh.webp", featured: false, url: "/blog/laravel-vs-core-which-one-should-you-choose" },
     { id: "p67", title: "Why Express.js Is the Preferred Framework for Node.js Development", excerpt: "When an organisation plans a new web application, the backend framework can have a lasting impact on development, maintenance, integrations, and future growth. For organisations using Node.js, Express.js is one of the most widely considered options because it offers a simple foundation without placing unnecessary restrictions...", author: "Arzeb Mansuri", date: "September 22nd, 2026", readTime: "6 min read", category: "Web Development", image: Blog63, avatarImage: "/images/blog-avtar-arzeb.webp", featured: false, url: "/blog/expressjs-is-the-preferred-framework-for-nodejs" },
      { id: "p68", title: "MongoDB vs SQL: Which Database Is Right for Your Business?", excerpt: "Choosing the right database is an important decision for any business building a new application or modernising an existing system. The database you select can affect application performance, scalability, development speed, data management, and long-term maintenance. The two most popular options are MongoDB and SQL databases such as MySQL...", author: "Bharat Katariya", date: "September 29th, 2026", readTime: "6 min read", category: "Web Development", image: Blog64, avatarImage: "/images/blog-avtar-bharat.webp", featured: false, url: "/blog/mongodb-vs-sql-which-database-is-right" },
+     { id: "p69", title: "How to Manage Patient Appointment Booking: AI-Driven Strategies for Best Practices", excerpt: "Managing patient appointments sounds simple, but for many healthcare practices, it can become one of the most time-consuming parts of daily operations. Phone calls, cancellations, rescheduling requests, missed appointments, reminder messages, and last-minute schedule changes can quickly create...", author: "Jignesh Vaghasiya", date: "October 5th, 2026", readTime: "6 min read", category: "AI", image: Blog65, avatarImage: "/images/written-by-jignesh.webp", featured: false, url: "/blog/patient-appointment-booking-ai-driven-strategies" },
   ];
 
 
