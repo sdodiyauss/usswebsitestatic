@@ -2,35 +2,25 @@
 
 import { useEffect, useMemo, useState } from 'react';
 
+// Match only real in-app browser UA tokens — not generic words like "LinkedIn"
+// that appear when a normal browser is opened from a social post.
 const SOCIAL_IN_APP_REGEXES = [
-  /FBAN|FBAV|FB_IAB|FBIOS|FBSS|Messenger/i, // Facebook / Messenger
+  /FBAN|FBAV|FB_IAB|FBIOS|FBSS/i, // Facebook
+  /Messenger/i,
   /Instagram|IGBrowser|InstagramApp/i,
   /Line\/|LineBrowser/i,
-  /LinkedInApp|LIApp|LinkedIn/i,
+  /LinkedInApp|LIApp/i, // do not match bare "LinkedIn"
   /Snapchat/i,
   /WhatsApp|WAApp/i,
-  /Twitter|TwitterFor|OkHttp\/Twitter/i,
+  /TwitterFor(?:iPhone|Android)|OkHttp\/Twitter/i,
   /Pinterest|PinterestiOS/i,
-  /TikTok|com\.zhiliaoapp/i,
-  /WeChat|MicroMessenger/i,
+  /TikTok|BytedanceWebview|musical_ly|com\.zhiliaoapp/i,
+  /MicroMessenger/i, // WeChat
 ];
 
 function isSocialInAppBrowser(userAgent = '') {
   if (!userAgent) return false;
-
-  const uaMatch = SOCIAL_IN_APP_REGEXES.some((regex) => regex.test(userAgent));
-  if (uaMatch) {
-    return true;
-  }
-
-  if (typeof document !== 'undefined') {
-    const ref = document.referrer || '';
-    if (/linkedin\.com|lnkd\.in|l\.facebook\.com|t\.co/i.test(ref)) {
-      return true;
-    }
-  }
-
-  return false;
+  return SOCIAL_IN_APP_REGEXES.some((regex) => regex.test(userAgent));
 }
 
 function detectPlatform(userAgent = '') {
@@ -78,15 +68,16 @@ export default function BrowserRedirectGuard() {
       window.sessionStorage.getItem('uss_inapp_redirect_attempted') === '1';
 
     const inAppBrowser = isSocialInAppBrowser(userAgent);
+    const { isAndroid, isIOS } = detectPlatform(userAgent);
 
-    if (!inAppBrowser || alreadyHandled) {
+    // Only act inside real mobile in-app browsers.
+    // Desktop Chrome opened from a LinkedIn post must not show this overlay.
+    if (!inAppBrowser || alreadyHandled || (!isAndroid && !isIOS)) {
       return undefined;
     }
 
     window.sessionStorage.setItem('uss_inapp_redirect_attempted', '1');
     setHasAttemptedRedirect(true);
-
-    const { isAndroid, isIOS } = detectPlatform(userAgent);
 
     if (isAndroid) {
       const intentUrl = buildAndroidIntentUrl(href);
@@ -119,8 +110,6 @@ export default function BrowserRedirectGuard() {
           setShowOverlay(true);
         }
       }
-    } else {
-      setShowOverlay(true);
     }
 
     const absoluteFallback = window.setTimeout(() => {
@@ -163,8 +152,29 @@ export default function BrowserRedirectGuard() {
           maxWidth: '22rem',
           width: '100%',
           boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
+          position: 'relative',
         }}
       >
+        <button
+          type="button"
+          onClick={() => setShowOverlay(false)}
+          aria-label="Close"
+          style={{
+            position: 'absolute',
+            top: '0.75rem',
+            right: '0.75rem',
+            background: 'transparent',
+            border: 'none',
+            color: '#fff',
+            fontSize: '1.25rem',
+            lineHeight: 1,
+            cursor: 'pointer',
+            opacity: 0.8,
+            padding: '0.25rem',
+          }}
+        >
+          ×
+        </button>
         <h2 style={{ fontSize: '1.4rem', marginBottom: '1rem' }}>
           Open in Your Browser
         </h2>
@@ -189,8 +199,25 @@ export default function BrowserRedirectGuard() {
             please follow the steps above.
           </p>
         )}
+        <button
+          type="button"
+          onClick={() => setShowOverlay(false)}
+          style={{
+            marginTop: '1.25rem',
+            width: '100%',
+            padding: '0.7rem 1rem',
+            borderRadius: '8px',
+            border: 'none',
+            backgroundColor: '#2563eb',
+            color: '#fff',
+            fontSize: '0.9rem',
+            fontWeight: 600,
+            cursor: 'pointer',
+          }}
+        >
+          Continue on this page
+        </button>
       </div>
     </div>
   );
 }
-

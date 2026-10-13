@@ -504,6 +504,15 @@ a {
   width: 100%;
 }
 
+.heading-content .main-primary-btn.btn-small{
+  font-size: 0.875rem;
+  padding: 3px 15px;
+}
+
+.heading-content .main-primary-btn.btn-small::after{
+  content: none;
+}
+
 .heading-content .main-primary-btn {
   background: #03b0ef;
   border: 1px solid #43cdff;
@@ -2822,7 +2831,7 @@ text {
 
 .marquee__group img {
   width: auto;
-  height: auto;
+  height: 500px;
 }
 
 .marquee-reverse .marquee__group {
@@ -4906,7 +4915,7 @@ text {
 }
 
 .job-card .info-row p {
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-family: var(--font-outfit);
 }
 
@@ -7774,6 +7783,11 @@ text {
   .faq-accordion .faq-answer p {
     font-size: 1rem;
   }
+
+  .about-banner-wwa {
+    bottom: -170px;
+  }
+
 }
 
 @media (max-width: 1400px) {
@@ -8513,7 +8527,7 @@ text {
   }
 
   .about-banner-wwa {
-    bottom: -100px;
+    bottom: -125px;
     right: 15px;
   }
 
@@ -9417,6 +9431,10 @@ text {
   .faq-accordion .faq-question h6 {
     font-size: 1.275rem;
     line-height: 1.4;
+  }
+  
+  .marquee__group img {
+    height: 250px;
   }
 }
 

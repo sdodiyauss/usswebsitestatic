@@ -1969,7 +1969,7 @@ export default function CompHome() {
                 sx={{
                   position: "absolute",
                   top: "50%",
-                  left: 0,
+                  left: "-20px",
                   zIndex: 10,
                   transform: "translateY(-50%)",
                 }}
@@ -1983,7 +1983,7 @@ export default function CompHome() {
                 sx={{
                   position: "absolute",
                   top: "50%",
-                  right: 0,
+                  right: "-20px",
                   zIndex: 10,
                   transform: "translateY(-50%)",
                 }}
@@ -2010,7 +2010,7 @@ export default function CompHome() {
                       <Grid container spacing={2} alignItems="center">
                         {/* Left Content - 9 columns */}
                         <Grid
-                          size={{ xs: 15, sm: 8.3 }}
+                          size={{ xs: 12, sm: 7, md: 8.3 }}
                           className="testimonial-content"
                         >
                           <Box className="testimonial-content-logo">
@@ -2044,7 +2044,7 @@ export default function CompHome() {
                         </Grid>
 
                         {/* Right Image - 3 columns */}
-                        <Grid size={{ xs: 15, sm: 3.7 }}>
+                        <Grid size={{ xs: 12, sm: 5, md: 3.7 }}>
                           <Box
                             className="testimonial-image"
                             sx={{
@@ -2054,9 +2054,6 @@ export default function CompHome() {
                             <Image
                               src={item.photo}
                               alt={item.name}
-                              width={200}
-                              height={250}
-                              style={{ width: "auto", height: "100%" }}
                             />
                           </Box>
                         </Grid>
