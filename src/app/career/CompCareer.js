@@ -125,39 +125,39 @@ export const jobData = [
     //         "Good communication and teamwork skills"
     //     ]
     // },
-    {
-        title: "QA Intern",
-        logo: SoftwareTesterIcon,
-        alt: "QA",
-        position: "01 Position",
-        experience: "Internship – 6 Months",
-        location: "Ahmedabad",
-        aboutRole: "We are looking for a motivated and detail-oriented QA Intern to join our team. This opportunity is ideal for recently graduated candidates who have a basic understanding of software testing and are looking to start their career in Quality Assurance and Software Testing. The intern will get practical exposure to real-world projects, testing processes, bug reporting, and QA practices while working closely with the development team.",
-        responsibilities: [
-            "Understand project requirements and prepare basic test scenarios and test cases.",
-            "Perform functional testing of web applications.",
-            "Identify, document, and report bugs clearly to the development team.",
-            "Perform regression testing after bug fixes and new feature updates.",
-            "Verify reported issues and ensure they are properly resolved.",
-            "Perform UI and usability testing to identify inconsistencies.",
-            "Test applications across different browsers and devices when required.",
-            "Maintain test cases, bug reports, and other QA documentation.",
-            "Work closely with developers and senior team members to understand and resolve issues.",
-            "Follow QA processes, testing standards, and best practices.",
-            "Learn and contribute to improving the overall quality of the application.",
-        ],
-        requiredSkills: [
-            "Basic understanding of Software Testing / QA concepts.",
-            "Basic knowledge of manual testing and test case creation.",
-            "Understanding of bug life cycle and bug reporting.",
-            "Basic knowledge of SDLC / STLC will be an advantage.",
-            "Good logical and analytical skills.",
-            "Strong attention to detail.",
-            "Good problem-solving skills.",
-            "Willingness to learn new tools and testing methodologies.",
-            "Good communication and teamwork skills.",
-        ]
-    },
+    // {
+    //     title: "QA Intern",
+    //     logo: SoftwareTesterIcon,
+    //     alt: "QA",
+    //     position: "01 Position",
+    //     experience: "Internship – 6 Months",
+    //     location: "Ahmedabad",
+    //     aboutRole: "We are looking for a motivated and detail-oriented QA Intern to join our team. This opportunity is ideal for recently graduated candidates who have a basic understanding of software testing and are looking to start their career in Quality Assurance and Software Testing. The intern will get practical exposure to real-world projects, testing processes, bug reporting, and QA practices while working closely with the development team.",
+    //     responsibilities: [
+    //         "Understand project requirements and prepare basic test scenarios and test cases.",
+    //         "Perform functional testing of web applications.",
+    //         "Identify, document, and report bugs clearly to the development team.",
+    //         "Perform regression testing after bug fixes and new feature updates.",
+    //         "Verify reported issues and ensure they are properly resolved.",
+    //         "Perform UI and usability testing to identify inconsistencies.",
+    //         "Test applications across different browsers and devices when required.",
+    //         "Maintain test cases, bug reports, and other QA documentation.",
+    //         "Work closely with developers and senior team members to understand and resolve issues.",
+    //         "Follow QA processes, testing standards, and best practices.",
+    //         "Learn and contribute to improving the overall quality of the application.",
+    //     ],
+    //     requiredSkills: [
+    //         "Basic understanding of Software Testing / QA concepts.",
+    //         "Basic knowledge of manual testing and test case creation.",
+    //         "Understanding of bug life cycle and bug reporting.",
+    //         "Basic knowledge of SDLC / STLC will be an advantage.",
+    //         "Good logical and analytical skills.",
+    //         "Strong attention to detail.",
+    //         "Good problem-solving skills.",
+    //         "Willingness to learn new tools and testing methodologies.",
+    //         "Good communication and teamwork skills.",
+    //     ]
+    // },
 ];
 
 export const teamDescriptions = {
