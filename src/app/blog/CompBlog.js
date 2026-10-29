@@ -98,6 +98,7 @@ import Blog65 from "@/blog-patient-appointment-booking-ai.webp";
 import Blog66 from "@/blog-how-ai-scribing-helps-healthcare-staff.webp";
 import Blog67 from "@/blog-healthcare-application-development-with-ai.webp";
 import Blog68 from "@/blog-best-urgent-care-emr-systems.webp";
+import Blog69 from "@/blog-custom-software-development-helps-pharmacy.webp";
 
 import CircleType from "circletype";
 import minitsCircle from "~/minitsCircle.json";
@@ -304,6 +305,7 @@ const CompBlog = () => {
      { id: "p70", title: "How AI Scribing Helps Healthcare Staff Spend Less Time on Documentation", excerpt: "Patient documentation is an essential part of healthcare, but it can also take a significant amount of time. Physicians, nurses, and other healthcare professionals may spend hours documenting patient visits, updating records, reviewing notes, and completing administrative tasks after the patient has left. For USA-based...", author: "Kinjal Vaghasiya", date: "October 12th, 2026", readTime: "6 min read", category: "Healthcare", image: Blog66, avatarImage: "/images/blog-avtar-kinjal.webp", featured: false, url: "/blog/ai-scribing-helps-healthcare-staff" },
      { id: "p71", title: "Healthcare Application Development with AI Workflow Integration: A Practical Guide", excerpt: "Healthcare applications are not just about building digital. It is about connecting people, clinical information, and everyday workflows to help healthcare teams deliver more coordinated, accessible and efficient care.", author: "Raj Shah", date: "October 15th, 2026", readTime: "6 min read", category: "Mobile App Development", image: Blog67, avatarImage: "/images/written-by-raj.webp", featured: false, url: "/blog/healthcare-application-development-with-ai-workflow" },
      { id: "p72", title: "Why the Best Urgent Care EMR Systems Trust on Unified Cloud Platforms", excerpt: "Five minutes at the clinic's front desk can change the whole day. Urgent medical care depends on speed. Patients always need easy access, clinicians need complete information and staff have to manage registration, documentation, billing and follow-up, causing unnecessary delays. When these activities depend on one separate...", author: "Kinjal Vaghasiya", date: "October 21st, 2026", readTime: "6 min read", category: "Healthcare", image: Blog68, avatarImage: "/images/blog-avtar-kinjal.webp", featured: false, url: "/blog/best-urgent-care-emr-systems-trust-on-unified-cloud-platforms" },
+     { id: "p73", title: "How Custom Software Development Helps Online and In-Store Pharmacy Solutions", excerpt: "Pharmacies are no longer limited to a traditional counter where patients hand over a prescription, wait for it to be filled, and return later to pick it up. Today, patients expect convenient digital services, faster communication, online refills, delivery options...", author: "Raj Shah", date: "October 29th, 2026", readTime: "6 min read", category: "Mobile App Development", image: Blog69, avatarImage: "/images/written-by-raj.webp", featured: false, url: "/blog/how-custom-software-development-helps-online-pharmacy" },
   ];
 
 
