@@ -612,7 +612,7 @@ const CompCustomSoftDevHelpPharmacy = () => {
                                     Pharmacies are common healthcare touchpoints that patients visit most frequently. Because of this, maintaining strong patient relationships can be a valuable part of the business.
                                     <br />
                                     <br />
-                                    Healthcare CRM development gives pharmacies a better way to manage patient relationships and stay connected.
+                                    <Link href="https://www.universalstreamsolution.com/healthcare">Healthcare CRM development</Link> gives pharmacies a better way to manage patient relationships and stay connected.
                                     <br />
                                     <br />
                                     A custom CRM can help pharmacies understand patient preferences, send timely vaccine and refill reminders, manage loyalty programs and provide more personalized communication for patients with ongoing care needs, while keeping privacy requirements in mind.
