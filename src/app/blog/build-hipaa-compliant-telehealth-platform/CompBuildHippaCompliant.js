@@ -468,7 +468,7 @@ const CompBuildHippaCompliant = () => {
                                     Plan integrations around the systems your partners already use, such as Epic, Oracle Health, or MEDITECH. Define how consultation requests, clinical notes, patient identifiers, and status updates will move between systems.
                                     <br />
                                     <br />
-                                    Its team developed a cloud-based platform for behavioural health coordination, supporting specialist assignments, consultation workflows, and integrations with partner EHR systems. The solution was projected to reduce manual coordination work by up to 40%.
+                                    Its team developed a cloud-based platform for behavioural health coordination, supporting specialist assignments, consultation workflows, and integrations with partner <Link href="https://www.universalstreamsolution.com/healthcare-tech/emr-software-development-company">EHR systems</Link>. The solution was projected to reduce manual coordination work by up to 40%.
                                     <br />
                                     <br />
                                     The takeaway is simple: design integrations around real clinical workflows, not just technical connectivity.
