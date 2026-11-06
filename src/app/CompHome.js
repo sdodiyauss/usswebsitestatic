@@ -103,6 +103,7 @@ import TechnologyStacks from "~/technologystackssection/TechnologyStacks";
 import Companylogos from "~/companylogoes/Companylogos";
 import Ussjourneysection from "~/ussjourney/Ussjourneysection";
 import Timelinewrapper from "~/timelinewrapper/Timelinewrapper";
+import FestivalSection, { getActiveFestival } from "~/festival/FestivalSection";
 
 
 const cardData = [
@@ -896,12 +897,23 @@ export default function CompHome() {
     },
   ];
 
+  const activeFestival = getActiveFestival();
+
   return (
     <>
-      {/* Banner Section */}
+      {/* Banner Section — festival effect controlled via ~/festival/config.js */}
       <motion.section {...fadeIn}>
-        <Box className="banner-section" sx={{ mb: { xs: 3, md: 4, lg: 5 } }}>
-          <Box className="banner-overlay" />
+        <Box
+          className={`banner-section${activeFestival.enabled ? ` festival-active festival-${activeFestival.id}` : ""}`}
+          sx={{ mb: { xs: 3, md: 4, lg: 5 } }}
+        >
+          <FestivalSection />
+          <Box
+            className="banner-overlay"
+            sx={{
+              backgroundColor: `rgba(0, 0, 0, ${activeFestival.overlayOpacity ?? 0.5})`,
+            }}
+          />
           <Container className="custom-container" maxWidth="lg">
             <Grid container spacing={2} justifyContent="center">
               <Grid size={{ xs: 12, md: 10 }}>

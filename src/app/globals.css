@@ -480,7 +480,20 @@ a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #05070f;
   position: relative;
+  overflow: hidden;
+}
+
+/* Festival effects (switch via festival/config.js) */
+.festival-effect,
+.festival-fireworks {
+  position: absolute !important;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .banner-content {
@@ -498,10 +511,18 @@ a {
 
 .banner-overlay {
   position: absolute;
+  inset: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
   height: 100%;
   width: 100%;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .festival-effect {
+    display: none !important;
+  }
 }
 
 .heading-content .main-primary-btn.btn-small{
